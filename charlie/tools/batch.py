@@ -171,6 +171,7 @@ def run_a_test(test_name, batch_mode=False):
     print '---All trials done.\n---------'
     print 'TEST OVER'
     print '---------'
+    return None, data_obj
 
 
 def run_a_batch():
@@ -192,27 +193,27 @@ def run_a_batch():
             f = open(b, 'rb')
     test_names = [l.strip('\n') for l in f]
     print '---Running the following tests in a batch:', test_names
-    
+
     for test_name in test_names:
-        
+
         repeat = True
         while repeat:
-            
+
             choice, data_obj = run_a_test(test_name, True)
-            
+
             if not choice or choice == 'skip':
-                
+
                 repeat = False
-            
+
             elif choice == 'quit':
-                
+
                 sys.exit()
-            
+
             elif choice == 'restart':
-                
+
                 data.delete_data(data_obj)
-                
-            
+
+
 def prompt(batch_mode):
     """
     Control-flow options.
@@ -240,7 +241,7 @@ def prompt(batch_mode):
                for incomplete tests will not appear in the localdb.
 
     quit       Kill the batch.
-    
+
     ------------------------------------------------------------------
     """
     print msg
