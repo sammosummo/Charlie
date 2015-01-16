@@ -1,0 +1,27 @@
+Continuous-performance test (practice)
+
+In this test, you will see a row of three symbols
+flash up in the middle of the screen. They will
+stay for a moment and then will be replaced by
+another three symbols. Your task is to press the
+spacebar each time the row of symbols matches the
+previous row exactly. If none of the symbols match,
+or only one or two of them match, do nothing.
+
+Press any key to begin try some practice trials.
+---
+Continuous-performance test (main test)
+
+Now you begin the real test. It is the same as the
+practice, except there are more trials, and the
+symbols will stay on the screen for less time.
+Try to complete the task as quickly as you can
+without making mistakes.
+
+Press any key to begin.
+---
+The test will start in: %i
+---
+Yes
+---
+No

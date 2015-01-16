@@ -1,0 +1,9 @@
+Digit—symbol test, part 2
+
+In this task, you will see a symbol in the middle of the
+screen. You will also see the row of digits from earlier,
+but not the row of symbols. Your task is to click on the
+digit that matches the symbol. Try to complete the task
+as quickly as you can without making mistakes.
+
+Press any key to begin.

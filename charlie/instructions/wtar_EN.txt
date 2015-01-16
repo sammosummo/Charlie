@@ -1,0 +1,79 @@
+Test of reading ability
+
+This test requires the experimenter to take over.
+Please allow them to take over now.
+---
+Say this:
+
+"I will show you some words that I will ask you to pronounce."
+
+Place the WTAR Word card in front of the examinee.  As you point
+to the card, say:
+
+"Beginning with the first word on the list, pronounce each word
+aloud. Start with the word (point to Item 1), and go down this
+column, one right after the other, without skipping any.  When
+you finish this column, go to the next column (point to the
+second column).  Pronounce each word, even if you are unsure. Do
+you understand?"
+
+When you are sure that the examinee understands the task, say:
+
+"Ready? Begin".
+---
+Click to continue.
+---
+Correct
+---
+Incorrect
+---
+Again,uh-GEHN or uh-GAIN
+Address,uh-DRESS or ad-dress
+Cough,Kawf or kof
+Preview,PREE-vyue
+Although,Awl-THO
+Most,Mohst
+Excitement,eck-SITE-munt or ik-SITE-muint
+Know,Noh or no
+Plumb,Plum
+Decorate,DEK-uh-rate
+Fierce,Firhrss
+Knead,Need
+Aisle,EYE-l
+Vengeance,VEN-junts or VIN-junts
+Prestigious,Pre-STIJ-us or pre-STEEJ-us
+Wreathe,ReeTH
+Gnat,Nat
+Amphitheater,AM(p)-fuh-the-uh-ter
+Lieu,Loo
+Grotesque,Gro-TESK
+Iridescent,Ihr-uh-DESS-unt
+Ballet,BA-lay or ba-LAY
+Equestrian,Ih-KWESS-tree-u
+Porpoise,POR-pus
+Aesthetic,Ess-THET-ik or ees-THET-ik
+Conscientious,Kon-chee-EN-shus or kon-chee-INCH-us
+Homily,HAHM-uh-lee
+Malady,MAL-uh-dee
+Subtle,SUH-tl
+Fecund,FE-cund or FEE-cund
+Palatable,PAL-uh-tuh-bul
+Menagerie,Muh-NAJ-uh-ree
+Obfuscate,OB-fuh-skate or ob-FUH-skate
+Liaison,Lee-A-zahn or LAY-a-zahn or LEE-ah-zahn
+Exigency,EKS-eh-jen-see or ek-ZEE-jen-see
+Xenophobia,Zen-uh-FO-bee-uh or zeen-uh-FO-bee-uh
+Ogre,OH-gur
+Scurrilous,SKUR-uh-lus or SKUH-ruh-lus
+Ethereal,Ih-THEER-ee-uhl or ih-THIR-ee-uhl
+Paradigm,PAIR-uh-dime or PAIR-uh-dim
+Perspicuity,Pur-spuh-KYEW-uh-tee
+Plethora,PLETH-er-aah
+Lugubrious,Loo-GOO-bree-us or luh-GOO-bree-us or loo-GYEW-bree-us
+Treatise,TREET-us
+Dilettante,DILL-uh-tahnt
+Vertiginous,Vur-TI-jin-us or vur-TIJ-uh-nus
+Ubiquitous,You-BIC-wuh-tus or you-BIH-kwah-tus
+Hyperbole,Hi-PUR-buh-lee
+Insouciant,In-SOO-see-yunt
+Hegemony,Heh-JEM-o-nee or he-je-MO-nee

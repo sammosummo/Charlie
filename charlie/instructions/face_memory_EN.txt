@@ -1,0 +1,25 @@
+Test of facial memory, part 1 (learning phase)
+
+There are two parts to this test. In the first part,
+you will see images of people's faces, one at a time.
+Try to remember each one. Later you will be asked to
+recognize the faces you have seen.
+
+Press any key to begin.
+---
+Test of facial memory, part 1 (test phase)
+
+In this second part, you will see some more images of
+people's faces. Some of these faces you have already
+seen and others are new. Respond 'Yes' if you have
+seen the face before, or 'No' if the face is new. If
+you are not sure, guess. Try to complete the task as
+quickly as you can without making mistakes.
+
+Press any key to begin.
+---
+Test will start in %s ...
+---
+Yes
+---
+No

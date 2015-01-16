@@ -1,0 +1,87 @@
+Word-learning test, part 1
+
+This test requires that the experimenter
+operates the computer. Please allow them to
+take over now.
+---
+CVLT: Trial %i ('listening' phase)
+---
+CVLT: Trial %i ('response' phase)
+---
+Instructions for experimenter:
+---
+Say this:
+
+"The computer will read a list of words to you.
+Listen carefully, because when it's through, I
+want you to tell me as many of the words as you
+can. You can say them in any order, just say as
+many of them as you can. Are you ready?"
+---
+Say this:
+
+"The computer will read the same list again.
+Like before, tell me as many of the words as you
+can, in any order. Be sure to also say words
+from the list that you told me the first time."
+---
+Say this:
+
+"The computer will read the list again. Like
+before, tell me as many of the words as you can,
+in any order, including the words from the list
+you said before."
+---
+Say this:
+
+"The computer will read the list again. Like
+before, tell me as many of the words as you can,
+in any order, including the words from the list
+you said before."
+---
+Say this:
+
+"The computer will read the list one more time.
+Like before, tell me as many of the words as you
+can, in any order, including the words from the
+list you said before."
+---
+Click to play the stimuli.
+---
+Playing now ...
+---
+Word currently being read out:
+---
+All Done. Click to continue to the 'response'
+phase of the trial.
+---
+Continue
+---
+Responses options:
+---
+Intrusion
+---
+No. of responses recorded:
+---
+Countdown since last response:
+---
+End trial
+---
+Pause countdown
+---
+truck
+spinach
+giraffe
+bookcase
+onion
+motorcycle
+cabinet
+zebra
+subway
+lamp
+celery
+cow
+desk
+boat
+squirrel
+cabbage

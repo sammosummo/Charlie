@@ -1,0 +1,24 @@
+Test of spatial-memory capacity (practice)
+
+On each trial, you will see some yellow dots on the
+screen. After a few seconds, these dots will
+disappear and a green dot will appear. Respond 'Yes'
+if the green dot is in the place of one of the yellow
+dots, and 'No' if it is not.
+
+Press any key to try some practice trials.
+---
+Test of spatial-memory capacity (main test)
+
+Now you will perform the real test. It is the same
+as the practice, except there are more trials. Try to
+complete the task as quickly as you can without making
+mistakes.
+
+Press any key to begin.
+---
+The test will start in: %i
+---
+Yes
+---
+No

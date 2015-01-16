@@ -1,0 +1,15 @@
+California Verbal Learning Test (Recognition).
+
+Earlier, you learned some words. Now, you will hear
+some more words. Some of these words you have already
+heard and others are new. Respond 'Yes' if you heard
+the word earlier, or 'No' if you did not. If you
+are not sure, guess.
+
+Press any key to begin the test.
+---
+Did you see this face earlier?
+---
+Yes
+---
+No

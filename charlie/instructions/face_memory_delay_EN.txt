@@ -1,0 +1,16 @@
+Test of facial memory, part 2
+
+Earlier, you saw some faces. Now, you will see some
+more faces. Some of these faces you have already
+seen and others are new. Respond 'Yes' if you saw
+the face earlier, or 'No' if you did not. If you
+are not sure, guess. Try to complete the task as
+quickly as you can without making mistakes.
+
+Press any key to begin.
+---
+Test will start in %s ...
+---
+Yes
+---
+No

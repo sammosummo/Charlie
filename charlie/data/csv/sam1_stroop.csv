@@ -1,0 +1,18 @@
+proband_id,test_name,phase,trialn,cong,f,ans,rsp,rt
+sam1,stroop,practice,0,n/a,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/prac_1.png,Right,Right,2368
+sam1,stroop,practice,1,n/a,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/prac_2.png,Left,Right,541
+sam1,stroop,practice,2,n/a,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/prac_3.png,Right,Right,455
+sam1,stroop,practice,3,n/a,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/prac_4.png,Right,Right,511
+sam1,stroop,test,0,Incongruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/6-Incongruent.png,Left,Right,553
+sam1,stroop,test,1,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/30-Congruent.png,Left,Right,119
+sam1,stroop,test,2,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/3-Congruent.png,Right,Right,153
+sam1,stroop,test,3,Incongruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/23-Incongruent.png,Left,Right,1283
+sam1,stroop,test,4,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/39-Congruent.png,Left,Right,85
+sam1,stroop,test,5,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/45-Congruent.png,Left,Right,108
+sam1,stroop,test,6,Incongruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/31-Incongruent.png,Right,Right,108
+sam1,stroop,test,7,Incongruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/28-Incongruent.png,Right,Right,108
+sam1,stroop,test,8,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/31-Congruent.png,Left,Right,130
+sam1,stroop,test,9,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/10-Congruent.png,Right,Right,89
+sam1,stroop,test,10,Incongruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/10-Incongruent.png,Left,Right,1759
+sam1,stroop,test,11,Incongruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/24-Incongruent.png,Left,Right,109
+sam1,stroop,test,12,Congruent,/Volumes/TOSHIBA EXT/Charlie/charlie/stimuli/visual/stroop/34-Congruent.png,Left,Right,109

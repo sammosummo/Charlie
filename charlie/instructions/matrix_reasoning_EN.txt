@@ -1,0 +1,20 @@
+Matrix-reasoning test (practice)
+
+On each trial you will see a picture with a piece
+missing from it. Your task is to look carefully
+at the picture, and choose the missing piece from
+the five alternatives that appear at the bottom
+of the screen. There is only one correct choice
+per picture. If you think that more than one
+answer is correct, choose the one you think fits
+best.
+
+Press any key to try a practice trial.
+---
+Matrix-reasoning test (main test)
+
+Now we begin the real test. The task is exactly the
+same as before. Try to complete the task as quickly
+as you can without making mistakes.
+
+Press any key to begin the test.

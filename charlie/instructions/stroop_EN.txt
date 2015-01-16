@@ -1,0 +1,27 @@
+Stroop test (practice)
+
+On each trial, you will see two images side by
+side. Your job is to say which of the images is
+smaller on the screen. Respond 'left' if the left-
+hand image is smaller, and 'right' if the right-
+hand image is smaller.
+
+Press any key to begin some practice trials.
+---
+Stroop test (real thing)
+
+Now you will perform the real test. It is the same
+as the practice, except there are more trials, and
+the images on each trial will depict two different
+real-world objects. Your job is to say which image
+is smaller on the screen, NOT which is smaller in
+real life. Try to complete the task as quickly as
+you can without making mistakes.
+
+Press any key to begin.
+---
+Trial will begin in %i ...
+---
+Left
+---
+Right

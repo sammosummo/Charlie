@@ -1,0 +1,49 @@
+Task-switching test, part 1 (practice)
+
+On each trial, you will see four squares with an
+arrow in one of them. If the arrow is blue and in
+one of the upper squares, you must indicate whether
+its POSITION: Respond 'Left' if it is in the left-
+hand square, and 'Right' if it is in the right-
+hand square.
+
+If the arrow is red and in the one of the bottom two
+squares, you must indicate its DIRECTION: Respond
+'Left' if it is facing left and 'Right' if it is
+facing right.
+
+Press any key to being some practice trials.
+---
+Task-switching test, part 1 (main test)
+
+Now you will perform the real test. It is the same
+as the practice, except there are more trials. 
+
+Notice that the task will switch predictably
+every other trial. You will start with two trials
+of the position task (blue arrows), then two trials
+of the direction task (red arrows), then back to the
+position task.
+
+Try to complete the task as quickly as you can
+without making mistakes.
+
+Press any key to begin.
+---
+Trial will begin in %i ...
+---
+Task-switching test, part 2
+
+Now you will perform another set of trials. They
+are the same as the last ones, except that the
+task will switch at random. Try to complete the
+task as quickly as you can without making
+mistakes.
+
+Press any key to begin.
+---
+Trial will begin in %i ...
+---
+Left
+---
+Right

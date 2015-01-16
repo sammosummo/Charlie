@@ -1,0 +1,104 @@
+Pen-and-paper trial-making test
+
+This test requires the experimenter to take over.
+Please allow them to take over now.
+---
+Number sequencing (examples)
+---
+Place the test form (Part A1), sample side up, flat on the table
+in front of the proband and say this:
+
+"On this page [point to the form] are some numbers.  Begin at
+number 1 [point] and draw a line from 1 to 2 [point], then from
+2 to 3 [point to 3], 3 to 4 [point to 4], and so on, in order,
+until you reach the end [point to the end].  Draw the lines as
+fast as you can, without lifting your pencil from the paper.
+Ready? Begin."""
+
+Correct and explain any errors. If the subject makes an incorrect
+connection, mark the connection with an "X", explain the error
+and ask the subject to continue from the last correctly connected
+number. If the subject cannot complete the practice after 4
+corrections by the examiner, discontinue.
+---
+Number sequencing (real thing)
+---
+Turn over the test form, and say this:
+
+"On this page there are numbers from 1 to 25. Do this the same way.
+Begin at number 1 [point] and draw a line from 1 to 2 [point], 2 to
+3 [point], 3 to 4 [point], and so on in order, until you reach the
+end [point to the end]. And remember to work as fast as you can.
+Ready? Begin."
+---
+Letter sequencing (examples)
+---
+Place the test form (Part AA), sample side up, flat on the table
+in front of the proband and say this:
+
+"On this page [point to the form] are some letters.  Begin at
+A [point] and draw a line from A to B [point], then from
+B to C [point to C], C to D [point to D], and so on, in order,
+until you reach the end [point to the end].  Draw the lines as
+fast as you can, without lifting your pencil from the paper.
+Ready? Begin."""
+
+Correct and explain any errors. If the subject makes an incorrect
+connection, mark the connection with an "X", explain the error
+and ask the subject to continue from the last correctly connected
+number. If the subject cannot complete the practice after 4
+corrections by the examiner, discontinue.
+---
+Letter sequencing (real thing)
+---
+Turn over the test form, and say this:
+
+"On this page there are numbers from A to Y. Do this the same way.
+Begin at A [point] and draw a line from A to B [point], B to
+C [point], C to D [point], and so on in order, until you reach the
+end [point to the end]. And remember to work as fast as you can.
+Ready? Begin."
+---
+Number-letter sequencing (examples)
+---
+Place the test form (Part AB), sample side up, flat on the table
+in front of the proband and say this:
+
+"On this page [point to the form] are some numbers and letters.
+Begin at 1 [point] and draw a line from 1 to A [point], then from
+A to 2 [point to 2], 2 to B [point to B], and so on, in order,
+until you reach the end [point to the end].  Draw the lines as
+fast as you can, without lifting your pencil from the paper.
+Ready? Begin."""
+
+Correct and explain any errors. If the subject makes an incorrect
+connection, mark the connection with an "X", explain the error
+and ask the subject to continue from the last correctly connected
+number. If the subject cannot complete the practice after 4
+corrections by the examiner, discontinue.
+---
+Number-letter sequencing (real thing)
+---
+Turn over the test form, and say this:
+
+"On this page there are numbers and letters. Do this the same way.
+Begin at 1 [point] and draw a line from 1 to A [point], A to
+2 [point], 2 to B [point], and so on in order, until you reach the
+end [point to the end]. And remember to work as fast as you can.
+Ready? Begin."
+---
+Click or press the spacebar to begin.
+---
+Elapsed time (to the nearest second):
+---
+Pause [spacebar]
+---
+Resume [spacebar]
+---
+Reset timer
+---
+Exit trial
+---
+Enter the number of errors:
+---
+Continue

@@ -1,0 +1,63 @@
+Word-learning test, part 3
+
+Earlier, you learned some words. Now, you will hear
+some more words. Some of these words you have already
+heard and others are new. Respond 'Yes' if you heard
+the word earlier, or 'No' if you did not. If you
+are not sure, guess. Try to complete the task as
+quickly as you can without making mistakes.
+
+Press any key to begin the test.
+---
+Trial will begin in %i ...
+---
+Yes
+---
+No
+---
+wallet
+boat
+saxophone
+cucumber
+giraffe
+carrot
+patio
+cabbage
+desk
+bracelet
+car
+elephant
+violin
+cow
+fork
+bus
+celery
+lamp
+radishes
+table
+rose
+motorcycle
+sheep
+basement
+dog
+bookcase
+matches
+spinach
+clarinet
+truck
+rabbit
+chair
+corn
+seashell
+garage
+squirrel
+turnip
+cabinet
+onion
+lion
+camera
+guitar
+subway
+tiger
+coffee
+zebra
