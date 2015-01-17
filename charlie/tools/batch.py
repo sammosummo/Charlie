@@ -16,31 +16,27 @@ import charlie.tools.instructions as instructions
 import charlie.tools.data as data
 import charlie.tools.visual as visual
 
-description = """
---------------------------------------------------------------
-Charlie: A neuropsychological test battery, written in python.
---------------------------------------------------------------
-"""
 
 def get_parser():
     """
     Returns a parser object that allows an individual test or a batch of tests
     to accept arguments from the command line.
     """
+    description = 'Charlie: A neuropsychological test battery'
     parser = argparse.ArgumentParser(description=description)
 
     parser.add_argument('-p', '--proband_id', default='TEST',
-                        help='proband ID (if omitted, no data will be saved)')
+                        help='Proband ID (if omitted, no data will be saved).')
     parser.add_argument('-l', '--lang', choices=['EN'], default='EN',
-                        help='testing language (only EN works right now')
+                        help='Testing language (only EN works right now).')
     parser.add_argument('-u', '--user_id', default='',
-                        help='experimenter/user ID')
+                        help='Experimenter/user ID.')
     parser.add_argument('-b', '--batch_file', default='',
-                        help='name of batch or path to batch text file')
+                        help='Name of batch or path to batch text file.')
     parser.add_argument('-j', '--proj_id', default='',
-                        help='project ID')
+                        help='Project ID.')
     parser.add_argument('-t', '--test_name', default='',
-                        help='individual test name (ignored if -b included)')
+                        help='Individual test name (ignored if -b included).')
 
     return parser
 
