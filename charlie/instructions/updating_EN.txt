@@ -1,0 +1,19 @@
+Test of updating working memory (practice)
+
+On each trial, you will see a grid with a circle
+inside it, followed by a sequence or arrows and
+dashes, followed by a new empty grid. The arrows
+and dashes 'update' the position of the circle
+within the grid: An arrow will move it up, down,
+left or right one space, and a dash with keep it
+in the same place. Your task is to click on the
+space in the new grid where the circle should go.
+
+Press any key to try some practice trials.
+---
+Test of updating working memory (main test)
+
+Now you begin the real test. It is the same as the
+practice, except there are more trials. Try to
+complete the task as quickly as you can without
+making mistakes.

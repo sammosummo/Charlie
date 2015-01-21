@@ -261,6 +261,7 @@ def prompt(batch_mode):
     else:
         return choice
 
+
 def main():
     """
     Main function.
