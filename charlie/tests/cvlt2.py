@@ -4,39 +4,22 @@ Created on Fri Mar 14 16:52:26 2014
 
 cvlt2: Computerised California verbal learning test (CVLT) version II.
 
-This is a modified and abridged version of the adult CVLT version #2. This
-script administers the 'learning' portion of the CVLT. First, the proband sees
+This is a modified and abridged version of the adult CVLT version II [1]. This
+script administers the 'learning' portion to the CVLT. First, the proband sees
 a screen instructing them to relinquish control of the testing computer to the
 experimenter. The experimenter then operates the CVLT GUI, which plays the
 stimuli and records probands' verbal responses for the five trials of the CVLT.
-A timer and a response counter are provided for convenience.
+A countdown timer and a response counter are provided. The 'recall and
+'recognition' portions to the CVLT are executed by two other scripts in the
+battery.
 
-Upon completion, summary stats are computed. These currently include the number
-of unique responses, number of intrusions, and number of repetitions per trial.
-I haven't yet found the rules for computing other the other stats (semanitc
-recall, clustering etc.). Specific intrusion responses are not recorded.
-
-Note also that there are 'recall and 'recognition' portions of this version the
-CVLT. These are executed by different scripts.
-
-TODO: Need new recordings of the verbal stimuli. The current ones are from STAN
-and are not high quality.
-
-TODO: Stimuli are in English and are currently ***HARD_CODED*** as such in the
-script. Therefore this script (and the other cvlt scripts) will need to be
-modified to allow other languages.
-
-Reference for the official CVLT:
-
-Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California verbal
-learning test - second edition. Adult version. Manual. Psychological
+[1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
+verbal learning test - second edition. Adult version. Manual. Psychological
 Corporation, San Antonio, TX.
-
-@author: Sam Mathias
-@status: completed
-@version: 1.0
-
 """
+
+# TODO: Replace current stimuli with Scott's, add acknowledgment.
+# TODO: Add other summary stats to method.
 
 import pandas
 try:
@@ -45,6 +28,7 @@ except ImportError:
     from PyQt4 import QtGui, QtCore
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 
 
 test_name = 'cvlt2'
@@ -54,14 +38,15 @@ output_format = [('proband_id', str),
                  ('trialn', int),
                  ('rsp', str)]
 
-
 trials = 5
 time_limit = 15
 isi = 2000
 
 
 class MainWindow(QtGui.QMainWindow):
-    """Experimenter-operated CVLT GUI object."""
+    """
+    Experimenter-operated CVLT GUI object.
+    """
 
     def __init__(self, data_obj, instructions):
         super(MainWindow, self).__init__()
@@ -82,8 +67,10 @@ class MainWindow(QtGui.QMainWindow):
         self.show()
 
     def set_central_widget(self):
-        """Saves the data accrued thus far then sets the central widget
-        contingent upon trial number and phase."""
+        """
+        Saves the data accrued thus far then sets the central widget
+        contingent upon trial number and phase.
+        """
 
         # save data
         if self.data_obj.data and self.data_obj.proband_id != 'TEST' and not \
@@ -138,7 +125,9 @@ class ListenWidget(QtGui.QWidget):
         self.show()
 
     def setup_ui(self):
-        """Creates the ListenWidget GUI."""
+        """
+        Creates the ListenWidget GUI.
+        """
         message_box = QtGui.QGroupBox(self.instr[3])
         self.label = QtGui.QLabel(self.instr[4 + self.trialn])
         self.label.setAlignment(QtCore.Qt.AlignCenter)
@@ -157,7 +146,9 @@ class ListenWidget(QtGui.QWidget):
         self.setLayout(widget_layout)
 
     def start_events(self):
-        """Starts playing the auditory stimuli."""
+        """
+        Starts playing the auditory stimuli.
+        """
         self.button.setText(self.instr[10])
         self.button.clicked.disconnect()
         self.timer = QtCore.QBasicTimer()
@@ -165,8 +156,10 @@ class ListenWidget(QtGui.QWidget):
         self.timer.start(isi, self)
 
     def timerEvent(self, e):
-        """Reimplemented event handler that plays stimuli and updates the
-        progress bar. Allows experimenter to proceed once done."""
+        """
+        Reimplemented event handler that plays stimuli and updates the
+        progress bar. Allows experimenter to proceed once done.
+        """
         nstim = len(self.stimuli)
         if self.num_played < nstim:
             QtGui.QSound.play(self.stimuli[self.num_played])
@@ -183,11 +176,13 @@ class ListenWidget(QtGui.QWidget):
 
 
 class RespondWidget(QtGui.QWidget):
-    """Widget for a response phase. Contains a set of response buttons and two
+    """
+    Widget for a response phase. Contains a set of response buttons and two
     dynamic number displays. The first number records the total responses made,
     and the second is a timer that counts down 15 seconds since the last
     response. When the countdown reaches zero, the phase is over, and the gui
-    allows no more responses to be recorded."""
+    allows no more responses to be recorded.
+    """
 
     def __init__(self, parent):
         super(RespondWidget, self).__init__(parent)
@@ -201,13 +196,17 @@ class RespondWidget(QtGui.QWidget):
         self.show()
 
     def update_data(self, response):
-        """Formats the response into the usual trial_info format and appends it
-        to the data iterable in the data object."""
+        """
+        Formats the response into the usual trial_info format and appends it
+        to the data iterable in the data object.
+        """
         trial_info = tuple(list(self.parent().current_trial) + [response])
         self.parent().data_obj.data.append(trial_info)
 
     def setup_ui(self):
-        """Sets up the gui for the widget."""
+        """
+        Sets up the gui for the widget.
+        """
         response_box = QtGui.QGroupBox(self.instr[14])
         response_grid = QtGui.QGridLayout()
         for j, word in enumerate(self.parent().words):
@@ -245,12 +244,14 @@ class RespondWidget(QtGui.QWidget):
         self.countdown.display(self.seconds_left)
 
     def response(self):
-        """Method called when any one of the response buttons are pressed.
+        """
+        Method called when any one of the response buttons are pressed.
         Formats the response and adds it to the data iterable, then updates the
         responses_made counter. If the countdown is not over, a reponse will
         reset the countdown and enable the pause button. If the cowntdown is
         over, responses are still counted, but they do not reset the
-        countdown."""
+        countdown.
+        """
         sender = self.sender()
         self.update_data(sender.text())
 
@@ -272,9 +273,11 @@ class RespondWidget(QtGui.QWidget):
             self.countdown.display(self.seconds_left)
 
     def timerEvent(self, _):
-        """Reimplemented event handler that counts down from 15 seconds. After
+        """
+        Reimplemented event handler that counts down from 15 seconds. After
         15 seconds, the pause button is replaced by a quit button, allowing the
-        experimenter to move on to the next trial."""
+        experimenter to move on to the next trial.
+        """
         if self.seconds_left > 0:
             self.seconds_left -= 1
             self.countdown.display(self.seconds_left)
@@ -285,8 +288,10 @@ class RespondWidget(QtGui.QWidget):
             self.button.clicked.connect(self.parent().set_central_widget)
 
     def pause_timer(self):
-        """When counting down, this pauses the countdown. Whilst already
-        paused, allows the experimenter to quit the trial."""
+        """
+        When counting down, this pauses the countdown. Whilst already
+        paused, allows the experimenter to quit the trial.
+        """
         if self.timer.isActive():
             self.timer.stop()
             self.button.setText(self.instr[18])
@@ -294,13 +299,17 @@ class RespondWidget(QtGui.QWidget):
 
 
 def control_method(proband_id, instructions):
-    """Generate a control iterable, a list of tuples in the format (proband_id,
-    TEST_NAME, trialn)."""
+    """
+    Generates a control iterable, a list of tuples in the format (proband_id,
+    TEST_NAME, trialn).
+    """
     return [(proband_id, test_name, trialn) for trialn in xrange(5)]
 
 
 def summary_method(data, instructions):
-    """Computes summary statistics for the CVLT."""
+    """
+    Computes summary statistics for the CVLT.
+    """
     df = data.to_df()
     cols, entries = summaries.get_universal_entries(data)
     for trialn in xrange(5):
@@ -316,10 +325,10 @@ def summary_method(data, instructions):
 
 
 def main():
-    """Command-line executor."""
-
-    tools.batch.run_single_test(test_name, control_method, None, output_format,
-                                summary_method, others=globals())
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':
