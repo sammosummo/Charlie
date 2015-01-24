@@ -26,7 +26,7 @@ cvlt2_trial_X_intrusions : Number of intrusions on trial X.
 cvlt2_trial_X_repetitions : Number of repetitions on trial X.
 cvlt2_trial_X_semantic : List-based semantic clustering index on trial X [2].
 cvlt2_trial_X_serial : List-based serial recall index on trial X [2].
-cvlt2_sum* or cvlt2_avg* : Aggregations across the 5 trials.
+cvlt2_mean* : Aggregations across the 5 trials.
 
 
 [1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
@@ -39,6 +39,7 @@ Corporation, San Antonio, TX.
 New semantic and serial clustering indices for the California Verbal Learning
 Test–Second Edition: Background, rationale, and formulae. J. Int. Neuropsychol.
 Soc., 8, 425–435.
+
 """
 
 # TODO: Add other summary stats to method.
@@ -62,7 +63,7 @@ output_format = [('proband_id', str),
 
 trials = 5
 time_limit = 15
-isi = 2000
+isi = .2000
 
 
 class MainWindow(QtGui.QMainWindow):
@@ -328,6 +329,42 @@ def control_method(proband_id, instructions):
     return [(proband_id, test_name, trialn) for trialn in xrange(5)]
 
 
+def semantic_ci(cluster_dic, responses):
+    """
+    Returns the list-based semantic clustering index from the CVLT-II.
+    """
+    cluster_dic['intrusion'] = None
+    cluster_dic['repetition'] = None
+    tally = []
+    for i, rsp in enumerate(responses):
+        if rsp in tally:
+            responses[i] = 'repetition'  # actually a repetition
+        tally.append(rsp)
+    semantic_responses = [cluster_dic[rsp] for rsp in responses]
+    tally = 0
+    for i, rsp in enumerate(semantic_responses):
+        if i > 0 and rsp is not None:
+            if rsp == semantic_responses[i - 1]:
+                tally += 1
+    r = len([x for x in responses if x not in ['intrusion', 'repetition']])
+    return tally - (r - 1) / 5.
+
+
+def serial_ci(serial_dic, responses):
+    """
+    Returns the list-based serial clustering index from the CVLT-II.
+    """
+    serial_dic['intrusion'] = None
+    serial_responses = [serial_dic[rsp] for rsp in responses]
+    tally = 0
+    for i, rsp in enumerate(serial_responses):
+        if i > 0 and rsp is not None:
+            if rsp == serial_responses[i - 1] + 1:
+                tally += 1
+    r = len([x for x in responses if x not in ['intrusion', 'repetition']])
+    return tally - (r - 1) / 16.
+
+
 def summary_method(data, instructions):
     """
     Computes summary statistics for the CVLT.
@@ -339,25 +376,30 @@ def summary_method(data, instructions):
     df1 = data.to_df()
 
     for X in xrange(5):
-        df2 = df1[df1.trialn == x]
-        intrusions = len(df2[df2.rsp == 'intrusion'])
 
-        subdf = df[df.trialn == X]
-        subdf_intrusions = subdf[subdf.rsp == 'intrusion']
-        subdf_nointrusions = subdf[subdf.rsp != 'intrusion']
-        subdf_nointrusions_unique = subdf_nointrusions.drop_duplicates()
+        df2 = df1[df1.trialn == X]
+        responses = df2.rsp
+        nintr = len(df2[df2.rsp == 'intrusion'])
+        nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
+        nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
+        semantic = semantic_ci(dict(zip(words, semantic_clusters)), responses)
+        serial = serial_ci(dict(zip(words, range(len(words)))), responses)
 
-        cols.append('cvlt2_trial_%i_valid' % X)
-        entries.append(len(subdf_nointrusions_unique))
-        cols.append('cvlt2_trial_%i_intrusions' % X)
-        entries.append(len(subdf_intrusions))
-        cols.append('cvlt2_trial_%i_repetitions' % X)
-        entries.append(len(subdf_nointrusions)-len(subdf_nointrusions_unique))
+        cols += ['cvlt2_trial_%i_valid' % X,
+                 'cvlt2_trial_%i_intrusions' % X,
+                 'cvlt2_trial_%i_repetitions' % X,
+                 'cvlt2_trial_%i_semantic' % X,
+                 'cvlt2_trial_%i_serial' % X,]
+        entries += [nvalid, nintr, nreps, semantic, serial]
 
-        dfsum = pandas.DataFrame(entries, cols).T
+    df = pandas.DataFrame(entries, cols).T
 
+    for dv in ['valid', 'intrusions', 'repetitions', 'semantic', 'serial']:
+        name = 'cvlt2_mean_' + dv
+        cs = [c for c in df.columns if dv in c]
+        df[name] = df[cs].mean()
 
-    return dfsum
+    return df
 
 
 def main():
