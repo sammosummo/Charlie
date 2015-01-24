@@ -2,23 +2,45 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-cvlt2: Computerised California verbal learning test (CVLT) version II.
+cvlt2: Computerised California verbal learning test, version II (CVLT-II).
 
-This is a modified and abridged version of the adult CVLT version II [1]. This
-script administers the 'learning' portion to the CVLT. First, the proband sees
-a screen instructing them to relinquish control of the testing computer to the
-experimenter. The experimenter then operates the CVLT GUI, which plays the
-stimuli and records probands' verbal responses for the five trials of the CVLT.
-A countdown timer and a response counter are provided. The 'recall and
-'recognition' portions to the CVLT are executed by two other scripts in the
+This is a modified and abridged version of the adult CVLT-II [1]. This script
+administers the 'learning' portion to the CVLT. First, the proband sees a
+screen instructing them to relinquish control of the testing computer to the
+experimenter. The experimenter then operates the CVLT GUI. On each trial, the
+proband hears audio recordings of 16 words [2], and then repeats out loud as
+many of them as he/she can recall. The experimenter records the correctly
+recalled words, as well as the number of intrusions and repetitions, using the
+GUI. The expermenter should end the trial after 15 seconds without a response
+have elapsed. To facilitate this, the GUI includes a countdown timer that
+resets to 15 after each response. There are 5 identical trials.
+
+In addition to this script, there are 'recall' and 'recognition' portions to
+our version of the CVLT. These are executed by two other scripts in the
 battery.
+
+Summary statistics:
+
+cvlt2_trial_X_valid : Number of valid responses on trial X.
+cvlt2_trial_X_intrusions : Number of intrusions on trial X.
+cvlt2_trial_X_repetitions : Number of repetitions on trial X.
+cvlt2_trial_X_semantic : List-based semantic clustering index on trial X [2].
+cvlt2_trial_X_serial : List-based serial recall index on trial X [2].
+cvlt2_sum* or cvlt2_avg* : Aggregations across the 5 trials.
+
 
 [1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
 verbal learning test - second edition. Adult version. Manual. Psychological
 Corporation, San Antonio, TX.
+
+[2] Words spoken and recorded by Scott Bressler at Boston University.
+
+[3] Stricker, J.L., Brown, G.G., Wixted, J., Baldo, J.V., & Delis, D.C. (2002).
+New semantic and serial clustering indices for the California Verbal Learning
+Test–Second Edition: Background, rationale, and formulae. J. Int. Neuropsychol.
+Soc., 8, 425–435.
 """
 
-# TODO: Replace current stimuli with Scott's, add acknowledgment.
 # TODO: Add other summary stats to method.
 
 import pandas
@@ -56,7 +78,7 @@ class MainWindow(QtGui.QMainWindow):
         self.next_phase = 'listen'
 
         # load stimuli filenames
-        path = data.pj(data.AUDIO_PATH, test_name, 'EN')
+        path = data.pj(data.AUDIO_PATH, test_name)
         self.instr = instructions
         self.words = self.instr[-1].split('\n')
         self.stimuli = [data.pj(path, w + '.wav') for w in self.words]
@@ -310,17 +332,31 @@ def summary_method(data, instructions):
     """
     Computes summary statistics for the CVLT.
     """
-    df = data.to_df()
     cols, entries = summaries.get_universal_entries(data)
-    for trialn in xrange(5):
-        cols += ['trial_%i_%s' % (trialn, s) for s in ['rsp', 'int', 'rep']]
-        subdf = df[df.trialn == trialn]
+
+    words = instructions[-1].split('\n')
+    semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
+    df1 = data.to_df()
+
+    for X in xrange(5):
+        df2 = df1[df1.trialn == x]
+        intrusions = len(df2[df2.rsp == 'intrusion'])
+
+        subdf = df[df.trialn == X]
         subdf_intrusions = subdf[subdf.rsp == 'intrusion']
         subdf_nointrusions = subdf[subdf.rsp != 'intrusion']
         subdf_nointrusions_unique = subdf_nointrusions.drop_duplicates()
-        entries += [len(subdf_nointrusions_unique), len(subdf_intrusions),
-                    len(subdf_nointrusions) - len(subdf_nointrusions_unique)]
+
+        cols.append('cvlt2_trial_%i_valid' % X)
+        entries.append(len(subdf_nointrusions_unique))
+        cols.append('cvlt2_trial_%i_intrusions' % X)
+        entries.append(len(subdf_intrusions))
+        cols.append('cvlt2_trial_%i_repetitions' % X)
+        entries.append(len(subdf_nointrusions)-len(subdf_nointrusions_unique))
+
         dfsum = pandas.DataFrame(entries, cols).T
+
+
     return dfsum
 
 
