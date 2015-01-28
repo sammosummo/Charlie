@@ -333,16 +333,10 @@ def control_method(proband_id, instructions):
     """
     return [(proband_id, test_name, trialn) for trialn in xrange(5)]
 
+
 def semantic_clustering(words, clusters, responses):
     """
-    List-based semantic clustering index from the CVLT-II. The recipe for the
-    calculation of this index is not exhaustive: it is not clear to me exactly
-    when repetitions should or should not be counted. Here, I count a
-    repetition IF IT IS THE FIRST ELEMENT WITHIN A SEMANTIC CLUSTER. So for
-    example:
-        ['giraffe', 'giraffe', 'zebra']
-    would be a cluster
-
+    List-based semantic clustering index from the CVLT-II.
     """
     dic = {w: c for w, c in zip(words, clusters)}
     dic['intrusion'] = None
@@ -357,14 +351,15 @@ def semantic_clustering(words, clusters, responses):
     for i in xrange(1, len(responses)):
         if clusts[i] == clusts[i - 1]:
             obs += 1
-    print clusts, obs
+    r = len(filter(None, clusts))
+    return obs - ((r - 1) / 5.)
 
 
 
 from charlie.tools.instructions import read_instructions
 instr = read_instructions(test_name, 'EN')
 words = instr[-1].split('\n')
-semantic_clustering(words, clusters, ['cabbage', 'onion', 'celery', 'intrusion', 'giraffe', 'giraffe', 'zebra'])
+print semantic_clustering(words, clusters, ['cabbage', 'onion', 'celery', 'zebra', 'giraffe'])
 
     # """
     #
