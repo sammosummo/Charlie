@@ -355,11 +355,32 @@ def semantic_clustering(words, clusters, responses):
     return obs - ((r - 1) / 5.)
 
 
+def serial_clustering(words, responses):
+    """
+    List-based serial clustering index from the CVLT-II.
+    """
+    dic = {w: c for w, c in zip(words, xrange(len(words)))}
+    print dic
+    dic['intrusion'] = None
+    dic['repetition'] = None
+    words_used = []
+    for i in xrange(len(responses)):
+        if responses[i] in words_used:
+            responses[i] = 'repetition'
+        words_used.append(responses[i])
+    clusts = [dic[r] for r in responses]
+    obs = 0
+    for i in xrange(1, len(responses)):
+        if clusts[i] == clusts[i - 1]:
+            obs += 1
+    r = len(filter(None, clusts))
+    return obs - ((r - 1) / 16.)
 
 from charlie.tools.instructions import read_instructions
 instr = read_instructions(test_name, 'EN')
 words = instr[-1].split('\n')
-print semantic_clustering(words, clusters, ['cabbage', 'onion', 'celery', 'zebra', 'giraffe'])
+print words
+print serial_clustering(words, ['truck', 'spinach', 'giraffe', 'bookcase'])
 
     # """
     #
