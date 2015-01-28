@@ -2,31 +2,33 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-cvlt2: Computerised California verbal learning test, version II (CVLT-II).
+cvlt2: Computerised California verbal learning test.
 
 This is a modified and abridged version of the adult CVLT-II [1]. This script
-administers the 'learning' portion to the CVLT. First, the proband sees a
+administers the "learning" portion to the CVLT. First, the proband sees a
 screen instructing them to relinquish control of the testing computer to the
 experimenter. The experimenter then operates the CVLT GUI. On each trial, the
 proband hears audio recordings of 16 words [2], and then repeats out loud as
 many of them as he/she can recall. The experimenter records the correctly
-recalled words, as well as the number of intrusions and repetitions, using the
-GUI. The expermenter should end the trial after 15 seconds without a response
-have elapsed. To facilitate this, the GUI includes a countdown timer that
-resets to 15 after each response. There are 5 identical trials.
+recalled words, as well as the number of intrusions (words not from the list),
+using the GUI. After 15 seconds without a response, the experimenter prompts
+the proband for their final response or responses, then exists the trial. There
+are 5 such trials.
 
-In addition to this script, there are 'recall' and 'recognition' portions to
-our version of the CVLT. These are executed by two other scripts in the
-battery.
+The official CVLT-II contains a second part in which another list of words is
+learned. This is omitted from the current test. In addition to this script,
+there are 'recall' and 'recognition' portions to our version of the CVLT. These
+are executed by two other scripts in the battery.
 
 Summary statistics:
 
-cvlt2_trial_X_valid : Number of valid responses on trial X.
-cvlt2_trial_X_intrusions : Number of intrusions on trial X.
-cvlt2_trial_X_repetitions : Number of repetitions on trial X.
-cvlt2_trial_X_semantic : List-based semantic clustering index on trial X [2].
-cvlt2_trial_X_serial : List-based serial recall index on trial X [2].
-cvlt2_mean* : Aggregations across the 5 trials.
+    trial_X_valid : Number of valid responses on trial X.
+    trial_X_intrusions : Number of intrusions on trial X.
+    trial_X_repetitions : Number of repetitions on trial X.
+    trial_X_semantic : List-based semantic clustering index on trial X [2].
+    trial_X_serial : List-based serial recall index on trial X [2].
+
+    Aggregated stats across the five trials are also computed.
 
 
 [1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
@@ -41,29 +43,32 @@ Test–Second Edition: Background, rationale, and formulae. J. Int. Neuropsychol
 Soc., 8, 425–435.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
-# TODO: Add other summary stats to method.
 
-import pandas
 try:
     from PySide import QtGui, QtCore
 except ImportError:
     from PyQt4 import QtGui, QtCore
+
+import pandas
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
 import charlie.tools.batch as batch
 
 
 test_name = 'cvlt2'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('trialn', int),
-                 ('rsp', str)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('rsp', str)
+]
 trials = 5
 time_limit = 15
-isi = .2000
+isi = .2000  # TODO: set isi to 2 seconds
+clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
 
 
 class MainWindow(QtGui.QMainWindow):
@@ -270,8 +275,8 @@ class RespondWidget(QtGui.QWidget):
         """
         Method called when any one of the response buttons are pressed.
         Formats the response and adds it to the data iterable, then updates the
-        responses_made counter. If the countdown is not over, a reponse will
-        reset the countdown and enable the pause button. If the cowntdown is
+        responses_made counter. If the countdown is not over, a response will
+        reset the countdown and enable the pause button. If the countdown is
         over, responses are still counted, but they do not reset the
         countdown.
         """
@@ -328,86 +333,119 @@ def control_method(proband_id, instructions):
     """
     return [(proband_id, test_name, trialn) for trialn in xrange(5)]
 
-
-def semantic_ci(cluster_dic, responses):
+def semantic_clustering(words, clusters, responses):
     """
-    Returns the list-based semantic clustering index from the CVLT-II.
+    List-based semantic clustering index from the CVLT-II. The recipe for the
+    calculation of this index is not exhaustive: it is not clear to me exactly
+    when repetitions should or should not be counted. Here, I count a
+    repetition IF IT IS THE FIRST ELEMENT WITHIN A SEMANTIC CLUSTER. So for
+    example:
+        ['giraffe', 'giraffe', 'zebra']
+    would be a cluster
+
     """
-    cluster_dic['intrusion'] = None
-    cluster_dic['repetition'] = None
-    tally = []
-    for i, rsp in enumerate(responses):
-        if rsp in tally:
-            responses[i] = 'repetition'  # actually a repetition
-        tally.append(rsp)
-    semantic_responses = [cluster_dic[rsp] for rsp in responses]
-    tally = 0
-    for i, rsp in enumerate(semantic_responses):
-        if i > 0 and rsp is not None:
-            if rsp == semantic_responses[i - 1]:
-                tally += 1
-    r = len([x for x in responses if x not in ['intrusion', 'repetition']])
-    return tally - (r - 1) / 5.
+    dic = {w: c for w, c in zip(words, clusters)}
+    dic['intrusion'] = None
+    dic['repetition'] = None
+    words_used = []
+    for i in xrange(len(responses)):
+        if responses[i] in words_used:
+            responses[i] = 'repetition'
+        words_used.append(responses[i])
+    clusts = [dic[r] for r in responses]
+    obs = 0
+    for i in xrange(1, len(responses)):
+        if clusts[i] == clusts[i - 1]:
+            obs += 1
+    print clusts, obs
 
 
-def serial_ci(serial_dic, responses):
-    """
-    Returns the list-based serial clustering index from the CVLT-II.
-    """
-    serial_dic['intrusion'] = None
-    serial_responses = [serial_dic[rsp] for rsp in responses]
-    tally = 0
-    for i, rsp in enumerate(serial_responses):
-        if i > 0 and rsp is not None:
-            if rsp == serial_responses[i - 1] + 1:
-                tally += 1
-    r = len([x for x in responses if x not in ['intrusion', 'repetition']])
-    return tally - (r - 1) / 16.
 
+from charlie.tools.instructions import read_instructions
+instr = read_instructions(test_name, 'EN')
+words = instr[-1].split('\n')
+semantic_clustering(words, clusters, ['cabbage', 'onion', 'celery', 'intrusion', 'giraffe', 'giraffe', 'zebra'])
 
-def summary_method(data, instructions):
-    """
-    Computes summary statistics for the CVLT.
-    """
-    cols, entries = summaries.get_universal_entries(data)
+    # """
+    #
+    # """
+    # Returns the list-based semantic clustering index from the CVLT-II.
+    # """
+    # cluster_dic['intrusion'] = None
+    # cluster_dic['repetition'] = None
+    # tally = []
+    # for i, rsp in enumerate(responses):
+    #     if rsp in tally:
+    #         responses[i] = 'repetition'  # actually a repetition
+    #     tally.append(rsp)
+    # semantic_responses = [cluster_dic[rsp] for rsp in responses]
+    # tally = 0
+    # for i, rsp in enumerate(semantic_responses):
+    #     if i > 0 and rsp is not None:
+    #         if rsp == semantic_responses[i - 1]:
+    #             tally += 1
+    # r = len([x for x in responses if x not in ['intrusion', 'repetition']])
+    # return tally - (r - 1) / 5.
 
-    words = instructions[-1].split('\n')
-    semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
-    df1 = data.to_df()
-
-    for X in xrange(5):
-
-        df2 = df1[df1.trialn == X]
-        responses = df2.rsp
-        nintr = len(df2[df2.rsp == 'intrusion'])
-        nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
-        nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
-        semantic = semantic_ci(dict(zip(words, semantic_clusters)), responses)
-        serial = serial_ci(dict(zip(words, range(len(words)))), responses)
-
-        cols += ['cvlt2_trial_%i_valid' % X,
-                 'cvlt2_trial_%i_intrusions' % X,
-                 'cvlt2_trial_%i_repetitions' % X,
-                 'cvlt2_trial_%i_semantic' % X,
-                 'cvlt2_trial_%i_serial' % X,]
-        entries += [nvalid, nintr, nreps, semantic, serial]
-
-    df = pandas.DataFrame(entries, cols).T
-
-    for dv in ['valid', 'intrusions', 'repetitions', 'semantic', 'serial']:
-        name = 'cvlt2_mean_' + dv
-        cs = [c for c in df.columns if dv in c]
-        df[name] = df[cs].mean()
-
-    return df
-
-
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
-if __name__ == '__main__':
-    main()
+#
+# def serial_ci(serial_dic, responses):
+#     """
+#     Returns the list-based serial clustering index from the CVLT-II.
+#     """
+#     serial_dic['intrusion'] = None
+#     serial_responses = [serial_dic[rsp] for rsp in responses]
+#     tally = 0
+#     for i, rsp in enumerate(serial_responses):
+#         if i > 0 and rsp is not None:
+#             if rsp == serial_responses[i - 1] + 1:
+#                 tally += 1
+#     r = len([x for x in responses if x not in ['intrusion', 'repetition']])
+#     return tally - (r - 1) / 16.
+#
+#
+# def summary_method(data, instructions):
+#     """
+#     Computes summary statistics for the CVLT.
+#     """
+#     cols, entries = summaries.get_universal_entries(data)
+#
+#     words = instructions[-1].split('\n')
+#     semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
+#     df1 = data.to_df()
+#
+#     for X in xrange(5):
+#
+#         df2 = df1[df1.trialn == X]
+#         responses = df2.rsp
+#         nintr = len(df2[df2.rsp == 'intrusion'])
+#         nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
+#         nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
+#         semantic = semantic_ci(dict(zip(words, semantic_clusters)), responses)
+#         serial = serial_ci(dict(zip(words, range(len(words)))), responses)
+#
+#         cols += ['cvlt2_trial_%i_valid' % X,
+#                  'cvlt2_trial_%i_intrusions' % X,
+#                  'cvlt2_trial_%i_repetitions' % X,
+#                  'cvlt2_trial_%i_semantic' % X,
+#                  'cvlt2_trial_%i_serial' % X,]
+#         entries += [nvalid, nintr, nreps, semantic, serial]
+#
+#     df = pandas.DataFrame(entries, cols).T
+#
+#     for dv in ['valid', 'intrusions', 'repetitions', 'semantic', 'serial']:
+#         name = 'cvlt2_mean_' + dv
+#         cs = [c for c in df.columns if dv in c]
+#         df[name] = df[cs].mean()
+#
+#     return df
+#
+#
+# def main():
+#     """
+#     Run this test.
+#     """
+#     batch.run_a_test(test_name)
+#
+#
+# if __name__ == '__main__':
+#     main()

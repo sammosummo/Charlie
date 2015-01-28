@@ -4,15 +4,15 @@ Created on Mon Nov 10 11:06:45 2014
 
 cTrails: Computerised comprehensive trail-making test.
 
-This is a computerised version of Reynold's comprehensive trail-making test
+This is a computerised version of Reynold's "comprehensive" trail-making test
 [1, 2], which is itself an extension of the popular trail-making test [3]. On
 each trial, the proband must click on circles drawn on the screen in a
 specified order, making a 'trail' between them. There are a total of 10 trials
 in the test, with one practice and one test trial of each kind. Each practice
-trial contains 8 circles and each test trial contains 25 circles. In order to
-provide better backwards compatibility between the original trail-making test,
-the final trial of the comprehensive test has been modified so that it contains
-no distracter circles.
+trial contains 8 circles and each test trial contains 20-25 circles. In order
+to provide better backwards compatibility between the original trail-making
+test, the final trial of the this test contains no distracter circles (unlike
+the Reynold's version [1]).
 
 The traditional tests are done with pen and paper and require an experienced
 experimenter to administer them. The current version should be more convenient
@@ -94,10 +94,36 @@ circle_labels = [
 ]
 phases = ['practice', 'test'] * 5
 ntargets = [8, 25, 8, 25, 8, 25, 8, 20, 8, 25]
-target_labels = [[circle_labels[j] for j in xrange(ntargets[i])] for i in xrange(10)]
+target_labels = [
+    [
+        circle_labels[i][j] for j in xrange(ntargets[i])
+    ] for i in xrange(10)
+]
+
+"""
+---------------------------------------------------------------------------
+The following was used to generate random positions of the circles on each
+trial and for generating the circles with matplotlib. Do not uncomment!
+"""
+import random
+import matplotlib.pyplot as plt
+
+def make_circle(char):
+    circle = plt.Circle((.5, .5), .2, color='b')
+
+    fig = plt.figure()
+    fig.set_size_inches(1, 1)
+    ax = plt.Axes(fig, [0., 0., 1., 1.])
+    ax.set_axis_off()
+
+    fig.add_axes(ax)
 
 
-print target_labels
+make_circle('a')
+
+
+
+
 
 #
 #
