@@ -201,7 +201,8 @@ def run_a_batch():
         except:
             b = data.BATCHES_PATH
             f = open(b, 'rb')
-    test_names = [l.strip('\n') for l in f]
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+    test_names = [quickfix(l) for l in f]
     print '---Running the following tests in a batch:', test_names
 
     for test_name in test_names:
