@@ -30,6 +30,7 @@ import charlie.tools.visual as visual
 import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 
 test_name = 'emotion_recognition'
 
@@ -64,6 +65,7 @@ def control_method(proband_id, instructions):
         emotions_dict[code] = name
     control = []
     for trialn, imgf in enumerate(stimuli):
+        print trialn, imgf
         control.append((proband_id, test_name, trialn,
                         {'M': 'Male', 'F': 'Female'}[imgf[0]],
                         emotions_dict[imgf[1]],
@@ -133,13 +135,10 @@ def summary_method(data, instructions):
     return dfsum
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':
