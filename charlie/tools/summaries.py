@@ -115,14 +115,14 @@ def get_rt(df, prefix=''):
     y = x[np.abs(x - a) <= (3 * x.std())]
     b = y.mean()
     c = len(x)-len(y)
-    cols = ['rt_mean', 'rt_mean_outrmvd', 'n_outrmvd']
+    cols = ['rt_mean', 'rt_mean_outrmvd', 'rt_outrmvd']
     if prefix:
         cols = ['%s_%s' % (prefix, col) for col in cols]
     entries = [a, b, c]
     return cols, entries
 
 
-def get_accuracy(df, prefix='', ans_col='ans'):
+def get_accuracy(df, prefix='', ans_col='ans', rts=True):
     """
     Generates accuracy statistics: number of trials, number of correct trials,
     proportion of correct trials, rau-transformed proportion correct.
@@ -150,14 +150,16 @@ def get_accuracy(df, prefix='', ans_col='ans'):
     ncorrect = len(corrects)
     if ntrials == 0:
         pcorrect = None
-        r = None
     else:
         pcorrect = ncorrect / float(ntrials)
-        r = rau(ncorrect, ntrials)
-    cols = ['ntrials', 'ncorrect', 'pcorrect', 'rau(pcorrect)']
+    cols = ['ntrials', 'ncorrect', 'pcorrect']
     if prefix:
         cols = ['%s_%s' % (prefix, col) for col in cols]
-    entries = [ntrials, ncorrect, pcorrect, r]
+    entries = [ntrials, ncorrect, pcorrect]
+    if rts:
+        a, b = get_rt(corrects, prefix)
+        cols += a
+        entries += b
     return cols, entries
 
 

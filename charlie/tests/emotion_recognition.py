@@ -14,12 +14,17 @@ and there are no practice trials.
 
 Summary statistics:
 
-    X_Y_Z_ntrials : number of trials for emotion X, sex Y, and salience Z.
-    *_ncorrect : number of trials correct for emotion X, sex Y, and salience Z.
-    *_pcorrect : proportion correct for emotion X, sex Y, and salience Z.
-    *_meanrt : mean reaction time for emotion X, sex Y, and salience Z.
-    X_* : stats collapsed over gender and salience
-    overall_* : stats collapsed over all trials
+    overall_*
+    [emotion]_*
+    [emotion]_[sex]_*
+    [emotion]_[sex]_[salience]_*
+
+    *ntrials : number of trials.
+    *ncorrect : number of correct trials.
+    *pcorrect : proportion of trials correct.
+    *rt_mean : mean response time on correct trials in milliseconds.
+    *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    *rt_outrmvd : number of outlier trials.
 
 References:
 
@@ -59,29 +64,28 @@ black_bg = True
 
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. For this test, it is a list of tuples in
-    the format (proband_id, test_name, trialn, sex, emotion, salience, f)."""
+    """
+    Generates a control iterable. For this test, it is a list of tuples in
+    the format (proband_id, test_name, trialn, sex, emotion, salience, f).
+    """
     p = data.pj(data.VISUAL_PATH, test_name)
     stimuli = sorted(f for f in data.ld(p) if '.png' in f)
     stimuli = [j for _, j in sorted(zip(stim_order, stimuli))]
-    labels = instructions[-5:]
-    emotions_dict = {}
-    for label in labels:
-        code, name = label.split('=')
-        emotions_dict[code] = name
+    emo_dict = {l.split('=')[0]: l.split('=')[1] for l in instructions[-5:]}
     control = []
     for trialn, imgf in enumerate(stimuli):
-        print trialn, imgf
         control.append((proband_id, test_name, trialn,
                         {'M': 'Male', 'F': 'Female'}[imgf[0]],
-                        emotions_dict[imgf[1]],
+                        emo_dict[imgf[1]],
                         {'X': 'Weak', 'Z': 'Strong', '_': 'N/A'}[imgf[2]],
                         data.pj(p, imgf)))
     return control
 
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""
+    """
+    Runs a single trial of the test.
+    """
     _, _, trialn, _, _, _, imgf = trial_info
     labels = [l.split('=')[1] for l in instructions[-5:]]
     if not screen.wordzones:
@@ -120,23 +124,29 @@ def trial_method(screen, instructions, trial_info):
 
 
 def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
+    """
+    Computes summary stats for this task.
+    """
     cols, entries = summaries.get_universal_entries(data)
-    
-    condition_set = [('emotion', ['Angry', 'Afraid', 'Sad', 'Happy', 'Neutral',
-                                  'all']),
-                     ('salience', ['Weak', 'Strong', 'all']),
-                     ('sex', ['Male', 'Female', 'all'])]
-    
-    a, b = summaries.get_all_combinations_malt(df, condition_set,
-                                                     ans_col='emotion')
-    cols += a
-    entries += b
+    emo_dict = {l.split('=')[1]: l.split('=')[0] for l in instructions[-5:]}
+    df = data.to_df()
+    a, b = summaries.get_accuracy(df, 'overall', 'emotion', True)
+    cols += a; entries += b
+    for emotion in df.emotion.unique():
+        df1 = df[df.emotion == emotion]
+        a, b = summaries.get_accuracy(df1, emotion, 'emotion', True)
+        cols += a; entries += b
+        for sex in df1.sex.unique():
+            prefix = '%s_%s' %(emotion, sex)
+            df2 = df1[df1.sex == sex]
+            a, b = summaries.get_accuracy(df2, prefix, 'emotion', True)
+            cols += a; entries += b
+            for salience in df2.salience.unique():
+                if salience != 'N/A':
+                    prefix = '%s_%s_%s' %(emotion, sex, salience)
+                    df3 = df2[df2.salience == salience]
+                    a, b = summaries.get_accuracy(df2, prefix, 'emotion', True)
+                    cols += a; entries += b
     dfsum = pandas.DataFrame(entries, cols).T
     return dfsum
 
