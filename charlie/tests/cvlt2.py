@@ -20,6 +20,9 @@ learned. This is omitted from the current test. In addition to this script,
 there are 'recall' and 'recognition' portions to our version of the CVLT. These
 are executed by two other scripts in the battery.
 
+In a follow-up study, Delis et al. [4] introduced a new discriminability metric
+for the CVLT. That paper is behind a paywall
+
 Summary statistics:
 
     trial_X_valid : Number of valid responses on trial X.
@@ -27,8 +30,7 @@ Summary statistics:
     trial_X_repetitions : Number of repetitions on trial X.
     trial_X_semantic : List-based semantic clustering index on trial X [2].
     trial_X_serial : List-based serial recall index on trial X [2].
-
-    Aggregated stats across the five trials are also computed.
+    mean_ * : Mean stats across the five trials.
 
 
 [1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
@@ -43,6 +45,8 @@ Test–Second Edition: Background, rationale, and formulae. J. Int. Neuropsychol
 Soc., 8, 425–435.
 
 """
+# TODO: Recall discriminability measure for the CVLT?
+
 __version__ = 1.0
 __author__ = 'Sam Mathias'
 
@@ -359,109 +363,67 @@ def serial_clustering(words, responses):
     """
     List-based serial clustering index from the CVLT-II.
     """
-    dic = {w: c for w, c in zip(words, xrange(len(words)))}
-    print dic
-    dic['intrusion'] = None
-    dic['repetition'] = None
     words_used = []
+    serial_positions = []
     for i in xrange(len(responses)):
         if responses[i] in words_used:
             responses[i] = 'repetition'
         words_used.append(responses[i])
-    clusts = [dic[r] for r in responses]
+        if responses[i] not in ['repetition', 'intrusion']:
+            serial_positions.append(words.index(responses[i]))
+        else:
+            serial_positions.append(None)
     obs = 0
     for i in xrange(1, len(responses)):
-        if clusts[i] == clusts[i - 1]:
+        if serial_positions[i] == serial_positions[i - 1] + 1:
             obs += 1
-    r = len(filter(None, clusts))
+    r = len(filter(None, serial_positions))
     return obs - ((r - 1) / 16.)
 
-from charlie.tools.instructions import read_instructions
-instr = read_instructions(test_name, 'EN')
-words = instr[-1].split('\n')
-print words
-print serial_clustering(words, ['truck', 'spinach', 'giraffe', 'bookcase'])
 
-    # """
-    #
-    # """
-    # Returns the list-based semantic clustering index from the CVLT-II.
-    # """
-    # cluster_dic['intrusion'] = None
-    # cluster_dic['repetition'] = None
-    # tally = []
-    # for i, rsp in enumerate(responses):
-    #     if rsp in tally:
-    #         responses[i] = 'repetition'  # actually a repetition
-    #     tally.append(rsp)
-    # semantic_responses = [cluster_dic[rsp] for rsp in responses]
-    # tally = 0
-    # for i, rsp in enumerate(semantic_responses):
-    #     if i > 0 and rsp is not None:
-    #         if rsp == semantic_responses[i - 1]:
-    #             tally += 1
-    # r = len([x for x in responses if x not in ['intrusion', 'repetition']])
-    # return tally - (r - 1) / 5.
+def summary_method(data, instructions):
+    """
+    Computes summary statistics for the CVLT.
+    """
+    cols, entries = summaries.get_universal_entries(data)
 
-#
-# def serial_ci(serial_dic, responses):
-#     """
-#     Returns the list-based serial clustering index from the CVLT-II.
-#     """
-#     serial_dic['intrusion'] = None
-#     serial_responses = [serial_dic[rsp] for rsp in responses]
-#     tally = 0
-#     for i, rsp in enumerate(serial_responses):
-#         if i > 0 and rsp is not None:
-#             if rsp == serial_responses[i - 1] + 1:
-#                 tally += 1
-#     r = len([x for x in responses if x not in ['intrusion', 'repetition']])
-#     return tally - (r - 1) / 16.
-#
-#
-# def summary_method(data, instructions):
-#     """
-#     Computes summary statistics for the CVLT.
-#     """
-#     cols, entries = summaries.get_universal_entries(data)
-#
-#     words = instructions[-1].split('\n')
-#     semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
-#     df1 = data.to_df()
-#
-#     for X in xrange(5):
-#
-#         df2 = df1[df1.trialn == X]
-#         responses = df2.rsp
-#         nintr = len(df2[df2.rsp == 'intrusion'])
-#         nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
-#         nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
-#         semantic = semantic_ci(dict(zip(words, semantic_clusters)), responses)
-#         serial = serial_ci(dict(zip(words, range(len(words)))), responses)
-#
-#         cols += ['cvlt2_trial_%i_valid' % X,
-#                  'cvlt2_trial_%i_intrusions' % X,
-#                  'cvlt2_trial_%i_repetitions' % X,
-#                  'cvlt2_trial_%i_semantic' % X,
-#                  'cvlt2_trial_%i_serial' % X,]
-#         entries += [nvalid, nintr, nreps, semantic, serial]
-#
-#     df = pandas.DataFrame(entries, cols).T
-#
-#     for dv in ['valid', 'intrusions', 'repetitions', 'semantic', 'serial']:
-#         name = 'cvlt2_mean_' + dv
-#         cs = [c for c in df.columns if dv in c]
-#         df[name] = df[cs].mean()
-#
-#     return df
-#
-#
-# def main():
-#     """
-#     Run this test.
-#     """
-#     batch.run_a_test(test_name)
-#
-#
-# if __name__ == '__main__':
-#     main()
+    words = instructions[-1].split('\n')
+    semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
+    df1 = data.to_df()
+
+    for trialn in xrange(5):
+
+        df2 = df1[df1.trialn == trialn]
+        responses = df2.rsp
+        nintr = len(df2[df2.rsp == 'intrusion'])
+        nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
+        nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
+        semantic = semantic_clustering(words, clusters, responses)
+        serial = serial_clustering(words, responses)
+
+        cols += ['trial_%i_valid' % trialn,
+                 'trial_%i_intrusions' % trialn,
+                 'trial_%i_repetitions' % trialn,
+                 'trial_%i_semantic' % trialn,
+                 'trial_%i_serial' % trialn,]
+        entries += [nvalid, nintr, nreps, semantic, serial]
+
+    df = pandas.DataFrame(entries, cols).T
+
+    for dv in ['valid', 'intrusions', 'repetitions', 'semantic', 'serial']:
+        name = 'mean_' + dv
+        cs = [c for c in df.columns if dv in c]
+        df[name] = df[cs].mean()
+
+    return df
+
+
+def main():
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
+
+
+if __name__ == '__main__':
+    main()
