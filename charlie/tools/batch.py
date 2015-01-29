@@ -70,6 +70,8 @@ def run_a_test(test_name, batch_mode=False):
 
     # import the test module
     mod = importlib.import_module('charlie.tests.' + test_name)
+    print '---Printing docstring for this test.'
+    print mod.__doc__
 
     # load language-dependent task instructions
     instr = instructions.read_instructions(test_name, lang)

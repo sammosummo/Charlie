@@ -21,7 +21,7 @@ there are 'recall' and 'recognition' portions to our version of the CVLT. These
 are executed by two other scripts in the battery.
 
 In a follow-up study, Delis et al. [4] introduced a new discriminability metric
-for the CVLT. That paper is behind a paywall
+for the CVLT. That paper is behind a paywall, so I haven't implemented it yet.
 
 Summary statistics:
 
@@ -42,7 +42,12 @@ Corporation, San Antonio, TX.
 [3] Stricker, J.L., Brown, G.G., Wixted, J., Baldo, J.V., & Delis, D.C. (2002).
 New semantic and serial clustering indices for the California Verbal Learning
 Test–Second Edition: Background, rationale, and formulae. J. Int. Neuropsychol.
-Soc., 8, 425–435.
+Soc., 8:425-435.
+
+[4] Delis, D.C., Wetter, S.R., Jacobson, M.W., Peavy, G., Hamilton, J.,
+Gongvatana, A., et al. (2005). Recall discriminability: utility of a new
+CVLT-II measure in the differential diagnosis of dementia. J. Int.
+Neuropsychol. Soc. 11(6):708-15.
 
 """
 # TODO: Recall discriminability measure for the CVLT?
@@ -71,7 +76,7 @@ output_format = [
 ]
 trials = 5
 time_limit = 15
-isi = .2000  # TODO: set isi to 2 seconds
+isi = 2
 clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
 
 
@@ -353,8 +358,9 @@ def semantic_clustering(words, clusters, responses):
     clusts = [dic[r] for r in responses]
     obs = 0
     for i in xrange(1, len(responses)):
-        if clusts[i] == clusts[i - 1]:
-            obs += 1
+        if clusts[i] is not None:
+            if clusts[i] == clusts[i - 1]:
+                obs += 1
     r = len(filter(None, clusts))
     return obs - ((r - 1) / 5.)
 
@@ -375,8 +381,9 @@ def serial_clustering(words, responses):
             serial_positions.append(None)
     obs = 0
     for i in xrange(1, len(responses)):
-        if serial_positions[i] == serial_positions[i - 1] + 1:
-            obs += 1
+        if serial_positions[i] is not None:
+            if serial_positions[i] == serial_positions[i - 1] + 1:
+                obs += 1
     r = len(filter(None, serial_positions))
     return obs - ((r - 1) / 16.)
 
@@ -394,7 +401,7 @@ def summary_method(data, instructions):
     for trialn in xrange(5):
 
         df2 = df1[df1.trialn == trialn]
-        responses = df2.rsp
+        responses = df2.rsp.tolist()
         nintr = len(df2[df2.rsp == 'intrusion'])
         nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
         nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
