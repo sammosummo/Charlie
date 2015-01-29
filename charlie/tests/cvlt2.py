@@ -30,8 +30,9 @@ Summary statistics:
     trial_X_repetitions : Number of repetitions on trial X.
     trial_X_semantic : List-based semantic clustering index on trial X [2].
     trial_X_serial : List-based serial recall index on trial X [2].
-    mean_ * : Mean stats across the five trials.
+    mean_* : Mean stats across the five trials.
 
+References:
 
 [1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
 verbal learning test - second edition. Adult version. Manual. Psychological
@@ -47,7 +48,7 @@ Soc., 8:425-435.
 [4] Delis, D.C., Wetter, S.R., Jacobson, M.W., Peavy, G., Hamilton, J.,
 Gongvatana, A., et al. (2005). Recall discriminability: utility of a new
 CVLT-II measure in the differential diagnosis of dementia. J. Int.
-Neuropsychol. Soc. 11(6):708-15.
+Neuropsychol. Soc., 11(6):708-15.
 
 """
 # TODO: Recall discriminability measure for the CVLT?

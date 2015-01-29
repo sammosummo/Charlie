@@ -2,28 +2,35 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-emotion_recognition: ER40 emotion-recognition test.
+emotion_recognition: The Penn emotion recognition test (ER-40).
 
-In this test, the proband sees images of faces expressing an emotion, and is
-required to click on the word that desribes that emotion. There are four
-emotions (happy, sad, fearful, angry), and a neutral condition. There are two
-levels of each emotion (except neutral), two male faces per emotion per level,
-and two female faces per emotion and level, resulting in 40 trials total. There
-is no feedback and there are no practice trials. This test is currently set to
-have a black background and white text.
+This test was developed by Gur and colleagues [1]. On each trial, the proband
+sees a colour image of a face expressing an emotion (happy, sad, fearful,
+angry) or with a neutral expression. There are two levels of each emotion
+(except neutral), two male faces per emotion per level, and two female faces
+per emotion and level, resulting in 40 trials total. Probands make their
+responses by clicking on the words printed to the screen. There is no feedback
+and there are no practice trials.
 
-Reference:
+Summary statistics:
 
-Gur R.C., Ragland J.D., Moberg P.J., Turner T.H., Bilker W.B., Kohler C.,
-Siegel S.J., Gur R.E. (2001). Computerized neurocognitive scanning: I.
-Methodology and validation in healthy people. Neuropsychopharmacology,
-25(5):766-76.
+    X_Y_Z_ntrials : number of trials for emotion X, sex Y, and salience Z.
+    *_ncorrect : number of trials correct for emotion X, sex Y, and salience Z.
+    *_pcorrect : proportion correct for emotion X, sex Y, and salience Z.
+    *_meanrt : mean reaction time for emotion X, sex Y, and salience Z.
+    X_* : stats collapsed over gender and salience
+    overall_* : stats collapsed over all trials
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+References:
+
+[1] Gur, R.C., Sara, R., Hagendoorn, M., Marom, O., Hughett, P., Macy L., et
+al. (2002). A method for obtaining 3-dimensional facial expressions and its
+standardization for use in neurocognitive studies. J. Neurosci. Methods,
+115:137–143.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
@@ -33,22 +40,21 @@ import charlie.tools.summaries as summaries
 import charlie.tools.batch as batch
 
 test_name = 'emotion_recognition'
-
 stim_order = [23, 9, 18, 12, 14, 5, 1, 35, 31, 13, 10, 0, 30, 38, 36, 6, 15,
               33, 32, 7, 26, 3, 21, 29, 39, 28, 37, 22, 8, 4, 2, 27, 11, 19,
               34, 25, 16, 17, 24, 20]
 img_pos = (0, -150)
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('trialn', int),
-                 ('sex', str),
-                 ('emotion', str),
-                 ('salience', str),
-                 ('f', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
-# overwrite default colours
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('sex', str),
+    ('emotion', str),
+    ('salience', str),
+    ('f', str),
+    ('rsp', str),
+    ('rt', int)
+]
 black_bg = True
 
 
@@ -56,7 +62,7 @@ def control_method(proband_id, instructions):
     """Generates a control iterable. For this test, it is a list of tuples in
     the format (proband_id, test_name, trialn, sex, emotion, salience, f)."""
     p = data.pj(data.VISUAL_PATH, test_name)
-    stimuli = sorted(f for f in data.ld(p) if 'png' in f)
+    stimuli = sorted(f for f in data.ld(p) if '.png' in f)
     stimuli = [j for _, j in sorted(zip(stim_order, stimuli))]
     labels = instructions[-5:]
     emotions_dict = {}
