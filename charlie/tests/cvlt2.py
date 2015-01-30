@@ -49,8 +49,9 @@ Gongvatana, A., et al. (2005). Recall discriminability: utility of a new
 CVLT-II measure in the differential diagnosis of dementia. J. Int.
 Neuropsychol. Soc., 11(6):708-15.
 
-[5] This measure was not included by [1] but I don't see why it can't be used.
-Calculated the same way as c from signal detection theory.
+[5] This measure was not included by Delis, but I don't see why not. It
+provides an index of how many intrusions there were relative to the number of
+hits.
 
 """
 __version__ = 1.0
@@ -77,7 +78,7 @@ output_format = [
 ]
 trials = 5
 time_limit = 15
-isi = 2
+isi = 2000
 clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
 
 
