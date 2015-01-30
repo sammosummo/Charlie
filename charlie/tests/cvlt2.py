@@ -20,9 +20,6 @@ learned. This is omitted from the current test. In addition to this script,
 there are 'recall' and 'recognition' portions to our version of the CVLT. These
 are executed by two other scripts in the battery.
 
-In a follow-up study, Delis et al. [4] introduced a new discriminability metric
-for the CVLT. That paper is behind a paywall, so I haven't implemented it yet.
-
 Summary statistics:
 
     trial_X_valid : Number of valid responses on trial X.
@@ -30,6 +27,8 @@ Summary statistics:
     trial_X_repetitions : Number of repetitions on trial X.
     trial_X_semantic : List-based semantic clustering index on trial X [2].
     trial_X_serial : List-based serial recall index on trial X [2].
+    trial_X_d : Recall discriminability index [4].
+    trial_x_c : Recall bias [5].
     mean_* : Mean stats across the five trials.
 
 References:
@@ -50,9 +49,10 @@ Gongvatana, A., et al. (2005). Recall discriminability: utility of a new
 CVLT-II measure in the differential diagnosis of dementia. J. Int.
 Neuropsychol. Soc., 11(6):708-15.
 
-"""
-# TODO: Recall discriminability measure for the CVLT?
+[5] This measure was not included by [1] but I don't see why it can't be used.
+Calculated the same way as c from signal detection theory.
 
+"""
 __version__ = 1.0
 __author__ = 'Sam Mathias'
 
@@ -394,7 +394,15 @@ def summary_method(data, instructions):
     Computes summary statistics for the CVLT.
     """
     cols, entries = summaries.get_universal_entries(data)
-
+    dvs = [
+        'valid',
+        'intrusions',
+        'repetitions',
+        'semantic',
+        'serial',
+        'd',
+        'c'
+    ]
     words = instructions[-1].split('\n')
     semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
     df1 = data.to_df()
@@ -408,17 +416,24 @@ def summary_method(data, instructions):
         nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
         semantic = semantic_clustering(words, clusters, responses)
         serial = serial_clustering(words, responses)
+        N = max([nintr, 16])
+        S = 16
+        H = nvalid
+        F = nintr
+        d, c = summaries.sdt_yesno(N, S, H, F)
 
         cols += ['trial_%i_valid' % trialn,
                  'trial_%i_intrusions' % trialn,
                  'trial_%i_repetitions' % trialn,
                  'trial_%i_semantic' % trialn,
-                 'trial_%i_serial' % trialn,]
-        entries += [nvalid, nintr, nreps, semantic, serial]
+                 'trial_%i_serial' % trialn,
+                 'trial_%i_d' % trialn,
+                 'trial_%i_c' % trialn]
+        entries += [nvalid, nintr, nreps, semantic, serial, d, c]
 
     df = pandas.DataFrame(entries, cols).T
 
-    for dv in ['valid', 'intrusions', 'repetitions', 'semantic', 'serial']:
+    for dv in dvs:
         name = 'mean_' + dv
         cs = [c for c in df.columns if dv in c]
         df[name] = df[cs].mean()
