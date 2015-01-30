@@ -2,6 +2,36 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
+cvlt2_recognition: Recognition portion of the computerised California verbal
+learning test.
+
+This is third and final part of the modified and abridged CVLT-II [1]. In this
+test, the proband performs a yes-no recognition memory task. The 16 target
+words from the CVLT serve as signal (or 'yes') trials, and there are 30 noise
+(or 'no') words. Each noise word belongs to one of the same four semantic
+clusters as the targets.
+
+
+Summary statistics:
+
+    valid : Number of valid responses on trial X.
+    intrusions : Number of intrusions on trial X.
+    repetitions : Number of repetitions on trial X.
+    semantic : List-based semantic clustering index on trial X.
+    serial : List-based serial recall index on trial X.
+    dprime : Recall discriminability index.
+    criterion : Recall bias.
+
+References:
+
+[1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
+verbal learning test - second edition. Adult version. Manual. Psychological
+Corporation, San Antonio, TX.
+
+"""
+"""
+Created on Fri Mar 14 16:52:26 2014
+
 The California verbal learning test (CVLT), recognition portion.
 
 This is the final portion of the CVLT. Here, the proband hears the 16 target

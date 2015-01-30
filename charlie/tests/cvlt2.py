@@ -27,8 +27,8 @@ Summary statistics:
     trial_X_repetitions : Number of repetitions on trial X.
     trial_X_semantic : List-based semantic clustering index on trial X [2].
     trial_X_serial : List-based serial recall index on trial X [2].
-    trial_X_d : Recall discriminability index [4].
-    trial_x_c : Recall bias [5].
+    trial_X_dprime : Recall discriminability index [4].
+    trial_x_criterion : Recall bias [5].
     mean_* : Mean stats across the five trials.
 
 References:
@@ -384,8 +384,9 @@ def serial_clustering(words, responses):
     obs = 0
     for i in xrange(1, len(responses)):
         if serial_positions[i] is not None:
-            if serial_positions[i] == serial_positions[i - 1] + 1:
-                obs += 1
+            if serial_positions[i - 1] is not None:
+                if serial_positions[i] == serial_positions[i - 1] + 1:
+                    obs += 1
     r = len(filter(None, serial_positions))
     return obs - ((r - 1) / 16.)
 
@@ -401,15 +402,14 @@ def summary_method(data, instructions):
         'repetitions',
         'semantic',
         'serial',
-        'd',
-        'c'
+        'dprime',
+        'criterion'
     ]
     words = instructions[-1].split('\n')
-    semantic_clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
     df1 = data.to_df()
 
     for trialn in xrange(5):
-
+        cols += ['trial_%i_%s' % (trialn, dv) for dv in dvs]
         df2 = df1[df1.trialn == trialn]
         responses = df2.rsp.tolist()
         nintr = len(df2[df2.rsp == 'intrusion'])
@@ -422,23 +422,15 @@ def summary_method(data, instructions):
         H = nvalid
         F = nintr
         d, c = summaries.sdt_yesno(N, S, H, F)
-
-        cols += ['trial_%i_valid' % trialn,
-                 'trial_%i_intrusions' % trialn,
-                 'trial_%i_repetitions' % trialn,
-                 'trial_%i_semantic' % trialn,
-                 'trial_%i_serial' % trialn,
-                 'trial_%i_d' % trialn,
-                 'trial_%i_c' % trialn]
         entries += [nvalid, nintr, nreps, semantic, serial, d, c]
 
     df = pandas.DataFrame(entries, cols).T
-
+    cols += ['mean_%s' % dv for dv in dvs]
     for dv in dvs:
-        name = 'mean_' + dv
-        cs = [c for c in df.columns if dv in c]
-        df[name] = df[cs].mean()
-
+        cs = [c for c in df.columns if '_' + dv in c]
+        x = float(df[cs].mean(axis=1))
+        entries.append(x)
+    df = pandas.DataFrame(entries, cols).T
     return df
 
 

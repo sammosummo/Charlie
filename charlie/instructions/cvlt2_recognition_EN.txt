@@ -61,3 +61,5 @@ subway
 tiger
 coffee
 zebra
+lettuce
+closet

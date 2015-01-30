@@ -2,36 +2,60 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-cvlt2: Recall portion of the computerised California verbal learning test
-(CVLT) version II.
+cvlt2_recall: Recall portion of the computerised California verbal learning
+test.
 
-This is designed to be adminstered after the CVLT learning portion. It is
-essentially just another trial without playback of the word list beforehand.
-Apart from this difference, the script works in exactly the same way as the
-script for the learning portion. See that script (cvlt.py) for a more detailed
-description.
+This is second part of the modified and abridged CVLT-II [1]. In this test the
+proband performs a 6th CVLT trial without hearing the target words beforehand.
+The procedure and summary statistics are therefore the same as those for one of
+the trials in the first portion of the CVLT.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+Technical note: this script imports functions from cvlt.py. Therefore this
+script must be present in the 'tests' subfolder.
+
+
+Summary statistics:
+
+    valid : Number of valid responses on trial X.
+    intrusions : Number of intrusions on trial X.
+    repetitions : Number of repetitions on trial X.
+    semantic : List-based semantic clustering index on trial X.
+    serial : List-based serial recall index on trial X.
+    dprime : Recall discriminability index.
+    criterion : Recall bias.
+
+References:
+
+[1] Delis, D.C., Kramer, J.H., Kaplan, E., & Ober, B.A. (2000). California
+verbal learning test - second edition. Adult version. Manual. Psychological
+Corporation, San Antonio, TX.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
-import pandas
+
 try:
     from PySide import QtGui, QtCore
 except ImportError:
     from PyQt4 import QtGui, QtCore
+
+
+import pandas
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
+from charlie.tests.cvlt2 import semantic_clustering, serial_clustering,\
+    clusters
+
 
 test_name = 'cvlt2_recall'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('trialn', int),
-                 ('rsp', str)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('rsp', str)
+]
 trials = 1
 time_limit = 15
 
@@ -244,26 +268,46 @@ def control_method(proband_id, instructions):
 
 
 def summary_method(data, instructions):
-    """Computes summary statistics for the CVLT."""
-    df = data.to_df()
+    """
+    Computes summary statistics for the CVLT.
+    """
     cols, entries = summaries.get_universal_entries(data)
-    for trialn in [0]:
-        cols += ['trial_%i_%s' % (trialn, s) for s in ['rsp', 'int', 'rep']]
-        subdf = df[df.trialn == trialn]
-        subdf_intrusions = subdf[subdf.rsp == 'intrusion']
-        subdf_nointrusions = subdf[subdf.rsp != 'intrusion']
-        subdf_nointrusions_unique = subdf_nointrusions.drop_duplicates()
-        entries += [len(subdf_nointrusions_unique), len(subdf_intrusions),
-                    len(subdf_nointrusions) - len(subdf_nointrusions_unique)]
-        dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    dvs = [
+        'valid',
+        'intrusions',
+        'repetitions',
+        'semantic',
+        'serial',
+        'dprime',
+        'criterion'
+    ]
+    words = instructions[-1].split('\n')
+    df1 = data.to_df()
+
+    cols += dvs
+    df2 = df1
+    responses = df2.rsp.tolist()
+    nintr = len(df2[df2.rsp == 'intrusion'])
+    nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
+    nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
+    semantic = semantic_clustering(words, clusters, responses)
+    serial = serial_clustering(words, responses)
+    N = max([nintr, 16])
+    S = 16
+    H = nvalid
+    F = nintr
+    d, c = summaries.sdt_yesno(N, S, H, F)
+    entries += [nvalid, nintr, nreps, semantic, serial, d, c]
+
+    df = pandas.DataFrame(entries, cols).T
+    return df
 
 
 def main():
-    """Command-line executor."""
-
-    tools.batch.run_single_test(test_name, control_method, None, output_format,
-                                summary_method, others=globals())
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':
