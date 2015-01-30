@@ -7,20 +7,28 @@ learning test.
 
 This is third and final part of the modified and abridged CVLT-II [1]. In this
 test, the proband performs a yes-no recognition memory task. The 16 target
-words from the CVLT serve as signal (or 'yes') trials, and there are 30 noise
-(or 'no') words. Each noise word belongs to one of the same four semantic
-clusters as the targets.
+words from the CVLT serve as signal (or 'yes') trials, and there are 32 noise
+(or 'no') words. Sixteen of the noise words come from one of the four semantic
+categories as the targets ('prototypical' words), and 16 come from other
+categories ('unrelated' words).
 
+In the original CVLT, some of the noise words comprise list B. Since we don't
+perform list B, we just count these as prototypical or unrelated.
 
 Summary statistics:
 
-    valid : Number of valid responses on trial X.
-    intrusions : Number of intrusions on trial X.
-    repetitions : Number of repetitions on trial X.
-    semantic : List-based semantic clustering index on trial X.
-    serial : List-based serial recall index on trial X.
-    dprime : Recall discriminability index.
-    criterion : Recall bias.
+    overall_*
+    proto_*
+    unrel_*
+
+    *ntrials : number of trials.
+    *ncorrect : number of correct trials.
+    *pcorrect : proportion of trials correct.
+    *dprime : index of sensitivity.
+    *criterion : index of bias.
+    *rt_mean : mean response time on correct trials in milliseconds.
+    *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    *rt_outrmvd : number of outlier trials.
 
 References:
 
@@ -29,23 +37,8 @@ verbal learning test - second edition. Adult version. Manual. Psychological
 Corporation, San Antonio, TX.
 
 """
-"""
-Created on Fri Mar 14 16:52:26 2014
-
-The California verbal learning test (CVLT), recognition portion.
-
-This is the final portion of the CVLT. Here, the proband hears the 16 target
-words plus 16 novel distractors in random order, and performs a standard yes/no
-recognition-memory task using the left and right arrow keys. There is no
-feedback and there are no practice trials. Accuracy and response times are
-recorded. Target and distracter words are taken from the official CVLT. See
-cvlt.py for more details.
-
-@author: Sam Mathias
-@status: completed
-@version: 1.0
-
-"""
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
@@ -53,42 +46,44 @@ import charlie.tools.audio as audio
 import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
+
 
 test_name = 'cvlt2_recognition'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('trialn', int),
-                 ('f', str),
-                 ('word', str),
-                 ('ans', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('f', str),
+    ('word', str),
+    ('type', str),
+    ('ans', str),
+    ('rsp', str),
+    ('rt', int)
+]
 word_pos = (0,-100)
+types = 'utuptputtupputupttpputpuptututpppuutpttpuutputpu'
 
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. For this test, it is a list of tuples in
-    the format (proband_id, test_name, trialn, f, word, ans)."""
-
-    # find the paths to the stimuli and put them in the correct order
-    p = data.pj(data.AUDIO_PATH, test_name, 'EN')
+    """
+    Generates a control iterable. For this test, it is a list of tuples in
+    the format (proband_id, test_name, trialn, f, word, type, ans).
+    """
+    path = lambda w: data.pj(data.AUDIO_PATH, test_name, w + '.wav')
+    ans = lambda i: labels[types[i] == 't']
     instr = instructions
     instr, labels = instr, instr[2:4]
     words = instr[-1].split('\n')
-    stimuli = [w + '.wav' for w in words]
-
-    # determine what was in the original word list
-    p2 = data.pj(data.AUDIO_PATH, 'cvlt2', 'EN')
-    control = [(proband_id, test_name, i, data.pj(p, f), words[i],
-                labels[f not in data.ld(p2)]) for i, f in enumerate(stimuli)]
-    return control
+    return [(proband_id, test_name, i, path(w), w, types[i], ans(i)) for i,
+        w in enumerate(words)]
 
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""
-    _, _, trialn, f, word, _ = trial_info
+    """
+    Runs a single trial of the test.
+    """
+    _, _, trialn, f, word, _, _ = trial_info
     instr = instructions
     instr, labels = instr, instr[2:4]
     if not screen.wordzones:
@@ -137,29 +132,38 @@ def trial_method(screen, instructions, trial_info):
 
 
 def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
+    """
+    Computes summary stats for this task.
+    """
+    instr = instructions
+    instr, labels = instr, instr[2:4]
     cols, entries = summaries.get_universal_entries(data)
-    labels = instructions[2:4]
-    a, b = summaries.get_2alt(df, choices=labels)
-    cols += a
-    entries += b
+    df = data.to_df()
+
+    a, b = summaries.get_accuracy(df, 'overall', rts=True)
+    print 'accuracy', a, b
+    c, d = summaries.get_recognition_memory(df, 'overall', choices=labels)
+    print 'sdt', c, d
+    cols = cols + a + c; entries = entries + b + d
+
+    df1 = df[(df['type'] == 'u') | (df['type'] == 't')]
+    a, b = summaries.get_accuracy(df1, 'unrel', rts=True)
+    c, d = summaries.get_recognition_memory(df1, 'unrel', choices=labels)
+    cols = cols + a + c; entries = entries + b + d
+
+    df2 = df[(df['type'] == 'p') | (df['type'] == 't')]
+    a, b = summaries.get_accuracy(df2, 'proto', rts=True)
+    c, d = summaries.get_recognition_memory(df2, 'proto', choices=labels)
+    cols = cols + a + c; entries = entries + b + d
+
     dfsum = pandas.DataFrame(entries, cols).T
     return dfsum
 
-
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':
