@@ -267,12 +267,15 @@ def control_method(proband_id, instructions):
     return [(proband_id, test_name, trialn) for trialn in xrange(1)]
 
 
-def summary_method(data, instructions):
+def summary_method(data_obj, instructions):
     """
-    Computes summary statistics for the CVLT.
+    Computes summary statistics for this task.
     """
-    cols, entries = summaries.get_universal_entries(data)
-    dvs = [
+    df = data_obj.to_df()
+    stats = summaries.get_universal_stats(data_obj)
+    words = instructions[-1].split('\n')
+
+    cols = [
         'valid',
         'intrusions',
         'repetitions',
@@ -281,25 +284,21 @@ def summary_method(data, instructions):
         'dprime',
         'criterion'
     ]
-    words = instructions[-1].split('\n')
-    df1 = data.to_df()
-
-    cols += dvs
-    df2 = df1
-    responses = df2.rsp.tolist()
-    nintr = len(df2[df2.rsp == 'intrusion'])
-    nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
-    nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
+    responses = df.rsp.tolist()
+    nintr = len(df[df.rsp == 'intrusion'])
+    nvalid = len(df[df.rsp != 'intrusion'].drop_duplicates())
+    nreps = len(df[df.rsp != 'intrusion']) - nvalid
     semantic = semantic_clustering(words, clusters, responses)
     serial = serial_clustering(words, responses)
-    N = max([nintr, 16])
-    S = 16
-    H = nvalid
-    F = nintr
-    d, c = summaries.sdt_yesno(N, S, H, F)
-    entries += [nvalid, nintr, nreps, semantic, serial, d, c]
+    sdt = max([nintr, 16]), 16, nvalid, nintr
+    d, c = summaries.sdt_yesno(*sdt)
+    entries = [nvalid, nintr, nreps, semantic, serial, d, c]
+    stats += zip(cols, entries)
 
-    df = pandas.DataFrame(entries, cols).T
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
     return df
 
 

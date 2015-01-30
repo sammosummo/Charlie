@@ -40,7 +40,7 @@ Corporation, San Antonio, TX.
 __version__ = 1.0
 __author__ = 'Sam Mathias'
 
-import pandas
+
 import charlie.tools.visual as visual
 import charlie.tools.audio as audio
 import charlie.tools.data as data
@@ -131,33 +131,38 @@ def trial_method(screen, instructions, trial_info):
     return trial_info
 
 
-def summary_method(data, instructions):
+def summary_method(data_obj, instructions):
     """
     Computes summary stats for this task.
     """
+    df = data_obj.to_df()
     instr = instructions
     instr, labels = instr, instr[2:4]
-    cols, entries = summaries.get_universal_entries(data)
-    df = data.to_df()
+    signal, noise = labels
 
-    a, b = summaries.get_accuracy(df, 'overall', rts=True)
-    print 'accuracy', a, b
-    c, d = summaries.get_recognition_memory(df, 'overall', choices=labels)
-    print 'sdt', c, d
-    cols = cols + a + c; entries = entries + b + d
-
+    stats = summaries.get_universal_stats(data_obj)
+    df1 = df
+    prefix = 'overall'
+    stats += summaries.get_accuracy_stats(df1, prefix)
+    stats += summaries.get_rt_stats(df1, prefix)
+    stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
     df1 = df[(df['type'] == 'u') | (df['type'] == 't')]
-    a, b = summaries.get_accuracy(df1, 'unrel', rts=True)
-    c, d = summaries.get_recognition_memory(df1, 'unrel', choices=labels)
-    cols = cols + a + c; entries = entries + b + d
+    prefix = 'unrel'
+    stats += summaries.get_accuracy_stats(df1, prefix)
+    stats += summaries.get_rt_stats(df1, prefix)
+    stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
+    df1 = df[(df['type'] == 'p') | (df['type'] == 't')]
+    prefix = 'proto'
+    stats += summaries.get_accuracy_stats(df1, prefix)
+    stats += summaries.get_rt_stats(df1, prefix)
+    stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
 
-    df2 = df[(df['type'] == 'p') | (df['type'] == 't')]
-    a, b = summaries.get_accuracy(df2, 'proto', rts=True)
-    c, d = summaries.get_recognition_memory(df2, 'proto', choices=labels)
-    cols = cols + a + c; entries = entries + b + d
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
 
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    return df
+
 
 def main():
     """
@@ -168,3 +173,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# TODO: stimuli are currently missing!

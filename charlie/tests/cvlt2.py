@@ -78,7 +78,7 @@ output_format = [
 ]
 trials = 5
 time_limit = 15
-isi = 2000
+isi = 2#000
 clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
 
 
@@ -391,11 +391,12 @@ def serial_clustering(words, responses):
     return obs - ((r - 1) / 16.)
 
 
-def summary_method(data, instructions):
+def summary_method(data_obj, instructions):
     """
-    Computes summary statistics for the CVLT.
+    Computes summary statistics for this task.
     """
-    cols, entries = summaries.get_universal_entries(data)
+    df = data_obj.to_df()
+    stats = summaries.get_universal_stats(data_obj)
     dvs = [
         'valid',
         'intrusions',
@@ -406,31 +407,34 @@ def summary_method(data, instructions):
         'criterion'
     ]
     words = instructions[-1].split('\n')
-    df1 = data.to_df()
 
     for trialn in xrange(5):
-        cols += ['trial_%i_%s' % (trialn, dv) for dv in dvs]
-        df2 = df1[df1.trialn == trialn]
+        cols = ['trial_%i_%s' % (trialn, dv) for dv in dvs]
+        df2 = df[df.trialn == trialn]
         responses = df2.rsp.tolist()
         nintr = len(df2[df2.rsp == 'intrusion'])
         nvalid = len(df2[df2.rsp != 'intrusion'].drop_duplicates())
         nreps = len(df2[df2.rsp != 'intrusion']) - nvalid
         semantic = semantic_clustering(words, clusters, responses)
         serial = serial_clustering(words, responses)
-        N = max([nintr, 16])
-        S = 16
-        H = nvalid
-        F = nintr
-        d, c = summaries.sdt_yesno(N, S, H, F)
-        entries += [nvalid, nintr, nreps, semantic, serial, d, c]
+        sdt = max([nintr, 16]), 16, nvalid, nintr
+        d, c = summaries.sdt_yesno(*sdt)
+        entries = [nvalid, nintr, nreps, semantic, serial, d, c]
+        stats += zip(cols, entries)
 
-    df = pandas.DataFrame(entries, cols).T
-    cols += ['mean_%s' % dv for dv in dvs]
+    df = summaries.make_df(stats)
+    cols = ['mean_%s' % dv for dv in dvs]
+    entries = []
     for dv in dvs:
         cs = [c for c in df.columns if '_' + dv in c]
         x = float(df[cs].mean(axis=1))
         entries.append(x)
-    df = pandas.DataFrame(entries, cols).T
+    stats += zip(cols, entries)
+
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
     return df
 
 
