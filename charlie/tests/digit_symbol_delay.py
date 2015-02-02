@@ -23,52 +23,51 @@ M., et al. (2007). Adjudicating neurocognitive endophenotypes for
 schizophrenia. Am. J. Med. Genet. B. Neuropsychiatr. Genet., 44B(2):242-249.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
 import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 
 
 test_name = 'digit_symbol_delay'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('digit', int),
-                 ('symbol', int),
-                 ('ans', str),
-                 ('f', str),
-                 ('rsp', str),
-                 ('rt', int)]
-                 
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('ans', str),
+    ('f', str),
+    ('rsp', str),
+    ('rt', int)
+]
 symbols = [6, 7, 4, 8, 5, 1, 9, 2, 3]
 
 
-
 def control_method(proband_id, instructions):
-    """Generate a control iterable. For this test, each item represents a trial
+    """
+    Generate a control iterable. For this test, each item represents a trial
     in the format: (proband_id, test_name, phase, trialn, digit, symbol, ans,
-    f)."""
+    f).
+    """
     p = data.pj(data.VISUAL_PATH, test_name)
-    stim = lambda x: data.pj(p, 'sym%i.bmp' %x)
-    control = [(proband_id, test_name, 'test', trialn, 0, symbol, symbol,
-                stim(symbol)) for trialn, symbol in enumerate(symbols)]
-    return control
+    y = lambda x: data.pj(p, 'sym%i.bmp' %x)
+    return [(proband_id, test_name, i, s, y(s)) for i, s in enumerate(symbols)]
 
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""
-    proband_id, test_name, phase, trialn, digit, symbol, ans, f = trial_info
-    
+    """
+    Runs a single trial of the test.
+    """
+    proband_id, test_name, trialn, digit, f = trial_info
     if not trialn:
         rsp = screen.splash(instructions[0], mouse=False)
         if rsp == 'EXIT':
             return 'EXIT'
-        screen.wipe()# wait for a response
-    
+        screen.wipe()
     if not screen.wordzones:
         screen.create_word_zones(list('123456789'), 100, -200)
     screen.change_word_colour(screen.wordzones.keys(),
@@ -91,29 +90,26 @@ def trial_method(screen, instructions, trial_info):
 
     return trial_info
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
-    cols, entries = summaries.get_universal_entries(data)
-    a, b = summaries.get_generic_summary(df)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, '')
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
 
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':

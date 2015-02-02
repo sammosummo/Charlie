@@ -1,7 +1,3 @@
-cvlt2
-cvlt2_recall
-cvlt2_recognition
-digit_symbol
 digit_symbol_delay
 emotion_recognition
 face_memory

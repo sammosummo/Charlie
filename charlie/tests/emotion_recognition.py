@@ -74,7 +74,7 @@ def control_method(proband_id, instructions):
     p = data.pj(data.VISUAL_PATH, test_name)
     stimuli = sorted(f for f in data.ld(p) if '.png' in f)
     stimuli = [j for _, j in sorted(zip(stim_order, stimuli))]
-    emo_dict = {qf(l.split('=')[0]): l.split('=')[1] for l in instructions[-5:]}
+    emo_dict = {l.split('=')[0]: l.split('=')[1] for l in instructions[-5:]}
     control = []
     for trialn, imgf in enumerate(stimuli):
         print trialn, imgf, emo_dict
@@ -127,32 +127,61 @@ def trial_method(screen, instructions, trial_info):
     return trial_info
 
 
-def summary_method(data, instructions):
+def summary_method(data_obj, instructions):
     """
     Computes summary stats for this task.
     """
-    cols, entries = summaries.get_universal_entries(data)
-    emo_dict = {l.split('=')[1]: l.split('=')[0] for l in instructions[-5:]}
-    df = data.to_df()
-    a, b = summaries.get_accuracy(df, 'overall', 'emotion', True)
-    cols += a; entries += b
+    df = data_obj.to_df()
+    stats = summaries.get_universal_stats(data_obj)
+    prefix = 'overall'
+    stats += summaries.get_accuracy_stats(df, prefix, ans_col='emotion')
+    stats += summaries.get_rt_stats(df, prefix, ans_col='emotion')
     for emotion in df.emotion.unique():
+        prefix = emotion.lower()
         df1 = df[df.emotion == emotion]
-        a, b = summaries.get_accuracy(df1, emotion, 'emotion', True)
-        cols += a; entries += b
+        stats += summaries.get_accuracy_stats(df1, prefix, ans_col='emotion')
+        stats += summaries.get_rt_stats(df1, prefix, ans_col='emotion')
         for sex in df1.sex.unique():
-            prefix = '%s_%s' %(emotion, sex)
+            prefix = emotion.lower() + '_' + sex.lower()
             df2 = df1[df1.sex == sex]
-            a, b = summaries.get_accuracy(df2, prefix, 'emotion', True)
-            cols += a; entries += b
-            for salience in df2.salience.unique():
-                if salience != 'N/A':
-                    prefix = '%s_%s_%s' %(emotion, sex, salience)
-                    df3 = df2[df2.salience == salience]
-                    a, b = summaries.get_accuracy(df2, prefix, 'emotion', True)
-                    cols += a; entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+            stats += summaries.get_accuracy_stats(df2, prefix,
+                                                  ans_col='emotion')
+            stats += summaries.get_rt_stats(df2, prefix, ans_col='emotion')
+            if len(df2.salience.unique()) == 2:
+                for sal in df2.salience.unique():
+                    prefix = emotion.lower() + '_' + sex.lower() + '_' + \
+                             sal.lower()
+                    df3 = df2[df2.salience == sal]
+                    stats += summaries.get_accuracy_stats(df3, prefix,
+                                                          ans_col='emotion')
+                    stats += summaries.get_rt_stats(df3, prefix,
+                                                    ans_col='emotion')
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+    # cols, entries = summaries.get_universal_entries(data)
+    # emo_dict = {l.split('=')[1]: l.split('=')[0] for l in instructions[-5:]}
+    # df = data.to_df()
+    # a, b = summaries.get_accuracy(df, 'overall', 'emotion', True)
+    # cols += a; entries += b
+    # for emotion in df.emotion.unique():
+    #     df1 = df[df.emotion == emotion]
+    #     a, b = summaries.get_accuracy(df1, emotion.lower(), 'emotion', True)
+    #     cols += a; entries += b
+    #     for sex in df1.sex.unique():
+    #         prefix = '%s_%s' %(emotion, sex)
+    #         df2 = df1[df1.sex == sex]
+    #         a, b = summaries.get_accuracy(df2, prefix.lower(), 'emotion', True)
+    #         cols += a; entries += b
+    #         for salience in df2.salience.unique():
+    #             if salience != 'N/A':
+    #                 prefix = '%s_%s_%s' %(emotion, sex, salience)
+    #                 df3 = df2[df2.salience == salience]
+    #                 a, b = summaries.get_accuracy(df2, prefix.lower(),
+    #                                               'emotion', True)
+    #                 cols += a; entries += b
+    # dfsum = pandas.DataFrame(entries, cols).T
+    # return dfsum
 
 def main():
     """
