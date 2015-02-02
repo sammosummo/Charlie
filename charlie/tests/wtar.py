@@ -2,21 +2,25 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-Wechsler Test of Adult Reading.
+wtar: Computerised Wechsler test of Adult Reading (WTAR).
 
-Computerised version of the standard WTAR. Probands relinquish control of the
-testing computer to the experimenter, then read a list of 50 words out loud.
-The experimenter marks their pronunciations using the GUI. The test terminates
-automatically 12 consequtive errors.
+This is a computerised version of the standard WTAR [1] and is administered in
+an identical manner to the official test. First, the proband sees a screen
+instructing them to relinquish control of the testing computer to the
+experimenter. The experimenter then operates the WTAR GUI. The proband is
+presented with a sheet of paper with a list of 50 words, which they must read
+out loud. The experimenter marks whether each pronunciation was correct using
+the GUI. The test terminates automatically after all 50 responses have been
+recorded or after 12 consecutive errors.
 
-Reference: Holdnack, H.A. (2001). Wechsler Test of Adult Reading: WTAR. San
-Antonio, TX: The Psychological Corporation.
+Summary statistics:
 
-TODO: Add a title to the WTAR GUI.
+    ntrials : number of trials (up to 50).
+    ncorrect : number correct.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+References:
+
+[1]
 
 """
 

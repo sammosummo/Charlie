@@ -15,11 +15,11 @@ def read_instructions(*args):
     Returns written instructions for a given test and language, if they are
     present in the battery.
     """
-    txt = open(pj(INSTRUCTIONS_PATH, '%s_%s.txt' % args), 'rb').read()
+    txt = open(pj(INSTRUCTIONS_PATH, '%s_%s.txt' % args), 'rU').read()
     return [s.strip('\n') for s in txt.split('---')]
 
 
-quickfix = lambda s: s.replace('\n', '').replace('\r', '')
+quickfix = lambda s: s#.replace('\n', '').replace('\r', '')
 
 
 if __name__ == '__main__':
