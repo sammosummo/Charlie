@@ -1,4 +1,4 @@
-Digit—symbol test, part 1 (practice)
+Digit-symbol test, part 1 (practice)
 
 At the top of the screen you will see a row of
 symbols and a row of digits. Each symbol is paired

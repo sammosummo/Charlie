@@ -2,27 +2,42 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-digit_symbol: The digit-symbol substitution test.
+digit_symbol: Digit-symbol substitution test.
 
-This test is based loosely on the digit-symbol coding task from the WAIS-III.
-On each trial the proband sees a key of digits and symbols at the top of the
-screen, as well as a single digit and a single symbol in the centre of the
-screen. The proband indicates whether the target symbol matches the target
-digit according to the key. During the test phase, probands complete as many
-trials as they can within 90 seconds. The symbols were designed by D. Glahn,
-and were part of the STAN and JANET batteries.
+This test is identical to the digit-symbol test found in STAN [1]. Although it
+is similar to the pen-and-paper digit-symbol test found in the WAIS-III [2] and
+other, the present test does not involving drawing each symbol, so it is not
+known how performance on the two versions are related. On each trial, the
+proband sees a key of digits and symbols at the top of the screen, as well as a
+single digit and a single symbol in the centre of the screen. The proband
+indicates whether the target symbol matches the target digit according to the
+key by responding either 'yes' or 'no'. During the test phase, the proband
+completes as many trials as they can within 90 seconds. The symbols were
+originally designed by D. Glahn for STAN.
 
-Reference for the WAIS-III version:
+Summary statistics:
 
-Ryan, J.J. & Lopez, S.J. (2001). Wechsler adult intelligence scale-III. In W.I.
-Dorfman & M. Hersen. Understanding psychological assessment. Perspectives on
-individual differences. New York: Kluwer Academic/Plenum Publishers.
+    ntrials : number of trials completed
+    ncorrect : number of trials correct
+    dprime : sensitivity
+    criterion : response bias
+    rt_mean : mean response time on correct trials in milliseconds.
+    rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    rt_outrmvd : number of outlier trials.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+
+References:
+
+[1] Glahn, D.C., Almasy, L., Blangero, J., Burk, G.M., Estrada, J., Peralta, J.
+M., et al. (2007). Adjudicating neurocognitive endophenotypes for
+schizophrenia. Am. J. Med. Genet. B. Neuropsychiatr. Genet., 44B(2):242-249.
+
+[2] The Psychological Corporation. (1997). WAIS-III/WMS-III technical manual.
+San Antonio, TX: The Psychological Corporation.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
@@ -30,22 +45,22 @@ import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
 import charlie.tools.audio as audio
+import charlie.tools.batch as batch
 
 test_name = 'digit_symbol'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('digit', int),
-                 ('symbol', int),
-                 ('ans', str),
-                 ('f', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('digit', int),
+    ('symbol', int),
+    ('ans', str),
+    ('f', str),
+    ('rsp', str),
+    ('rt', int)
+]
 max_time = 90
-
 practice_order = [(2,2), (6,6),
                   (8,4), (4,4),
                   (7,7), (6,5),
@@ -61,19 +76,21 @@ test_order = [(8,8), (1,4), (2,8), (6,2), (4,4), (9,5), (5,6), (3,3), (4,4),
               (2,2), (8,8), (5,5), (4,3), (6,6), (1,1), (7,7), (3,3), (6,4),
               (3,3), (5,5), (6,8), (9,1), (1,5), (2,2), (3,3), (7,7), (2,2),
               (8,4), (7,7), (8,2), (5,5), (4,9), (6,6), (4,3), (1,1), (9,9),
-
               (6,6), (2,2), (1,8), (5,5), (5,5), (8,8), (3,3), (6,6), (8,9),
               (2,2), (1,1), (5,5), (6,4), (5,5), (5,6), (4,4), (9,2), (7,9),
               (9,1), (1,8), (9,9), (7,7), (4,2), (2,2), (6,6), (3,3), (4,3)]
 
+
 def control_method(proband_id, instructions):
-    """Generate a control iterable. For this test, each item represents a trial
+    """
+    Generate a control iterable. For this test, each item represents a trial
     in the format: (proband_id, test_name, phase, trialn, digit, symbol, ans,
     f).
 
     Note that there is only one 'test' trial; this was done because the testing
     phase ends after a certain time has elapsed rather than a number of trials,
-    and it was sensible to code this way."""
+    and it was sensible to code this way.
+    """
 
     # find the paths to the stimuli
     p = data.pj(data.VISUAL_PATH, test_name)
@@ -95,8 +112,10 @@ def control_method(proband_id, instructions):
 
 
 def trial_method(screen, instructions, trial_info):
-    """Run a single trial of the test. Not that there is only one trial in the
-    'test' phase."""
+    """
+    Run a single trial of the test. Not that there is only one trial in the
+    'test' phase.
+    """
     proband_id, test_name, phase, trialn, digit, symbol, ans, f = trial_info
     labels = instructions[-2:]
     if not screen.wordzones:
@@ -231,30 +250,30 @@ def trial_method(screen, instructions, trial_info):
         return _data
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
-    df = df[df.phase != 'practice']
-    cols, entries = summaries.get_universal_entries(data)
-    a, b = summaries.get_2alt(df)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
+    labels = instructions[-2:]
+    signal, noise = labels
+
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, '')
+    stats += summaries.get_rt_stats(df, '')
+    stats += summaries.get_sdt_stats(df, noise, signal, '')
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
 
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':

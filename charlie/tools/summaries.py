@@ -88,7 +88,6 @@ def get_sdt_stats(df, noise, signal, prefix='', ans_col='ans', rsp_col='rsp',
     :param rsp_col: str
     :return: (cols, entries)
     """
-    print noise, signal
     N = len(df[df[ans_col] == noise])
     S = len(df[df[ans_col] == signal])
     H = len(df[(df[ans_col] == signal) & (df[rsp_col] == signal)])

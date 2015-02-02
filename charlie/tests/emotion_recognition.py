@@ -34,7 +34,6 @@ standardization for use in neurocognitive studies. J. Neurosci. Methods,
 115:137–143.
 
 """
-# TODO: Does this work on PC?
 # TODO: Calculate d' for 4AFC?
 
 __version__ = 1.0

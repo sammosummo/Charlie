@@ -78,7 +78,7 @@ output_format = [
 ]
 trials = 5
 time_limit = 15
-isi = 2#000
+isi = 2000
 clusters = [0, 1, 2, 3, 1, 0, 3, 2, 0, 3, 1, 2, 3, 0, 2, 1]
 
 

@@ -5,16 +5,22 @@ Created on Fri Mar 14 16:52:26 2014
 digit_symbol_delay: Delayed digit-symbol recognition test.
 
 This is a very brief test designed to be administered immediately after the
-digit-symbol test. On each trial, the proband sees the digit array from the
-digit-symbol test at the top of the screen, an array of '?'s in place of the
-symbol array, and a symbol (but no digit) in the middle of the screen. The task
-is to match the symbol to its digit by clicking on the '?' that is in its
-original position. This was part of the JANET battary. As far as I am aware,
-there is no reference for this test.
+digit_symbol. On each trial, the proband sees the digit array, but not the
+symbol array, from the main test, and a symbol in the middle of the screen. The
+proband must click on the digit corresponding to the symbol. This test was
+originally part of STAN [1].
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+Summary statistics:
+
+    *ntrials : number of trials.
+    *ncorrect : number of correct trials.
+    *pcorrect : proportion of trials correct.
+
+References:
+
+[1] Glahn, D.C., Almasy, L., Blangero, J., Burk, G.M., Estrada, J., Peralta, J.
+M., et al. (2007). Adjudicating neurocognitive endophenotypes for
+schizophrenia. Am. J. Med. Genet. B. Neuropsychiatr. Genet., 44B(2):242-249.
 
 """
 
