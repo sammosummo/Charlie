@@ -19,5 +19,8 @@ def read_instructions(*args):
     return [s.strip('\n') for s in txt.split('---')]
 
 
+quickfix = lambda s: s.replace('\n', '').replace('\r', '')
+
+
 if __name__ == '__main__':
     pass

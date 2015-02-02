@@ -46,6 +46,7 @@ import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
 import charlie.tools.batch as batch
+from charlie.tools.instructions import quickfix as qf
 
 test_name = 'emotion_recognition'
 stim_order = [23, 9, 18, 12, 14, 5, 1, 35, 31, 13, 10, 0, 30, 38, 36, 6, 15,
@@ -74,9 +75,10 @@ def control_method(proband_id, instructions):
     p = data.pj(data.VISUAL_PATH, test_name)
     stimuli = sorted(f for f in data.ld(p) if '.png' in f)
     stimuli = [j for _, j in sorted(zip(stim_order, stimuli))]
-    emo_dict = {l.split('=')[0]: l.split('=')[1] for l in instructions[-5:]}
+    emo_dict = {qf(l.split('=')[0]): l.split('=')[1] for l in instructions[-5:]}
     control = []
     for trialn, imgf in enumerate(stimuli):
+        print trialn, imgf, emo_dict
         control.append((proband_id, test_name, trialn,
                         {'M': 'Male', 'F': 'Female'}[imgf[0]],
                         emo_dict[imgf[1]],
