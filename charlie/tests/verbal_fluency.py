@@ -2,21 +2,51 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-verbal_fluency: Verbal fluency test.
+verbal_fluency: Controlled oral word association test (COWAT)
 
-This test requires the proband to relinquish control to the experimenter.
-Probands are instructed to list as many words as they can that begin with a
-certain letter (first three trials) or as many animals (final trial) as they
-can in 60 seconds. The experimenter records the number of correct and incorrect
-responses.
+This test administers the FAS version [1] of the COWAT. First, the proband is
+instructed to relinquish control of the testing computer to the experimenter.
+Probands are then instructed to list as many words as they can that begin with
+the letter F (trial 1), A (trail 2), and S (trial 3), or name as many animals
+as they can (trial 4) in 60 seconds. The experimenter records the number of
+correct and incorrect responses. With the GUI.
 
-TODO: Add references etc.
+There is some controversy in the literature over whether the FAS version of the
+COWAT produces similar results to the CFL version [2, 3]. It would be trivial
+to modify this test to include C and L trials if desired.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+Summary statistics:
+
+    [F, A, S, or animal]_*
+    letter_* : sum (for counts) or mean (for indices) the first three trials
+    overall_*
+
+    *nvalid : number of valid responses
+    *ninval : number of invalid responses
+    *dprime : Recall discriminability index [4].
+    *criterion : Recall bias [4].
+
+References:
+
+[1] Spreen, O. & Strauss, E. (1998). A compendium of neuropsychological tests:
+Administration, norms and commentary. 2nd edition. Oxford University Press; New
+York, NY.
+
+[2] Lacy, M.A., Gore, P.A., Pliskin, N.H., Henry, G.K., Heilbronner, R.L., &
+Hamer, D.P. (1996). Verbal fluency task equivalence. The Clinical
+Neuropsychologist, 10(3):305–308.
+
+[3] Barry, D., Bates, M.E., & Labouvie, E. (2008) FAS and CFL forms of verbal
+fluency differ in difficulty: A meta-analytic study. Appl. Neuropsychol.,
+15(2): 97-106.
+
+[4] Methods for these indices are taken from the CVLT2 (see that test for the
+reference).
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
+
 
 import pandas
 try:
@@ -25,14 +55,19 @@ except ImportError:
     from PyQt4 import QtGui, QtCore
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
+
 
 test_name = 'verbal_fluency'
 trials = 4
 time_limit = 60
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('trialn', int),
-                 ('rsp', str)]
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('rsp', str)
+]
+trial_names = ['f', 'a', 's', 'animal']
 
 
 class MainWindow(QtGui.QMainWindow):
@@ -248,9 +283,35 @@ def summary_method(data, instructions):
     df = data.to_df()
     cols, entries = summaries.get_universal_entries(data)
     for trialn in xrange(4):
-        cols += ['trial_%i_%s' % (trialn, s) for s in ['nvrsp', 'nirsp']]
-        subdf = df[df.trialn == trialn]
-        entries += [len(subdf[subdf.rsp=='True']),
-                    len(subdf[subdf.rsp=='False'])]
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+        trial_name = trial_names[trialn]
+        cols += ['trial_%s_%s' % (trial_name, s) for s in ['nvalid', 'ninval',
+                                                           'dprime',
+                                                           'criterion']]
+        df1 = df[df.trialn == trialn]
+        valid = len(df1[df1.rsp=='True'])
+        invalid = len(df1[df1.rsp=='False'])
+        sdt = 100, 100, valid, invalid
+        d, c = summaries.sdt_yesno(*sdt)
+        entries += [valid, invalid, d, c]
+
+    cols += ['letter_%s' % s for s in ['nvalid', 'ninval', 'dprime',
+                                       'criterion']]
+    df1 = df[df.trialn >= 4]
+    valid = len(df1[df1.rsp=='True'])
+    invalid = len(df1[df1.rsp=='False'])
+    sdt = 400, 400, valid, invalid
+    d, c = summaries.sdt_yesno(*sdt)
+    entries += [valid, invalid, d, c]
+
+    cols += ['overall_%s' % s for s in ['nvalid', 'ninval', 'dprime',
+                                        'criterion']]
+    df1 = df
+    valid = len(df1[df1.rsp=='True'])
+    invalid = len(df1[df1.rsp=='False'])
+    sdt = 500, 500, valid, invalid
+    d, c = summaries.sdt_yesno(*sdt)
+    entries += [valid, invalid, d, c]
+    df= pandas.DataFrame(entries, cols).T
+    print '---Here are the summary stats:'
+    print df.T
+    return df

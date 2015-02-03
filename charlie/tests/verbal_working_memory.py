@@ -2,26 +2,41 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-Wechsler Working Memory task.
+verbal_working_memory: Wechsler verbal working memory test
 
-This test requires the proband to relinquish control to the experimenter. There
-are four phases to the test. In the first phase, the experimenter reads aloud
-sequences of letters and digits to the proband. The proband then repeats the
-sequence back to the experimenter, in the same order. The first sequence is two
-digits in length; sequence length increases by one digit every two sequences.
-If the proband responds incorrectly to both sequences of the same length, the
-phase is terminated.
+This test is a combination of the digit span forward, digit span backward, and
+letter-number sequencing tests from the WAIS-III [1] and WMC-III [2]. This test
+requires the proband to relinquish control to the experimenter. There are four
+phases to the test. In the first phase, the experimenter reads aloud sequences
+of letters and digits to the proband. The proband then repeats the sequence
+back to the experimenter, in the same order. The first sequence is two digits
+in length; sequence length increases by one digit every two sequences. If the
+proband responds incorrectly to both sequences of the same length, the phase is
+terminated. The second phase is the same as the first except that probands
+repeat the sequences in reverse order. In the third phase, the sequences
+contain both digits and letters, and probands repeat the letters in numerical
+order, followed by the letters in alphabetical order. The third phase serves as
+a practice for the fourth phase. In the fourth phase there are three sequences
+of the same length; if probands get all three wrong, the phase is terminated.
 
-The second phase is the same as the first except that probands repeat the
-sequences in reverse order. In the third phase, the sequences contain both
-digits and letters, and probands repeat the letters in numerical order,
-followed by the letters in alphabetical order. The third phase serves as a
-practice for the fourth phase. In the fourth phase there are three sequences of
-the same length; if probands get all three wrong, the phase is terminated.
+Summary statistics:
 
-@author: Sam Mathias
-@status: complete
-@version: 1.0
+    forward_*
+    backward_*
+    sequencing_*
+
+    *ntrials: number of trials
+    *ncorrect: number of correct trials
+    *k: longest sequence correctly reported [3]
+
+References:
+
+[1]
+
+[2]
+
+[3] For forward and backward, this value reflects 50% correct threshold. For
+letter-number sequencing, it relects 33% correct.
 
 """
 
