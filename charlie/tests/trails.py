@@ -4,25 +4,39 @@ Created on Fri Mar 14 16:52:26 2014
 
 trails: Pen-and-paper trail-making test.
 
-This test requires the three trail paper trials, and is conducted by the
-experimenter: this script simply creates a GUI for recording the results. It is
-identical to the computerised version (ctrails.py) in design. The GUI is used
-to record the time taken to complete each trial, along with the number of
-errors.
 
-Useful references:
+This is identical to the STAN version of the trail-making test (TMT) [1].
+This test requires three sheets of paper with trail configurations printed on
+them. First the proband is instructed to relinquish control of the testing
+computer to the experimenter. The experimenter then gives the proband the
+printed sheets and performs the TMT as per the usual protocol. This test
+contains a GUI to keep track of response times.
 
-Corrigan, J.D., & Hinkeldey, M.S. (1987). Relationships between parts A and B
-of the Trail Making Test. J Clin Psychol, 43(4):402–409.
+Normally, the TMT contains two parts, A and B. In part A, the proband must make
+a trail between consecutive digits, and in part B, he/she must alternate
+between letters and numbers. Given that the difference between parts A and B
+have been considered useful [2], these are computed here. I'm not sure why but
+the STAN also contained an intermediate part in which the proband makes a trail
+between letters. This is preserved here.
 
-Reitan, R.M. (1958). Validity of the Trail Making test as an indicator of
-organic brain damage. Percept Mot Skills, 8:271-276.
+Summary statistics:
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+    [number or letter or number-letter]*
+
+    errors : number of errors the proband makes
+    rt : response time in seconds
+
+References:
+
+[1] Reitan, R.M. (1958). Validity of the Trail Making test as an indicator of
+organic brain damage. Percept. Mot. Skills, 8:271-276.
+
+[2] Corrigan, J.D., & Hinkeldey, M.S. (1987). Relationships between parts A and
+B of the Trail Making Test. J Clin Psychol, 43(4):402–409.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 try:
@@ -31,16 +45,18 @@ except ImportError:
     from PyQt4 import QtGui, QtCore
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 
 
 test_name = 'trails'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trial_type', str),
-                 ('rt', int),
-                 ('nerrors', int)]
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trial_type', str),
+    ('rt', int),
+    ('nerrors', int)
+]
 
 
 class MainWindow(QtGui.QMainWindow):
@@ -292,14 +308,14 @@ def summary_method(data, instructions):
         entries += [int(df[df.phase == phase].rt),
                     int(df[df.phase == phase].nerrors)]
     dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    print '---Here are the summary stats:'
+    print dfsum.T
+
+    return df
+
 
 def main():
-    """Command-line executor."""
-
-    tools.batch.run_single_test(test_name, control_method, None, output_format,
-                                summary_method, others=globals())
-
-
-if __name__ == '__main__':
-    main()
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)

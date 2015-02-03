@@ -4,36 +4,67 @@ Created on Fri Mar 14 16:52:26 2014
 
 switching: Task-switching test
 
-This task-switching test is based on the Cantab Attention-switching test and
-on the work of Monsell and colleagues. On each trial, the proband sees a 2-by-2
-grid on the screen. There is an arrow in one of the cells of the grid. If the
-arrow is in either of the top two cells, the proband indicates its horizontal
-position (left or right). If the arrow is in either of the bottom cells, the
-proband responds with the direction it is facing (left or right). The arrows
-are also coloured differently (blue for position, red for direction). The test
-follows on from Rogers and Monsell's work suggesting that subjects may handle
-predictable and unpredictable task switches differently, and improves on the
-Cantab, by removing the reliance on on-screen written instructions.
+This task-switching test is based on the Cantab attention-switching test [1]
+and on the work by Monsell and colleagues [2, 3]. On each trial, the proband
+sees a 2-by-2 grid on the screen. There is an arrow in one of the cells of the
+grid. If the arrow is in either of the top two cells, the proband indicates its
+horizontal position (left or right). If the arrow is in either of the bottom
+cells, the proband indicates the direction it is facing (left or right). The
+arrows are also coloured differently (blue for position, red for direction).
+The test follows on from Rogers and Monsell's work suggesting that subjects may
+handle predictable and unpredictable task switches differently, and improves on
+the Cantab, by removing the reliance on on-screen written instructions.
 
 There are two main phases to the test. In the 'predictable' phase, the task
 switches every two trials. In the 'random' phase, task-switching is
 unpredictable. There are 101 trials in each phase, plus eight trials in the
-practice phase. Numerous summary statistics are recorded, including accuracy
-and response times for predictable and random switch and non-swtich trials,
-position and direction tasks, and congruent and incongruent trials (in terms of
-position and direction of the arrow).
+practice phase.
 
-Reference:
+Summary statistics:
 
-Rogers, R. D., & Monsell, S. (1995). Costs of a predictible switch between
+    overall*
+    [predictable or random]*
+    [predictable or random]_[switch or nonswitch]*
+
+    *ntrials : number of trials.
+    *ncorrect : number of correct trials.
+    *pcorrect : proportion of trials correct.
+    *dprime : index of sensitivity.
+    *criterion : index of bias.
+    *rt_mean : mean response time on correct trials in milliseconds.
+    *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    *rt_outrmvd : number of outlier trials.
+
+
+    cost_[predictable or random]_ncorrect : cost of switching
+    cost_[predictable or random]_pcorrect
+    cost_[predictable or random]_dprime
+    cost_[predictable or random]_rt_mean_outrmvd
+
+    stroop_ncorrect : incongruent minus congruent
+    stroop_pcorrect
+    stroop_dprime
+    stroop_rt_mean_outrmvd
+
+
+References:
+
+[1] Sahakian, B.J., Morris, R.G., Evenden, J.L., Heald, A., Levy, R., Philpot,
+M., Robbins, T.W. (1988). A Comparative Study of Visuospatial Memory and
+Learning in Alzheimer-Type Dementia and Parkinson's Disease. Brain, 111(3):
+695-718.
+
+[2] Rogers, R. D., & Monsell, S. (1995). Costs of a predictible switch between
 simple cognitive tasks. Journal of Experimental Psychology: General, 124(2):
 207-231.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+[3] Monsell, S. (2003). Task switching. Trends Cogn. Sci., 7(3):134-140.
+
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
+
 
 import pandas
 import charlie.tools.visual as visual
@@ -41,29 +72,30 @@ import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
 import charlie.tools.audio as audio
+import charlie.tools.batch as batch
 
 test_name = 'switching'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('task', str),
-                 ('pos', str),
-                 ('dir', str),
-                 ('switch', str),
-                 ('cong', str),
-                 ('f', str),
-                 ('ans', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('task', str),
+    ('pos', str),
+    ('dir', str),
+    ('switch', str),
+    ('cong', str),
+    ('f', str),
+    ('ans', str),
+    ('rsp', str),
+    ('rt', int)
+]
 answers = {
     'practice': (
         [0, 0, 1, 1, 0, 0, 1, 1, 0],  # task, 0=position
         [0, 0, 0, 1, 1, 1, 0, 1, 0],  # position, 0=left
         [1, 1, 1, 0, 1, 0, 0, 0, 0]  # direction, 0=left
-        ),  
+    ),
     'predictable': (
         [0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1,
          1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0,
@@ -80,7 +112,7 @@ answers = {
          0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0,
          0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0,
          0, 1, 0, 0, 0, 1, 0, 1, 0]
-         ),
+    ),
     'random': (
         [0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0,
          1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0,
@@ -96,17 +128,20 @@ answers = {
          0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0,
          0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0,
          0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0,
-         0, 1, 1, 0, 1, 0, 1, 0, 1])
-    }
+         0, 1, 1, 0, 1, 0, 1, 0, 1]
+    )
+}
 tasks = ['Position', 'Direction']
 labels = ['Left', 'Right']
 switches = ['Switch', 'Non-switch']
 
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. For this test, it is a list of tuples in
+    """
+    Generates a control iterable. For this test, it is a list of tuples in
     the format (proband_id, test_name, phase, trialn, task, pos, dir, switch,
-    cong, f, ans)."""
+    cong, f, ans).
+    """
     path = data.pj(data.VISUAL_PATH, test_name)
     control = []
     for phase in ['practice', 'predictable', 'random']:
@@ -126,7 +161,9 @@ def control_method(proband_id, instructions):
     
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""   
+    """
+    Runs a single trial of the test.
+    """
     _, _, phase, trialn, task, position, direction, _, _, f, ans = trial_info
     labels = instructions[-2:]
     if not screen.wordzones:
@@ -211,53 +248,65 @@ def trial_method(screen, instructions, trial_info):
     return trial_info
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
     df = df[df.phase != 'practice']
-    cols, entries = summaries.get_universal_entries(data)
-    
-    condition_set = (('phase', ['predictable', 'random', 'all']),
-                     ('task', tasks + ['all']),
-                     ('switch', switches + ['all']),
-                     ('cong', ['Incongruent', 'Congruent', 'all']))
-    
-    a, b = summaries.get_all_combinations_2alt(df, condition_set, labels)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    
-    dvs = ['pcorrect', 'rau(pcorrect)', 'd', 'rt_mean_outrmvd']
-    a, b = summaries.differences(dfsum,
-                                       'predictable_all_switch_all',
-                                       'predictable_all_non-switch_all',
-                                       dvs)
-    cols += a
-    entries += b
-    a, b = summaries.differences(dfsum,
-                                       'random_all_switch_all',
-                                       'random_all_non-switch_all',
-                                       dvs)
-    cols += a
-    entries += b
-    
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    labels = instructions[-2:]
+    signal, noise = labels
+    _stats = []
+
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, 'overall')
+    stats += summaries.get_rt_stats(df, 'overall')
+    stats += summaries.get_sdt_stats(df, noise, signal, 'overall')
+
+    for phase in df.phase.unique():
+        df1 = df[df.phase == phase]
+        prefix = '%s' % phase.lower()
+        stats += summaries.get_accuracy_stats(df1, prefix)
+        stats += summaries.get_rt_stats(df1, prefix)
+        stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
+        for switch in df['switch'].unique():
+            if switch != 'n/a':
+                df2 = df1[df['switch'] == switch]
+                prefix = '%s_%s' % (phase.lower(), switch.lower())
+                print prefix
+                stats += summaries.get_accuracy_stats(df2, prefix)
+                stats += summaries.get_rt_stats(df2, prefix)
+                stats += summaries.get_sdt_stats(df2, noise, signal, prefix)
+
+    for cong in df.cong.unique():
+        prefix = '%s' % cong.lower()
+        df1 = df[df.cong == cong]
+        _stats += summaries.get_accuracy_stats(df1, prefix)
+        _stats += summaries.get_rt_stats(df1, prefix)
+        _stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
+    _df = summaries.make_df(_stats)
+    for dv in ['ncorrect', 'pcorrect', 'dprime', 'rt_mean_outrmvd']:
+        x = 'stroop_%s' %dv
+        y = float(_df['congruent_%s' % dv] - _df['incongruent_%s' % dv])
+        stats.append((x, y))
+
+    _df = summaries.make_df(stats)
+    for phase in df.phase.unique():
+        if phase != 'practice':
+            for dv in ['ncorrect', 'pcorrect', 'dprime', 'rt_mean_outrmvd']:
+                x = 'cost_%s_%s' %(phase, dv)
+                y = float(_df['%s_switch_%s' % (phase, dv)] - _df[
+                    '%s_non-switch_%s' % (phase, dv)])
+                stats.append((x, y))
+
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+    return df
 
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
-
-
-if __name__ == '__main__':
-    main()
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)

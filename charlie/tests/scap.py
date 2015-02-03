@@ -24,8 +24,9 @@ Summary statistics:
     *rt_mean : mean response time on correct trials in milliseconds.
     *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
     *rt_outrmvd : number of outlier trials.
-    *k : Cowan's K (estimate of capacity).
-    *g : Cowan's G (estimate of response bias).
+
+    k : Cowan's K (estimate of capacity).
+    g : Cowan's G (estimate of response bias).
 
 References:
 
