@@ -4,26 +4,31 @@ Created on Mon Nov 10 11:06:45 2014
 
 updating: Test of updating spatial memory.
 
-On each trial, the proband sees a 4-by-4 grid. One of the cells in the grid
-contains a circle. The grid is then replaced by a 6-s sequence of arrows or
-dashes, that instruct the proband how the circle moves within the grid. The
-sequence is followed by an empty grid. The task is to click on the cell in
-which the circle ended up. The independent variable is the number of updates
-made during the retention period: 0, 1, 2, 3, 4, 6, 8, 9 or 12. There are three
-trials at each level. The test ends if the proband gets all three trials of a
-level incorrect.
+This test was devised for an fMRI study by Leung et al [1]. On each trial, the
+proband sees a 4-by-4 grid. One of the cells in the grid contains a circle. The
+grid is then replaced by a 6-s sequence of arrows or dashes, that instruct the
+proband how the circle moves within the grid. The sequence is followed by an
+empty grid. The task is to click on the cell in which the circle ended up. The
+independent variable is the number of updates made during the retention period
+(0 up to 12). There are three trials at each level. The test ends prematurely
+if the proband gets all three trials of a level incorrect.
 
-Reference:
+Summary statistics:
 
-Leung, H.C., Oh, H., Ferri, J., & Yi, Y. (2007). Load response functions in the
-human spatial working memory circuit during location memory updating.
+    ntrials : number of trials completed
+    ncorrect : number of trials correct
+    pcorrect : proportion of trial correct
+
+References:
+
+[1] Leung, H.C., Oh, H., Ferri, J., & Yi, Y. (2007). Load response functions in
+the human spatial working memory circuit during location memory updating.
 Neuroimage, 35: 368-377.
 
-@author: Sam Mathias
-@status: under construction
-@version: 0.9
-
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
+
 
 import pandas
 import charlie.tools.visual as visual
@@ -35,18 +40,19 @@ import charlie.tools.batch as batch
 
 
 test_name = 'updating'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('updates', int),
-                 ('trialn', int),
-                 ('origin', int),
-                 ('endpoint', int),
-                 ('moves', str),
-                 ('marginalpositions', str),
-                 ('rsp', int),
-                 ('rt', int)]
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('updates', int),
+    ('origin', int),
+    ('endpoint', int),
+    ('moves', str),
+    ('marginalpositions', str),
+    ('rsp', int),
+    ('rt', int)
+]
 
 study_duration = 4
 wipe_period = 0.5
@@ -247,48 +253,55 @@ def trial_method(screen, instructions, trial_info):
 
     # show response
     if phase == 'practice':
+        set_up_grid(screen, imgf, endpoint)
         corr = endpoint == i
         colour = [visual.RED, visual.GREEN][corr]
         screen.blit_rectangle(screen.zones[i], colour, alpha=100)
-        audio.play_feedback(corr)
-        set_up_grid(screen, imgf, endpoint)
-        events.wait(events.DEFAULT_ITI_FEEDBACK)
         screen.update()
+        audio.play_feedback(corr)
+        events.wait(events.DEFAULT_ITI_FEEDBACK)
     else:
         screen.blit_rectangle(screen.zones[i], visual.BLUE, alpha=100)
         events.wait(events.DEFAULT_ITI_NOFEEDBACK)
-        trial_info = tuple(list(trial_info) + [i, rt])
-
+    trial_info = tuple(list(trial_info) + [i, rt])
     return trial_info
 
 timeout = 120
+
 
 def stopping_rule(data):
     """
     Returns True if all three of the trials of a given moves length were
     incorrect.
     """
+    print ''
     df = data.to_df()
-    df = df[df.phase=='test']
-    trials, __ = df.shape
-    if trials > 0:
-        last_moves = df[df.moves == df.ix[-1].moves]
-        if len(last_moves) == 3:
-            corr = last_moves[last_moves.endpoint == last_moves.rsp]
-            if len(corr[corr]) == 0:
+    df = df[df.phase == 'test']
+    if len(df) > 0:
+        df = df.set_index('trialn', drop=False)
+        last = df.ix[len(df) - 1].updates
+        df = df[df['updates'] == last]
+        if len(df) == 3:
+            print 'checking ...'
+            if len(df[df.endpoint == df.rsp]) == 0:
                 return True
 
-def summary_method():
+
+def summary_method(data_obj, instructions):
     """
-    Calculate summary stats for this test.
+    Computes summary stats for this task.
     """
-    df = data.to_df()
-    cols, entries = summaries.get_universal_entries(data)
-    a, b = summaries.get_generic_summary(df)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    df = data_obj.to_df()
+    df = df[df.phase == 'test']
+
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, '', ans_col='endpoint')
+
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
 
 def main():
     """
