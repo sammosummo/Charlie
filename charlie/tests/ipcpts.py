@@ -5,30 +5,38 @@ Created on Fri Oct  3 15:12:07 2014
 ipcpts: The identical pairs continuous performance test, three-symbol version
 
 This test is based on the original continuous performance test introduced by
-Rosvold et al. and the subsequent identical-pairs modification by Cornblatt et
-al. On each trial, the proband sees a three-item symbol array, and presses the
-space bar each time the current array matches the array from the previous
-trial (essentially a 1-back task). Trials have a duration of 1.5 seconds. There
-are 200 trials in the test phase. This version uses the same stimuli as the
-JANET battery.
+Rosvold et al. [1] and the subsequent identical-pairs modification [2]. On each
+trial, the proband sees a three-item symbol array, and presses the space bar
+each time the current array matches the array from the previous trial
+(effectively a 1-back task). Trials have a duration of 1.5 seconds. There
+are 200 trials in the test phase. The symbols were originally designed by D.
+Glahn for STAN. The task is identical to the STAN version.
 
-Reference for the original CPT:
+Summary statistics:
 
-Rosvold, H.E., Mirsky, A.F., Sarason, I., Bransome, E.D. Jr., & Beck, L.H.
-(1956). A continuous performance test of brain damage. J Consult Clin Psychol,
-20: 343-350.
+    ntrials : number of trials completed
+    ncorrect : number of trials correct
+    dprime : sensitivity
+    criterion : response bias
+    rt_mean : mean response time on correct trials in milliseconds.
+    rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    rt_outrmvd : number of outlier trials.
 
-Reference for the identical-pairs version:
+References:
 
-Cornblatt, B.A., Risch, N.J., Faris, G., Friedman, D., & Erlenmeyer-Kimling, L.
-(1988). The continuous performance test, identical pairs version (CPT-IP): I.
-New findings about sustained attention in normal families. Psychiatry Res,
-26(2): 223–38.
+[1] Rosvold, H.E., Mirsky, A.F., Sarason, I., Bransome, E.D. Jr., & Beck, L.H.
+(1956). A continuous performance test of brain damage. J. Consult. Clin.
+Psychol., 20:343-350.
 
-@author: smathias
-@status: completed
-@version: 1.0
+[2] Cornblatt, B.A., Risch, N.J., Faris, G., Friedman, D., &
+Erlenmeyer-Kimling, L. (1988). The continuous performance test, identical pairs
+version (CPT-IP): I. New findings about sustained attention in normal families.
+Psychiatr. Res., 26(2):223–38.
+
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
+
 
 import pandas
 import charlie.tools.visual as visual
@@ -36,22 +44,23 @@ import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
 import charlie.tools.audio as audio
+import charlie.tools.batch as batch
 
 
 test_name = 'ipcpts'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('matches', int),
-                 ('ans', str),
-                 ('symbol1', str),
-                 ('symbol2', str),
-                 ('symbol3', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('matches', int),
+    ('ans', str),
+    ('symbol1', str),
+    ('symbol2', str),
+    ('symbol3', str),
+    ('rsp', str),
+    ('rt', int)
+]
 presentation_time = 1
 wait_time = .5
 
@@ -105,14 +114,18 @@ symbols = [(0, 1, 2), (6, 9, 0), (6, 9, 0), (6, 9, 0), (3, 5, 8), (3, 5, 8),
 
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. Both phases of the task are time-limited.
-    Therefofe, the control object contains only two items."""
+    """
+    Generates a control iterable. Both phases of the task are time-limited.
+    Therefofe, the control object contains only two items.
+    """
     return [(proband_id, test_name, phase) for phase in ('practice', 'test')]
 
 
 def trial_method(screen, instructions, trial_info):
-    """Run all the trials. It was much easier to write one function to do all
-    trials than a function that is called per trial."""
+    """
+    Run all the trials. It was much easier to write one function to do all
+    trials than a function that is called per trial.
+    """
     proband_id, test_name, phase = trial_info
     p = data.pj(data.VISUAL_PATH, test_name)
     screen.load_keyboard_keys()
@@ -214,32 +227,29 @@ def trial_method(screen, instructions, trial_info):
     return _data
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
-    df = df[df.phase != 'practice']
-    df = df.ix[1:]
-    cols, entries = summaries.get_universal_entries(data)
-    labels = instructions[-2:]
-    a, b = summaries.get_gonogo(df, choices=labels)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
+    df = df[df.phase == 'test']
+
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, '')
+    stats += summaries.get_rt_stats(df, '')
+    stats += summaries.get_sdt_stats(df, 'No', 'Yes', '')
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
 
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':

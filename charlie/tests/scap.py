@@ -4,24 +4,38 @@ Created on Mon Nov 10 11:06:45 2014
 
 scap: Spatial capacity delayed-response test.
 
-On each trial, the proband sees a study array comprising three to five yellow
-circles in random positions on the screen. The study array is removed and,
-after a delay, is replaced by a single green circle (the probe). The proband
-indicates whether the probe has the same spatial location as one of the
-original circles. In this version of the SCAP, there are 14 three-, 14 four-
-and 14 five-item trials.
+This is an extended version of the SCAP [1]. On each trial, the proband sees a
+study array comprising three to five yellow circles in random positions on the
+screen. The study array is removed and, after a delay, is replaced by a single
+green circle (the probe). The proband indicates whether the probe has the same
+spatial location as one of the original circles. In this version of the SCAP,
+there are 14 three-, 14 four- and 14 five-item trials.
 
-Reference for the original SCAP:
+Summary statistics:
 
-Glahn, D.C., Therman, S., Manninen, M., Huttunen, M., Kaprio, J., Lönnqvist,
-J., & Cannon T. D. (2003). Spatial working memory as an endophenotype for
-schizophrenia. Biol Psychiatry, 53(7):624-626.
+    overall*
+    [load]* : number of items in the study array (3, 4 or 5).
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+    *ntrials : number of trials.
+    *ncorrect : number of correct trials.
+    *pcorrect : proportion of trials correct.
+    *dprime : index of sensitivity.
+    *criterion : index of bias.
+    *rt_mean : mean response time on correct trials in milliseconds.
+    *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    *rt_outrmvd : number of outlier trials.
+    *k : Cowan's K (estimate of capacity).
+    *g : Cowan's G (estimate of response bias).
+
+References:
+
+[1] Glahn, D.C., Therman, S., Manninen, M., Huttunen, M., Kaprio, J.,
+Lönnqvist, J., & Cannon T. D. (2003). Spatial working memory as an
+endophenotype for schizophrenia. Biol. Psychiatry, 53(7):624-626.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
@@ -29,40 +43,40 @@ import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
 import charlie.tools.audio as audio
+import charlie.tools.batch as batch
 
 
 test_name = 'scap'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('load', int),
-                 ('trialn', int),
-                 ('ans', str),
-                 ('array_f', str),
-                 ('probe_f', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('load', int),
+    ('trialn', int),
+    ('ans', str),
+    ('array_f', str),
+    ('probe_f', str),
+    ('rsp', str),
+    ('rt', int)
+]
 array_duration = .2
 retention_interval = 0
 prac_answers = [1, 0, 1]
-prac_loads = [1, 2, 3]
+prac_loads = [3, 4, 5]
 answers = {3: (1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0),
            4: (0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0),
            5: (1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0)}
 img_pos = (0, -100)
 retention_image = data.pj(data.VISUAL_PATH, test_name, 'fix.BMP')
-
-visual.BG_COLOUR = visual.BLACK
-visual.DEFAULT_TEXT_COLOUR = visual.WHITE
+black_bg = True
 
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. For this test, it is a list of tuples in
+    """
+    Generates a control iterable. For this test, it is a list of tuples in
     the format (proband_id, test_name, phase, load, trialn, ans, array_f,
-    probe_f)."""
-    
+    probe_f).
+    """
     def get_f(phase, stimtype, load, trialn):
         p = data.pj(data.VISUAL_PATH, test_name)
         if phase == 'practice':
@@ -98,7 +112,9 @@ def control_method(proband_id, instructions):
 
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""
+    """
+    Runs a single trial of the test.
+    """
     _, _, phase, load, trialn, ans, array_f, probe_f = trial_info
     labels = instructions[-2:]
     if not screen.wordzones:
@@ -177,35 +193,39 @@ def trial_method(screen, instructions, trial_info):
     return trial_info
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
-    df = df[df.phase != 'practice']
-    cols, entries = summaries.get_universal_entries(data)
-    
-    condition_set = [('load', [3, 4, 5, 'all'])]
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
+    df = df[df.phase == 'test']
     labels = instructions[-2:]
-    a, b = summaries.get_all_combinations_2alt(df, condition_set, labels)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
+    signal, noise = labels
+    print labels
 
-    return dfsum
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, 'overall')
+    stats += summaries.get_rt_stats(df, 'overall')
+    stats += summaries.get_sdt_stats(df, noise, signal, 'overall')
+
+    for load in df['load'].unique():
+        prefix = 'load_%i' % load
+        df1 = df[df['load'] == load]
+        stats += summaries.get_accuracy_stats(df1, prefix)
+        stats += summaries.get_rt_stats(df1, prefix)
+        stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
+
+    stats += summaries.get_cowan_stats(df, noise, signal, '')
+
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
 
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
-
-
-if __name__ == '__main__':
-    main()
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)

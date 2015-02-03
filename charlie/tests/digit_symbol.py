@@ -25,7 +25,6 @@ Summary statistics:
     rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
     rt_outrmvd : number of outlier trials.
 
-
 References:
 
 [1] Glahn, D.C., Almasy, L., Blangero, J., Burk, G.M., Estrada, J., Peralta, J.
@@ -255,6 +254,7 @@ def summary_method(data_obj, instructions):
     Computes summary stats for this task.
     """
     df = data_obj.to_df()
+    df = df[df.phase == 'test']
     labels = instructions[-2:]
     signal, noise = labels
 

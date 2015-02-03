@@ -113,6 +113,35 @@ def get_sdt_stats(df, noise, signal, prefix='', ans_col='ans', rsp_col='rsp',
     return zip(cols, entries)
 
 
+def get_cowan_stats(df, noise, signal, prefix='', ans_col='ans', rsp_col='rsp',
+                    load_col='load'):
+    """
+    Calculates mean rt, mean t without outliers, number of outliers removed.
+    :param df: pandas.DataFrame
+    :param prefix: str
+    :param ans_col: str
+    :param rsp_col: str
+    :return: (cols, entries)
+    """
+    K = []
+    G = []
+    for load in df[load_col].unique():
+        load = int(load)
+        N = len(df[df[ans_col] == noise])
+        S = len(df[df[ans_col] == signal])
+        H = len(df[(df[ans_col] == signal) & (df[rsp_col] == signal)])
+        F = len(df[(df[ans_col] == noise) & (df[rsp_col] == signal)])
+        k = load * ((H / float(S)) - (F / float(N)))
+        K.append(k)
+        g = (F / float(1 - H - F))
+        G.append(g)
+    cols = ['k', 'g']
+    if prefix:
+        cols = ['%s_%s' % (prefix, col) for col in cols]
+    entries = [np.mean(K), np.mean(G)]
+    return zip(cols, entries)
+
+
 def make_df(stats):
     df = pandas.DataFrame(stats).T
     df.columns = df.iloc[0]

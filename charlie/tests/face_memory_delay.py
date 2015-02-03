@@ -2,53 +2,63 @@
 """
 Created on Fri Mar 14 16:52:26 2014
 
-face_memory_delay: The Penn facial memory test, delayed condition
+face_memory_delay: The Penn face memory test, delayed.
 
-This is the second part of the facial memory test. This is the same as the
-first part of the test, except that the distractor faces are different and
-there is no learning phase.
+This is the second part of the Penn face memory test [1]. Each trial comprises
+a face (either an old face or a new one), and probands make old/new judgements.
+It is identical to the original Penn test.
 
-Reference:
+Summary statistics:
 
-Gur R.C., Ragland J.D., Moberg P.J., Turner T.H., Bilker W.B.,
-Kohler C., Siegel S.J., Gur R.E. (2001). Computerized neurocognitive scanning:
-I. Methodology and validation in healthy people. Neuropsychopharmacology,
-25(5):766-76.
+    ntrials : number of trials.
+    ncorrect : number of correct trials.
+    pcorrect : proportion of trials correct.
+    dprime : index of sensitivity.
+    criterion : index of bias.
+    rt_mean : mean response time on correct trials in milliseconds.
+    rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    rt_outrmvd : number of outlier trials.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+References:
+
+[1] Gur, R.C., Ragland, J.D., Mozley, L.H., Mozley, P.D., Smith, R., Alavi, A.,
+et al. (1997). Lateralized changes in regional cerebral blood flow during
+performance of verbal and facial recognition tasks: Correlations with
+performance and ”effort”. Brain Cogn., 33:388-414.
+
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
 import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('f', str),
-                 ('ans', str),
-                 ('rsp', str),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('f', str),
+    ('ans', str),
+    ('rsp', str),
+    ('rt', int)
+]
 test_name = 'face_memory_delay'
-
 stim_order = [34, 12, 28, 37, 22, 17, 2, 13, 32, 23, 8, 20, 14, 38, 7, 31, 26,
               3, 5, 15, 10, 24, 36, 1, 9, 39, 18, 19, 33, 0, 35, 30, 6, 4, 27,
-              11, 21, 16, 29, 25] #same order for every proband
-
-# overwrite default colours
+              11, 21, 16, 29, 25]
 black_bg = True
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. For this test, it is a list of tuples in
-    the format (proband_id, test_name, phase, trialn, f, ans)."""
+    """
+    Generates a control iterable. For this test, it is a list of tuples in
+    the format (proband_id, test_name, phase, trialn, f, ans).
+    """
     p = data.pj(data.VISUAL_PATH, test_name)
-    stimuli = sorted(f for f in data.ld(p) if 'bmp' in f)
     stimuli = sorted(f for f in data.ld(p) if 'bmp' in f)
     labels = instructions[-2:]
 
@@ -62,9 +72,11 @@ def control_method(proband_id, instructions):
 
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""
+    """
+    Runs a single trial of the test.
+    """
 
-    proband_id, test_name, phase, trialn, f, ans = trial_info
+    proband_id, _, _, trialn, f, ans = trial_info
     img_pos = (0,-100)
     labels = instructions[-2:]
     if not screen.wordzones:
@@ -112,31 +124,31 @@ def trial_method(screen, instructions, trial_info):
     return trial_info
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
-    df = df[df.phase != 'learning']
-    cols, entries = summaries.get_universal_entries(data)
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
+    df = df[df.phase == 'test']
     labels = instructions[-2:]
-    a, b = summaries.get_2alt(df, choices=labels)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    signal, noise = labels
+
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, '')
+    stats += summaries.get_rt_stats(df, '')
+    stats += summaries.get_sdt_stats(df, noise, signal, '')
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
 
 
 def main():
-    """Command-line executor."""
-    params = (test_name,
-              control_method,
-              trial_method,
-              output_format,
-              summary_method)
-    batch.run_single_test(*params)
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':

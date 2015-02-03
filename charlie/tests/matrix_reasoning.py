@@ -2,56 +2,65 @@
 """
 Created on Wed Oct  1 12:08:08 2014
 
-matrix_reasonging: Computerised matrix reasoning test.
+matrix_reasoning: Matrix reasoning test.
 
-On each trial, the proband sees a matrix with one missing item in the centre of
-the screen, and an array of alternatives below. The task is to select the
-correct element from the array by clicking within its area. There is one
-practice trial, which will not progress until the correct answer is selected.
+This is identical to the matrix reasoning test from the WAIS-III [1]. On each
+trial, the proband sees a matrix with one missing item in the centre of the
+screen, and an array of alternatives below. The task is to select the correct
+element from the array by clicking within its area. There is one practice
+trial, which will not progress until the correct answer is selected. The test
+will terminate prematurely if four out of the last five trials were incorrect.
+Probands can sometimes spend minutes on single trials of this test. To try to
+prevent this, each trial has a time limit of two minutes. The stimuli are taken
+direction from the WAIS-III.
 
-Jen Barett reports that probands can sometimes spend minutes on single trials
-of this test. To try to prevent this, each trial has a time limit of two
-minutes.
+Summary statistics:
 
-TODO: The stimuli are taken from the JANET. They have been scanned in,
-presumably from one of the WAIS editions, but I'm not sure which one. Need to
-check where they are from.
+    ntrials : number of trials completed
+    ncorrect : number of trials correct
 
-@author: Sam Mathias
-@status: under construction
-@version: 0.9
+References:
+
+[1] The Psychological Corporation. (1997). WAIS-III/WMS-III technical manual.
+San Antonio, TX: The Psychological Corporation.
+
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import charlie.tools.visual as visual
 import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 import charlie.tools.audio as audio
 
 
 test_name = 'matrix_reasoning'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('matrix', str),
-                 ('array', str),
-                 ('ans', int),
-                 ('rsp', int),
-                 ('rt', int)]
-
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('matrix', str),
+    ('array', str),
+    ('ans', int),
+    ('rsp', int),
+    ('rt', int)
+]
 answers = [1, 3, 1, 3, 2, 0, 0, 2, 4, 4, 4, 1, 2, 0, 1, 3, 2, 0, 0, 3, 4, 4, 1,
            1, 0, 4, 3, 2, 2, 3, 0, 3, 1, 2, 4]
-
 timeout = 120
 
+
 def stopping_rule(data):
-    """Returns True if four out of the five previous responses are
-    incorrect."""
+    """
+    Returns True if four out of the five previous responses are
+    incorrect.
+    """
     df = data.to_df()
-    df = df[df.phase=='test']
+    df = df[df.phase == 'test']
     trials, __ = df.shape
     if trials >= 5:
         corr = df.ix[trials-4 : trials].ans == df.ix[trials-4 : trials].rsp
@@ -60,14 +69,17 @@ def stopping_rule(data):
 
 
 def control_method(proband_id, instructions):
-    """Generate a control iterable. For this test, it is a list of tuples in
-    the format (proband_id, test_name, phase, trialn, matrix, array, ans)."""
+    """
+    Generate a control iterable. For this test, it is a list of tuples in
+    the format (proband_id, test_name, phase, trialn, matrix, array, ans).
+    """
 
     # find the paths to the stimuli
     p = data.pj(data.VISUAL_PATH, test_name)
     prac_matrix = 'prac_MA.png'
     prac_array = 'prac_MAa.png'
-    matrices = sorted([s for s in data.ld(p) if 'png' in s and 'a.png' not in s])
+    matrices = sorted([s for s in data.ld(p) if 'png' in s and 'a.png'
+                       not in s])
     arrays = sorted([s for s in data.ld(p) if 'a.png' in s])
 
     # practice trial
@@ -85,8 +97,10 @@ def control_method(proband_id, instructions):
 
 
 def trial_method(screen, instructions, trial_info):
-    """Run a single trial. Since the practice trial is very similar to the test
-    trials, all are done within this script."""
+    """
+    Run a single trial. Since the practice trial is very similar to the test
+    trials, all are done within this script.
+    """
     proband_id, test_name, phase, trialn, matrix, array, ans = trial_info
 
     # show instructions if first trial
@@ -161,25 +175,27 @@ def trial_method(screen, instructions, trial_info):
     return tuple(list(trial_info) + [999, 999])
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for this task. Collects the trial-by-trial
-    data by calling the to_df() method from the data object, filters out the
-    practice trials, gets universal entries, generates a condition set, then
-    summary stats are produced for each combination of levels from the
-    condition set."""
-    df = data.to_df()
-    cols, entries = summaries.get_universal_entries(data)
-    a, b = summaries.get_generic_summary(df)
-    cols += a
-    entries += b
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+def summary_method(data_obj, instructions):
+    """
+    Computes summary stats for this task.
+    """
+    df = data_obj.to_df()
+    df = df[df.phase == 'test']
+
+    stats = summaries.get_universal_stats(data_obj)
+    stats += summaries.get_accuracy_stats(df, '')
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+
+    return df
+
 
 def main():
-    """Command-line executor."""
-    batch.run_single_test(test_name, control_method, trial_method,
-                                output_format, summary_method,
-                                others={'stopping_rule': stopping_rule})
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':
