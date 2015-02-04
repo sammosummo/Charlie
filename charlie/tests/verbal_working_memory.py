@@ -5,7 +5,7 @@ Created on Fri Mar 14 16:52:26 2014
 verbal_working_memory: Wechsler verbal working memory test
 
 This test is a combination of the digit span forward, digit span backward, and
-letter-number sequencing tests from the WAIS-III [1] and WMC-III [2]. This test
+letter-number sequencing tests from the WAIS-III and WMC-III [1]. This test
 requires the proband to relinquish control to the experimenter. There are four
 phases to the test. In the first phase, the experimenter reads aloud sequences
 of letters and digits to the proband. The proband then repeats the sequence
@@ -31,14 +31,15 @@ Summary statistics:
 
 References:
 
-[1]
+[1] The Psychological Corporation. (1997). WAIS-III/WMS-III technical manual.
+San Antonio, TX: The Psychological Corporation.
 
-[2]
-
-[3] For forward and backward, this value reflects 50% correct threshold. For
-letter-number sequencing, it relects 33% correct.
+[2] For forward and backward, this value reflects 50% correct threshold. For
+letter-number sequencing, it reflects 33% correct.
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
 import numpy as np
@@ -47,16 +48,18 @@ try:
 except ImportError:
     from PyQt4 import QtGui, QtCore
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 
 
 test_name = 'verbal_working_memory'
-
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('phase', str),
-                 ('trialn', int),
-                 ('sequence', str),
-                 ('rsp', str)]
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('phase', str),
+    ('trialn', int),
+    ('sequence', str),
+    ('rsp', str)
+]
 #sequences = [tuple(s.split('\n')) for s in self.instr[-4:]]
 
 
@@ -245,14 +248,29 @@ def summary_method(data, instructions):
     cols, entries = summaries.get_universal_entries(data)
     for phase in df.phase.unique():
         p = phase.replace(' ', '_')
+        if p == 'digit_letter':
+            p = 'sequencing'
         subdf = df[df.phase==phase]
         corrects = subdf[subdf.rsp=='True']
-        cols += ['%s_ntrials' % p, '%s_ncorrect' % p, '%s_kmax' % p]
+        cols += ['%s_ntrials' % p, '%s_ncorrect' % p, '%s_k' % p]
         entries += [len(subdf), len(corrects)]
         if len(corrects.tail(1)):
             kmax = len(np.ravel(corrects.tail(1).sequence)[0])
         else:
             kmax = 0
         entries.append(kmax)
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    df = pandas.DataFrame(entries, cols).T
+    print '---Here are the summary stats:'
+    print df.T
+    return df
+
+
+def main():
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
+
+
+if __name__ == '__main__':
+    main()
