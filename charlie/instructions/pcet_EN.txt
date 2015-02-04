@@ -1,0 +1,19 @@
+Conditional exclusion test (practice)
+
+On each trial in this test, you will see four objects
+on the screen. Your job is to click on the object that
+does not belong with the other three. You will be given
+feedback after each response.
+
+Press any key to try a practice trial.
+---
+Conditional exclusion test (main test)
+
+Now you begin the real test. It is the same as the
+practice, except there are more trials. Try to complete
+the task as quickly as you can without making mistakes.
+
+Press any key to begin.
+---
+Test will begin in %i ...
+---
