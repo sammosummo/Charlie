@@ -5,13 +5,13 @@ Created on Fri Mar 14 16:52:26 2014
 wtar: Computerised Wechsler test of Adult Reading (WTAR).
 
 This is a computerised version of the standard WTAR [1] and is administered in
-an identical manner to the official test. First, the proband sees a screen
-instructing them to relinquish control of the testing computer to the
-experimenter. The experimenter then operates the WTAR GUI. The proband is
-presented with a sheet of paper with a list of 50 words, which they must read
-out loud. The experimenter marks whether each pronunciation was correct using
-the GUI. The test terminates automatically after all 50 responses have been
-recorded or after 12 consecutive errors.
+an identical manner to the official test. It requires a sheet with 50 printed
+words. First, the proband sees a screen instructing them to relinquish control
+of the testing computer to the experimenter. The experimenter then operates the
+WTAR GUI. The proband is presented with the sheet of paper, and then they must
+read each of the 50 words out loud in order. The experimenter marks whether
+each pronunciation was correct using the GUI. The test terminates automatically
+after all 50 responses have been recorded or after 12 consecutive errors.
 
 Summary statistics:
 
@@ -20,12 +20,17 @@ Summary statistics:
 
 References:
 
-[1]
+[1] Holdnack, H.A. (2001). Wechsler Test of Adult Reading: WTAR. San Antonio.
+The Psychological Corporation
 
 """
+__version__ = 1.0
+__author__ = 'Sam Mathias'
 
 import pandas
-import numpy as np
+import charlie.tools.data as data
+import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
 try:
     from PySide import QtGui, QtCore
 except ImportError:
@@ -34,12 +39,15 @@ import charlie.tools.summaries as summaries
 
 test_name = 'wtar'
 
-output_format = [('proband_id', str),
-                 ('test_name', str),
-                 ('trialn', int),
-                 ('word', str),
-                 ('rsp', str)]
+output_format = [
+    ('proband_id', str),
+    ('test_name', str),
+    ('trialn', int),
+    ('word', str),
+    ('rsp', str)
+]
 #WORDS = [tuple(l.split(',')) for l in self.instr[-1].split('\n')]
+
 
 class MainWindow(QtGui.QMainWindow):
     """Experimenter-operated CVLT GUI object."""
@@ -191,4 +199,17 @@ def summary_method(data, instructions):
     cols += ['ntrials', 'ncorrect']
     entries += [len(df), len(df[df.rsp=='True'])]
     dfsum = pandas.DataFrame(entries, cols).T
+    print '---Here are the summary stats:'
+    print dfsum.T
     return dfsum
+
+
+def main():
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
+
+
+if __name__ == '__main__':
+    main()
