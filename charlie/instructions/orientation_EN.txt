@@ -1,46 +1,11 @@
-Orientation Test
+Orientation test
 
-Today we will be doing some tests of attention, memory,
-problem solving, and concentration. You may find some
-of these tests difficult and others easy. Just do your
-best on each one. Some tests will be on the computer
-and others will be paper and pencil.
-
-For the computerized tests, you will be asked to press
-keys on the keyboard and click with the mouse. We will
-now do some quick tests to get used to using the
-computer.
-
-Press any key to continue.
----
-Test 1
-
-In this test, you will need to use the LEFT ARROW
-and RIGHT ARROW keys. On each trial you will see an
-arrow printed to the screen. Your job is to press the
-matching arrow key. You have 90 seconds to give as many
-correct answers as you can.
+On each trial in this test, you see a red square
+on ths screen. Your task is to click on the square
+with the mouse. Try to make your responses as
+quickly as you can.
 
 Press any key to begin.
 ---
-Test 2
+The test will start in: %i
 
-In this test, you will need to use the SPACE BAR. On
-each trial you will see either a circle or a square.
-Your job is to press the space bar as quickly as you
-can when you see a circle, and do nothing when you see
-a square. You have 90 seconds to give as many correct
-answers as you can.
-
-Press any key to begin.
----
-Test 3
-
-In this test, you will need to use the mouse. On each
-trial you will see a square printed somewhere on the
-screen. Your job is to click on the square as quickly
-as you can in 90 seconds
-
-Press any key to begin.
----
-Test begins in % s.

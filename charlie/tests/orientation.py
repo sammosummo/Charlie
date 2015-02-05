@@ -42,7 +42,6 @@ output_format = [
     ('test_name', str),
     ('phase', str),
     ('trialn', str),
-    ('size', int),
     ('posx', int),
     ('posy', int),
     ('dposx', int),
@@ -85,19 +84,19 @@ def trial_method(screen, instructions, trial_info):
         pos = positions[:10]
         if keydown == 'EXIT':
             return 'EXIT'
+        screen.countdown_splash(5, instructions[1])
     else:
         pos = positions[10:]
     screen.wipe()
-    screen.countdown_splash(5, instructions.pop(0))
 
     trial_data = []
 
     path = data.pj(data.VISUAL_PATH, test_name)
-    f1 = lambda x: data.pj(path, '%s_b.png' % str(x))
-    f2 = lambda x: data.pj(path, '%s_r.png' % str(x))
+    f1 = lambda x: data.pj(path, '%s_s.png' % str(x))
+    f2 = lambda x: data.pj(path, '%s_c.png' % str(9 - x))
 
     trial_clock = events.Clock()
-    trial_clock.tick_busy_loop()
+    total_time = trial_clock.tick_busy_loop()
 
     trialn = -1
     size = -1
@@ -113,7 +112,7 @@ def trial_method(screen, instructions, trial_info):
         image, r = screen.blit_image(f1(trialn), (x, y), update=False)
         zones.append(r)
         if phase == 'last':
-            image, r = screen.blit_image(f1(trialn), dpos, update=False)
+            image, r = screen.blit_image(f2(trialn), dpos, update=False)
             zones.append(r)
         screen.create_rect_zones(zones)
         screen.flip()
@@ -127,56 +126,49 @@ def trial_method(screen, instructions, trial_info):
             else:
                 r, rt = mouse_click
 
-            total_time = trial_clock.tick_busy_loop()
+            total_time += trial_clock.tick_busy_loop()
             t = (proband_id, test_name, phase, size, x, y, dpos[0], dpos[1], r,
                 rt, total_time)
+            trial_data.append(t)
 
             if r == 0:
                 clicked = True
-
-        return trial_data
+    print trial_data
+    return trial_data
 
 
 def summary_method(data_obj, instructions):
     """
     Computes summary stats for the trails task.
     """
-    df = data.to_df()
+    df = data_obj.to_df()
     stats = summaries.get_universal_stats(data_obj)
 
+    df1 = df[df.phase == 'first']
+    phase_1_time = float(df1.total_time.max())
+    df1 = df[df.phase == 'last']
+    phase_2_time = float(df1.total_time.max())
+    difference = phase_2_time - phase_1_time
+    errors = len(df[df.rsp == 1])
 
-    df1 = df[df.trial_type == 'first']
-    phase_1_time : time taken to complete the first 10 trials
-    phase_2_time : time taken to complete the last 10 trials
-    difference : difference in time between the two phases
-    phase_2_errors : number of error clicks in the final 10 trials
+    stats += [
+        ('phase_1_time', phase_1_time),
+        ('phase_2_time', phase_2_time),
+        ('difference', difference),
+        ('errors', errors)
+    ]
     
-    for phase in df.phase.unique():
-        cols += ['%s_nerrors' % phase, '%s_total_time' % phase]
-        subdf = df[df.phase == phase]
-        entries.append(len(subdf) - len(subdf[subdf['corr'] == 'Correct']))
-        entries.append(list(subdf['total_time'])[0])
-    
-    cols += ['letter_minus_number_time',
-             'number-letter_minus_number_time',
-             'number-letter_minus_letter_time']
-    a = list(df[df.phase == 'number']['total_time'])[0]
-    b = list(df[df.phase == 'letter']['total_time'])[0]
-    c = list(df[df.phase == 'number-letter']['total_time'])[0]
-    entries += [b - a, c - a, c - b]
-    
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
+    df = summaries.make_df(stats)
+    print '---Here are the summary stats:'
+    print df.T
+    return df
 
 
-#def main():
-#    """Command-line executor."""
-#    params = (test_name,
-#              control_method,
-#              trial_method,
-#              output_format,
-#              summary_method)
-#    batch.run_single_test(*params)
+def main():
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
 
 
 if __name__ == '__main__':
