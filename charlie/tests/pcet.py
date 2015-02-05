@@ -195,8 +195,10 @@ def control_method(proband_id, instructions):
                s('000.png'), s('000.png'), s('111.png'), s('000.png'))]
     for x in details:
         t = [proband_id, test_name, 'test'] + list(x)
-        t[-3:] = [s(i) for i in t[-3:]]
+        t[-4:] = [s(i) for i in t[-4:]]
         control.append(t)
+    for c in control:
+        print c
     return control
 
 
@@ -204,7 +206,6 @@ def trial_method(screen, instructions, trial_info):
     """
     Runs a single trial of the test.
     """
-    print 'heeo'
     _, _, phase, trialn, _, ans, _, _, _,f1, f2, f3, f4 = trial_info
     
     # show instructions if first trial
@@ -224,7 +225,7 @@ def trial_method(screen, instructions, trial_info):
     # set up trial
     screen.reset_zones()
     images = [f1, f2, f3, f4]
-    screen.create_image_zones(images, 50, 0)
+    screen.create_image_zones(images, 250, 0)
     screen.update()
 
     # wait for a response
@@ -239,13 +240,13 @@ def trial_method(screen, instructions, trial_info):
         suffix = 'g'
     else:
         corr = False
-        suffix = 'f'
+        suffix = 'r'
     images[rsp] = images[rsp].split('.png')[0] + '_%s.png' % suffix
-    screen.create_image_zones(images, 50, 0)
+    screen.create_image_zones(images, 250, 0)
     screen.update()
     audio.play_feedback(corr)
     events.wait(events.DEFAULT_ITI_FEEDBACK)
-
+    screen.wipe()
     trial_info = tuple(list(trial_info) + [rsp, rspt])
     return trial_info
 
@@ -261,16 +262,20 @@ def summary_method(data_obj, instructions):
     stats += summaries.get_rt_stats(df, '')
 
     x = 0
-    dfs = df.groupby('rule')
-    for df1 in dfs:
-        for df2 in [df1.ix[:12], df1.ix[12:]]:
-            if len(df2[df2.ans == df2.rsp]) >= 6:
+    grouped = df.groupby('rule')
+    for rule, group in grouped:
+        group['new_index'] = range(len(group))
+        group.set_index('new_index', inplace=True)
+        for _df in [group.ix[:11], group.ix[12:]]:
+            print rule
+            print _df
+            if len(_df[_df.ans == _df.rsp]) >= 6:
                 x += 1
 
     stats += [
         ('persev', len(df[df.rsp == df.pers])),
         ('nonpersev', len(df[df.rsp == df['other']])),
-        ('lapse', len(df[df.rsp == df.lapse]))
+        ('lapse', len(df[df.rsp == df.lapse])),
         ('nlearned', x)
     ]
     df = summaries.make_df(stats)
