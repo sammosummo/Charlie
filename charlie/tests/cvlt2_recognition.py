@@ -70,7 +70,7 @@ def control_method(proband_id, instructions):
     Generates a control iterable. For this test, it is a list of tuples in
     the format (proband_id, test_name, trialn, f, word, type, ans).
     """
-    path = lambda w: data.pj(data.AUDIO_PATH, test_name, w + '.wav')
+    path = lambda w: data.pj(data.AUDIO_PATH, 'cvlt2', w + '.wav')
     ans = lambda i: labels[types[i] == 't']
     instr = instructions
     instr, labels = instr, instr[2:4]
