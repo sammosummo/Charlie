@@ -131,20 +131,17 @@ def summary_method(data_obj, instructions):
     """
     Computes summary stats for this task.
     """
-    print 'did this'
     df = data_obj.to_df()
     stats = summaries.get_universal_stats(data_obj)
     prefix = 'overall'
     stats += summaries.get_accuracy_stats(df, prefix, ans_col='emotion')
     stats += summaries.get_rt_stats(df, prefix, ans_col='emotion')
     for emotion in df.emotion.unique():
-        print emotion
         prefix = emotion.lower()
         df1 = df[df.emotion == emotion]
         stats += summaries.get_accuracy_stats(df1, prefix, ans_col='emotion')
         stats += summaries.get_rt_stats(df1, prefix, ans_col='emotion')
         for sex in df1.sex.unique():
-            print sex
             prefix = emotion.lower() + '_' + sex.lower()
             df2 = df1[df1.sex == sex]
             stats += summaries.get_accuracy_stats(df2, prefix,
@@ -152,7 +149,6 @@ def summary_method(data_obj, instructions):
             stats += summaries.get_rt_stats(df2, prefix, ans_col='emotion')
             if len(df2.salience.unique()) == 2:
                 for sal in df2.salience.unique():
-                    print sal
                     prefix = emotion.lower() + '_' + sex.lower() + '_' + \
                              sal.lower()
                     df3 = df2[df2.salience == sal]
@@ -163,29 +159,7 @@ def summary_method(data_obj, instructions):
     df = summaries.make_df(stats)
     print '---Here are the summary stats:'
     print df.T
-    # cols, entries = summaries.get_universal_entries(data)
-    # emo_dict = {l.split('=')[1]: l.split('=')[0] for l in instructions[-5:]}
-    # df = data.to_df()
-    # a, b = summaries.get_accuracy(df, 'overall', 'emotion', True)
-    # cols += a; entries += b
-    # for emotion in df.emotion.unique():
-    #     df1 = df[df.emotion == emotion]
-    #     a, b = summaries.get_accuracy(df1, emotion.lower(), 'emotion', True)
-    #     cols += a; entries += b
-    #     for sex in df1.sex.unique():
-    #         prefix = '%s_%s' %(emotion, sex)
-    #         df2 = df1[df1.sex == sex]
-    #         a, b = summaries.get_accuracy(df2, prefix.lower(), 'emotion', True)
-    #         cols += a; entries += b
-    #         for salience in df2.salience.unique():
-    #             if salience != 'N/A':
-    #                 prefix = '%s_%s_%s' %(emotion, sex, salience)
-    #                 df3 = df2[df2.salience == salience]
-    #                 a, b = summaries.get_accuracy(df2, prefix.lower(),
-    #                                               'emotion', True)
-    #                 cols += a; entries += b
-    # dfsum = pandas.DataFrame(entries, cols).T
-    # return dfsum
+    return df
 
 def main():
     """
