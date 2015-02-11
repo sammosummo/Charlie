@@ -71,7 +71,7 @@ def control_method(proband_id, instructions):
     the format (proband_id, test_name, trialn, f, word, type, ans).
     """
     path = lambda w: data.pj(data.AUDIO_PATH, 'cvlt2', w + '.wav')
-    ans = lambda i: labels[types[i] == 't']
+    ans = lambda i: labels[types[i] != 't']
     instr = instructions
     instr, labels = instr, instr[2:4]
     words = instr[-1].split('\n')

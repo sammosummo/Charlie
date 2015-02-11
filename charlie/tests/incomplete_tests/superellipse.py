@@ -7,7 +7,7 @@ superellipse: Superellipse test of precision of visual working memory
 This experimental test is designed to measure the precision of observers'
 memory represenations of visual shapes as a function of retention interval,
 memory load, and task design. On each trial the observer sees up to 5
-superellipses
+superellipses on the screen, differing
 
 
 This is a computerised version of Reynold's "comprehensive" trail-making test
