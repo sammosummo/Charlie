@@ -131,17 +131,20 @@ def summary_method(data_obj, instructions):
     """
     Computes summary stats for this task.
     """
+    print 'did this'
     df = data_obj.to_df()
     stats = summaries.get_universal_stats(data_obj)
     prefix = 'overall'
     stats += summaries.get_accuracy_stats(df, prefix, ans_col='emotion')
     stats += summaries.get_rt_stats(df, prefix, ans_col='emotion')
     for emotion in df.emotion.unique():
+        print emotion
         prefix = emotion.lower()
         df1 = df[df.emotion == emotion]
         stats += summaries.get_accuracy_stats(df1, prefix, ans_col='emotion')
         stats += summaries.get_rt_stats(df1, prefix, ans_col='emotion')
         for sex in df1.sex.unique():
+            print sex
             prefix = emotion.lower() + '_' + sex.lower()
             df2 = df1[df1.sex == sex]
             stats += summaries.get_accuracy_stats(df2, prefix,
@@ -149,6 +152,7 @@ def summary_method(data_obj, instructions):
             stats += summaries.get_rt_stats(df2, prefix, ans_col='emotion')
             if len(df2.salience.unique()) == 2:
                 for sal in df2.salience.unique():
+                    print sal
                     prefix = emotion.lower() + '_' + sex.lower() + '_' + \
                              sal.lower()
                     df3 = df2[df2.salience == sal]
