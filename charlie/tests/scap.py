@@ -60,8 +60,8 @@ output_format = [
     ('rsp', str),
     ('rt', int)
 ]
-array_duration = .2
-retention_interval = 0
+array_duration = 2
+retention_interval = 4
 prac_answers = [1, 0, 1]
 prac_loads = [3, 4, 5]
 answers = {3: (1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0),

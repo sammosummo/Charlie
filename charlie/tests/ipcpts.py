@@ -166,6 +166,7 @@ def trial_method(screen, instructions, trial_info):
     # run trials
     _data = []
     screen.update()
+
     while control:
         trial_info = control.pop(0)
         events.clear()
@@ -184,7 +185,7 @@ def trial_method(screen, instructions, trial_info):
                 images = [screen.images[a] for a in trial_info[-3:]]
                 screen.create_image_zones(images, 150, -50)
                 screen.create_keyboard_key_zones(['s'], 0, 250)
-                screen.update_image_zones()
+                screen.update_image_zones(update=False)
                 screen.change_key_colour('s', '', update=False)
                 screen.update()
                 symbols_on = True

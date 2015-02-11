@@ -324,7 +324,7 @@ class Screen:
             end = self.x0 + end[0], self.y0 + end[1]
         pygame.draw.line(self.screen, colour, start, end, width)
 
-    def update_image_zones(self):
+    def update_image_zones(self, update=True):
         """
         Update all images within self.imagezones, and set
         self.images_visible to True.
@@ -335,7 +335,8 @@ class Screen:
                 q, r = self.imagezones[k]
                 self.screen.blit(q, r)
                 R.append(r)
-            pygame.display.update(R)
+            if update:
+                pygame.display.update(R)
             self.images_visible = True
 
     def change_word_colour(self, word, colour, update=False, font=None):
