@@ -60,16 +60,14 @@ def create_db():
     Initialises the local database.
     """
     if not os.path.exists(LOCAL_DB_F):
-        _ = sqlite3.connect(LOCAL_DB_F)
-#    tables = ['project', 'experimenter', 'probands']
-#    for table in tables:
-#        if table != 'probands':
-#            columns = ['id']
-#        else:
-#            columns = ['id', 'sex', 'dob', 'project', 'tests_completed',
-#                       'notes']
-#        df = pandas.DataFrame(columns=columns)
-#        df.to_sql(table, con, index=False, if_exists='append')
+        con = sqlite3.connect(LOCAL_DB_F)
+    cols = ['id', 'sex', 'dob', 'age', 'projects', 'tests_completed', 'notes']
+    df = pandas.DataFrame(columns=cols)
+    df.to_sql('probands', con, if_exists='append')
+    df = pandas.DataFrame(columns=['id'])
+    df.to_sql('users', con, if_exists='append')
+    df = pandas.DataFrame(columns=['id'])
+    df.to_sql('projects', con, if_exists='append')
 
 
 def load_data(proband_id, lang, user_id, proj_id, test_name, output_format,

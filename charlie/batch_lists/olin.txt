@@ -1,5 +1,5 @@
 orientation
-cvlt
+cvlt2
 digit_symbol
 digit_symbol_delay
 emotion_recognition
@@ -17,3 +17,4 @@ verbal_working_memory
 wtar
 switching
 trails
+updating

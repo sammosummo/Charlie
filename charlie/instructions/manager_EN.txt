@@ -1,0 +1,96 @@
+Manager
+---
+Python neurocognitive test battery ("Charlie" | v 0.1).
+For assistance, please contact samuel.mathias@yale.edu.
+---
+Session setup
+---
+Before running any tests, you must set up the session. This involves inputting a project ID and
+experimenter ID, and loading/creating a new proband.
+---
+Project information:
+---
+Project ID:
+---
+Experimenter ID:
+---
+* NOTE: You can enter new IDs in the boxes above if they are not already listed.
+---
+Proband:
+---
+Check if the proband ID is in the table already. If it is, highlight the row and click 'Select
+proband'. If not, click 'Create new...'. To debug or try the tests without saving any data,
+click 'Set as 'TEST''. You can also edit proband information here (USE CAUTION!).
+---
+Current selection:
+---
+Select
+---
+Deselect
+---
+Edit selected...
+---
+Create new...
+---
+Set as TEST
+---
+You must enter a project ID before performing this action.
+---
+You must enter an experimenter ID before performing this action.
+---
+You must select a proband before performing this action.
+---
+You cannot edit TEST.
+---
+Proband Editor
+---
+All fields must be completed.
+---
+Commit and close window
+---
+Proband ID not entered.
+---
+Sex not selected.
+---
+Proband is under 15.
+---
+Tests
+---
+Individual tests:
+---
+Run test...
+---
+No proband selected.
+---
+You have selected 'TEST' as the proband.
+---
+Do you want to run the test without saving any data?
+---
+Docstring:
+---
+[Select a test to read a description here.]
+---
+Proband with ID %s has already started this test (roughly %i %% completed).
+---
+If you want to resume from where they left off, click 'Ok'.
+---
+Proband with ID %s has already completed this test.
+---
+WARNING: This action will DELETE any previous data associated with this proband
+and test!!!
+---
+Batch mode:
+---
+Clicking 'Run batch...' will run the tests listed below in that order. Each new test will
+start automatically after the previous one. Batch files are simply text files with the
+extension '.batch', containing test names separated by commas. 'Edit  current...'
+will open the current batch in your default text editor.
+---
+Load batch file...
+---
+Edit current...
+---
+Save current batch as
+---
+Post-session
+
