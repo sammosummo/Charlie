@@ -41,6 +41,13 @@ def get_parser():
     return parser
 
 
+def get_args():
+    """
+    Retrieve all command-line arguments.
+    """
+    return get_parser().parse_args()
+
+
 def run_a_test(test_name, batch_mode=False):
     """
     Initialises and runs a single test from the battery. The test script needs
@@ -62,7 +69,7 @@ def run_a_test(test_name, batch_mode=False):
     print '--------' + ('-' * len(test_name)) + '\n'
 
     # copy system arguments into local namespace
-    args = get_parser().parse_args()
+    args = get_args()
     proband_id = args.proband_id
     user_id = args.user_id
     proj_id = args.proj_id

@@ -18,26 +18,6 @@ import charlie.tools.batch as batch
 import charlie.tools.instructions as instructions
 
 
-
-
-
-
-
-
-def get_current_proband_user_project_lang():
-    """
-    Retrieve proband, user, project, and lang from the command-line arguments.
-    Default values are returned if these were not provided.
-    :return: proband_id, user_id, proj_id, lang
-    """
-    args = batch.get_parser().parse_args()
-    proband_id = args.proband_id
-    user_id = args.user_id
-    proj_id = args.proj_id
-    lang = args.lang
-    return proband_id, user_id, proj_id, lang
-
-
 class HomeWidget(QtGui.QWidget):
 
     """
@@ -46,8 +26,9 @@ class HomeWidget(QtGui.QWidget):
 
     def __init__(self, parent=None):
         super(HomeWidget, self).__init__(parent=parent)
-        _, _, _, self.lang = get_current_proband_user_project_lang()
-        self.instr = instructions.read_instructions('manager', self.lang)
+
+        args = batch.get_args()
+        self.instr = instructions.read_instructions('manager', args.lang)
         self.setup_ui()
 
     def setup_ui(self):
@@ -61,7 +42,7 @@ class HomeWidget(QtGui.QWidget):
         vbox.addWidget(img)
 
         txt = QtGui.QLabel()
-        txt.setText(self.instr[1] %__version__)
+        txt.setText(self.instr[1] % __version__)
         txt.setAlignment(QtCore.Qt.AlignCenter)
         vbox.addWidget(txt)
 
@@ -86,12 +67,15 @@ class SetupTab(QtGui.QWidget):
     def __init__(self, parent=None):
         super(SetupTab, self).__init__(parent=parent)
 
-        self.instr = self.parent().instr
-        _ = get_current_proband_user_project_lang()
-        self.proband_id, self.user_id, self.proj_id, self.lang = _
-        self.df1, self.df2 = read_sql_db()
-        _ = get_probands_users_projects(self.df1)
-        _, self.user_list, self.project_list = _
+        args = batch.get_args()
+        self.instr = instructions.read_instructions('manager', args.lang)
+        self.proband_id = args.proband_id
+        self.user_id = args.user_id
+        self.proj_id = args.proj_id
+
+        data.populate_probands_table()
+        self.proband_df = data.get_probands_table()
+        _, self.user_list, self.proj_list = data.get_probands_users_projects()
 
         self.setup_ui()
 
@@ -101,30 +85,35 @@ class SetupTab(QtGui.QWidget):
         a = QtGui.QLabel(self.instr[3])
         widgets.append(a)
 
-        # Project and experimenter ID boxes
+        # project and user boxes
         b = QtGui.QGroupBox(self.instr[4])
         grid = QtGui.QGridLayout()
         grid.addWidget(QtGui.QLabel(self.instr[5]), 0, 0)
         proj_list = QtGui.QComboBox()
-        proj_list.addItems(self.project_list)
+        proj_list.setItemText(0, self.proj_id)
+        proj_list.addItems(self.proj_list)
         proj_list.setInsertPolicy(proj_list.NoInsert)
         proj_list.setEditable(True)
         proj_list.activated.connect(self.set_proj)
         proj_list.editTextChanged.connect(self.set_proj)
+        proj_list.setCurrentIndex(0)
         grid.addWidget(proj_list, 1, 0)
+
         grid.addWidget(QtGui.QLabel(self.instr[6]), 0, 1)
         exp_list = QtGui.QComboBox()
+        exp_list.setItemText(0, self.user_id)
         exp_list.addItems(self.user_list)
         exp_list.setInsertPolicy(exp_list.NoInsert)
         exp_list.setEditable(True)
         exp_list.activated.connect(self.set_user)
         exp_list.editTextChanged.connect(self.set_user)
+        exp_list.setCurrentIndex(0)
         grid.addWidget(exp_list, 1, 1)
         grid.addWidget(QtGui.QLabel(self.instr[7]), 2, 0, 1, 2)
         b.setLayout(grid)
         widgets.append(b)
 
-        # Proband box
+        # proband box
         c = QtGui.QGroupBox(self.instr[8])
         cols = 5
         grid = QtGui.QGridLayout()
@@ -154,7 +143,7 @@ class SetupTab(QtGui.QWidget):
         c.setLayout(grid)
         widgets.append(c)
 
-        # Finally, add all widgets to list
+        # finally, add all widgets to list
         vbox = QtGui.QVBoxLayout()
         [vbox.addWidget(w) for w in widgets]
         self.setLayout(vbox)
@@ -454,8 +443,8 @@ class ProbandTable(QtCore.QAbstractTableModel):
 
     def __init__(self, parent=None):
         super(ProbandTable, self).__init__(parent=parent)
-        self.df1, self.df2 = read_sql_db()
-        self.fields = self.df1.columns.tolist()
+        self.proband_df = data.get_probands_table()
+        self.fields = self.proband_df.columns.tolist()
         self.load_data()
 
     def rowCount(self, parent):
@@ -489,8 +478,7 @@ class ProbandTable(QtCore.QAbstractTableModel):
         self.emit(QtCore.SIGNAL("layoutChanged()"))
     #
     def load_data(self):
-        self.contents = [self.df1[col].tolist() for col in self.df1.columns]
-        print self.contents
+        self.contents = self.proband_df.T
         self.emit(QtCore.SIGNAL("layoutChanged()"))
 #
 #
