@@ -38,36 +38,132 @@ BATCHES_PATH = pj(PACKAGE_DIR, 'batch_lists')
 
 def ld(path):
     """
-    Wrapper os.listdir(path), but removes hidden files.
+    Wrapper around os.listdir(path), but excludes hidden files on unix-based
+    systems.
     """
     return [l for l in os.listdir(path) if l[0] != '.']
 
 
 def create_paths():
     """
-    The directory structure should exist within the pacakge, but if not, it is
-    created by this function.
+    The directory structure should exist within the package, but if not, it is
+    created by this function. This is useful because sometimes it is convenient
+    to delete all the data files before debugging.
     """
-    to_create = [DATA_PATH, LOG_PATH, RAW_DATA_PATH, BACKUP_DATA_PATH,
-                 CSV_DATA_PATH, STIM_PATH, VISUAL_PATH, AUDIO_PATH, DB_PATH]
-
+    to_create = [
+        DATA_PATH, LOG_PATH, RAW_DATA_PATH, BACKUP_DATA_PATH, CSV_DATA_PATH,
+        STIM_PATH, VISUAL_PATH, AUDIO_PATH, DB_PATH
+    ]
     [os.makedirs(p) for p in to_create if not os.path.exists(p)]
-
 
 
 def create_db():
     """
-    Initialises the local database.
+    Initialises the local database, if it does not already exist. Also adds
+    blank probands and notes tables.
     """
     if not os.path.exists(LOCAL_DB_F):
         con = sqlite3.connect(LOCAL_DB_F)
-        cols = ['proband_id', 'user_id', 'proj_id', 'sex', 'age', 'tests_compl']
+
+        cols = [
+            'proband_id', 'user_id', 'proj_id', 'sex', 'age', 'tests_compl'
+        ]
         df = pandas.DataFrame(columns=cols)
-        df.to_sql('probands', con, if_exists='append')
-        cols = ['proband_id', 'user_id', 'proj_id', 'test_name',
-                'date_note_added', 'note', 'include_data']
+        df.to_sql('probands', con)
+
+        cols = [
+            'proband_id', 'user_id', 'proj_id', 'test_name', 'date_note_added',
+            'note', 'include_data'
+        ]
         df = pandas.DataFrame(columns=cols)
-        df.to_sql('notes', con, if_exists='append')
+        df.to_sql('notes', con)
+
+
+def get_tests_with_summary_data():
+    """
+    Returns a list of tests with summary data stored within the db.
+    """
+    con = sqlite3.connect(LOCAL_DB_F)
+    try:
+        df1 = pandas.read_sql('SELECT * from probands', con, index_col='index')
+    except pandas.io.sql.DatabaseError:
+        cols = [
+            'proband_id', 'user_id', 'proj_id', 'sex', 'age'
+        ]
+        df = pandas.DataFrame(columns=cols)
+        df.to_sql('probands', con)
+        cols = [
+            'proband_id', 'user_id', 'proj_id', 'test_name', 'date_note_added',
+            'note', 'include_data'
+        ]
+        df = pandas.DataFrame(columns=cols)
+        df.to_sql('notes', con)
+        df1 = pandas.read_sql('SELECT * from probands', con, index_col='index')
+
+    df2 = pandas.read_sql("SELECT * FROM sqlite_master WHERE type='table'",
+                          con)
+    tests = df2['name'].tolist()
+    if 'probands' in tests:
+        tests.remove('probands')
+    if 'notes' in tests:
+        tests.remove('notes')
+    return [t for t in tests if '_trials' not in t]
+
+
+def populate_probands_table():
+    """
+    From the data within the db, generates a new DataFrame for the probands
+    table, then merges the new df with the old one, and overwrites the old
+    probands table. This is just to keep track of any probands that have not
+    been added via the GUI.
+    """
+    con = sqlite3.connect(LOCAL_DB_F)
+    tests = get_tests_with_summary_data()
+
+    df = pandas.read_sql('SELECT * from probands', con)
+    proband_list = df.proband_id.tolist()
+
+    for test_name in tests:
+
+        try:
+            df1 = pandas.read_sql('SELECT * from %s' % test_name, con)
+            df1 = df1[['proband_id', 'user_id', 'proj_id']]
+            df1 = df1.loc[~(df1.proband_id.isin(proband_list))]
+        except KeyError:
+            continue  # trials doesn't work; see issues
+
+        df = pandas.concat([df, df1])
+        proband_list = df.proband_id.tolist()
+
+    print df
+    df.to_sql('probands', con, index=False, if_exists='replace')
+
+
+def get_probands_table():
+    """
+    Read the contents of the local database and returns the probands and notes
+    tables as pandas DataFrames.
+    :return: df1
+    """
+    create_paths()
+    create_db()
+    con = sqlite3.connect(LOCAL_DB_F)
+    df1 = pandas.read_sql('SELECT * from probands', con)
+    return df1
+
+
+def get_probands_users_projects():
+    """
+    Returns lists of unique probands, users, and projects from probands table
+    in the database.
+    :param df1:
+    :return: probands, users, projects
+    """
+    df1 = get_probands_table()
+    probands = df1.proband_id.unique().tolist()
+    users = df1.user_id.unique().tolist()
+    projects = df1.proj_id.unique().tolist()
+    return probands, users, projects
 
 
 def load_data(proband_id, lang, user_id, proj_id, test_name, output_format,
