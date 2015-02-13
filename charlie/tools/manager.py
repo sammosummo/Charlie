@@ -14,9 +14,48 @@ import sqlite3
 from datetime import date
 import pandas
 import charlie.tools.data as data
-import charlie.tools.summaries as summaries
 import charlie.tools.batch as batch
 import charlie.tools.instructions as instructions
+
+
+def read_sql_db():
+    """
+    Read the contents of the SQL local database. Returns the probands and notes
+    tables as pandas DataFrames.
+    :return: df1, df2
+    """
+    data.create_paths()
+    data.create_db()
+    con = sqlite3.connect(data.LOCAL_DB_F)
+    df1 = pandas.read_sql('SELECT * from probands', con, index_col='index')
+    df2 = pandas.read_sql('SELECT * from notes', con, index_col='index')
+    return df1, df2
+
+
+def get_probands_users_projects(df1):
+    """
+    Returns lists of unique probands, users, and projects from the DataFrame.
+    :param df1:
+    :return: probands, users, projects
+    """
+    probands = df1.proband_id.unique().tolist()
+    users = df1.user_id.unique().tolist()
+    projects = df1.proj_id.unique().tolist()
+    return probands, users, projects
+
+
+def get_current_proband_user_project_lang():
+    """
+    Retrieve proband, user, and project information if this was added at the
+    command line.
+    :return: proband_id, user_id, proj_id, lang
+    """
+    args = batch.get_parser().parse_args()
+    proband_id = args.proband_id
+    user_id = args.user_id
+    proj_id = args.proj_id
+    lang = args.lang
+    return proband_id, user_id, proj_id, lang
 
 
 class CustomSignals(QtCore.QObject):
@@ -33,20 +72,21 @@ class HomeWidget(QtGui.QWidget):
     tests, data management).
     """
     
-    def __init__(self, lang='EN', parent=None):
+    def __init__(self, parent=None):
         super(HomeWidget, self).__init__(parent=parent)
-        self.proband = None
-        self.instr = instructions.read_instructions('manager', lang)
-        self.con = sqlite3.connect(data.LOCAL_DB_F)
-        self.probands = pandas.read_sql('probands', self.con, index_col='id')
-        self.users = pandas.read_sql('users', self.con, index_col='id')
-        self.projects = pandas.read_sql('projects', self.con, index_col='id')
+
+        (self.proband_id, self.user_id,
+         self.proj_id, self.lang) = get_current_proband_user_project_lang()
+        self.df1, self.df2 = read_sql_db()
+        (self.probands, self.users,
+        self.projects) = get_probands_users_projects(self.df1)
+        self.instr = instructions.read_instructions('manager', self.lang)
         self.setup_ui()
         
     def setup_ui(self):
         self.setWindowTitle(self.instr[0])
         vbox = QtGui.QVBoxLayout()
-        f = data.pj(data.pd(data.pd(__file__)), 'charlie.png')
+        f = data.pj(data.PACKAGE_DIR, 'charlie.png')
         pixmap = QtGui.QPixmap(f)
         img = QtGui.QLabel()
         img.setPixmap(pixmap)
@@ -54,15 +94,15 @@ class HomeWidget(QtGui.QWidget):
         vbox.addWidget(img)
         
         txt = QtGui.QLabel()
-        txt.setText(self.instr[1])
+        txt.setText(self.instr[1] %__version__)
         txt.setAlignment(QtCore.Qt.AlignCenter)
         vbox.addWidget(txt)
       
         tabs = QtGui.QTabWidget()
-        setup_tab = SetupTab()
+        setup_tab = SetupTab(self)
         tabs.addTab(setup_tab, self.tr(self.instr[2]))
-        test_tab = TestTab()
-        tabs.addTab(test_tab, self.tr(self.instr[26]))
+        # test_tab = TestTab(self)
+        # tabs.addTab(test_tab, self.tr(self.instr[26]))
         vbox.addWidget(tabs)
               
         self.setLayout(vbox)
@@ -80,15 +120,15 @@ class SetupTab(QtGui.QWidget):
     
     def __init__(self, parent=None):
         super(SetupTab, self).__init__(parent=parent)
+
         self.instr = self.parent().instr
-        self.con = self.parent().con
+        self.df1 = self.parent().df1
         self.probands = self.parent().probands
         self.users = self.parent().users
         self.projects = self.parent().projects
-
-        self.current_project = None
-        self.current_user = None
-        self.current_proband = None
+        self.proband_id = self.parent().proband_id
+        self.user_id = self.parent().user_id
+        self.proj_id = self.parent().proj_id
 
         self.setup_ui()
         
@@ -103,7 +143,7 @@ class SetupTab(QtGui.QWidget):
         grid = QtGui.QGridLayout()
         grid.addWidget(QtGui.QLabel(self.instr[5]), 0, 0)
         proj_list = QtGui.QComboBox()
-        proj_list.addItems(self.projects.index.tolist())
+        proj_list.addItems(self.projects)
         proj_list.setInsertPolicy(proj_list.NoInsert)
         proj_list.setEditable(True)
         proj_list.activated.connect(self.set_proj)
@@ -111,7 +151,7 @@ class SetupTab(QtGui.QWidget):
         grid.addWidget(proj_list, 1, 0)
         grid.addWidget(QtGui.QLabel(self.instr[6]), 0, 1)
         exp_list = QtGui.QComboBox()
-        exp_list.addItems(self.users.index.tolist())
+        exp_list.addItems(self.users)
         exp_list.setInsertPolicy(exp_list.NoInsert)
         exp_list.setEditable(True)
         exp_list.activated.connect(self.set_user)
@@ -130,20 +170,20 @@ class SetupTab(QtGui.QWidget):
         self.proband_id_label = QtGui.QLabel()
         self.set_text()
         grid.addWidget(self.proband_id_label, 1, 1, 1, cols-1)
-        self.table_model = ProbandTable(self)
-        self.table_model.load_data()
-        self.table_view = QtGui.QTableView()
-        self.table_view.setModel(self.table_model)
-        self.table_view.setFont(QtGui.QFont("Courier New", 14))
-        self.table_view.resizeColumnsToContents()
-        self.table_view.setSortingEnabled(True)
-        self.table_view.setSelectionMode(self.table_view.SingleSelection)
-        self.table_view.setSelectionBehavior(self.table_view.SelectRows)
-        grid.addWidget(self.table_view, 2, 0, 1, cols)
+        # self.table_model = ProbandTable(self)
+        # self.table_model.load_data()
+        # self.table_view = QtGui.QTableView()
+        # self.table_view.setModel(self.table_model)
+        # self.table_view.setFont(QtGui.QFont("Courier New", 14))
+        # self.table_view.resizeColumnsToContents()
+        # self.table_view.setSortingEnabled(True)
+        # self.table_view.setSelectionMode(self.table_view.SingleSelection)
+        # self.table_view.setSelectionBehavior(self.table_view.SelectRows)
+        # grid.addWidget(self.table_view, 2, 0, 1, cols)
         funcs = (self.select_proband, self.deselect_proband, self.edit_proband,
                  self.new_proband, self.test_proband)
         for i, func in enumerate(funcs):
-            button = QtGui.QPushButton(instructions[11+i])
+            button = QtGui.QPushButton(self.instr[11+i])
             button.clicked.connect(func)
             grid.addWidget(button, 3, i)
         c.setLayout(grid)
@@ -155,10 +195,12 @@ class SetupTab(QtGui.QWidget):
         self.setLayout(vbox)
 
     def set_text(self):
-        """Displays the currently selected proband's ID, in green. Displays
-        NONE in red if no proband is selected."""
-        if self.proband:
-            s = '<font color="green"><b>%s</b></font>' %self.proband['id']
+        """
+        Displays the currently selected proband's ID, in green. Displays
+        NONE in red if no proband is selected.
+        """
+        if self.proband_id:
+            s = '<font color="green"><b>%s</b></font>' %self.proband_id
         else:
             s = '<font color="red"><b>None</b></font>'
         self.proband_id_label.setText(s)
@@ -167,7 +209,7 @@ class SetupTab(QtGui.QWidget):
         """Sets the project ID."""
         self.project = self.sender().currentText()
     
-    def set_exp(self):
+    def set_user(self):
         """Sets the experimenter (administrator) ID."""
         self.experimenter = self.sender().currentText()
     
@@ -594,12 +636,11 @@ class TestTab(QtGui.QWidget):
                 if r == a.Ok:
                     execfile(f)
 
+
 def main():
-    set_proband(None)
     app = QtGui.QApplication(sys.argv)
-    ex = HomeWidget()
+    _ = HomeWidget()
     sys.exit(app.exec_())
-#    tools.convert.convert_all_raw()
 
 
 if __name__ == '__main__':

@@ -1,12 +1,12 @@
 Manager
 ---
-Python neurocognitive test battery ("Charlie" | v 0.1).
+Charlie version %.1f
 For assistance, please contact samuel.mathias@yale.edu.
 ---
 Session setup
 ---
 Before running any tests, you must set up the session. This involves inputting a project ID and
-experimenter ID, and loading/creating a new proband.
+experimenter ID, and loading or creating a new proband.
 ---
 Project information:
 ---
@@ -82,9 +82,8 @@ and test!!!
 Batch mode:
 ---
 Clicking 'Run batch...' will run the tests listed below in that order. Each new test will
-start automatically after the previous one. Batch files are simply text files with the
-extension '.batch', containing test names separated by commas. 'Edit  current...'
-will open the current batch in your default text editor.
+start automatically after the previous one. Batch files are simply text files containing
+test names. 'Edit  current...' will open the current batch in your default text editor.
 ---
 Load batch file...
 ---

@@ -61,13 +61,13 @@ def create_db():
     """
     if not os.path.exists(LOCAL_DB_F):
         con = sqlite3.connect(LOCAL_DB_F)
-    cols = ['id', 'sex', 'dob', 'age', 'projects', 'tests_completed', 'notes']
-    df = pandas.DataFrame(columns=cols)
-    df.to_sql('probands', con, if_exists='append')
-    df = pandas.DataFrame(columns=['id'])
-    df.to_sql('users', con, if_exists='append')
-    df = pandas.DataFrame(columns=['id'])
-    df.to_sql('projects', con, if_exists='append')
+        cols = ['proband_id', 'user_id', 'proj_id', 'sex', 'age', 'tests_compl']
+        df = pandas.DataFrame(columns=cols)
+        df.to_sql('probands', con, if_exists='append')
+        cols = ['proband_id', 'user_id', 'proj_id', 'test_name',
+                'date_note_added', 'note', 'include_data']
+        df = pandas.DataFrame(columns=cols)
+        df.to_sql('notes', con, if_exists='append')
 
 
 def load_data(proband_id, lang, user_id, proj_id, test_name, output_format,
