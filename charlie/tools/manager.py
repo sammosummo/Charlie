@@ -443,6 +443,7 @@ class ProbandTable(QtCore.QAbstractTableModel):
 
     def __init__(self, parent=None):
         super(ProbandTable, self).__init__(parent=parent)
+        data.populate_probands_table()
         self.proband_df = data.get_probands_table()
         self.fields = self.proband_df.columns.tolist()
         self.load_data()
@@ -479,6 +480,7 @@ class ProbandTable(QtCore.QAbstractTableModel):
     #
     def load_data(self):
         self.contents = self.proband_df.T
+        print self.contents
         self.emit(QtCore.SIGNAL("layoutChanged()"))
 #
 #

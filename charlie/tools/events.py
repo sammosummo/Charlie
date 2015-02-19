@@ -157,8 +157,8 @@ def poll_for_valid_mouse_click(screen, button, escape=True):
     if event.type == pygame.MOUSEBUTTONDOWN:
         if event.button == button:
             valid, i = screen.check_if_inside_clickable(event.pos)
-        if valid:
-            return i
+            if valid:
+                return i
         else:
             return None
 
