@@ -224,3 +224,7 @@ def main():
     Run this test.
     """
     batch.run_a_test(test_name)
+
+
+if __name__ == '__main__':
+    main()
