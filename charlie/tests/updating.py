@@ -6,12 +6,19 @@ updating: Test of updating spatial memory.
 
 This test was devised for an fMRI study by Leung et al [1]. On each trial, the
 proband sees a 4-by-4 grid. One of the cells in the grid contains a circle. The
-grid is then replaced by a 6-s sequence of arrows or dashes, that instruct the
+grid is then replaced by a sequence of arrows or dashes, that instruct the
 proband how the circle moves within the grid. The sequence is followed by an
 empty grid. The task is to click on the cell in which the circle ended up. The
 independent variable is the number of updates made during the retention period
 (0 up to 12). There are three trials at each level. The test ends prematurely
 if the proband gets all three trials of a level incorrect.
+
+Version history:
+
+    1.1     Study duration and duration of retention interval halved.
+            Neutral response feedback added.
+            Mouse hidden during study and retention intervals.
+            Mouse reset to centre before each trial.
 
 Summary statistics:
 
@@ -26,7 +33,7 @@ the human spatial working memory circuit during location memory updating.
 Neuroimage, 35: 368-377.
 
 """
-__version__ = 1.0
+__version__ = 1.1
 __author__ = 'Sam Mathias'
 
 
@@ -54,9 +61,9 @@ output_format = [
     ('rt', int)
 ]
 
-study_duration = 4
-wipe_period = 0.5
-update_duration = 0.5
+study_duration = 2
+wipe_period = 0.25
+update_duration = 0.25
 
 
 trial_details = [
@@ -224,7 +231,7 @@ def trial_method(screen, instructions, trial_info):
             if rsp == 'EXIT':
                 return 'EXIT'
 
-    screen.wipe()
+    screen.wipe(force_hide_mouse=True)
 
     # display study stimulus, show moves, show response grid
     set_up_grid(screen, imgf, origin)
@@ -246,6 +253,7 @@ def trial_method(screen, instructions, trial_info):
     set_up_grid(screen, imgf, None)
 
     # wait for a response
+    screen.reset_mouse_pos()
     mouse_click = events.wait_for_valid_mouse_click(screen, 1)
     if mouse_click == 'EXIT':
         return 'EXIT'
@@ -262,6 +270,7 @@ def trial_method(screen, instructions, trial_info):
         events.wait(events.DEFAULT_ITI_FEEDBACK)
     else:
         screen.blit_rectangle(screen.zones[i], visual.BLUE, alpha=100)
+        screen.update()
         events.wait(events.DEFAULT_ITI_NOFEEDBACK)
     trial_info = tuple(list(trial_info) + [i, rt])
     return trial_info

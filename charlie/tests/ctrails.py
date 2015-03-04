@@ -157,6 +157,7 @@ def trial_method(screen, instructions, trial_info):
     clicked_zones = []
     
     # trial loop
+    screen.reset_mouse_pos()
     while remaining_responses:
     
         mouse_click = events.wait_for_valid_mouse_click(screen, 1)

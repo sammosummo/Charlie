@@ -179,13 +179,23 @@ def trial_method(screen, instructions, trial_info):
                 return 'EXIT'
             screen.wipe()
             
-    else:
+    elif phase == 'predictable':
         if not trialn:
             rsp = screen.splash(instructions[1], mouse=False)
             if rsp == 'EXIT':
                 return 'EXIT'
             screen.wipe()
             
+            screen.countdown_splash(5, instructions[2])
+            screen.wipe()
+
+    else:
+        if not trialn:
+            rsp = screen.splash(instructions[3], mouse=False)
+            if rsp == 'EXIT':
+                return 'EXIT'
+            screen.wipe()
+
             screen.countdown_splash(5, instructions[2])
             screen.wipe()
     

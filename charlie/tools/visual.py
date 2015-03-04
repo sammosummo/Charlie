@@ -89,12 +89,14 @@ class Screen:
         f = data.pj(data.FONTS_PATH, 'ClearSans-Medium.ttf')
         self.font2 = pygame.font.Font(f, size, bold=bold, italic=italic)
 
-    def wipe(self, r=None, update=True, prc=True):
+    def wipe(self, r=None, update=True, prc=True, force_hide_mouse=False):
         """
         Wipes (fills with background colour) either the entire screen if r
         is None, or an area defined by r, which should be a pygame Rect or a
         list of Rects.
         """
+        if force_hide_mouse is True:
+            pygame.mouse.set_visible(False)
         if r:
             if not hasattr(r, '__iter__'):
                 r = [r]
@@ -404,6 +406,19 @@ class Screen:
         self.keyzones = {}
         self.imagezones = {}
         self.images_visible = False
+
+    def reset_mouse_pos(self, x=None, y=None):
+        """
+        Moves the mouse cursor to the centre of the screen, or another
+        position.
+        """
+        if x is None:
+            x = self.x0
+        if y is None:
+            y = self.y0
+        pygame.mouse.set_pos((x, y))
+
+
 
 
 if __name__ == '__main__':
