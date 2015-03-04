@@ -47,10 +47,10 @@ def get_accuracy_stats(df, prefix='', ans_col='ans', rsp_col='rsp'):
         pcorrect = None
     else:
         pcorrect = ncorrect / float(ntrials)
-    cols = ['ntrials', 'ncorrect', 'pcorrect']
+    cols = ['ntrials', 'ncorrect']
     if prefix:
         cols = ['%s_%s' % (prefix, col) for col in cols]
-    entries = [ntrials, ncorrect, pcorrect]
+    entries = [ntrials, ncorrect]
     return zip(cols, entries)
 
 

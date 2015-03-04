@@ -19,6 +19,10 @@ have been considered useful [2], these are computed here. I'm not sure why but
 the STAN also contained an intermediate part in which the proband makes a trail
 between letters. This is preserved here.
 
+Version history:
+
+    1.1     Now saving summary stats to the database.
+
 Summary statistics:
 
     [number or letter or number-letter]*
@@ -35,7 +39,7 @@ organic brain damage. Percept. Mot. Skills, 8:271-276.
 B of the Trail Making Test. J Clin Psychol, 43(4):402–409.
 
 """
-__version__ = 1.0
+__version__ = 1.1
 __author__ = 'Sam Mathias'
 
 import pandas
@@ -311,7 +315,7 @@ def summary_method(data, instructions):
     print '---Here are the summary stats:'
     print dfsum.T
 
-    return df
+    return dfsum
 
 
 def main():
