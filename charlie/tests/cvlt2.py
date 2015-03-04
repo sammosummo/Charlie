@@ -409,6 +409,7 @@ def summary_method(data_obj, instructions):
     words = instructions[-1].split('\n')
 
     for trialn in xrange(5):
+
         cols = ['trial_%i_%s' % (trialn, dv) for dv in dvs]
         df2 = df[df.trialn == trialn]
         responses = df2.rsp.tolist()
@@ -423,9 +424,19 @@ def summary_method(data_obj, instructions):
         stats += zip(cols, entries)
 
     df = summaries.make_df(stats)
-    cols = ['mean_%s' % dv for dv in dvs]
+
+    cols = ['total_%s' % dv for dv in ['valid', 'intrusions', 'repetitions']]
     entries = []
-    for dv in dvs:
+    for dv in ['valid', 'intrusions', 'repetitions']:
+        cs = [c for c in df.columns if '_' + dv in c]
+        x = float(df[cs].sum(axis=1))
+        entries.append(x)
+    stats += zip(cols, entries)
+
+    cols = ['mean_%s' % dv for dv in ['semantic', 'serial', 'dprime',
+                                      'criterion']]
+    entries = []
+    for dv in ['semantic', 'serial', 'dprime', 'criterion']:
         cs = [c for c in df.columns if '_' + dv in c]
         x = float(df[cs].mean(axis=1))
         entries.append(x)
