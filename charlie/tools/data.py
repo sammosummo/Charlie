@@ -24,6 +24,7 @@ DATA_PATH = pj(PACKAGE_DIR, 'data')
 LOG_PATH = pj(PACKAGE_DIR, 'logs')
 RAW_DATA_PATH = pj(DATA_PATH, 'raw')
 BACKUP_DATA_PATH = pj(DATA_PATH, 'backups')
+INSPECTION_DATA_PATH = pj(DATA_PATH, 'inspections')
 CSV_DATA_PATH = pj(DATA_PATH, 'csv')
 LOCAL_DB_F = pj(DATA_PATH, 'db', 'localdb.sqlite')
 STIM_PATH = pj(PACKAGE_DIR, 'stimuli')
@@ -52,7 +53,7 @@ def create_paths():
     """
     to_create = [
         DATA_PATH, LOG_PATH, RAW_DATA_PATH, BACKUP_DATA_PATH, CSV_DATA_PATH,
-        STIM_PATH, VISUAL_PATH, AUDIO_PATH, DB_PATH
+        STIM_PATH, VISUAL_PATH, AUDIO_PATH, DB_PATH, INSPECTION_DATA_PATH
     ]
     [os.makedirs(p) for p in to_create if not os.path.exists(p)]
 
