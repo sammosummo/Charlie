@@ -1,7 +1,7 @@
 Orientation test
 
 On each trial in this test, you see a red square
-on ths screen. Your task is to click on the square
+on the screen. Your task is to click on the square
 with the mouse. Try to make your responses as
 quickly as you can.
 
