@@ -1,0 +1,183 @@
+Impulsiveness questionnaire
+---
+Q:I plan tasks carefully.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I do things without thinking.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I make-up my mind quickly.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am happy-go-lucky.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I don’t “pay attention.”
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I have “racing” thoughts.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I plan trips well ahead of time.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am self controlled.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I concentrate easily.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I save regularly.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I “squirm” at plays or lectures.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am a careful thinker.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I plan for job security.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I say things without thinking.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I like to think about complex problems.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I change jobs.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I act “on impulse.”
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I get easily bored when solving thought problems.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I act on the spur of the moment.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am a steady thinker.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I change residences.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I buy things on impulse.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I can only think about one thing at a time.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I change hobbies.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I spend or charge more than I earn.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I often have extraneous thoughts when thinking.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am more interested in the present than the future.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am restless at the theater or lectures.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I like puzzles.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Q:I am future oriented.
+A:Rarely/never<0>
+A:Occasionally<1>
+A:Often<2>
+A:Almost always/always<3>
+---
+Done
