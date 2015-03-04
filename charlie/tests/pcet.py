@@ -258,24 +258,29 @@ def summary_method(data_obj, instructions):
     df = data_obj.to_df()
     df = df[df.phase == 'test']
     stats = summaries.get_universal_stats(data_obj)
-    stats += summaries.get_accuracy_stats(df, '')
-    stats += summaries.get_rt_stats(df, '')
+    stats += summaries.get_accuracy_stats(df, 'total')
+    stats += summaries.get_rt_stats(df, 'total')
 
     x = 0
     grouped = df.groupby('rule')
     for rule, group in grouped:
         group['new_index'] = range(len(group))
         group.set_index('new_index', inplace=True)
-        for _df in [group.ix[:11], group.ix[12:]]:
-            print rule
-            print _df
+        for i, _df in enumerate([group.ix[:11], group.ix[12:]]):
+            s = '%s_%i_' % (rule, i)
+            stats += summaries.get_accuracy_stats(_df, s)
+            stats += [
+                (s + 'persev', len(_df[_df.rsp == _df.pers])),
+                (s + 'nonpersev', len(_df[_df.rsp == _df['other']])),
+                (s + 'lapse', len(_df[_df.rsp == _df.lapse])),
+            ]
             if len(_df[_df.ans == _df.rsp]) >= 6:
                 x += 1
 
     stats += [
-        ('persev', len(df[df.rsp == df.pers])),
-        ('nonpersev', len(df[df.rsp == df['other']])),
-        ('lapse', len(df[df.rsp == df.lapse])),
+        ('total_persev', len(df[df.rsp == df.pers])),
+        ('total_nonpersev', len(df[df.rsp == df['other']])),
+        ('total_lapse', len(df[df.rsp == df.lapse])),
         ('nlearned', x)
     ]
     df = summaries.make_df(stats)
