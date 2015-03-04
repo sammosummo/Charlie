@@ -40,11 +40,11 @@ Then say this:
 ---
 Say this:
 
-"The first letter is A. Ready? Begin"
+"The next letter is A. Ready? Begin"
 ---
 Say this:
 
-"The first letter is S. Ready? Begin"
+"The next letter is S. Ready? Begin"
 ---
 Say this:
 

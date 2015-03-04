@@ -315,3 +315,14 @@ def summary_method(data, instructions):
     print '---Here are the summary stats:'
     print df.T
     return df
+
+
+def main():
+    """
+    Run this test.
+    """
+    batch.run_a_test(test_name)
+
+
+if __name__ == '__main__':
+    main()
