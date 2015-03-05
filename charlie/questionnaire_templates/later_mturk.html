@@ -1,0 +1,1198 @@
+<!--Give path for jquery--><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><!--Give paths for Yale fonts-->
+<style media="screen, print" type="text/css">@font-face
+{
+font-family:Yale_smcaps;
+src:url("https://dl.dropboxusercontent.com/u/22799080/YaleAdmin-SmallCap.otf");
+}
+{
+font-family:Yale_boldit
+src:url("https://dl.dropboxusercontent.com/u/22799080/YaleAdmin-BoldItalic.otf");
+}
+{
+font-family:Yale_websmcaps;
+src:url("https://dl.dropboxusercontent.com/u/22799080/YaleAdmin-WebSmallCap.otf");
+}
+{
+font-family:Yale_roman;
+src:url("https://dl.dropboxusercontent.com/u/22799080/YaleAdmin-Roman.otf");
+}
+{
+font-family:Yale_italic;
+src:url("https://dl.dropboxusercontent.com/u/22799080/YaleAdmin-Italic.otf");
+}
+{
+font-family:Yale_bodlrom;
+src:url("hhttps://dl.dropboxusercontent.com/u/22799080/YaleAdmin-BoldRoman.otf");
+}
+</style>
+<!--Styles here: white box, contact bar at bottom-->
+<style type="text/css">html { background-color: #252525; }
+p {color:black;}
+body { margin-top: 1%; margin-right: 10%; margin-bottom: 0px; margin-left: 10%; background-color:white;}
+p {font-family: Helvetica, Arial, sans-serif; Yale_smcaps; Yale_websmcaps; Yale_boldit; Yale_roman; Yale_italic; Yale_bodlrom}
+</style>
+<style type="text/css">.csscontact
+{
+font-family:Yale_smcaps;font-weight:normal;color:white;background-color:#252525;word-spacing:1pt;font-size:16px;text-align:left;line-height:1;padding:10px 10px 500px 10px;
+}
+
+.consenthead
+{
+font-family:"Yale_smcaps;Yale_roman;Yale_bodlrom";font-weight:normal;background-color:#004DA4;word-spacing:1pt;padding:20px;
+}
+
+.sectionhead
+{
+font-family:"Yale_smcaps";font-weight:normal;color:white;background-color:#004DA4;word-spacing:1pt;padding:20px;font-size:22px;
+}
+
+.consenttext
+{
+font-family:Yale_roman;font-weight:normal;color:black;background-color:white;word-spacing:1pt;font-size:18px;line-height:1;padding:0px 10px 10px 10px;
+}
+
+#question
+{
+font-family:Yale_roman;font-weight:normal;color:black;background-color:white;word-spacing:1pt;font-size:16px;text-align:left;line-height:1;
+}
+
+.questions
+{
+font-family:Yale_roman;font-weight:normal;color:black;background-color:white;word-spacing:1pt;font-size:16px;text-align:left;line-height:1;
+}
+
+ppp
+{
+font-family:Yale_roman;font-weight:normal;color:black;background-color:white;word-spacing:1pt;font-size:16px;text-align:left;line-height:1;
+}
+
+.pageend
+{
+font-weight:normal;color:#252525;background-color:#252525;padding:10px 10px 250px 10px;img-align:
+}
+
+.finalpageend
+{
+font-weight:normal;color:#252525;background-color:#252525;padding:10px 10px 10px 10px;img-align:
+}
+
+.button-link {
+	font-family:Yale_roman;
+	font-size:18px;
+    padding: 10px 15px;
+    background: #FF8B00;
+    color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #FF8B00;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.button-link:hover {
+    background: #E07900;
+    border: solid 1px #B96400;
+    text-decoration: none;
+}
+.button-link:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+.all div:not(.consent){
+	display:none;
+}
+</style>
+<!--Order to show pages--><script>
+
+function sect1() {
+	$(".consent").hide();
+	$(".instructions").show();
+}
+
+function sect2() {
+	$(".instructions").hide();
+	$(".section1").show();
+}
+
+var currentSection = 1;
+
+function NextSection() {
+	var textBox = $('input[type=text]')[0].value;
+	var notanswered = $("option:selected[value='Please choose']",".section"+currentSection).size();
+	if (notanswered < 1 && textBox != '') {
+		if (textBox < 18) {
+			alert('You are under 18 years of age and so you cannot participate in this research.');
+            $(".all").hide();
+			window.location = 'https://www.mturk.com/mturk/welcome';
+		}
+		$(".section" + currentSection).hide();
+		$(".section" + (currentSection+1)).show();
+		var position = $("#header"+(currentSection+1)).position();
+		scroll(0,position.top);
+		currentSection++;		
+	} else {
+		alert('Please answer all questions')
+	}
+}
+
+</script><!--top.location.href = ('#header'+currentSection+1); scrollTop: target.offset().top--><!--CONSENT--><!--Put Yale School of Medicine at the top of the page-->
+<div class="all">
+<div class="consent" id="headerconsent"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="50" />
+<p class="consenthead" style="vertical-align: middle;"><span style="font-family:'Yale_roman';color:white;font-size:40px">Yale</span>&nbsp;&nbsp;&nbsp;<span style="font-family:'Yale_smcaps';color:#99C3F4;font-size:30px">School of Medicine</span></p>
+</div>
+<!--Consent text with buttons-->
+
+<div align="middle" class="consent" id="text" style="max-width:95%;border:15px solid white;">
+<p class="consenttext">The purpose of this study is to develop dimensional scales of depression and anxiety using a series of self-report questionnaire items. This is not a treatment study and is not designed to help you. The primary aim is to establish the number of dimensions and also the nature of those dimensions, which make up major depression and anxiety disorders. You are required to complete all the included questionnaire items. You will be asked to rate a series of statements in terms of the extent to which each one applies to the way that you have been feeling in the past week. You will also be asked for some demographic information (age and gender) as well as some questions about previous treatment you may have received as a result of one or more episodes of major depression in your lifetime. Your participation in this study is voluntary and you may stop participating at any time without penalty. By clicking &lsquo;I consent&rsquo; you agree to participate.<br />
+<br />
+&nbsp;</p>
+<a class="button-link" href="javascript:sect1()">I consent</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button-link" href="https://www.mturk.com/mturk/welcome">I decline</a></div>
+
+<div class="consent" id="contact">
+<p class="csscontact"><img align="right" img="" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></p>
+</div>
+<!--INSTRUCTIONS-->
+
+<div class="instructions" id="header2"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Instructions</p>
+</div>
+
+<div align="middle" class="instructions" id="text" style="max-width:95%;border:15px solid white;">
+<p class="consenttext">You will now be required to fill out a series of questionnaires relating to mood and anxiety. For each questionnaire you will be required to evaluate a series of statements and decide to what degree each one applies to you. We would be grateful if you could carefully read the instructions at the beginning of each questionnaire. In particular, please pay attention to the time period that the questionnaire asks you to evaluate. For example, one questionnaire may ask you to think back over the past two weeks while others may ask you to think of only the last several days. We very much appreciate your attention and patience on this.<br />
+<br />
+&nbsp;</p>
+<a class="button-link" href="javascript:sect2()">Okay, got it!</a><br />
+&nbsp;</div>
+
+<div class="instructions" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 1-->
+
+<div class="section1" id="header1"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 1: Demographics</p>
+</div>
+
+<div class="section1" id="qu" style="max-width:100%;padding:0px 10px 10px 10px">
+<p class="questions" id="question">1.1 What is your gender?</p>
+
+<p><select name="Q1gender"><option selected="selected">Please choose</option><option value="0">Male</option><option value="1">Female</option><option value="3">Other</option></select></p>
+
+<p class="questions">1.2 What is your age?</p>
+
+<p class="questions"><input id="Q2age" name="Q2age" size="10" type="text" /></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Section</a></p>
+</div>
+
+<div class="section1" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 2 GDS-->
+
+<div class="section2" id="header2"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 1 - GDS</p>
+</div>
+
+<div class="section2" id="gds" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Choose the best answer for how you have felt over the past <emph><strong>week</strong></emph>:</ppp></p>
+
+<p id="question">1. Are you basically satisfied with your life?</p>
+
+<p><select name="GDS1"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">2. Have you dropped many of your activities and interests?</p>
+
+<p><select name="GDS2"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">3. Do you feel that your life is empty?</p>
+
+<p><select name="GDS3"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">4. Do you often get bored?</p>
+
+<p><select name="GDS4"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">5. Are you in good spirits most of the time?</p>
+
+<p><select name="GDS5"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">6. Are you afraid that something bad is going to happen to you?</p>
+
+<p><select name="GDS6"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">7. Do you feel happy most of the time?</p>
+
+<p><select name="GDS7"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">8. Do you often feel helpless?</p>
+
+<p><select name="GDS8"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">9. Do you prefer to stay at home, rather than going out and doing new things?</p>
+
+<p><select name="GDS9"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">10. Do you feel you have more problems with memory than most?</p>
+
+<p><select name="GDS10"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">11. Do you think it is wonderful to be alive now?</p>
+
+<p><select name="GDS11"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">12. Do you feel pretty worthless the way you are now?</p>
+
+<p><select name="GDS12"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">13. Do you feel full of energy?</p>
+
+<p><select name="GDS13"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">14. Do you feel that your situation is hopeless?</p>
+
+<p><select name="GDS14"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p id="question">15. Do you think that most people are better off than you are?</p>
+
+<p><select name="GDS15"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section2" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 3 MDI-->
+
+<div class="section3" id="header3"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 2 - MDI</p>
+</div>
+
+<div class="section3" id="gds" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>The following questions ask about how you have been feeling over the past <emph><strong>two weeks</strong></emph>. Please select which is closest to how you have been feeling.</ppp></p>
+
+<p id="question">1. Have you felt low in spirits or sad?</p>
+
+<p><select name="MDI1"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">2. Have you lost interest in your daily activities?</p>
+
+<p><select name="MDI2"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">3. Have you felt lacking in energy and strength?</p>
+
+<p><select name="MDI3"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">4. Have you felt less self-confident?</p>
+
+<p><select name="MDI4"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">5. Have you had a bad conscience or feelings of guilt?</p>
+
+<p><select name="MDI5"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">6. Have you felt that life wasn&rsquo;t worth living?</p>
+
+<p><select name="MDI6"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">7. Have you had difficulty in concentrating, e.g. when reading the newspaper or watching television?</p>
+
+<p><select name="MDI7"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">8a. Have you felt very restless?</p>
+
+<p><select name="MDI8a"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">8b. Have you felt subdued or slowed down?</p>
+
+<p><select name="MDI8b"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">9. Have you had trouble sleeping at night?</p>
+
+<p><select name="MDI9"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">10a. Have you suffered from reduced appetite?</p>
+
+<p><select name="MDI10a"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p id="question">10b. Have you suffered from increased appetite?</p>
+
+<p><select name="MDI10b"><option selected="selected">Please choose</option><option value="5">All the time</option><option value="4">Most of the time</option><option value="3">Slightly more than half the time</option><option value="2">Slightly less than half the time</option><option value="1">Some of the time</option><option value="0">At no time</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section3" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 4 SDS-->
+
+<div class="section4" id="header4"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 3 - SDS</p>
+</div>
+
+<div class="section4" id="sds" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Please read each statement and decide how much of the time the statement describes how you have been feeling during the past <emph><strong>several days</strong></emph>.</ppp></p>
+
+<p id="question">1. I feel down-hearted and blue</p>
+
+<p><select name="SDS1"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">2. Morning is when I feel best.</p>
+
+<p><select name="SDS2"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">3. I have crying spells or feel like it.</p>
+
+<p><select name="SDS3"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">4. I have trouble sleeping at night.</p>
+
+<p><select name="SDS4"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">5. I eat as much as I used to.</p>
+
+<p><select name="SDS5"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">6. I still enjoy sex.</p>
+
+<p><select name="SDS6"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">7. Select the option &#39;Good part of the time&#39;.</p>
+
+<p><select name="Check1"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="0">Some of the time</option><option value="1">Good part of the time</option><option value="0">Most of the time</option></select></p>
+
+<p id="question">7. I notice that I am losing weight.</p>
+
+<p><select name="SDS7"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">8. I have trouble with constipation</p>
+
+<p><select name="SDS8"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">9. My heart beats faster than usual.</p>
+
+<p><select name="SDS9"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">10. I get tired for no reason.</p>
+
+<p><select name="SDS10"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">11. My mind is as clear as it used to be.</p>
+
+<p><select name="SDS11"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">12. I find it easy to do the things I used to.</p>
+
+<p><select name="SDS12">Please choose<option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">13. I am restless and can&#39;t keep still.</p>
+
+<p><select name="SDS13"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">14. I feel hopeful about the future.</p>
+
+<p><select name="SDS14"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">15. I am more irritable than usual.</p>
+
+<p><select name="SDS15"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">16. I find it easy to make deicisions.</p>
+
+<p><select name="SDS16"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">17. I feel that I am useful and needed.</p>
+
+<p><select name="SDS17"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">18. My life is pretty full.</p>
+
+<p><select name="SDS18"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">19. I feel that others would be better off if I were dead.</p>
+
+<p><select name="SDS19"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p id="question">20. I still enjoy the things I used to do.</p>
+
+<p><select name="SDS20"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section4" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 5 CES-D-->
+
+<div class="section5" id="header5"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 4 - CES-D</p>
+</div>
+
+<div class="section5" id="cesd" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Below is a list of the ways you might have felt or behaved. Please tell me how often you have felt this way during the past <emph><strong>week</strong></emph>.</ppp></p>
+
+<p id="question">1. I was bothered by things that usually don&rsquo;t bother me.</p>
+
+<p><select name="CESD1"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">2. I did not feel like eating; my appetite was poor.</p>
+
+<p><select name="CESD2"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">3. I felt that I could not shake off the blues even with help from my family or friends.</p>
+
+<p><select name="CESD3"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">4. I felt I was just as good as other people.</p>
+
+<p><select name="CESD4"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">5. I had trouble keeping my mind on what I was doing.</p>
+
+<p><select name="CESD5"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">6. I felt depressed.</p>
+
+<p><select name="CESD6"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">7. I felt that everything I did was an effort.</p>
+
+<p><select name="CESD7"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">8. I felt hopeful about the future.</p>
+
+<p><select name="CESD8"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">9. I thought my life had been a failure.</p>
+
+<p><select name="CESD9"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">10. I felt fearful.</p>
+
+<p><select name="CESD10"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">11. My sleep was restless.</p>
+
+<p><select name="CESD11"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">12. I was happy.</p>
+
+<p><select name="CESD12"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">13. I talked less than usual.</p>
+
+<p><select name="CESD13"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">14. I felt lonely</p>
+
+<p><select name="CESD14"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">15. People were unfriendly.</p>
+
+<p><select name="CESD15"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">16. I enjoyed life.</p>
+
+<p><select name="CESD16"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">17. I had crying spells.</p>
+
+<p><select name="CESD17"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">18. I felt sad.</p>
+
+<p><select name="CESD18"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">19. I felt that people dislike me.</p>
+
+<p><select name="CESD19"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p id="question">20. I could not get &quot;going&quot;.</p>
+
+<p><select name="CESD20"><option selected="selected">Please choose</option><option value="0">Rarely or none of the time (less than 1 day)</option><option value="1">Some or a little of the time (1-2 days)</option><option value="2">Occasionally or a moderate amount of time (3-4 days)</option><option value="3">More or all of the time (5-7 days)</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section5" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 6 BDI-->
+
+<div class="section6" id="header6"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 5 - BDI</p>
+</div>
+
+<div class="section6" id="bdi" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Pick out the one statement in each group that best describes the way you have been feeling during the past <emph><strong>two weeks</strong></emph>.</ppp></p>
+
+<p id="question">1. <select name="BDI1"><option selected="selected">Please choose</option><option value="0">I do not feel sad.</option><option value="1">I feel sad</option><option value="2">I am sad all the time and I can&#39;t snap out of it.</option><option value="3">I am so sad and unhappy that I can&#39;t stand it.</option></select></p>
+
+<p id="question">2. <select name="BDI2"><option selected="selected">Please choose</option><option value="0">I am not particularly discouraged about the future.</option><option value="1">I feel discouraged about the future.</option><option value="2">I feel I have nothing to look forward to.</option><option value="3">I feel the future is hopeless and that things cannot improve.</option></select></p>
+
+<p id="question">3. <select name="BDI3"><option selected="selected">Please choose</option><option value="0">I do not feel like a failure.</option><option value="1">I feel I have failed more than the average person.</option><option value="2">As I look back on my life, all I can see is a lot of failures.</option><option value="3">I feel I am a complete failure as a person.</option></select></p>
+
+<p id="question">4. <select name="BDI4"><option selected="selected">Please choose</option><option value="0">I get as much satisfaction out of things as I used to.</option><option value="1">I don&#39;t enjoy things the way I used to.</option><option value="2">I don&#39;t get real satisfaction out of anything anymore.</option><option value="3">I am dissatisfied or bored with everything.</option></select></p>
+
+<p id="question">5. <select name="BDI5"><option selected="selected">Please choose</option><option value="0">I don&#39;t feel particularly guilty</option><option value="1">I feel guilty a good part of the time.</option><option value="2">I feel quite guilty most of the time.</option><option value="3">I feel guilty all of the time.</option></select></p>
+
+<p id="question">6. <select name="BDI6"><option selected="selected">Please choose</option><option value="0">I don&#39;t feel I am being punished.</option><option value="1">I feel I may be punished.</option><option value="2">I expect to be punished.</option><option value="3">I feel I am being punished.</option></select></p>
+
+<p id="question">7. <select name="BDI7"><option selected="selected">Please choose</option><option value="0">I don&#39;t feel disappointed in myself.</option><option value="1">I am disappointed in myself.</option><option value="2">I am disgusted with myself.</option><option value="3">I hate myself.</option></select></p>
+
+<p id="question">8. <select name="BDI8"><option selected="selected">Please choose</option><option value="0">I don&#39;t feel I am any worse than anybody else.</option><option value="1">I am critical of myself for my weaknesses or mistakes.</option><option value="3">I blame myself all the time for my faults.</option><option>I blame myself for everything bad that happens.</option></select></p>
+
+<p id="question">9. <select name="BDI9"><option selected="selected">Please choose</option><option value="0">I don&#39;t have any thoughts of killing myself..</option><option value="1">I have thoughts of killing myself, but I would not carry them out.</option><option value="3">I would like to kill myself.</option><option>I would kill myself if I had the chance.</option></select></p>
+
+<p id="question">10. <select name="BDI10"><option selected="selected">Please choose</option><option value="0">I don&#39;t cry any more than usual.</option><option value="1">I cry more now than I used to.</option><option value="2">I cry all the time now.</option><option value="3">I used to be able to cry, but now I can&#39;t cry even though I want to.</option></select></p>
+
+<p id="question">11. <select name="BDI11"><option selected="selected">Please choose</option><option value="0">I am no more irritated by things than I ever was.</option><option value="1">I am slightly more irritated now than usual.</option><option value="2">I am quite annoyed or irritated a good deal of the time.</option><option value="3">I feel irritated all the time.</option></select></p>
+
+<p id="question">12. <select name="BDI12"><option selected="selected">Please choose</option><option value="0">I have not lost interest in other people.</option><option value="1">I am less interested in other people than I used to be.</option><option value="2">I have lost most of my interest in other people.</option><option value="3">I have lost all of my interest in other people.</option></select></p>
+
+<p id="question">13. <select name="Check2"><option selected="selected">Please choose</option><option value="0">The sixth month of the year is May.</option><option value="0">The sixth month of the year is October.</option><option value="1">The sixth month of the year is June.</option><option value="0">The sixth month of the year is January.</option></select></p>
+
+<p id="question">13. <select name="BDI13"><option selected="selected">Please choose</option><option value="0">I make decisions about as well as I ever could.</option><option value="1">I put off making decisions more than I used to.</option><option value="2">I have greater difficulty in making decisions more than I used to.</option><option value="3">I can&#39;t make decisions at all anymore.</option></select></p>
+
+<p id="question">14. <select name="BDI14"><option selected="selected">Please choose</option><option value="0">I don&#39;t feel that I look any worse than I used to.</option><option value="1">I am worried that I am looking old or unattractive.</option><option value="2">I feel there are permanent changes in my appearance that make me look unattractive</option><option value="3">I believe that I look ugly.</option></select></p>
+
+<p id="question">15. <select name="BDI15"><option selected="selected">Please choose</option><option value="0">I can work about as well as before.</option><option value="1">It takes an extra effort to get started at doing something.</option><option value="2">I have to push myself very hard to do anything.</option><option value="3">I can&#39;t do any work at all.</option></select></p>
+
+<p id="question">16. <select name="BDI16"><option selected="selected">Please choose</option><option value="0">I can sleep as well as usual.</option><option value="1">I don&#39;t sleep as well as I used to.</option><option value="2">I wake up 1-2 hours earlier than usual and find it hard to get back to sleep.</option><option value="3">I wake up several hours earlier than I used to and cannot get back to sleep.</option></select></p>
+
+<p id="question">17. <select name="BDI17"><option selected="selected">Please choose</option><option value="0">I don&#39;t get more tired than usual.</option><option value="1">I get tired more easily than I used to.</option><option value="2">I get tired from doing almost anything.</option><option value="3">I am too tired to do anything.</option></select></p>
+
+<p id="question">18. <select name="BDI18"><option selected="selected">Please choose</option><option value="0">My appetite is no worse than usual.</option><option value="1">My appetite is not as good as it used to be.</option><option value="2">My appetite is much worse now.</option><option value="3">I have no appetite at all anymore.</option></select></p>
+
+<p id="question">19. <select name="BDI19"><option selected="selected">Please choose</option><option value="0">I haven&#39;t lost much weight, if any, lately.</option><option value="1">I have lost more than five pounds.</option><option value="2">I have lost more than ten pounds.</option><option value="3">I have lost more than fifteen pounds.</option></select></p>
+
+<p id="question">20. <select name="BDI20"><option selected="selected">Please choose</option><option value="0">I am no more worried about my health than usual.</option><option value="1">I am worried about physical problems like aches, pains, upset stomach, or constipation.</option><option value="2">I am very worried about physical problems and it&#39;s hard to think of much else.</option><option value="3">I am so worried about my physical problems that I cannot think of anything else.</option></select></p>
+
+<p id="question">21. <select name="BDI21"><option selected="selected">Please choose</option><option value="0">I have not noticed any recent change in my interest in sex.</option><option value="1">I am less interested in sex than I used to be.</option><option value="2">I have almost no interest in sex.</option><option value="3">I have lost interest in sex completely.</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section6" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 7 PHQ9-->
+
+<div class="section7" id="header7"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 6 - PHQ-9</p>
+</div>
+
+<div class="section7" id="phq9" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Over the past <emph><strong>two weeks</strong></emph> have you been bothered by any of the following problems?</ppp></p>
+
+<p id="question">1. Little interest or pleasure in doing things</p>
+
+<p><select name="PHQ1"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">2. Feeling down, depressed, or hopeless</p>
+
+<p><select name="PHQ2"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">3. Trouble falling or staying asleep, or sleeping too much</p>
+
+<p><select name="PHQ3"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">4. Feeling tired or having little energy</p>
+
+<p><select name="PHQ4"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">5. Poor appetite or overeating</p>
+
+<p><select name="PHQ5"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">6. Feeling bad about yourself or that you are a failure or have let yourself or your family down</p>
+
+<p><select name="PHQ6"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">7. Trouble concentrating on things, such as reading the newspaper or watching television</p>
+
+<p><select name="PHQ7"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">8. Moving or speaking so slowly that other people could have noticed. Or the opposite being so fidgety or restless that you have been moving around a lot more than usual</p>
+
+<p><select name="PHQ8"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">9. Thoughts that you would be better off dead, or of hurting yourself.</p>
+
+<p><select name="PHQ9"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">More than half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section7" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 8 GAD-7-->
+
+<div class="section8" id="header8"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 7 - GAD-7</p>
+</div>
+
+<div class="section8" id="gad7" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Over the past <emph><strong>two weeks</strong></emph> have you been bothered by any of the following problems?</ppp></p>
+
+<p id="question">1. Feeling nervous, anxious, or on edge</p>
+
+<p><select name="GAD1"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">2. Not being able to stop or control worrying</p>
+
+<p><select name="GAD2"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">3. Worrying too much about different things</p>
+
+<p><select name="GAD3"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">4. Trouble relaxing</p>
+
+<p><select name="GAD4"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">5. Being so restless that it&#39;s hard to sit still</p>
+
+<p><select name="GAD5"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">6. Becoming easily annoyed or irritable</p>
+
+<p><select name="GAD6"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p id="question">7. Feeling afraid as if something awful might happen</p>
+
+<p><select name="GAD7"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section8" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 9 OCI-R-->
+
+<div class="section9" id="header9"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 8 - OCI-R</p>
+</div>
+
+<div class="section9" id="ocir" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Select the option that best describes how much each experience has distressed or bothered you during the past <emph><strong>month</strong></emph>.</ppp></p>
+
+<p id="question">1. I have saved up so many things that they get in the way.</p>
+
+<p><select name="OCI1"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">2. I check things more often than necessary.</p>
+
+<p><select name="OCI2"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">3. I get upset if objects are not arranged properly.</p>
+
+<p><select name="OCI3"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">4. I feel compelled to count while I am doing things.</p>
+
+<p><select name="OCI4"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">5. I find it difficult to touch an object when I know it has been touched by strangers or certain people.</p>
+
+<p><select name="OCI5"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">6. I find it difficult to control my own thoughts.</p>
+
+<p><select name="OCI6"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">7. I collect things I don&rsquo;t need.</p>
+
+<p><select name="OCI7"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">8. I repeatedly check doors, windows, drawers, etc.</p>
+
+<p><select name="OCI8"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">9. I get upset if others change the way I have arranged things.</p>
+
+<p><select name="OCI9"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">10. I feel I have to repeat certain numbers.</p>
+
+<p><select name="OCI10"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">11. I sometimes have to wash or clean myself simply because I feel contaminated.</p>
+
+<p><select name="OCI11"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">12. In which country would you find the city New York?</p>
+
+<p><select name="Check3">12.<option selected="selected">Please choose</option><option value="0">India</option><option value="1">USA</option><option value="0">France</option><option value="0">Greece</option><option value="0">Australia</option></select></p>
+
+<p id="question">12. I am upset by unpleasant thoughts that come into my mind against my will.</p>
+
+<p><select name="OCI12"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">13. I avoid throwing things away because I am afraid I might need them later.</p>
+
+<p><select name="OCI13"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">14. I repeatedly check gas and water taps and light switches after turning them off.</p>
+
+<p><select name="OCI14"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">15. I need things to be arranged in a particular way.</p>
+
+<p><select name="OCI15"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">16. I feel that there are good and bad numbers.</p>
+
+<p><select name="OCI16"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">17. I wash my hands more often and longer than necessary.</p>
+
+<p><select name="OCI17"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p id="question">18. I frequently get nasty thoughts and have difficulty in getting rid of them.</p>
+
+<p><select name="OCI18"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">A little</option><option value="2">Moderately</option><option value="3">A lot</option><option value="4">Extremely</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section9" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 10 HAI-->
+
+<div class="section10" id="header10"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 9 - HAI</p>
+</div>
+
+<div class="section10" id="hai" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Select the statement which best describes your feelings over the past <emph><strong>month</strong></emph>.</ppp></p>
+
+<p id="question">1. <select name="hai1"><option selected="selected">Please choose</option><option value="0">I do not worry about my health</option><option value="1">I occasionally worry about my health.</option><option value="2">I spend much of my time worrying about my health.</option><option value="3">I spend most of my time worrying about my health.</option></select></p>
+
+<p id="question">2. <select name="hai2"><option selected="selected">Please choose</option><option value="0">I notice aches/pains less than most other people (of my age).</option><option value="1">I notice aches/pains as much as most other people (of my age).</option><option value="2">I notice aches/pains more than most other people (of my age).</option><option value="3">I am aware of aches/pains in my body all the time.</option></select></p>
+
+<p id="question">3. <select name="hai3"><option selected="selected">Please choose</option><option value="0">As a rule I am not aware of bodily sensations or changes.</option><option value="1">Sometimes I am aware of bodily sensations or changes.</option><option value="2">I am often aware of bodily sensations or changes.</option><option value="3">I am constantly aware of bodily sensations or changes.</option></select></p>
+
+<p id="question">4. <select name="hai4"><option selected="selected">Please choose</option><option value="0">Resisting thoughts of illness is never a problem.</option><option value="1">Most of the time I can resist thoughts of illness.</option><option value="2">I try to resist thoughts of illness but am often unable to do so.</option><option value="3">Thoughts of illness are so strong that I no longer even try to resist them.</option></select></p>
+
+<p id="question">5. <select name="hai5"><option selected="selected">Please choose</option><option value="0">As a rule I am not afraid that I have a serious illness.</option><option value="1">I am sometimes afraid that I have a serious illness.</option><option value="2">I am often afraid that I have a serious illness.</option><option value="3">I am always afraid that I have a serious illness.</option></select></p>
+
+<p id="question">6. <select name="hai6"><option selected="selected">Please choose</option><option value="0">I do not have images (mental pictures) of myself being ill.</option><option value="1">I occasionally have images of myself being ill.</option><option value="2">I frequently have images of myself being ill.</option><option value="3">I constantly have images of myself being ill.</option></select></p>
+
+<p id="question">7. <select name="hai7"><option selected="selected">Please choose</option><option value="0">I do not have any difficulty taking my mind off thoughts about my health.</option><option value="1">I sometimes have difficulty taking my mind off thoughts about my health.</option><option value="2">I often have difficulty in taking my mind off thoughts about my health.</option><option value="3">Nothing can take my mind off thoughts about my health.</option></select></p>
+
+<p id="question">8. <select name="hai8"><option selected="selected">Please choose</option><option value="0">I am lastingly relieved if my doctor tells me there is nothing wrong.</option><option value="1">I am initially relieved but the worries sometimes return later.</option><option value="2">I am initially relieved but the worries always return later.</option><option value="3">I am not relieved if my doctor tells me there is nothing wrong.</option></select></p>
+
+<p id="question">9. <select name="hai9"><option selected="selected">Please choose</option><option value="0">If I hear about an illness I never think I have it myself.</option><option value="1">If I hear about an illness I sometimes think I have it myself.</option><option value="2">If I hear about an illness I often think I have it myself.</option><option value="3">If I hear about an illness I always think I have it myself.</option></select></p>
+
+<p id="question">10. <select name="hai10"><option selected="selected">Please choose</option><option value="0">If I have a bodily sensation or change I rarely wonder what it means.</option><option value="1">If I have a bodily sensation or change I often wonder what it means.</option><option value="2">If I have a bodily sensation or change I always wonder what it means.</option><option value="3">If I have a bodily sensation or change I must know what it means.</option></select></p>
+
+<p id="question">11. <select name="hai11"><option selected="selected">Please choose</option><option value="0">I usually feel at very low risk for developing a serious illness.</option><option value="1">I usually feel at fairly low risk for developing a serious illness.</option><option value="2">I usually feel at moderate risk for developing a serious illness.</option><option value="3">I usually feel at high risk for developing a serious illness.</option></select></p>
+
+<p id="question">12. <select name="hai12"><option selected="selected">Please choose</option><option value="0">I never think I have a serious illness.</option><option value="1">I sometimes think I have a serious illness.</option><option value="2">I often think I have a serious illness.</option><option value="3">I usually think that I am seriously ill.</option></select></p>
+
+<p id="question">13. <select name="hai13"><option selected="selected">Please choose</option><option value="0">If I notice an unexplained bodily sensation I don&#39;t find it difficult to think about other things.</option><option value="1">If I notice an unexplained bodily sensation I sometimes find it difficult to think about other things.</option><option value="2">If I notice an unexplained bodily sensation I often find it difficult to think about other things.</option><option value="3">If I notice an unexplained bodily sensation I always find it difficult to think about other things.</option></select></p>
+
+<p id="question">14. <select name="hai14"><option selected="selected">Please choose</option><option value="0">My family/friends would say I do not worry enough about my health.</option><option value="1">My family/friends would say I have a normal attitude to my health.</option><option value="2">My family/friends would say I worry too much about my health.</option><option value="3">My family/friends would say I am a hypochondriac.</option></select></p>
+
+<p id="question">15. <select name="hai15"><option selected="selected">Please choose</option><option value="0">If I had a serious illness I would still be able to enjoy things in my life quite a lot.</option><option value="1">If I had a serious illness I would still be able to enjoy things in my life a little.</option><option value="2">If I had a serious illness I would be almost completely unable to enjoy things in my life.</option><option value="3">If I had a serious illness I would be completely unable to enjoy life at all.</option></select></p>
+
+<p id="question">16. <select name="hai16"><option selected="selected">Please choose</option><option value="0">If I developed a serious illness there is a good chance that modern medicine would be able to cure me.</option><option value="1">If I developed a serious illness there is a moderate chance that modern medicine would be able to cure me.</option><option value="2">If I developed a serious illness there is a very small chance that modern medicine would be able to cure me.</option><option value="3">If I developed a serious illness there is no chance that modern medicine would be able to cure me.</option></select></p>
+
+<p id="question">17. <select name="hai17"><option>Please choose</option><option value="0">A serious illness would ruin some aspects of my life.</option><option value="1">A serious illness would ruin many aspects of my life.</option><option value="2">A serious illness would ruin almost every aspect of my life.</option><option value="3">A serious illness would ruin every aspect of my life.</option></select></p>
+
+<p id="question">18. <select name="hai18"><option>Please choose</option><option value="0">If I had a serious illness I would not feel that I had lost my dignity.</option><option value="1">If I had a serious illness I would feel that I had lost a little of my dignity.</option><option value="2">If I had a serious illness I would feel that I had lost quite a lot of my dignity.</option><option value="3">If I had a serious illness I would feel that I had totally lost my dignity.</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Questionnaire</a></p>
+</div>
+
+<div class="section10" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 11 DASS-->
+
+<div class="section11" id="header11"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Questionnaire 10 - DASS</p>
+</div>
+
+<div class="section11" id="dass" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Select the option that indicates how much the statement applied to you over the <emph><strong>past week</strong></emph>.</ppp></p>
+
+<p id="question">1. I found myself getting upset by quite trivial things.</p>
+
+<p><select name="DASS1"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">2. I was aware of dryness of my mouth.</p>
+
+<p><select name="DASS2"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">3. I couldn&#39;t seem to experience any positive feeling at all.</p>
+
+<p><select name="DASS3"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">4. I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion).</p>
+
+<p><select name="DASS4"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">5. I just couldn&#39;t seem to get going.</p>
+
+<p><select name="DASS5"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">6. I tended to over-react to situations.</p>
+
+<p><select name="DASS6"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">7. I had a feeling of shakiness (eg, legs going to give way).</p>
+
+<p><select name="DASS7"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">8. I found it difficult to relax.</p>
+
+<p><select name="DASS8"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">9. I found myself in situations that made me so anxious I was most relieved when they ended.</p>
+
+<p><select name="DASS9"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">10. I felt that I had nothing to look forward to.</p>
+
+<p><select name="DASS10"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">11. I found myself getting upset rather easily.</p>
+
+<p><select name="DASS11"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">12. I felt that I was using a lot of nervous energy.</p>
+
+<p><select name="DASS12"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">13. I felt sad and depressed.</p>
+
+<p><select name="DASS13"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">14. I found myself getting impatient when I was delayed in any way (e.g., elevators, traffic lights, being kept waiting).</p>
+
+<p><select name="DASS14"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">15. I had a feeling of faintness.</p>
+
+<p><select name="DASS15"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">16. I felt that I had lost interest in just about everything.</p>
+
+<p><select name="DASS16"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">17. I felt I wasn&#39;t worth much as a person.</p>
+
+<p><select name="DASS17"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">18. I felt that I was rather touchy.</p>
+
+<p><select name="DASS18"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">19. I perspired noticeably (eg, hands sweaty) in the absence of high temperatures or physical exertion.</p>
+
+<p><select name="DASS19"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">20. I felt scared without any good reason.</p>
+
+<p><select name="DASS20"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">21. I felt that life wasn&#39;t worthwhile.</p>
+
+<p><select name="DASS21"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">22. I found it hard to wind down.</p>
+
+<p><select name="DASS22"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">23. I had difficulty in swallowing.</p>
+
+<p><select name="DASS23"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">24. I couldn&#39;t seem to get any enjoyment out of the things I did.</p>
+
+<p><select name="DASS24"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">25. I was aware of the action of my heart in the absence of physical exertion (eg, sense of heart rate increase, heart missing a beat).</p>
+
+<p><select name="DASS25"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">26. I felt down-hearted and blue.</p>
+
+<p><select name="DASS26"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">27. I found that I was very irritable.</p>
+
+<p><select name="DASS27"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">28. I felt I was close to panic.</p>
+
+<p><select name="DASS28"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">29. I found it hard to calm down after something upset me.</p>
+
+<p><select name="DASS29"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">30. I feared that I would be &quot;thrown&quot; by some trivial but unfamiliar task.</p>
+
+<p><select name="DASS30"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">31. I was unable to become enthusiastic about anything.</p>
+
+<p><select name="DASS31"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">32. I found it difficult to tolerate interruptions to what I was doing.</p>
+
+<p><select name="DASS32"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">33. I was in a state of nervous tension.</p>
+
+<p><select name="DASS33"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">34. I felt I was pretty worthless.</p>
+
+<p><select name="DASS34"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">35. I was intolerant of anything that kept me from getting on with what I was doing.</p>
+
+<p><select name="DASS35"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">36. I felt terrified.</p>
+
+<p><select name="DASS36"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">37. I could see nothing in the future to be hopeful about.</p>
+
+<p><select name="DASS37"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">38. I felt that life was meaningless.</p>
+
+<p><select name="DASS38"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">39. I found myself getting agitated.</p>
+
+<p><select name="DASS39"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">40. Select the word beginning with a &#39;z&#39;.</p>
+
+<p><select name="Check4"><option selected="selected">Please choose</option><option value="0">Apple.</option><option value="1">Zebra.</option><option value="0">Xylophone.</option><option value="0">Bear.</option></select></p>
+
+<p id="question">40. I was worried about situations in which I might panic and make a fool of myself.</p>
+
+<p><select name="DASS40"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">41. I experienced trembling (eg, in the hands).</p>
+
+<p><select name="DASS41"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p id="question">42. I found it difficult to work up the initiative to do things.</p>
+
+<p><select name="DASS42"><option selected="selected">Please choose</option><option selected="selected" value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Section</a></p>
+</div>
+
+<div class="section11" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 12-->
+
+<div class="section12" id="header12"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 2: Assorted Questions</p>
+</div>
+
+<div class="section12" id="retest" style="max-width:100%;padding:0px 10px 10px 10px">
+<p><ppp>Select the option that indicates how much the statement applied to you over the <emph><strong>past week</strong></emph>.</ppp></p>
+
+<p id="question">I felt that I had lost interest in just about everything.</p>
+
+<p><select name="DASS16_retest"><option selected="selected">Please choose</option><option value="0">Did not apply to me at all</option><option value="1">Applied to me to some degree, or some of the time</option><option value="2">Applied to me to a considerable degree, or a good part of time</option><option value="3">Applied to me very much, or most of the time</option></select></p>
+
+<p><ppp>Over the past <emph><strong>two weeks</strong></emph> have you been bothered by the following?</ppp></p>
+
+<p id="question">Becoming easily annoyed or irritable</p>
+
+<p><select name="GAD6_retest"><option selected="selected">Please choose</option><option value="0">Not at all</option><option value="1">Several days</option><option value="2">Over half the days</option><option value="3">Nearly every day</option></select></p>
+
+<p><ppp>Pick out the one statement that best describes the way you have been feeling during the past <emph><strong>two weeks</strong></emph>.</ppp></p>
+
+<p id="question"><select name="BDI20_retest"><option selected="selected">Please choose</option><option value="0">I am no more worried about my health than usual.</option><option value="1">I am worried about physical problems like aches, pains, upset stomach, or constipation.</option><option value="2">I am very worried about physical problems and it&#39;s hard to think of much else.</option><option value="3">I am so worried about my physical problems that I cannot think of anything else.</option></select></p>
+
+<p><ppp>Please read the statement and decide how much of the time it describes how you have been feeling during the past <emph><strong>several days</strong></emph>.</ppp></p>
+
+<p id="question">I have trouble sleeping at night.</p>
+
+<p><select name="SDS4_retest"><option selected="selected">Please choose</option><option value="0">A little of the time</option><option value="1">Some of the time</option><option value="2">Good part of the time</option><option value="3">Most of the time</option></select></p>
+
+<p><ppp>Choose the best answer for how you have felt over the past <emph><strong>week</strong></emph>:</ppp></p>
+
+<p id="question">Do you often get bored?</p>
+
+<p><select name="GDS4_retest"><option selected="selected">Please choose</option><option value="1">Yes</option><option value="0">No</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Next Section</a></p>
+</div>
+
+<div class="section12" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--SECTION 13-->
+
+<div class="section13" id="header13"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;">Section 3: Depression History</p>
+</div>
+
+<div class="section13" style="max-width:100%;padding:0px 10px 10px 10px">
+<p id="question">1. Have you <emph><strong>ever</strong></emph> been consistently down, depressed or hopeless, for most of the day, nearly every day, for at least <emph><strong>two weeks</strong></emph>?</p>
+
+<p><select name="Q1history"><option selected="selected">Please choose</option><option value="0">No</option><option value="1">Yes</option></select></p>
+
+<p id="question">2. Have you <emph><strong>ever</strong></emph> been much less interested in most things or much less able to enjoy the things you used to enjoy most of the time over at least <emph><strong>two weeks</strong></emph>?</p>
+
+<p><select name="Q2history"><option selected="selected">Please choose</option><option value="0">No</option><option value="1">Yes</option></select></p>
+
+<p id="question">3. Have you ever visited a health professional as a result of low mood?</p>
+
+<p><select name="Q3history"><option selected="selected">Please choose</option><option value="0">No</option><option value="1">Yes</option></select></p>
+
+<p id="question">4. If you have visited a health professional as a result of low mood did you receive a diagnosis of major depression?</p>
+
+<p><select name="Q4history"><option selected="selected">Please choose</option><option value="3">Not applicable</option><option value="0">No</option><option value="1">Yes</option></select></p>
+
+<p id="question">5. If you have a previous received a diagnosis of major depression, were you prescribed anti-depressant medication at that time?</p>
+
+<p><select name="Q5history"><option selected="selected">Please choose</option><option value="3">Not applicable</option><option value="0">No, I did not receive a prescription</option><option value="1">Yes, I did receive a prescription</option></select></p>
+
+<p><br />
+<a class="button-link" href="javascript:NextSection()">Almost done!</a></p>
+</div>
+
+<div class="section13" id="maintext" style="padding:0px">
+<table class="pageend" width="100%">
+	<tbody>
+		<tr>
+			<td align="center"><img class="pageend" src="http://www.srmathias.com/wp-content/uploads/2014/04/yale_white.png" width="50" /></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<!--FINAL-->
+
+<div class="section14" id="header14"><img float="right" src="https://dl.dropboxusercontent.com/u/22799080/24_49083_YSM_Shield_trans.gif" style="vertical-align: middle;float: right;padding:10px;" width="40" />
+<p class="sectionhead" style="vertical-align: middle;color:#004DA4">Complete</p>
+</div>
+
+<div align="middle" class="section14" id="text" style="max-width:95%;border:15px solid white;">
+<p class="consenttext">Thank you for completing our questionnaires. We recognize that sometimes people can feel down or depressed. If you are currently feeling depressed or in a crisis, there is help, you have options, and you are not alone. You can contact the National Suicide Prevention Lifeline at 1-800-273-8255. The Lifeline is available to all those experiencing depression, mental illness, relationship and family problems. You can also talk to your primary care doctor, or if you feel it is more urgent, or an emergency, call 911 or go to your local emergency room. Remember you are not alone.</p>
+</div>
+</div>
