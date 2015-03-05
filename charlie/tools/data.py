@@ -35,7 +35,7 @@ INSTRUCTIONS_PATH = pj(PACKAGE_DIR, 'instructions')
 FONTS_PATH = pj(PACKAGE_DIR, 'fonts')
 TESTS_PATH = pj(PACKAGE_DIR, 'tests')
 BATCHES_PATH = pj(PACKAGE_DIR, 'batch_lists')
-
+QUESTIONNAIRE_TEMPLATES_PATH = pj(PACKAGE_DIR, 'questionnaire_templates')
 
 def ld(path):
     """
@@ -320,7 +320,7 @@ class Data:
         """
         Sends data to the local sqlite database. If a 'summary_method'
         function is supplied, the summary statistics for the test are
-        calculated and adde to the local db.
+        calculated and added to the local db.
         """
         self.update()
         con = sqlite3.connect(LOCAL_DB_F)

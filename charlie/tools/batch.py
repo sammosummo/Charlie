@@ -97,8 +97,13 @@ def run_a_test(test_name, batch_mode=False):
         data_obj.control = control_method(proband_id, instr)
         data_obj.data = []
 
+    # start a web server, if the "test" is actually a questionnaire
+    if hasattr(mod, 'is_questionnaire'):
+        print '---This "test" is actually a questionnaire.'
+
+
     # load the experimenter gui, if appropriate
-    if not hasattr(mod, 'trial_method'):
+    elif not hasattr(mod, 'trial_method'):
 
         print '---No trial_method, must be an experimenter-operated test.'
         screen = visual.Screen()
