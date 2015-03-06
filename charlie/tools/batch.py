@@ -15,6 +15,7 @@ import sys
 import charlie.tools.instructions as instructions
 import charlie.tools.data as data
 import charlie.tools.visual as visual
+import charlie.tools.questionnaires as questionnaires
 
 
 def get_parser():
@@ -32,12 +33,13 @@ def get_parser():
     parser.add_argument('-u', '--user_id', default='',
                         help='Experimenter/user ID.')
     parser.add_argument('-b', '--batch_file', default='',
-                        help='Name of batch or path to batch text file.')
+                        help='Name of a batch or path to a batch file.')
     parser.add_argument('-j', '--proj_id', default='',
                         help='Project ID.')
     parser.add_argument('-t', '--test_name', default='',
                         help='Individual test name (ignored if -b included).')
-
+    parser.add_argument('-q', '--questionnaires', default='',
+                        help='Names of questionnaires or name of questionnaire list.')
     return parser
 
 
@@ -97,13 +99,8 @@ def run_a_test(test_name, batch_mode=False):
         data_obj.control = control_method(proband_id, instr)
         data_obj.data = []
 
-    # start a web server, if the "test" is actually a questionnaire
-    if hasattr(mod, 'is_questionnaire'):
-        print '---This "test" is actually a questionnaire.'
-
-
     # load the experimenter gui, if appropriate
-    elif not hasattr(mod, 'trial_method'):
+    if not hasattr(mod, 'trial_method'):
 
         print '---No trial_method, must be an experimenter-operated test.'
         screen = visual.Screen()
@@ -203,6 +200,18 @@ def run_a_batch():
     """
     print '++++++++++\nBATCH MODE\n++++++++++\n'
     args = get_parser().parse_args()
+
+    if args.questionnaires:
+        print '---Loading questionnaires to administer first:'
+        _questionnaires = []
+        questionnaires = args.questionnaires.split(' ')
+        for q in questionnaires:
+            try:
+                q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
+                f = open(q)
+
+
+
     try:
         b = data.pj(data.BATCHES_PATH, args.batch_file + '.txt')
         f = open(b, 'rb')

@@ -36,6 +36,7 @@ FONTS_PATH = pj(PACKAGE_DIR, 'fonts')
 TESTS_PATH = pj(PACKAGE_DIR, 'tests')
 BATCHES_PATH = pj(PACKAGE_DIR, 'batch_lists')
 QUESTIONNAIRE_TEMPLATES_PATH = pj(PACKAGE_DIR, 'questionnaire_templates')
+QUESTIONNAIRES_PATH = pj(PACKAGE_DIR, 'questionnaire_lists')
 
 def ld(path):
     """
