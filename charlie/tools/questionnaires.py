@@ -106,7 +106,7 @@ class Index:
         sys.exit(0)
 
 
-def create_questionnaire_app(test_name, questionnaires, lang, data_obj):
+def create_questionnaire_app(questionnaires, args):
     """
     Creates a local web application for collecting self-report questionnaire
     data. The web page should open in a new browser window or tab
@@ -114,11 +114,11 @@ def create_questionnaire_app(test_name, questionnaires, lang, data_obj):
     terminal window.
     """
     abs_f = lambda f: data.pj(data.QUESTIONNAIRE_TEMPLATES_PATH, f)
-    files = ['%s_%s.html' % (q, lang) for q in questionnaires]
+    files = ['%s_%s.html' % (q, args.lang) for q in questionnaires]
     files = [abs_f(f) for f in files]
     form_code = ''.join(open(q, 'rU').read() for q in files)
     html_code = open(abs_f('template.html'), 'rU').read()
-    html_code = html_code % (test_name, form_code)
+    html_code = html_code % ('Self-report questionnaires', form_code)
     open(abs_f('_questionnaires.html'), 'w').write(html_code)
 
     urls = ('/', 'Index')
@@ -190,6 +190,14 @@ def process_form_data(form):
         new_form['fnds_score'] = score
 
     return new_form
+
+def save_questionnaire_data(form):
+    """
+    Save the data from each questionnaire as a separate
+    :param form:
+    :return:
+    """
+
 
 
 create_questionnaire_app('test', ['bdi2', 'bis11', 'dass', 'stai', 'fnds'], 'EN')

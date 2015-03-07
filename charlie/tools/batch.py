@@ -15,7 +15,7 @@ import sys
 import charlie.tools.instructions as instructions
 import charlie.tools.data as data
 import charlie.tools.visual as visual
-import charlie.tools.questionnaires as questionnaires
+import charlie.tools.questionnaires as qmod
 
 
 def get_parser():
@@ -203,15 +203,16 @@ def run_a_batch():
 
     if args.questionnaires:
         print '---Loading questionnaires to administer first:'
-        _questionnaires = []
-        questionnaires = args.questionnaires.split(' ')
+        questionnaires = args.questionnaires.split()
         for q in questionnaires:
             try:
                 q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
-                f = open(q)
-
-
-
+                f = open(q, 'rU').readlines()
+                questionnaires += f
+            except:
+                pass
+        print questionnaires
+        qmod.create_questionnaire_app(questionnaires, args)
     try:
         b = data.pj(data.BATCHES_PATH, args.batch_file + '.txt')
         f = open(b, 'rb')
