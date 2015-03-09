@@ -158,7 +158,6 @@ def process_form_data(form):
     new_form.update(form)
 
     if 'bdi2_1' in form:
-        print 'yes'
         _form = {k: v for k, v in form.iteritems() if 'bdi2' in k}
         _int = lambda s: int(s.replace('a', '').replace('b',''))
         bdi_q = {k: _int(v) for k, v in _form.iteritems()}
@@ -208,13 +207,11 @@ def process_form_data(form):
                 score += form['fnds_%i' % i]
         new_form['fnds_score'] = score
 
-    print new_form
     questionnaires = set(k.split('_')[0] for k in new_form)
     dfs = {}
     for q_name in questionnaires:
         stats = [(k, v) for k, v in new_form.iteritems() if q_name in k]
         dfs[q_name] = summaries.make_df(stats)
-        print stats
 
     return dfs
 
