@@ -7,17 +7,17 @@ __version__ = 0.1
 __author__ = 'Sam Mathias'
 
 
+from datetime import datetime
+from copy import copy
+import sqlite3
 import sys
-import web
 import webbrowser
 import numpy as np
 import pandas
-import sqlite3
+import web
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
-import charlie.tools.batch as batch
-from datetime import datetime
-from copy import copy
+import charlie.tools.arguments as arguments
 
 
 bis_subscales = {
@@ -63,7 +63,6 @@ bis_subscales = {
        ('bis11_27', False), ('bis11_29', True)
    ]
 }
-
 dass_subscales = {
     'depression': [
         'dass_3', 'dass_5', 'dass_10', 'dass_13', 'dass_16', 'dass_17',
@@ -81,7 +80,6 @@ dass_subscales = {
         'dass_35', 'dass_39'
     ]
 }
-
 stai_scorecard = {
     'stai_1': True, 'stai_2': True, 'stai_3': False, 'stai_4': False,
     'stai_5': True, 'stai_6': False, 'stai_7': False, 'stai_8': True,
@@ -115,7 +113,7 @@ class Index:
         sys.exit(0)
 
 
-def create_questionnaire_app(questionnaires, args):
+def create_questionnaire_app(questionnaires, lang):
     """
     Creates a local web application for collecting self-report questionnaire
     data. The web page should open in a new browser window or tab
@@ -123,7 +121,7 @@ def create_questionnaire_app(questionnaires, args):
     terminal window.
     """
     abs_f = lambda f: data.pj(data.QUESTIONNAIRE_TEMPLATES_PATH, f)
-    files = ['%s_%s.html' % (q, args) for q in questionnaires] #TODO: FIX!!!!
+    files = ['%s_%s.html' % (q, lang) for q in questionnaires]
     files = [abs_f(f) for f in files]
     form_code = ''.join(open(q, 'rU').read() for q in files)
     html_code = open(abs_f('template.html'), 'rU').read()
@@ -225,7 +223,7 @@ def to_db(dfs):
     """
     Saves the questionnaire data frames to the local cb.
     """
-    args = batch.get_args()
+    args = arguments.get_args()
     con = sqlite3.connect(data.LOCAL_DB_F)
     for q_name, df in dfs.iteritems():
         data_obj = data.Data(
@@ -241,7 +239,3 @@ def to_db(dfs):
         df = pandas.concat([summaries.make_df(stats), df], axis=1)
         if args.proband_id != 'TEST':
             df.to_sql(q_name, con, index=False, if_exists='append')
-
-
-
-create_questionnaire_app(['bdi2', 'fnds'], 'EN')

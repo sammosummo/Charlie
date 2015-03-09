@@ -7,7 +7,6 @@ Created on Tue Jan  6 16:15:06 2015
 @author: Sam
 """
 
-import argparse
 import importlib
 import os
 from os.path import join as pj
@@ -15,39 +14,8 @@ import sys
 import charlie.tools.instructions as instructions
 import charlie.tools.data as data
 import charlie.tools.visual as visual
-import charlie.tools.questionnaires
-
-
-def get_parser():
-    """
-    Returns a parser object that allows an individual test or a batch of tests
-    to accept arguments from the command line.
-    """
-    description = 'Charlie: A neuropsychological test battery'
-    parser = argparse.ArgumentParser(description=description)
-
-    parser.add_argument('-p', '--proband_id', default='TEST',
-                        help='Proband ID (if omitted, no data will be saved).')
-    parser.add_argument('-l', '--lang', choices=['EN'], default='EN',
-                        help='Testing language (only EN works right now).')
-    parser.add_argument('-u', '--user_id', default='',
-                        help='Experimenter/user ID.')
-    parser.add_argument('-b', '--batch_file', default='',
-                        help='Name of a batch or path to a batch file.')
-    parser.add_argument('-j', '--proj_id', default='',
-                        help='Project ID.')
-    parser.add_argument('-t', '--test_name', default='',
-                        help='Individual test name (ignored if -b included).')
-    parser.add_argument('-q', '--questionnaires', default='',
-                        help='Names of questionnaires or name of questionnaire list.')
-    return parser
-
-
-def get_args():
-    """
-    Retrieve all command-line arguments.
-    """
-    return get_parser().parse_args()
+import charlie.tools.questionnaires as questionnaires
+import charlie.tools.arguments as arguments
 
 
 def run_a_test(test_name, batch_mode=False):
@@ -71,7 +39,7 @@ def run_a_test(test_name, batch_mode=False):
     print '--------' + ('-' * len(test_name)) + '\n'
 
     # copy system arguments into local namespace
-    args = get_args()
+    args = arguments.get_args()
     proband_id = args.proband_id
     user_id = args.user_id
     proj_id = args.proj_id
@@ -199,7 +167,7 @@ def run_a_batch():
     they should be run.
     """
     print '++++++++++\nBATCH MODE\n++++++++++\n'
-    args = get_parser().parse_args()
+    args = arguments.get_parser().parse_args()
     quickfix = lambda f: f.replace('\n', '').replace('\r', '')
 
     if args.questionnaires:
@@ -215,7 +183,7 @@ def run_a_batch():
                 _qlist.append(q)
         qlist = [quickfix(l) for l in _qlist]
         print qlist
-        questionnaires.create_questionnaire_app(qlist, args)
+        questionnaires.create_questionnaire_app(qlist, args.lang)
     try:
         b = data.pj(data.BATCHES_PATH, args.batch_file + '.txt')
         f = open(b, 'rb')
@@ -294,7 +262,7 @@ def main():
     """
     Main function.
     """
-    args = get_parser().parse_args()
+    args = arguments.get_parser().parse_args()
     if args.batch_file:
         run_a_batch()
     elif args.test_name:
