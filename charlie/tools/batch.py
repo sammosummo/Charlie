@@ -15,7 +15,7 @@ import sys
 import charlie.tools.instructions as instructions
 import charlie.tools.data as data
 import charlie.tools.visual as visual
-import charlie.tools.questionnaires as qmod
+import charlie.tools.questionnaires
 
 
 def get_parser():
@@ -200,19 +200,22 @@ def run_a_batch():
     """
     print '++++++++++\nBATCH MODE\n++++++++++\n'
     args = get_parser().parse_args()
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
 
     if args.questionnaires:
         print '---Loading questionnaires to administer first:'
-        questionnaires = args.questionnaires.split()
-        for q in questionnaires:
+        qlist = args.questionnaires.split()
+        _qlist = []
+        for q in qlist:
             try:
                 q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
                 f = open(q, 'rU').readlines()
-                questionnaires += f
+                _qlist += f
             except:
-                pass
-        print questionnaires
-        qmod.create_questionnaire_app(questionnaires, args)
+                _qlist.append(q)
+        qlist = [quickfix(l) for l in _qlist]
+        print qlist
+        questionnaires.create_questionnaire_app(qlist, args)
     try:
         b = data.pj(data.BATCHES_PATH, args.batch_file + '.txt')
         f = open(b, 'rb')
@@ -223,7 +226,7 @@ def run_a_batch():
         except:
             b = data.BATCHES_PATH
             f = open(b, 'rb')
-    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+
     test_names = [quickfix(l) for l in f]
     print '---Running the following tests in a batch:', test_names
 
@@ -296,3 +299,7 @@ def main():
         run_a_batch()
     elif args.test_name:
         run_a_test(args.test_name)
+
+
+if __name__ == '__main__':
+    main()

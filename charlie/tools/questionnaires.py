@@ -12,7 +12,12 @@ import web
 import webbrowser
 import numpy as np
 import pandas
+import sqlite3
 import charlie.tools.data as data
+import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
+from datetime import datetime
+from copy import copy
 
 
 bis_subscales = {
@@ -98,11 +103,15 @@ class Index:
     are transferred to the local database and the application is stopped.
     """
     def GET(self):
+        # HACK!!!! See description below---------------------------------------
+        sys.argv = original_args
+        # ---------------------------------------------------------------------
         render = web.template.render(data.QUESTIONNAIRE_TEMPLATES_PATH)
         return render._questionnaires()
 
     def POST(self):
-        form = process_form_data(web.input())
+        dfs = process_form_data(web.input())
+        to_db(dfs)
         sys.exit(0)
 
 
@@ -114,12 +123,25 @@ def create_questionnaire_app(questionnaires, args):
     terminal window.
     """
     abs_f = lambda f: data.pj(data.QUESTIONNAIRE_TEMPLATES_PATH, f)
-    files = ['%s_%s.html' % (q, args.lang) for q in questionnaires]
+    files = ['%s_%s.html' % (q, args) for q in questionnaires] #TODO: FIX!!!!
     files = [abs_f(f) for f in files]
     form_code = ''.join(open(q, 'rU').read() for q in files)
     html_code = open(abs_f('template.html'), 'rU').read()
     html_code = html_code % ('Self-report questionnaires', form_code)
     open(abs_f('_questionnaires.html'), 'w').write(html_code)
+
+    # MAJOR HACK!!!!!----------------------------------------------------------
+    # webpy always takes the first command-line argument as the port number,
+    # which is not what we want here. Therefore it is necessary to remove all
+    # arguments from the command line temporarily, then reinstate them after
+    # the web server has been initialised. This is horrible, but I don't see
+    # any other way around it.
+
+    global original_args
+    original_args = copy(sys.argv)
+    sys.argv = sys.argv[0:1]
+
+    # -------------------------------------------------------------------------
 
     urls = ('/', 'Index')
     dic = {'Index': Index}
@@ -134,12 +156,11 @@ def process_form_data(form):
     calculating additional stats as required. This function must be updated as
     more questionnaires are added.
     """
-    print form
     new_form = {}
     new_form.update(form)
 
     if 'bdi2_1' in form:
-
+        print 'yes'
         _form = {k: v for k, v in form.iteritems() if 'bdi2' in k}
         _int = lambda s: int(s.replace('a', '').replace('b',''))
         bdi_q = {k: _int(v) for k, v in _form.iteritems()}
@@ -151,9 +172,9 @@ def process_form_data(form):
             score = 0
             for item, reverse in items:
                 if reverse is False:
-                    score += form[item]
+                    score += int(form[item])
                 else:
-                    score -= form[item]
+                    score -= int(form[item])
             new_form['bis11_' + subscale] = score
 
     if 'dass_1' in form:
@@ -161,7 +182,7 @@ def process_form_data(form):
         for subscale, items in dass_subscales.iteritems():
             score = 0
             for item in items:
-                score += form[item]
+                score += int(form[item])
             new_form['bis11_' + subscale] = score
 
     if 'stai_1' in form:
@@ -169,15 +190,15 @@ def process_form_data(form):
         a_score = 0
         b_score = 0
         for item, reverse in stai_scorecard.iteritems():
-            n = int(item[-2:])
+            n = int(item.split('_')[1])
             if n <= 20:
                 this_score = a_score
             else:
                 this_score = b_score
             if reverse is False:
-                this_score += form[item]
+                this_score += int(form[item])
             else:
-                this_score -= form[item]
+                this_score -= int(form[item])
         new_form['stai_a_total'] = a_score
         new_form['stai_b_total'] = b_score
 
@@ -189,15 +210,38 @@ def process_form_data(form):
                 score += form['fnds_%i' % i]
         new_form['fnds_score'] = score
 
-    return new_form
+    print new_form
+    questionnaires = set(k.split('_')[0] for k in new_form)
+    dfs = {}
+    for q_name in questionnaires:
+        stats = [(k, v) for k, v in new_form.iteritems() if q_name in k]
+        dfs[q_name] = summaries.make_df(stats)
+        print stats
 
-def save_questionnaire_data(form):
+    return dfs
+
+
+def to_db(dfs):
     """
-    Save the data from each questionnaire as a separate
-    :param form:
-    :return:
+    Saves the questionnaire data frames to the local cb.
     """
+    args = batch.get_args()
+    con = sqlite3.connect(data.LOCAL_DB_F)
+    for q_name, df in dfs.iteritems():
+        data_obj = data.Data(
+            args.proband_id,
+            args.lang,
+            args.user_id,
+            args.proband_id,
+            q_name,
+            None
+        )
+        data_obj.date_done = datetime.now()
+        stats = summaries.get_universal_stats(data_obj)
+        df = pandas.concat([summaries.make_df(stats), df], axis=1)
+        if args.proband_id != 'TEST':
+            df.to_sql(q_name, con, index=False, if_exists='append')
 
 
 
-create_questionnaire_app('test', ['bdi2', 'bis11', 'dass', 'stai', 'fnds'], 'EN')
+create_questionnaire_app(['bdi2', 'fnds'], 'EN')
