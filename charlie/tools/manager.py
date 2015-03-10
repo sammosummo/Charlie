@@ -5,17 +5,18 @@ __author__ = 'Sam Mathias'
 
 try:
     from PySide import QtGui, QtCore
+    from PySide.QtSql import QSqlQueryModel,QSqlDatabase,QSqlQuery
+    from PySide.QtGui import QTableView,QApplication
 except ImportError:
     from PyQt4 import QtGui, QtCore
-
-import os
+    from PyQt4.QtSql import QSqlQueryModel,QSqlDatabase,QSqlQuery
+    from PyQt4.QtGui import QTableView,QApplication
 import sys
-import sqlite3
 from datetime import date
-import pandas
 import charlie.tools.data as data
 import charlie.tools.batch as batch
 import charlie.tools.instructions as instructions
+import charlie.tools.arguments as arguments
 
 
 class HomeWidget(QtGui.QWidget):

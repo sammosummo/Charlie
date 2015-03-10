@@ -176,8 +176,8 @@ def run_a_batch():
         _qlist = []
         for q in qlist:
             try:
-                q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
-                f = open(q, 'rU').readlines()
+                _q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
+                f = open(_q, 'rU').readlines()
                 _qlist += f
             except:
                 _qlist.append(q)

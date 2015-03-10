@@ -144,7 +144,7 @@ def create_questionnaire_app(questionnaires, lang):
     urls = ('/', 'Index')
     dic = {'Index': Index}
     app = web.application(urls, dic, True)
-    webbrowser.open('http://0.0.0.0:8080/')
+    webbrowser.open('http://localhost:8080/')
     app.run()
 
 
