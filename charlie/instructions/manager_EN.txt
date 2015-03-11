@@ -5,8 +5,7 @@ For assistance, please contact samuel.mathias@yale.edu.
 ---
 Session setup
 ---
-Before running any tests, you must set up the session. This involves inputting a project ID and
-experimenter ID, and loading or creating a new proband.
+Before running any tests, you must enter a <b>Project ID</b> and an <b>Experimenter ID</b>.
 ---
 Project information:
 ---
@@ -14,13 +13,12 @@ Project ID:
 ---
 Experimenter ID:
 ---
-* NOTE: You can enter new IDs in the boxes above if they are not already listed.
+You can enter new IDs in the boxes above if they are not already listed.
 ---
 Proband:
 ---
-Check if the proband ID is in the table already. If it is, highlight the row and click 'Select
-proband'. If not, click 'Create new...'. To debug or try the tests without saving any data,
-click 'Set as 'TEST''. You can also edit proband information here (USE CAUTION!).
+Check if the <b>Proband ID</b> is in the table already. If so, highlight the ID and click <b>Select</b>. If not, click<br>
+<b>Create new</b>. Click <b>Set as TEST</b> if you want to try out the battery without saving any of the data.
 ---
 Current selection:
 ---
@@ -54,7 +52,7 @@ Sex not selected.
 ---
 Proband is under 15.
 ---
-Tests
+Run
 ---
 Individual tests:
 ---

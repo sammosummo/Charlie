@@ -14,7 +14,7 @@ import charlie.tools.arguments as arguments
 import charlie.tools.data as data
 import charlie.tools.instructions as instructions
 from charlie.gui.setuptab import SetupTab
-
+from charlie.gui.runtab import RunTab
 
 class HomeWidget(QtGui.QWidget):
 
@@ -46,8 +46,8 @@ class HomeWidget(QtGui.QWidget):
         tabs = QtGui.QTabWidget()
         setup_tab = SetupTab(self)
         tabs.addTab(setup_tab, self.tr(self.instr[2]))
-        # test_tab = TestTab(self)
-        # tabs.addTab(test_tab, self.tr(self.instr[26]))
+        run_tab = RunTab(self)
+        tabs.addTab(run_tab, self.tr(self.instr[26]))
         vbox.addWidget(tabs)
 
         self.setLayout(vbox)

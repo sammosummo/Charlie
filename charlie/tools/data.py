@@ -99,7 +99,6 @@ def populate_demographics():
             'proband_id', 'user_id', 'proj_id', 'sex', 'age', 'tests_compl'
         ]
         df = pandas.DataFrame(columns=cols)
-    print df
     df1 = pandas.read_sql(
         "SELECT * FROM sqlite_master WHERE type='table'", con
     )
@@ -126,6 +125,7 @@ def populate_demographics():
             if row.proband_id in _probands[test_name]:
                 x += '%s ' % test_name
         df.ix[i, 'tests_compl'] = x
+    df.replace('', np.nan, inplace=True)
     df.to_sql('probands', con, index=False, if_exists='replace')
     return df
 
@@ -137,6 +137,7 @@ def replace_demographics(df):
     """
     print '---Replacing contents of probands sql table'
     con = sqlite3.connect(LOCAL_DB_F)
+    df.replace('', np.nan, inplace=True)
     df.to_sql('probands', con, index=False, if_exists='replace')
 
 

@@ -8,6 +8,7 @@ except ImportError:
     from PyQt4 import QtGui, QtCore
     from PyQt4.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
     from PyQt4.QtGui import QTableView, QApplication
+import sys
 import pandas
 import charlie.tools.data as data
 import charlie.tools.instructions as instructions
@@ -28,22 +29,24 @@ class SetupTab(QtGui.QWidget):
         self.proband_id = self.args.proband_id
         self.user_id = self.args.user_id
         self.proj_id = self.args.proj_id
-        self.refresh_proband_table()
+        self.df = data.populate_demographics()
+        self.projects_list = [self.proj_id] + self.df.proj_id.dropna().unique().tolist()
+        print self.projects_list
+        self.users_list = [self.user_id] + self.df.user_id.dropna().unique().tolist()
         self.setup_ui()
+        self.create_proband_table()
 
     def setup_ui(self):
 
-        widgets = []  # for easier layout management, all widgets in this list
-        a = QtGui.QLabel(self.instr[3])
-        widgets.append(a)
+        self.vbox = QtGui.QVBoxLayout()
+        self.vbox.addWidget(QtGui.QLabel(self.instr[3]))
 
         # project and user boxes
         b = QtGui.QGroupBox(self.instr[4])
         grid = QtGui.QGridLayout()
         grid.addWidget(QtGui.QLabel(self.instr[5]), 0, 0)
         proj_list = QtGui.QComboBox()
-        proj_list.setItemText(0, self.proj_id)
-        proj_list.addItems(self.df.proj_id.unique().tolist())
+        proj_list.addItems(self.projects_list)
         proj_list.setInsertPolicy(proj_list.NoInsert)
         proj_list.setEditable(True)
         proj_list.activated.connect(self.set_proj)
@@ -54,7 +57,7 @@ class SetupTab(QtGui.QWidget):
         grid.addWidget(QtGui.QLabel(self.instr[6]), 0, 1)
         exp_list = QtGui.QComboBox()
         exp_list.setItemText(0, self.user_id)
-        exp_list.addItems(self.df.user_id.unique().tolist())
+        exp_list.addItems(self.users_list)
         exp_list.setInsertPolicy(exp_list.NoInsert)
         exp_list.setEditable(True)
         exp_list.activated.connect(self.set_user)
@@ -63,21 +66,17 @@ class SetupTab(QtGui.QWidget):
         grid.addWidget(exp_list, 1, 1)
         grid.addWidget(QtGui.QLabel(self.instr[7]), 2, 0, 1, 2)
         b.setLayout(grid)
-        widgets.append(b)
+        self.vbox.addWidget(b)
 
         # proband box
-        c = QtGui.QGroupBox(self.instr[8])
-        cols = 5
-        grid = QtGui.QGridLayout()
-        grid.addWidget(QtGui.QLabel(self.instr[9]), 0, 0, 1, cols)
-        grid.addWidget(QtGui.QLabel(self.instr[10]), 1, 0)
+        self.proband_groupbox = QtGui.QGroupBox(self.instr[8])
+        self.proband_grid = QtGui.QGridLayout()
+        self.proband_grid.addWidget(QtGui.QLabel(self.instr[9]), 0, 0, 1, 5)
+        self.proband_grid.addWidget(QtGui.QLabel(self.instr[10]), 1, 0)
         self.proband_id_label = QtGui.QLabel()
         self.set_text()
-        grid.addWidget(self.proband_id_label, 1, 1, 1, cols-1)
-        # self.view.setFont(QtGui.QFont("Courier New", 14))
-        # self.view.resizeColumnsToContents()
+        self.proband_grid.addWidget(self.proband_id_label, 1, 1, 1, 4)
 
-        grid.addWidget(self.view, 2, 0, 1, cols)
         funcs = [
             self.select_proband, self.deselect_proband, self.edit_proband,
             self.new_proband, self.test_proband
@@ -85,16 +84,12 @@ class SetupTab(QtGui.QWidget):
         for i, func in enumerate(funcs):
             button = QtGui.QPushButton(self.instr[11+i])
             button.clicked.connect(func)
-            grid.addWidget(button, 3, i)
-        c.setLayout(grid)
-        widgets.append(c)
+            self.proband_grid.addWidget(button, 3, i)
+        self.proband_groupbox.setLayout(self.proband_grid)
+        self.vbox.addWidget(self.proband_groupbox)
+        self.setLayout(self.vbox)
 
-        vbox = QtGui.QVBoxLayout()
-        [vbox.addWidget(w) for w in widgets]
-        self.setLayout(vbox)
-
-
-    def refresh_proband_table(self):
+    def create_proband_table(self):
         self.df = data.populate_demographics()
         self.probands_list = self.df.proband_id.unique().tolist()
         self.db = QSqlDatabase.addDatabase("QSQLITE")
@@ -108,6 +103,7 @@ class SetupTab(QtGui.QWidget):
         self.view.setSelectionMode(self.view.SingleSelection)
         self.view.setSelectionBehavior(self.view.SelectRows)
         self.view.setSortingEnabled(True)
+        self.proband_grid.addWidget(self.view, 2, 0, 1, 5)
 
     def set_text(self):
         """
@@ -142,6 +138,9 @@ class SetupTab(QtGui.QWidget):
             if j in self.probands_list:
                 self.proband_id = j
                 self.set_text()
+            sys.argv = sys.argv[:1]
+            sys.argv += ['-p', self.proband_id]
+            print sys.argv
 
     def deselect_proband(self):
         """
@@ -223,7 +222,7 @@ class SetupTab(QtGui.QWidget):
         self.w = ProbandWindow(
             self.proband_id, self.proj_id, self.user_id, self.df
         )
-        self.w.com.update_proband_table.connect(self.refresh_proband_table)
+        self.w.com.update_proband_table.connect(self.create_proband_table)
 
 
 class ProbandWindow(QtGui.QWidget):
@@ -247,26 +246,37 @@ class ProbandWindow(QtGui.QWidget):
             'Assoc. project ID:',
             'Assoc. experimenter ID:'
         ]
-        self.projects = [proj_id] + self.df.proj_id.unique().tolist()
-        self.users = [user_id] + self.df.user_id.unique().tolist()
+        self.projects = [proj_id] + self.df.proj_id.dropna().unique().tolist()
+        self.users = [user_id] + self.df.user_id.dropna().unique().tolist()
         self.com = CustomSignals()
 
         if proband_id:
             self.new_proband = False
-            self.proband = df.loc[proband_id]
             self._proband_id = proband_id
-            self._sex = self.proband.sex
-            self._age = self.proband.age
-            if str(self._age) == 'nan':
-                self._age = ''
-            self._proj_id = self.proband.proj_id
-            self._user_id = self.proband.user_id
+            self.proband = df.loc[proband_id]
+            nulls = self.proband.isnull()
+            if nulls.age == True:
+                self._age = None
+            else:
+                self._age = int(self.proband.age)
+            if nulls.sex == True:
+                self._sex = None
+            else:
+                self._sex = self.proband.sex
+            if nulls.proj_id == True:
+                self._proj_id = proj_id
+            else:
+                self._proj_id = self.proband.proj_id
+            if nulls.user_id == True:
+                self._user_id = user_id
+            else:
+                self._user_id = self.proband.user_id
         else:
             self.new_proband = True
             self.proband = pandas.Series(index=self.fields)
             self._proband_id = None
             self._sex = None
-            self._age = ''
+            self._age = None
             self._proj_id = proj_id
             self._user_id = user_id
         self.highlighted_proj = self.projects.index(self._proj_id)
@@ -301,8 +311,10 @@ class ProbandWindow(QtGui.QWidget):
 
         # age field
         grid.addWidget(QtGui.QLabel(self.fd[2]), 2, 0)
-        print self._age, type(self._age)
-        age_field = QtGui.QLineEdit(str(self._age))
+        if self._age:
+            age_field = QtGui.QLineEdit('%i' % self._age)
+        else:
+            age_field = QtGui.QLineEdit()
         age_field.textEdited.connect(self.edit_age)
         grid.addWidget(age_field, 2, 1, 1, 2)
 
@@ -370,7 +382,7 @@ class ProbandWindow(QtGui.QWidget):
 
         if self.rbs[0].isChecked():
             self._sex = 'Male'
-        if self.rbs[0].isChecked():
+        elif self.rbs[1].isChecked():
             self._sex = 'Female'
         else:
             s = 'Sex not selected.'
