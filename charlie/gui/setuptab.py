@@ -8,7 +8,10 @@ except ImportError:
     from PyQt4 import QtGui, QtCore
     from PyQt4.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
     from PyQt4.QtGui import QTableView, QApplication
+import pandas
 import charlie.tools.data as data
+import charlie.tools.instructions as instructions
+import numpy as np
 
 
 class SetupTab(QtGui.QWidget):
@@ -25,24 +28,7 @@ class SetupTab(QtGui.QWidget):
         self.proband_id = self.args.proband_id
         self.user_id = self.args.user_id
         self.proj_id = self.args.proj_id
-
-        (self.probands_list,
-         self.users_list,
-         self.projects_list) = data.populate_demographics()
-
-        self.db = QSqlDatabase.addDatabase("QSQLITE")
-        self.db.setDatabaseName(data.LOCAL_DB_F)
-        self.db.open()
-        self.model = QSqlTableModel()
-        self.model.setTable('probands')
-        self.model.setEditStrategy(QSqlTableModel.OnManualSubmit)
-        self.view = QTableView()
-        self.view.setModel(self.model)
-        self.view.setSelectionMode(self.view.SingleSelection)
-        self.view.setSelectionBehavior(self.view.SelectRows)
-        self.view.setSortingEnabled(True)
-
-
+        self.refresh_proband_table()
         self.setup_ui()
 
     def setup_ui(self):
@@ -57,7 +43,7 @@ class SetupTab(QtGui.QWidget):
         grid.addWidget(QtGui.QLabel(self.instr[5]), 0, 0)
         proj_list = QtGui.QComboBox()
         proj_list.setItemText(0, self.proj_id)
-        proj_list.addItems(self.projects_list)
+        proj_list.addItems(self.df.proj_id.unique().tolist())
         proj_list.setInsertPolicy(proj_list.NoInsert)
         proj_list.setEditable(True)
         proj_list.activated.connect(self.set_proj)
@@ -68,7 +54,7 @@ class SetupTab(QtGui.QWidget):
         grid.addWidget(QtGui.QLabel(self.instr[6]), 0, 1)
         exp_list = QtGui.QComboBox()
         exp_list.setItemText(0, self.user_id)
-        exp_list.addItems(self.users_list)
+        exp_list.addItems(self.df.user_id.unique().tolist())
         exp_list.setInsertPolicy(exp_list.NoInsert)
         exp_list.setEditable(True)
         exp_list.activated.connect(self.set_user)
@@ -106,6 +92,22 @@ class SetupTab(QtGui.QWidget):
         vbox = QtGui.QVBoxLayout()
         [vbox.addWidget(w) for w in widgets]
         self.setLayout(vbox)
+
+
+    def refresh_proband_table(self):
+        self.df = data.populate_demographics()
+        self.probands_list = self.df.proband_id.unique().tolist()
+        self.db = QSqlDatabase.addDatabase("QSQLITE")
+        self.db.setDatabaseName(data.LOCAL_DB_F)
+        self.db.open()
+        self.model = QSqlTableModel()
+        self.model.setTable('probands')
+        self.model.setEditStrategy(QSqlTableModel.OnManualSubmit)
+        self.view = QTableView()
+        self.view.setModel(self.model)
+        self.view.setSelectionMode(self.view.SingleSelection)
+        self.view.setSelectionBehavior(self.view.SelectRows)
+        self.view.setSortingEnabled(True)
 
     def set_text(self):
         """
@@ -218,9 +220,10 @@ class SetupTab(QtGui.QWidget):
         """
         if new:
             self.deselect_proband()
-        self.w = ProbandWindow(self.proband_id, self.model, self.view)
-        # self.w.com.update_proband_table.connect(self.model.load_data)
-        # self.w.show()
+        self.w = ProbandWindow(
+            self.proband_id, self.proj_id, self.user_id, self.df
+        )
+        self.w.com.update_proband_table.connect(self.refresh_proband_table)
 
 
 class ProbandWindow(QtGui.QWidget):
@@ -232,152 +235,198 @@ class ProbandWindow(QtGui.QWidget):
     fields are left blank.
     """
 
-    def __init__(self, proband_id, model, view, parent=None):
+    def __init__(self, proband_id, proj_id, user_id, df, parent=None):
         super(ProbandWindow, self).__init__(parent=parent)
-        print model.data()
 
-        # Load in the proband etc.
-        db = tools.db
-        self.proband = proband
-        self.fields = db.PROBAND_ORDER
-        self.field_descriptions = [db.FIELD_DESCRIPTIONS[f] \
-                                   for f in self.fields]
-
-        # Create a blank proband dict if needed
-        if not self.proband:
-            self.proband = dict(zip(self.fields, ['']*len(self.fields)))
-            self.proband['createdby'] = experimenter
-            self.proband['project'] = project
-        self.proband['modifiedby'] = experimenter
-
+        self.df = df
+        self.fields = ['proband_id', 'sex', 'age', 'user_id', 'proj_id']
+        self.fd = [
+            'Proband ID:',
+            'Sex:',
+            'Age in years:',
+            'Assoc. project ID:',
+            'Assoc. experimenter ID:'
+        ]
+        self.projects = [proj_id] + self.df.proj_id.unique().tolist()
+        self.users = [user_id] + self.df.user_id.unique().tolist()
         self.com = CustomSignals()
-        self.setup_ui()
 
+        if proband_id:
+            self.new_proband = False
+            self.proband = df.loc[proband_id]
+            self._proband_id = proband_id
+            self._sex = self.proband.sex
+            self._age = self.proband.age
+            if str(self._age) == 'nan':
+                self._age = ''
+            self._proj_id = self.proband.proj_id
+            self._user_id = self.proband.user_id
+        else:
+            self.new_proband = True
+            self.proband = pandas.Series(index=self.fields)
+            self._proband_id = None
+            self._sex = None
+            self._age = ''
+            self._proj_id = proj_id
+            self._user_id = user_id
+        self.highlighted_proj = self.projects.index(self._proj_id)
+        self.highlighted_user = self.users.index(self._user_id)
+
+        self.setup_ui()
 
     def setup_ui(self):
 
-        self.setWindowTitle(instructions[20])
-        cols = 3
+        self.setWindowTitle('Proband editor')
         grid = QtGui.QGridLayout()
 
-        # Proband ID (not editable if existing proband loaded)
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[0]+':'), 0, 0, 1,
-                       cols)
-        if not self.proband['id']:
-            self.proband_id_box = QtGui.QLineEdit(self.proband['id'])
-            self.proband_id_box.textEdited.connect(self.edit_proband_id)
+        # proband ID field (not editable if existing proband loaded)
+        grid.addWidget(QtGui.QLabel(self.fd[0]), 0, 0)
+        if not self.new_proband:
+            s = '<b>%s</b>' % self.proband.proband_id
+            proband_id_field = QtGui.QLabel(s)
         else:
-            self.proband_id_box = QtGui.QLabel('<b>%s</b>' %self.proband['id'])
-        grid.addWidget(self.proband_id_box, 1, 0, 1, cols)
+            proband_id_field = QtGui.QLineEdit()
+            proband_id_field.textEdited.connect(self.edit_proband_id)
+        grid.addWidget(proband_id_field, 0, 1, 1, 2)
 
-        # Sex radio buttons
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[2]+':'), 2, 0)
-        self.male = QtGui.QRadioButton('Male')
-        if self.proband['sex'] == 'male':
-            self.male.toggle()
-        self.female = QtGui.QRadioButton('Female')
-        if self.proband['sex'] == 'female':
-            self.female.toggle()
-        grid.addWidget(self.male, 2, 1)
-        grid.addWidget(self.female, 2, 2)
+        # sex field
+        grid.addWidget(QtGui.QLabel(self.fd[1]), 1, 0)
+        self.rbs = []
+        for i, sex in enumerate(['Male', 'Female']):
+            rb = QtGui.QRadioButton(sex)
+            if self._sex == sex:
+                rb.toggle()
+            grid.addWidget(rb, 1, i + 1)
+            self.rbs.append(rb)
 
-        # Dob calendar
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[3]+':'), 3, 0, 1,
-                       cols)
-        self.calendar = QtGui.QCalendarWidget()
-        dob = self.proband['dob']
-        if dob:
-            date = QtCore.QDate(*[int(d) for d in dob.split('-')])
-            self.calendar.setSelectedDate(date)
-        grid.addWidget(self.calendar, 4, 0, 1, cols)
-        button = QtGui.QPushButton(instructions[22])
-        button.clicked.connect(self.update_proband)
-        grid.addWidget(button, 20, 0, 1, cols)
+        # age field
+        grid.addWidget(QtGui.QLabel(self.fd[2]), 2, 0)
+        print self._age, type(self._age)
+        age_field = QtGui.QLineEdit(str(self._age))
+        age_field.textEdited.connect(self.edit_age)
+        grid.addWidget(age_field, 2, 1, 1, 2)
 
-        # Otheer fields are displayed just for completeness
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[4]+':'), 5, 0, 1,
-                       2)
-        grid.addWidget(QtGui.QLabel('<b>%s</b>' %self.proband['createdby']), 5,
-                       2, 1, 1)
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[5]+':'), 6, 0, 1,
-                       2)
-        grid.addWidget(QtGui.QLabel('<b>%s</b>' %self.proband['created']), 6,
-                       2, 1, 1)
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[6]+':'), 7, 0, 1,
-                       2)
-        grid.addWidget(QtGui.QLabel('<b>%s</b>' %self.proband['modifiedby']),
-                       7, 2, 1, 1)
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[7]+':'), 8, 0, 1,
-                       2)
-        grid.addWidget(QtGui.QLabel('<b>%s</b>' %self.proband['modified']), 8,
-                       2, 1, 1)
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[8]+':'), 9, 0, 1,
-                       2)
-        l = self.proband['started'].split(',')
-        if len(l) > 3:
-            s = '\n'.join(l[:4]) + '... + %i more' %(len(l)-3)
-        else:
-            s = '\n'.join(l)
-        grid.addWidget(QtGui.QLabel(s), 9, 2, 1, 1)
-        grid.addWidget(QtGui.QLabel(self.field_descriptions[9]+':'), 10, 0, 1,
-                       2)
-        l = self.proband['completed'].split(',')
-        if len(l) > 3:
-            s = '\n'.join(l[:4]) + '... + %i more' %(len(l)-3)
-        else:
-            s = '\n'.join(l)
-        grid.addWidget(QtGui.QLabel(s), 10, 2, 1, 1)
+        # project ID field
+        grid.addWidget(QtGui.QLabel(self.fd[3]), 3, 0)
+        proj_field = QtGui.QComboBox()
+        proj_field.addItems(self.projects)
+        proj_field.setInsertPolicy(proj_field.NoInsert)
+        proj_field.setEditable(True)
+        proj_field.activated.connect(self.edit_proj)
+        proj_field.editTextChanged.connect(self.edit_proj)
+        proj_field.setCurrentIndex(self.highlighted_proj)
+        grid.addWidget(proj_field, 3, 1, 1, 2)
+
+         # user ID field
+        grid.addWidget(QtGui.QLabel(self.fd[4]), 4, 0)
+        proj_field = QtGui.QComboBox()
+        proj_field.addItems(self.users)
+        proj_field.setInsertPolicy(proj_field.NoInsert)
+        proj_field.setEditable(True)
+        proj_field.activated.connect(self.edit_user)
+        proj_field.editTextChanged.connect(self.edit_user)
+        proj_field.setCurrentIndex(self.highlighted_user)
+        grid.addWidget(proj_field, 4, 1, 1, 2)
+
+        # buttons
+        btn_1 = QtGui.QPushButton('OK')
+        btn_1.clicked.connect(self.submit)
+        btn_2 = QtGui.QPushButton('Cancel')
+        btn_2.clicked.connect(self.close)
+        hbox = QtGui.QHBoxLayout()
+        hbox.addWidget(btn_1)
+        hbox.addWidget(btn_2)
+        grid.addLayout(hbox, 5, 0, 1, 3)
+
         self.setLayout(grid)
         self.show()
-
+    #
     def edit_proband_id(self):
-        """Edits the proband ID (if new proband)."""
-        self.proband['id'] = self.sender().text()
+        self._proband_id = self.sender().text()
 
-    def update_proband(self):
-        """Updates the proband information in the table."""
-        if self.check_data():
-            tools.db.insert('probands', self.proband)
-            self.com.update_proband_table.emit()
-            self.close()
+    def edit_age(self):
+        self._age = self.sender().text()
 
-    def check_data(self):
-        """Check that the proband details are all ok."""
-        if not self.proband['id']:
-            s = instructions[23]
-            a = QtGui.QMessageBox()
-            a.setText(s)
-            a.exec_()
-            return False
-        if self.male.isChecked():
-            self.proband['sex'] = 'male'
-        elif self.female.isChecked():
-            self.proband['sex'] = 'female'
+    def edit_proj(self):
+        """
+        Sets the project ID.
+        """
+        self._proj_id = self.sender().currentText()
+
+    def edit_user(self):
+        """
+        Sets the project ID.
+        """
+        self._user_id = self.sender().currentText()
+
+    def submit(self):
+
+        if not self._proband_id:
+            s = 'Invalid proband ID.'
+            _ = QtGui.QMessageBox()
+            _.setText(s)
+            _.exec_()
+            return None
+
+        if self.rbs[0].isChecked():
+            self._sex = 'Male'
+        if self.rbs[0].isChecked():
+            self._sex = 'Female'
         else:
-            s = instructions[24]
+            s = 'Sex not selected.'
             a = QtGui.QMessageBox()
             a.setText(s)
             a.exec_()
-            return False
-        d = self.calendar.selectedDate().toPython()
-        dob = self.calendar.selectedDate().toString('yyyy-MM-dd')
-        age = self.calculate_age(d)
-        if age < 15:
-            s = instructions[25]
-            a = QtGui.QMessageBox()
-            a.setText(s)
-            a.exec_()
-            return False
-        else:
-            self.proband['dob'] = dob
-            return True
+            return None
 
-    def calculate_age(self, born):
-        """Calculates someone's age in years."""
-        today = date.today()
-        return today.year - born.year - ((today.month, today.day) < \
-                                         (born.month, born.day))
+        try:
+            self._age = int(self._age)
+            if self._age < 15:
+                s = 'Proband must be over 15.'
+                _ = QtGui.QMessageBox()
+                _.setText(s)
+                _.exec_()
+                return None
+        except:
+            s = 'Invalid age.'
+            _ = QtGui.QMessageBox()
+            _.setText(s)
+            _.exec_()
+            return None
 
-    def closeEvent(self, event):
-        """Closes the window and updates the table."""
-        self.com.update_proband_table
+        if not self._proj_id:
+            s = 'Invalid proband ID.'
+            _ = QtGui.QMessageBox()
+            _.setText(s)
+            _.exec_()
+            return None
+
+        if not self._user_id:
+            s = 'Invalid user ID.'
+            _ = QtGui.QMessageBox()
+            _.setText(s)
+            _.exec_()
+            return None
+
+        if self.new_proband and self._proband_id in self.df.index.tolist():
+            s = 'Proband with this ID already exists.'
+            _ = QtGui.QMessageBox()
+            _.setText(s)
+            _.exec_()
+            return None
+
+        self.proband.proband_id = self._proband_id
+        self.proband.sex = self._sex
+        self.proband.age = self._age
+        self.proband.proj_id = self._proj_id
+        self.proband.user_id = self._user_id
+
+        self.df.loc[self._proband_id] = self.proband
+        data.replace_demographics(self.df)
+        self.com.update_proband_table.emit()
+        self.close()
+
+
+class CustomSignals(QtCore.QObject):
+
+    update_proband_table = QtCore.Signal()

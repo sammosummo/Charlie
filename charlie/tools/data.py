@@ -83,22 +83,23 @@ def create_db():
 
 def populate_demographics():
     """
-    Populate the 'probands' table in the local database based on information
+    Populates the 'probands' table in the local database based on information
     contained within the other tables. This is useful because running the test
     battery from the command line will not update the probands table by itself.
     Also returns the data frame.
     """
     create_paths()
     create_db()
+    print '---Populating the probands sql table'
     con = sqlite3.connect(LOCAL_DB_F)
     try:
-        df = pandas.read_sql('SELECT * from probands', con, index_col='index')
+        df = pandas.read_sql('SELECT * from probands', con)
     except:
         cols = [
             'proband_id', 'user_id', 'proj_id', 'sex', 'age', 'tests_compl'
         ]
         df = pandas.DataFrame(columns=cols)
-
+    print df
     df1 = pandas.read_sql(
         "SELECT * FROM sqlite_master WHERE type='table'", con
     )
@@ -113,7 +114,7 @@ def populate_demographics():
         try:
             df2 = pandas.read_sql('SELECT * from %s' % test_name, con)
             df2 = df2[['proband_id', 'user_id', 'proj_id']]
-            df = pandas.concat([df2, df])
+            df = pandas.concat([df, df2])
             _probands[test_name] = df2.proband_id.tolist()
         except KeyError:
             continue
@@ -126,10 +127,17 @@ def populate_demographics():
                 x += '%s ' % test_name
         df.ix[i, 'tests_compl'] = x
     df.to_sql('probands', con, index=False, if_exists='replace')
-    probands_list = df.proband_id.unique().tolist()
-    users_list = df.user_id.unique().tolist()
-    projects_list = df.proj_id.unique().tolist()
-    return probands_list, users_list, projects_list
+    return df
+
+
+def replace_demographics(df):
+    """
+    Repalces the contents of the 'probands' table in the local database with
+    the contents of the data frame.
+    """
+    print '---Replacing contents of probands sql table'
+    con = sqlite3.connect(LOCAL_DB_F)
+    df.to_sql('probands', con, index=False, if_exists='replace')
 
 
 def load_data(proband_id, lang, user_id, proj_id, test_name, output_format,
