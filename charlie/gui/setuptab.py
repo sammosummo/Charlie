@@ -31,7 +31,6 @@ class SetupTab(QtGui.QWidget):
         self.proj_id = self.args.proj_id
         self.df = data.populate_demographics()
         self.projects_list = [self.proj_id] + self.df.proj_id.dropna().unique().tolist()
-        print self.projects_list
         self.users_list = [self.user_id] + self.df.user_id.dropna().unique().tolist()
         self.setup_ui()
         self.create_proband_table()

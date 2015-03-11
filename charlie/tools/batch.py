@@ -149,6 +149,7 @@ def run_a_test(test_name, batch_mode=False):
 
                 print "---'EXIT' detected."
                 if not batch_mode:
+                    screen.kill()
                     break  # act as if the session is over
 
                 else:
