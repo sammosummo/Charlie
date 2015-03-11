@@ -86,7 +86,7 @@ def populate_demographics():
     Populate the 'probands' table in the local database based on information
     contained within the other tables. This is useful because running the test
     battery from the command line will not update the probands table by itself.
-    Also returns lists of unique proband, user, and project IDs
+    Also returns the data frame.
     """
     create_paths()
     create_db()
