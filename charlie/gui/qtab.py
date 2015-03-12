@@ -35,6 +35,12 @@ class QuestionnaireTab(QtGui.QWidget):
         self._qlist = None
         self._q = []
         self.vbox = QtGui.QVBoxLayout()
+        self.vbox.addWidget(
+            QtGui.QLabel(
+                """Make sure the Proband ID is set correctly before running the questionnaires!."""))
+        self.vbox.addWidget(
+            QtGui.QLabel(
+                'You can also run questionnaires from the batch tab.'))
         a = QtGui.QGroupBox('Questionnaire selection:')
         grid = QtGui.QGridLayout()
 
@@ -55,7 +61,7 @@ class QuestionnaireTab(QtGui.QWidget):
         q_list = QtGui.QComboBox()
         x = [''] + questionnaires.get_available_questionnaires('EN')
         q_list.addItems(x)
-        q_list.setInsertPolicy(set_list.NoInsert)
+        q_list.setInsertPolicy(q_list.NoInsert)
         q_list.setEditable(False)
         q_list.activated.connect(self.set_current_q)
         q_list.editTextChanged.connect(self.set_current_q)
@@ -80,7 +86,7 @@ class QuestionnaireTab(QtGui.QWidget):
 
         b = QtGui.QGroupBox('Run selection:')
         vbox = QtGui.QVBoxLayout()
-        vbox.addWidget(QtGui.QLabel('Questionnaires can also be administered in batch mode.'))
+        vbox.addWidget(QtGui.QLabel('WARNING: This app becomes unresponsive while the questionnaire app is running!'))
         button = QtGui.QPushButton('Run now...')
         button.clicked.connect(self.run)
         vbox.addWidget(button)

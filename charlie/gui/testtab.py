@@ -18,6 +18,8 @@ from os.path import dirname
 import importlib
 import sys
 import charlie.tools.batch as batch
+import threading
+
 
 class TestTab(QtGui.QWidget):
 

@@ -20,6 +20,7 @@ from charlie.gui.batchtab import BatchTab
 from charlie.gui.notestab import NotesTab
 from charlie.gui.datatab import DataTab
 
+
 class HomeWidget(QtGui.QWidget):
 
     """
@@ -50,12 +51,13 @@ class HomeWidget(QtGui.QWidget):
         tabs = QtGui.QTabWidget()
         setup_tab = SetupTab(self)
         tabs.addTab(setup_tab, self.tr('Session setup'))
+        batch_tab = BatchTab(self)
+        tabs.addTab(batch_tab, self.tr('Batch'))
         test_tab = TestTab(self)
         tabs.addTab(test_tab, self.tr('Tests'))
         q_tab = QuestionnaireTab(self)
         tabs.addTab(q_tab, self.tr('Questionnaires'))
-        batch_tab = BatchTab(self)
-        tabs.addTab(batch_tab, self.tr('Batch'))
+
         notes_tab = NotesTab(self)
         tabs.addTab(notes_tab, self.tr('Notes'))
         data_tab = DataTab(self)
@@ -68,8 +70,9 @@ class HomeWidget(QtGui.QWidget):
 
 def main():
     app = QtGui.QApplication(sys.argv)
+    app.aboutToQuit.connect(app.deleteLater)
     _ = HomeWidget()
-    sys.exit(app.exec_())
+    app.exec_()
 
 
 if __name__ == '__main__':

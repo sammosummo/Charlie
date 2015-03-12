@@ -18,6 +18,7 @@ from os.path import dirname
 import importlib
 import sys
 import charlie.tools.batch as batch
+import charlie.tools.questionnaires as questionnaires
 
 
 class BatchTab(QtGui.QWidget):
@@ -30,42 +31,84 @@ class BatchTab(QtGui.QWidget):
     def __init__(self, parent=None):
         super(BatchTab, self).__init__(parent=parent)
         self.instr = self.parent().instr
-        f = dirname(charlie.tests.__file__)
-        self.test_names = [None] + [name for _, name, _ in iter_modules([f])]
-        self.test_name = None
+
+        batches = [''] + batch.get_available_batches()
+        qlists = [''] + questionnaires.get_available_questionnaire_lists()
+        self._batch = None
+        self._q = None
 
         self.vbox = QtGui.QVBoxLayout()
-        a = QtGui.QGroupBox(self.instr[27])
+        self.vbox.addWidget(
+            QtGui.QLabel(
+                """Make sure the Proband ID is set correctly before running a batch!."""))
+        a = QtGui.QGroupBox('Batch mode:')
         grid = QtGui.QGridLayout()
-        test_list = QtGui.QComboBox()
-        test_list.addItems(self.test_names)
-        test_list.setInsertPolicy(test_list.NoInsert)
-        test_list.setEditable(False)
-        test_list.activated.connect(self.set_current_test)
-        test_list.editTextChanged.connect(self.set_current_test)
-        grid.addWidget(test_list, 0, 0, 1, 3)
-        button = QtGui.QPushButton(self.instr[28])
-        button.clicked.connect(self.run_test)
-        grid.addWidget(button, 0, 4)
-        self.doc_box = QtGui.QTextEdit()
-        self.doc_box.insertPlainText(self.instr[33])
-        grid.addWidget(self.doc_box, 1, 0, 4, 5)
+
+        grid.addWidget(QtGui.QLabel('Available batches:'), 0, 0)
+        batch_list = QtGui.QComboBox()
+        batch_list.addItems(batches)
+        batch_list.setInsertPolicy(batch_list.NoInsert)
+        batch_list.setEditable(False)
+        batch_list.activated.connect(self.set_current_batch)
+        batch_list.editTextChanged.connect(self.set_current_batch)
+        grid.addWidget(batch_list, 1, 0)
+        grid.addWidget(QtGui.QLabel('Tests in selected batch:'), 3, 0)
+        self.batch_contents = QtGui.QListWidget()
+        grid.addWidget(self.batch_contents, 4, 0, 6, 1)
+
+        grid.addWidget(QtGui.QLabel('Available questionnaire lists:'), 0, 1)
+        q_list = QtGui.QComboBox()
+        q_list.addItems(qlists)
+        q_list.setInsertPolicy(q_list.NoInsert)
+        q_list.setEditable(False)
+        q_list.activated.connect(self.set_current_q)
+        q_list.editTextChanged.connect(self.set_current_q)
+        grid.addWidget(q_list, 1, 1)
+        grid.addWidget(QtGui.QLabel('Questionnaire lists:'), 3, 1)
+        self.q_contents = QtGui.QListWidget()
+        grid.addWidget(self.q_contents, 4, 1, 6, 1)
+    #
         a.setLayout(grid)
         self.vbox.addWidget(a)
+
+        b = QtGui.QGroupBox('Run selection:')
+        vbox = QtGui.QVBoxLayout()
+        vbox.addWidget(QtGui.QLabel('WARNING: This app becomes unresponsive whilst in batch mode!'))
+        button = QtGui.QPushButton('Run now...')
+        button.clicked.connect(self.run)
+        vbox.addWidget(button)
+        b.setLayout(vbox)
+        self.vbox.addWidget(b)
+        self.vbox.addStretch(1)
+
         self.setLayout(self.vbox)
         self.show()
 
-    def set_current_test(self):
-        self.test_name = self.sender().currentText()
-        try:
-            mod = importlib.import_module('charlie.tests.' + self.test_name)
-        except KeyError:
-            return None
-        self.doc_box.clear()
-        self.doc_box.insertPlainText(mod.__doc__)
+    def set_current_q(self):
+        _q = self.sender().currentText()
+        if _q:
+            self._q = _q
+            qlist = questionnaires.questionnaires_in_list(_q)
+            self.q_contents.clear()
+            self.q_contents.addItems(qlist)
+        else:
+            self.q_contents.clear()
+            self._q = None
 
-    def run_test(self):
-        print 'hello'
-        if self.test_name is not None:
-            print 'hello'
-            batch.run_a_test(self.test_name, False)
+    def set_current_batch(self):
+        _batch = self.sender().currentText()
+        if _batch:
+            self._batch = _batch
+            test_list = batch.tests_in_batch(_batch)
+            self.batch_contents.clear()
+            self.batch_contents.addItems(test_list)
+        else:
+            self.batch_contents.clear()
+            self._batch = None
+
+    def run(self):
+        if self._batch is not None:
+            sys.argv += ['-b', self._batch]
+            if self._q is not None:
+                sys.argv += ['-q', self._q]
+            batch.run_a_batch()

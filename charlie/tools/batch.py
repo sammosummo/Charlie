@@ -16,6 +16,7 @@ import charlie.tools.data as data
 import charlie.tools.visual as visual
 import charlie.tools.questionnaires as questionnaires
 import charlie.tools.arguments as arguments
+from os import listdir
 
 
 def run_a_test(test_name, batch_mode=False):
@@ -71,18 +72,21 @@ def run_a_test(test_name, batch_mode=False):
     if not hasattr(mod, 'trial_method'):
 
         print '---No trial_method, must be an experimenter-operated test.'
-        screen = visual.Screen()
-        screen.splash(instr[0])
-        screen.kill()
+        if not threaded:
+            screen = visual.Screen()
+            screen.splash(instr[0])
+            screen.kill()
 
         QtGui = getattr(mod, 'QtGui')
+        QtCore = getattr(mod, 'QtCore')
         MainWindow = getattr(mod, 'MainWindow')
-        app = QtGui.QApplication(sys.argv)
-        app.aboutToQuit.connect(app.deleteLater)
-        _ = MainWindow(data_obj, instr)
-#            sys.exit(app.exec_())
-        app.exec_()
-        del _
+        app = QtGui.QApplication.instance()
+        if not app: # create QApplication if it doesnt exist
+            app = QtGui.QApplication(sys.argv)
+            app.aboutToQuit.connect(app.deleteLater)
+            _ = MainWindow(data_obj, instr)
+    #            sys.exit(app.exec_())
+            app.exec_()
 
     # set up a normal pygame session
     else:
@@ -258,6 +262,26 @@ def prompt(batch_mode):
         prompt(batch_mode)
     else:
         return choice
+
+
+def get_available_batches():
+    """
+    Returns a list of batch files.
+    """
+    s = '.txt'
+    files = listdir(data.BATCHES_PATH)
+    f = lambda q: q.strip(s)
+    return [f(q) for q in files if s in q]
+
+
+def tests_in_batch(b):
+    """
+    Returns a list of the tests within a given batch file.
+    """
+    _b = open(data.pj(data.BATCHES_PATH, b + '.txt'), 'rU').readlines()
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+    blist = [quickfix(l) for l in _b]
+    return blist
 
 
 def main():
