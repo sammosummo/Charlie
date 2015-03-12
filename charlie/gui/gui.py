@@ -14,7 +14,11 @@ import charlie.tools.arguments as arguments
 import charlie.tools.data as data
 import charlie.tools.instructions as instructions
 from charlie.gui.setuptab import SetupTab
-from charlie.gui.runtab import RunTab
+from charlie.gui.testtab import TestTab
+from charlie.gui.qtab import QuestionnaireTab
+from charlie.gui.batchtab import BatchTab
+from charlie.gui.notestab import NotesTab
+from charlie.gui.datatab import DataTab
 
 class HomeWidget(QtGui.QWidget):
 
@@ -45,9 +49,17 @@ class HomeWidget(QtGui.QWidget):
 
         tabs = QtGui.QTabWidget()
         setup_tab = SetupTab(self)
-        tabs.addTab(setup_tab, self.tr(self.instr[2]))
-        run_tab = RunTab(self)
-        tabs.addTab(run_tab, self.tr(self.instr[26]))
+        tabs.addTab(setup_tab, self.tr('Session setup'))
+        test_tab = TestTab(self)
+        tabs.addTab(test_tab, self.tr('Tests'))
+        q_tab = QuestionnaireTab(self)
+        tabs.addTab(q_tab, self.tr('Questionnaires'))
+        batch_tab = BatchTab(self)
+        tabs.addTab(batch_tab, self.tr('Batch'))
+        notes_tab = NotesTab(self)
+        tabs.addTab(notes_tab, self.tr('Notes'))
+        data_tab = DataTab(self)
+        tabs.addTab(data_tab, self.tr('Data transfer'))
         vbox.addWidget(tabs)
 
         self.setLayout(vbox)

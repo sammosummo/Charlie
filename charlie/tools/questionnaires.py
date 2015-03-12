@@ -18,6 +18,7 @@ import web
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
 import charlie.tools.arguments as arguments
+from os import listdir
 
 
 bis_subscales = {
@@ -236,3 +237,34 @@ def to_db(dfs):
         df = pandas.concat([summaries.make_df(stats), df], axis=1)
         if args.proband_id != 'TEST':
             df.to_sql(q_name, con, index=False, if_exists='append')
+
+
+def get_available_questionnaires(lang):
+    """
+    Returns a list of questionnaires available in the given language.
+    """
+    s = '_' + lang + '.html'
+    files = listdir(data.QUESTIONNAIRE_TEMPLATES_PATH)
+    f = lambda q: q.split('_')[0]
+    return [f(q) for q in files if s in q]
+
+
+def get_available_questionnaire_lists():
+    """
+    Returns a list of questionnaire lists.
+    """
+    s = '.txt'
+    files = listdir(data.QUESTIONNAIRES_PATH)
+    f = lambda q: q.strip(s)
+    return [f(q) for q in files if s in q]
+
+
+def questionnaires_in_list(q):
+    """
+    Returns a list of the questionnaires within a given questionnaire list
+    file.
+    """
+    _q = open(data.pj(data.QUESTIONNAIRES_PATH, q + '.txt'), 'rU').readlines()
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+    qlist = [quickfix(l) for l in _q]
+    return qlist

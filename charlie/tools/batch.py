@@ -158,6 +158,7 @@ def run_a_test(test_name, batch_mode=False):
     print '---All trials done.\n---------'
     print 'TEST OVER'
     print '---------'
+    screen.kill()
     return None, data_obj
 
 

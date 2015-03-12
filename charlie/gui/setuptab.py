@@ -139,6 +139,8 @@ class SetupTab(QtGui.QWidget):
                 self.set_text()
             sys.argv = sys.argv[:1]
             sys.argv += ['-p', self.proband_id]
+            sys.argv += ['-j', self.proj_id]
+            sys.argv += ['-u', self.user_id]
             print sys.argv
 
     def deselect_proband(self):

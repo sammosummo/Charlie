@@ -5,7 +5,7 @@ For assistance, please contact samuel.mathias@yale.edu.
 ---
 Session setup
 ---
-Before running any tests, you must enter a <b>Project ID</b> and an <b>Experimenter ID</b>.
+Before running any tests, you must enter a <b>Project ID</b>, <b>Experimenter ID</b> and <b>Proband ID</b>.
 ---
 Project information:
 ---

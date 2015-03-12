@@ -19,8 +19,7 @@ import importlib
 import sys
 import charlie.tools.batch as batch
 
-
-class RunTab(QtGui.QWidget):
+class TestTab(QtGui.QWidget):
 
     """
     Second tab in the GUI. Allows the user to run individual tests or batches
@@ -28,30 +27,40 @@ class RunTab(QtGui.QWidget):
     """
 
     def __init__(self, parent=None):
-        super(RunTab, self).__init__(parent=parent)
+        super(TestTab, self).__init__(parent=parent)
         self.instr = self.parent().instr
         f = dirname(charlie.tests.__file__)
         self.test_names = [None] + [name for _, name, _ in iter_modules([f])]
         self.test_name = None
 
         self.vbox = QtGui.QVBoxLayout()
+        self.vbox.addWidget(
+            QtGui.QLabel(
+                """Make sure the Proband ID is set correctly before running a test!"""))
+
         a = QtGui.QGroupBox(self.instr[27])
         grid = QtGui.QGridLayout()
+        grid.addWidget(
+            QtGui.QLabel(
+                'Available tests:',
+            ), 1, 0, 1, 1
+        )
         test_list = QtGui.QComboBox()
         test_list.addItems(self.test_names)
         test_list.setInsertPolicy(test_list.NoInsert)
         test_list.setEditable(False)
         test_list.activated.connect(self.set_current_test)
         test_list.editTextChanged.connect(self.set_current_test)
-        grid.addWidget(test_list, 0, 0, 1, 3)
+        grid.addWidget(test_list, 2, 0, 1, 4)
         button = QtGui.QPushButton(self.instr[28])
         button.clicked.connect(self.run_test)
-        grid.addWidget(button, 0, 4)
+        grid.addWidget(button, 2, 4, 1, 2)
         self.doc_box = QtGui.QTextEdit()
         self.doc_box.insertPlainText(self.instr[33])
-        grid.addWidget(self.doc_box, 1, 0, 4, 5)
+        grid.addWidget(self.doc_box, 4, 0, 10, 6)
         a.setLayout(grid)
         self.vbox.addWidget(a)
+        self.vbox.addStretch(1)
         self.setLayout(self.vbox)
         self.show()
 
