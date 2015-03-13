@@ -1,37 +1,36 @@
 __author__ = 'smathias'
 
-try:
-    from PySide import QtGui, QtCore
-    from PySide.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
-    from PySide.QtGui import QTableView, QApplication
-except ImportError:
-    from PyQt4 import QtGui, QtCore
-    from PyQt4.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
-    from PyQt4.QtGui import QTableView, QApplication
+
 import sys
+try:
+    from PySide import QtGui, QtCore, QtSql
+except ImportError:
+    from PyQt4 import QtGui, QtCore, QtSql
 import pandas
 import charlie.tools.data as data
-import charlie.tools.instructions as instructions
-import numpy as np
 
 
 class SetupTab(QtGui.QWidget):
 
     """
-    First tab in the GUI. Allows the user to view, select, and edit the
-    project, user, and proband information.
+    This tab allows the user to edit the project, user and proband information
+    stored in the local database. Also allows them to select IDs ready for
+    running tests.
     """
 
     def __init__(self, parent=None):
         super(SetupTab, self).__init__(parent=parent)
+
         self.instr = self.parent().instr
         self.args = self.parent().args
         self.proband_id = self.args.proband_id
         self.user_id = self.args.user_id
         self.proj_id = self.args.proj_id
         self.df = data.populate_demographics()
-        self.projects_list = [self.proj_id] + self.df.proj_id.dropna().unique().tolist()
-        self.users_list = [self.user_id] + self.df.user_id.dropna().unique().tolist()
+        self.projects_list = [self.proj_id] + \
+                             self.df.proj_id.dropna().unique().tolist()
+        self.users_list = [self.user_id] + \
+                          self.df.user_id.dropna().unique().tolist()
         self.setup_ui()
         self.create_proband_table()
 
@@ -40,7 +39,7 @@ class SetupTab(QtGui.QWidget):
         self.vbox = QtGui.QVBoxLayout()
         self.vbox.addWidget(QtGui.QLabel(self.instr[3]))
 
-        # project and user boxes
+        # project box
         b = QtGui.QGroupBox(self.instr[4])
         grid = QtGui.QGridLayout()
         grid.addWidget(QtGui.QLabel(self.instr[5]), 0, 0)
@@ -53,6 +52,7 @@ class SetupTab(QtGui.QWidget):
         proj_list.setCurrentIndex(0)
         grid.addWidget(proj_list, 1, 0)
 
+        # user box
         grid.addWidget(QtGui.QLabel(self.instr[6]), 0, 1)
         exp_list = QtGui.QComboBox()
         exp_list.setItemText(0, self.user_id)
@@ -75,7 +75,6 @@ class SetupTab(QtGui.QWidget):
         self.proband_id_label = QtGui.QLabel()
         self.set_text()
         self.proband_grid.addWidget(self.proband_id_label, 1, 1, 1, 4)
-
         funcs = [
             self.select_proband, self.deselect_proband, self.edit_proband,
             self.new_proband, self.test_proband
@@ -89,15 +88,16 @@ class SetupTab(QtGui.QWidget):
         self.setLayout(self.vbox)
 
     def create_proband_table(self):
+
         self.df = data.populate_demographics()
         self.probands_list = self.df.proband_id.unique().tolist()
-        self.db = QSqlDatabase.addDatabase("QSQLITE")
+        self.db = QtSql.QSqlDatabase.addDatabase("QSQLITE")
         self.db.setDatabaseName(data.LOCAL_DB_F)
         self.db.open()
-        self.model = QSqlTableModel()
+        self.model = QtSql.QSqlTableModel()
         self.model.setTable('probands')
-        self.model.setEditStrategy(QSqlTableModel.OnManualSubmit)
-        self.view = QTableView()
+        self.model.setEditStrategy(self.model.OnManualSubmit)
+        self.view = QtGui.QTableView()
         self.view.setModel(self.model)
         self.view.setSelectionMode(self.view.SingleSelection)
         self.view.setSelectionBehavior(self.view.SelectRows)

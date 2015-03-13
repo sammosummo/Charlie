@@ -1,32 +1,25 @@
 __author__ = 'smathias'
 
+
+import sys
 try:
     from PySide import QtGui, QtCore
-    from PySide.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
-    from PySide.QtGui import QTableView, QApplication
 except ImportError:
     from PyQt4 import QtGui, QtCore
-    from PyQt4.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
-    from PyQt4.QtGui import QTableView, QApplication
-import pandas
-import charlie.tools.data as data
-import charlie.tools.instructions as instructions
-import numpy as np
-from pkgutil import iter_modules
-import charlie.tests
-from os.path import dirname
-import importlib
-import sys
-import charlie.tools.batch as batch
+import charlie.tools.batch2 as batch
 import charlie.tools.questionnaires as questionnaires
+
+
+m = 'Make sure the Proband ID is set correctly before running a batch!'
 
 
 class BatchTab(QtGui.QWidget):
 
     """
-    Second tab in the GUI. Allows the user to run individual tests or batches
-    of tests.
+    This tab allows the user to run batches of tests and questionnaires. Batch
+    and questionnaire lists are saved as text files within Charlie.
     """
+    #TODO: Add the ability to edit and save new batch files.
 
     def __init__(self, parent=None):
         super(BatchTab, self).__init__(parent=parent)
@@ -38,9 +31,7 @@ class BatchTab(QtGui.QWidget):
         self._q = None
 
         self.vbox = QtGui.QVBoxLayout()
-        self.vbox.addWidget(
-            QtGui.QLabel(
-                """Make sure the Proband ID is set correctly before running a batch!."""))
+        self.vbox.addWidget(QtGui.QLabel(m))
         a = QtGui.QGroupBox('Batch mode:')
         grid = QtGui.QGridLayout()
 
@@ -67,13 +58,12 @@ class BatchTab(QtGui.QWidget):
         grid.addWidget(QtGui.QLabel('Questionnaire lists:'), 3, 1)
         self.q_contents = QtGui.QListWidget()
         grid.addWidget(self.q_contents, 4, 1, 6, 1)
-    #
+
         a.setLayout(grid)
         self.vbox.addWidget(a)
 
         b = QtGui.QGroupBox('Run selection:')
         vbox = QtGui.QVBoxLayout()
-        vbox.addWidget(QtGui.QLabel('WARNING: This app becomes unresponsive whilst in batch mode!'))
         button = QtGui.QPushButton('Run now...')
         button.clicked.connect(self.run)
         vbox.addWidget(button)
@@ -111,4 +101,5 @@ class BatchTab(QtGui.QWidget):
             sys.argv += ['-b', self._batch]
             if self._q is not None:
                 sys.argv += ['-q', self._q]
-            batch.run_a_batch()
+            self.batch = batch.Batch()
+            self.batch.run(True)

@@ -1,31 +1,25 @@
 __author__ = 'smathias'
 
+
 try:
     from PySide import QtGui, QtCore
-    from PySide.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
-    from PySide.QtGui import QTableView, QApplication
 except ImportError:
     from PyQt4 import QtGui, QtCore
-    from PyQt4.QtSql import QSqlTableModel, QSqlDatabase, QSqlQuery
-    from PyQt4.QtGui import QTableView, QApplication
-import pandas
-import charlie.tools.data as data
-import charlie.tools.instructions as instructions
-import numpy as np
 from pkgutil import iter_modules
 import charlie.tests
 from os.path import dirname
 import importlib
-import sys
-import charlie.tools.batch as batch
-import threading
+import charlie.tools.batch2 as batch
+
+
+m = 'Make sure the Proband ID is set correctly before running a test!'
 
 
 class TestTab(QtGui.QWidget):
 
     """
-    Second tab in the GUI. Allows the user to run individual tests or batches
-    of tests.
+    This tab allows the user to run individual tests from the battery and read
+    their docstrings.
     """
 
     def __init__(self, parent=None):
@@ -34,19 +28,14 @@ class TestTab(QtGui.QWidget):
         f = dirname(charlie.tests.__file__)
         self.test_names = [None] + [name for _, name, _ in iter_modules([f])]
         self.test_name = None
+        self.test = None
 
         self.vbox = QtGui.QVBoxLayout()
-        self.vbox.addWidget(
-            QtGui.QLabel(
-                """Make sure the Proband ID is set correctly before running a test!"""))
+        self.vbox.addWidget(QtGui.QLabel(m))
 
         a = QtGui.QGroupBox(self.instr[27])
         grid = QtGui.QGridLayout()
-        grid.addWidget(
-            QtGui.QLabel(
-                'Available tests:',
-            ), 1, 0, 1, 1
-        )
+        grid.addWidget(QtGui.QLabel('Available tests:'), 1, 0, 1, 1)
         test_list = QtGui.QComboBox()
         test_list.addItems(self.test_names)
         test_list.setInsertPolicy(test_list.NoInsert)
@@ -76,7 +65,6 @@ class TestTab(QtGui.QWidget):
         self.doc_box.insertPlainText(mod.__doc__)
 
     def run_test(self):
-        print 'hello'
         if self.test_name is not None:
-            print 'hello'
-            batch.run_a_test(self.test_name, False)
+            self.test = batch.Test(self.test_name, False)
+            self.test.run(True)

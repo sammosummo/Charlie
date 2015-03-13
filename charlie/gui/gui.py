@@ -1,9 +1,13 @@
 """
-Front-end GUI for Charlie.
+Front-end GUI for Charlie. Allows the experimenter to enter proband
+information, run individual tests and questionnaires, batches of tests, and add
+notes to the database. Eventually, the GUI will also contain data backup and
+transfer functionality.
 
 """
 __version__ = 0.1
 __author__ = 'smathias'
+
 
 import sys
 try:
@@ -24,12 +28,12 @@ from charlie.gui.datatab import DataTab
 class HomeWidget(QtGui.QWidget):
 
     """
-    Main window widget.
+    Main window widget. This essentially just holds the various tabs (widgets
+    imported from other scripts).
     """
 
     def __init__(self, parent=None):
         super(HomeWidget, self).__init__(parent=parent)
-        # data.populate_probands_table()
         self.args = arguments.get_args()
         self.instr = instructions.read_instructions('manager', self.args.lang)
         self.setup_ui()
@@ -49,15 +53,18 @@ class HomeWidget(QtGui.QWidget):
         vbox.addWidget(txt)
 
         tabs = QtGui.QTabWidget()
+
         setup_tab = SetupTab(self)
         tabs.addTab(setup_tab, self.tr('Session setup'))
+
+        test_tab = TestTab(self)
+        tabs.addTab(test_tab, self.tr('Individual tests'))
+
+        q_tab = QuestionnaireTab(self)
         batch_tab = BatchTab(self)
         tabs.addTab(batch_tab, self.tr('Batch'))
-        test_tab = TestTab(self)
-        tabs.addTab(test_tab, self.tr('Tests'))
-        q_tab = QuestionnaireTab(self)
-        tabs.addTab(q_tab, self.tr('Questionnaires'))
 
+        tabs.addTab(q_tab, self.tr('Questionnaires'))
         notes_tab = NotesTab(self)
         tabs.addTab(notes_tab, self.tr('Notes'))
         data_tab = DataTab(self)
