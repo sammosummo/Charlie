@@ -136,6 +136,7 @@ def trial_method(screen, instructions, trial_info):
     
         # set up trial
         screen.update_image_zones()
+        print screen.images
         img = screen.images[f]
         p = labels, [visual.DEFAULT_TEXT_COLOUR] * len(labels)
         screen.change_word_colour(*p)

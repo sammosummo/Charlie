@@ -52,27 +52,35 @@ class HomeWidget(QtGui.QWidget):
         txt.setAlignment(QtCore.Qt.AlignCenter)
         vbox.addWidget(txt)
 
+        self.batch_tab = BatchTab(self)
+
         tabs = QtGui.QTabWidget()
-
-        setup_tab = SetupTab(self)
-        tabs.addTab(setup_tab, self.tr('Session setup'))
-
-        test_tab = TestTab(self)
-        tabs.addTab(test_tab, self.tr('Individual tests'))
-
-        q_tab = QuestionnaireTab(self)
-        batch_tab = BatchTab(self)
         tabs.addTab(batch_tab, self.tr('Batch'))
 
-        tabs.addTab(q_tab, self.tr('Questionnaires'))
-        notes_tab = NotesTab(self)
-        tabs.addTab(notes_tab, self.tr('Notes'))
-        data_tab = DataTab(self)
-        tabs.addTab(data_tab, self.tr('Data transfer'))
+        # setup_tab = SetupTab(self)
+        # tabs.addTab(setup_tab, self.tr('Session setup'))
+        #
+        # test_tab = TestTab(self)
+        # tabs.addTab(test_tab, self.tr('Individual tests'))
+        #
+        # q_tab = QuestionnaireTab(self)
+        # batch_tab = BatchTab(self)
+        # tabs.addTab(batch_tab, self.tr('Batch'))
+        #
+        # tabs.addTab(q_tab, self.tr('Questionnaires'))
+        # notes_tab = NotesTab(self)
+        # tabs.addTab(notes_tab, self.tr('Notes'))
+        # data_tab = DataTab(self)
+        # tabs.addTab(data_tab, self.tr('Data transfer'))
         vbox.addWidget(tabs)
 
         self.setLayout(vbox)
         self.show()
+
+    def quit_and_run_batch(self):
+
+        app = QtGui.QApplication.instance()
+        app.quit()
 
 
 def main():

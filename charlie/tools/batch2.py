@@ -73,9 +73,12 @@ class Test:
             visual.BG_COLOUR = visual.LIGHT_GREY
             visual.DEFAULT_TEXT_COLOUR = visual.BLACK
 
-        img_path = os.path.join(data.VISUAL_PATH, self.test_name)
-        load = lambda f: self.screen.load_image(os.path.join(img_path, f))
-        [load(f) for f in os.listdir(img_path) if misc.is_imgfile(f)]
+        print '---Preloading images.'
+        img_path = data.pj(data.VISUAL_PATH, self.test_name)
+        files = [data.pj(img_path, f) for f in os.listdir(img_path)]
+        [self.screen.load_image(f) for f in files if misc.is_imgfile(f)]
+
+
 
         while self.data_obj.control:
 
@@ -114,6 +117,8 @@ class Test:
                     self.screen.kill()
                     return self.data_obj
 
+        self.screen.kill()
+
     def run_qt(self, from_gui):
 
         if from_gui is False:
@@ -132,7 +137,8 @@ class Test:
 
             MainWindow = getattr(self.mod, 'MainWindow')
             self.window = MainWindow(self.data_obj, self.instr)
-            self.window.show()
+            self.window.lower()
+
 
 
 class Batch:
@@ -143,6 +149,8 @@ class Batch:
         self.quickfix = lambda f: f.replace('\n', '').replace('\r', '')
         self.test_names = self.get_test_names()
         self._test = None
+        self._tests = []
+
 
     def get_test_names(self):
         if self.args.questionnaires:
@@ -170,27 +178,35 @@ class Batch:
                 f = open(b, 'rb')
         return [self.quickfix(l) for l in f]
 
-    def run(self, from_gui=False):
+    def run(self, from_gui):
 
-        _test_names = self.test_names
+        self._tests = [Test(t, True, self) for t in self.test_names]
+        self._windows = []
+        for test in self._tests:
+            test.run(from_gui)
 
-        while _test_names:
 
-            _test_name = _test_names.pop(0)
-            self._test = Test(_test_name, True, self)
-
-            data_obj = self._test.run(from_gui)
-
-            if data_obj is not None:
-
-                choice = prompt()
-                if choice == 'quit':
-                    sys.exit()
-                elif choice == 'restart':
-                    data.delete_data(data_obj)
-                    _test_names = [_test_name] + _test_names
-                elif choice == 'resume':
-                     _test_names = [_test_name] + _test_names
+    # def run(self, from_gui=False):
+    #
+    #     _test_names = self.test_names
+    #
+    #     while _test_names:
+    #
+    #         _test_name = _test_names.pop(0)
+    #         self._test = Test(_test_name, True, self)
+    #
+    #         data_obj = self._test.run(from_gui)
+    #
+    #         if data_obj is not None:
+    #
+    #             choice = prompt()
+    #             if choice == 'quit':
+    #                 sys.exit()
+    #             elif choice == 'restart':
+    #                 data.delete_data(data_obj)
+    #                 _test_names = [_test_name] + _test_names
+    #             elif choice == 'resume':
+    #                  _test_names = [_test_name] + _test_names
 
 
 def prompt():

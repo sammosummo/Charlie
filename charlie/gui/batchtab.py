@@ -21,8 +21,8 @@ class BatchTab(QtGui.QWidget):
     """
     #TODO: Add the ability to edit and save new batch files.
 
-    def __init__(self, parent=None):
-        super(BatchTab, self).__init__(parent=parent)
+    def __init__(self, parent):
+        super(BatchTab, self).__init__(parent)
         self.instr = self.parent().instr
 
         batches = [''] + batch.get_available_batches()
@@ -97,9 +97,4 @@ class BatchTab(QtGui.QWidget):
             self._batch = None
 
     def run(self):
-        if self._batch is not None:
-            sys.argv += ['-b', self._batch]
-            if self._q is not None:
-                sys.argv += ['-q', self._q]
-            self.batch = batch.Batch()
-            self.batch.run(True)
+        self.parent().quit_and_run_batch()

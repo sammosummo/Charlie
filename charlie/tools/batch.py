@@ -72,10 +72,9 @@ def run_a_test(test_name, batch_mode=False):
     if not hasattr(mod, 'trial_method'):
 
         print '---No trial_method, must be an experimenter-operated test.'
-        if not threaded:
-            screen = visual.Screen()
-            screen.splash(instr[0])
-            screen.kill()
+        screen = visual.Screen()
+        screen.splash(instr[0])
+        screen.kill()
 
         QtGui = getattr(mod, 'QtGui')
         QtCore = getattr(mod, 'QtCore')
