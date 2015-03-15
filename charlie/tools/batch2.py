@@ -1,7 +1,5 @@
 """
-This is a rewrite of the batch module. This was necessary because it was
-impossible to run Qt-based tests from the gui, because there can be only one Qt
-application at one time.
+Executing individual tests and batches of tests.
 """
 
 import importlib
@@ -21,8 +19,15 @@ import charlie.tools.visual as visual
 
 class Test:
 
+    """
+    Test class. Initialised using the test_name, which must be a string with
+    exactly the same name as a test in the test battery. Optionally supply a
+    batch_mode bool.
+    """
+
     def __init__(self, test_name, batch_mode=False, parent=None):
 
+        print '---Test object initialised.'
         self.batch_mode = batch_mode
         args = arguments.get_args()
         self.test_name = test_name
@@ -42,6 +47,7 @@ class Test:
         else:
             self.user_controlled = True
 
+        print '---Creating a data object.'
         self.data_obj = data.load_data(
             self.proband_id,
             self.lang,
@@ -51,11 +57,13 @@ class Test:
             self.output_format
         )
         if not self.data_obj.control and not self.data_obj.data:
+            print '---New proband detected.'
             self.data_obj.control = self._control
             self.data_obj.data = []
 
     def run(self, from_gui=False):
 
+        print '---Running test.'
         if self.user_controlled is False:
             return self.run_pygame()
         else:
@@ -63,6 +71,7 @@ class Test:
 
     def run_pygame(self):
 
+        print '---This is a pygame test.'
         self.screen = visual.Screen()
         self.trial_method = getattr(self.mod, 'trial_method')
 
@@ -78,37 +87,42 @@ class Test:
         files = [data.pj(img_path, f) for f in os.listdir(img_path)]
         [self.screen.load_image(f) for f in files if misc.is_imgfile(f)]
 
-
-
         while self.data_obj.control:
 
+            print '---New trial.'
             trial = self.data_obj.control.pop(0)
             trial_info = self.trial_method(self.screen, self.instr, trial)
 
             if trial_info != 'EXIT':
 
+                print '---Trial over.'
                 if type(trial_info) == list:
                     self.data_obj.data += trial_info
                 else:
                     self.data_obj.data.append(trial_info)
 
                 if self.proband_id != 'TEST':
+                    print '---Saving the data.'
                     self.data_obj.update()
                     self.data_obj.to_csv()
 
                 if hasattr(self.mod, 'stopping_rule'):
                     stopping_rule = getattr(self.mod, 'stopping_rule')
                     if stopping_rule(self.data_obj):
+                        print '---Stopping rule failed.'
                         self.data_obj.control = []
 
                 if not self.data_obj.control:
+                    print '---Test over.'
                     self.data_obj.test_done = True
                     if self.proband_id != 'TEST':
+                        print '---Analysing the data.'
                         summary_method = getattr(self.mod, 'summary_method')
                         self.data_obj.to_localdb(summary_method, self.instr)
 
             else:
 
+                print '---Exit detected.'
                 if self.batch_mode is False:
                     self.screen.kill()
                     break  # act as if the session is over
@@ -137,76 +151,69 @@ class Test:
 
             MainWindow = getattr(self.mod, 'MainWindow')
             self.window = MainWindow(self.data_obj, self.instr)
-            self.window.lower()
+            self.window.raise_()
 
 
+def run_batch():
+    """
+    Run a sequence of tests. The command-line option -b must be a text file
+    containing the names of the tests to be included in the batch, in the order
+    they should be run.
+    """
+    print '++++++++++\nBATCH MODE\n++++++++++\n'
+    args = arguments.get_parser().parse_args()
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
 
-class Batch:
-
-    def __init__(self, from_gui=False, parent=None):
-
-        self.args = arguments.get_parser().parse_args()
-        self.quickfix = lambda f: f.replace('\n', '').replace('\r', '')
-        self.test_names = self.get_test_names()
-        self._test = None
-        self._tests = []
-
-
-    def get_test_names(self):
-        if self.args.questionnaires:
-            qlist = self.args.questionnaires.split()
-            _qlist = []
-            for q in qlist:
-                try:
-                    _q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
-                    f = open(_q, 'rU').readlines()
-                    _qlist += f
-                except:
-                    _qlist.append(q)
-            qlist = [self.quickfix(l) for l in _qlist]
-            print qlist
-            questionnaires.create_questionnaire_app(qlist, self.args.lang)
+    if args.questionnaires:
+        print '---Loading questionnaires to administer first:'
+        qlist = args.questionnaires.split()
+        _qlist = []
+        for q in qlist:
+            try:
+                _q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
+                f = open(_q, 'rU').readlines()
+                _qlist += f
+            except:
+                _qlist.append(q)
+        qlist = [quickfix(l) for l in _qlist]
+        print qlist
+        questionnaires.create_questionnaire_app(qlist, args.lang)
+    try:
+        b = data.pj(data.BATCHES_PATH, args.batch_file + '.txt')
+        f = open(b, 'rb')
+    except:
         try:
-            b = data.pj(data.BATCHES_PATH, self.args.batch_file + '.txt')
+            b = data.pj(data.BATCHES_PATH, args.batch_file)
             f = open(b, 'rb')
         except:
-            try:
-                b = data.pj(data.BATCHES_PATH, self.args.batch_file)
-                f = open(b, 'rb')
-            except:
-                b = data.BATCHES_PATH
-                f = open(b, 'rb')
-        return [self.quickfix(l) for l in f]
+            b = data.BATCHES_PATH
+            f = open(b, 'rb')
 
-    def run(self, from_gui):
+    test_names = [quickfix(l) for l in f]
+    print '---Running the following tests in a batch:', test_names
 
-        self._tests = [Test(t, True, self) for t in self.test_names]
-        self._windows = []
-        for test in self._tests:
-            test.run(from_gui)
+    while test_names:
 
+        test_name = test_names.pop(0)
+        test = Test(test_name)
+        _data_obj = test.run()
 
-    # def run(self, from_gui=False):
-    #
-    #     _test_names = self.test_names
-    #
-    #     while _test_names:
-    #
-    #         _test_name = _test_names.pop(0)
-    #         self._test = Test(_test_name, True, self)
-    #
-    #         data_obj = self._test.run(from_gui)
-    #
-    #         if data_obj is not None:
-    #
-    #             choice = prompt()
-    #             if choice == 'quit':
-    #                 sys.exit()
-    #             elif choice == 'restart':
-    #                 data.delete_data(data_obj)
-    #                 _test_names = [_test_name] + _test_names
-    #             elif choice == 'resume':
-    #                  _test_names = [_test_name] + _test_names
+        if _data_obj is not None:
+
+            choice = prompt()
+
+            if choice == 'quit':
+
+                sys.exit()
+
+            elif choice == 'restart':
+
+                data.delete_data(_data_obj)
+                test_names = [test_name] + test_names
+
+            elif choice == 'resume':
+
+                test_names = [test_name] + test_names
 
 
 def prompt():
@@ -224,16 +231,17 @@ def prompt():
                Usually, this means from the last trial the proband
                saw before exiting. However, for some tests (e.g., the
                IPCPTS), this means starting from the beginning of the
-               last phase of trials. Also, if you are running this
-               batch script without a proband_id (i.e., in debug
-               mode), 'resume' is equivalent to 'restart'.
+               last phase of trials. If you are running this batch
+               script without a proband_id (i.e., in debug mode),
+               'resume' is equivalent to 'restart'.
 
     restart    Start the previous test again, deleting any data
                previously collected from the proband in this test.
 
     skip       Move on to the next test in the batch, leaving the
                previous test incomplete. Note that summary statistics
-               for incomplete tests will not appear in the localdb.
+               for incomplete tests will not appear in the local
+               database.
 
     quit       Kill the batch.
 
