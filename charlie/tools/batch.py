@@ -15,7 +15,6 @@ import charlie.tools.instructions as instructions
 import charlie.tools.questionnaires as questionnaires
 import charlie.tools.misc as misc
 import charlie.tools.visual as visual
-import charlie.gui.maintab
 
 
 class Test:
@@ -158,15 +157,12 @@ class Test:
             self.window.raise_()
 
 
-def run_batch(from_gui=False):
+def run_batch():
     """
     Run a sequence of tests. The command-line option -b must be a text file
     containing the names of the tests to be included in the batch, in the order
     they should be run.
     """
-    app = QtGui.QApplication.instance()
-    if app:
-        app.quit()
     print '++++++++++\nBATCH MODE\n++++++++++\n'
     args = arguments.get_parser().parse_args()
     quickfix = lambda f: f.replace('\n', '').replace('\r', '')
@@ -291,7 +287,6 @@ def run_single_test(test_name):
     test = Test(test_name)
     test.run()
 
-def run_gui():
-    print vars(charlie.gui.maintab).keys()
 
-run_gui()
+def main():
+    run_batch()
