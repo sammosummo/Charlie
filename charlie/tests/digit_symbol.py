@@ -120,6 +120,7 @@ def trial_method(screen, instructions, trial_info):
         screen.load_keyboard_keys()
         screen.create_keyboard_key_zones(('l', 'r'), 200, 250)
         images = sorted(f for f in screen.images if 'sym' in f)
+        print images
         screen.create_image_zones(sorted(images), 100, -300)
         screen.create_word_zones(list('123456789'), 100, -200)
         screen.create_word_zones(labels, 200, 350)

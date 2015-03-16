@@ -157,12 +157,16 @@ class Test:
             self.window.raise_()
 
 
-def run_batch():
+def run_batch(from_gui=False):
     """
     Run a sequence of tests. The command-line option -b must be a text file
     containing the names of the tests to be included in the batch, in the order
     they should be run.
     """
+    if from_gui is True:
+        app = QtGui.QApplication.instance()
+        app.quit()
+        app.exit()
     print '++++++++++\nBATCH MODE\n++++++++++\n'
     args = arguments.get_parser().parse_args()
     quickfix = lambda f: f.replace('\n', '').replace('\r', '')

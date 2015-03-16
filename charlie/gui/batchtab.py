@@ -1,6 +1,6 @@
 __author__ = 'smathias'
 
-
+import atexit
 import sys
 try:
     from PySide import QtGui, QtCore
@@ -97,4 +97,7 @@ class BatchTab(QtGui.QWidget):
             self._batch = None
 
     def run(self):
-        self.parent().quit_and_run_batch()
+        if self._batch is not None:
+            sys.argv += ['-b', self._batch]
+        if self._q is not None:
+            sys.argv += ['-q', self._q]

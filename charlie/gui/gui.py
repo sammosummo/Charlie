@@ -23,6 +23,7 @@ from charlie.gui.qtab import QuestionnaireTab
 from charlie.gui.batchtab import BatchTab
 from charlie.gui.notestab import NotesTab
 from charlie.gui.datatab import DataTab
+import charlie.tools.batch as batch
 
 
 class HomeWidget(QtGui.QWidget):
@@ -34,8 +35,8 @@ class HomeWidget(QtGui.QWidget):
 
     def __init__(self, parent=None):
         super(HomeWidget, self).__init__(parent=parent)
-        self.args = arguments.get_args()
-        self.instr = instructions.read_instructions('manager', self.args.lang)
+        sys.argv = sys.argv[:1]  # wipe all sys args
+        self.instr = instructions.read_instructions('manager', 'EN')
         self.setup_ui()
 
     def setup_ui(self):
@@ -84,15 +85,10 @@ class HomeWidget(QtGui.QWidget):
         self.show()
         self.raise_()
 
-    def quit_and_run_batch(self):
-
-        app = QtGui.QApplication.instance()
-        app.quit()
-
 
 def main():
     app = QtGui.QApplication(sys.argv)
-    app.aboutToQuit.connect(app.deleteLater)
+    app.aboutToQuit.connect(batch.run_batch)
     _ = HomeWidget()
     app.exec_()
 

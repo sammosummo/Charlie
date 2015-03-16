@@ -22,10 +22,9 @@ class SetupTab(QtGui.QWidget):
         super(SetupTab, self).__init__(parent=parent)
 
         self.instr = self.parent().instr
-        self.args = self.parent().args
-        self.proband_id = self.args.proband_id
-        self.user_id = self.args.user_id
-        self.proj_id = self.args.proj_id
+        self.proband_id = 'TEST'
+        self.user_id = None
+        self.proj_id = None
         self.df = data.populate_demographics()
         self.projects_list = [self.proj_id] + \
                              self.df.proj_id.dropna().unique().tolist()

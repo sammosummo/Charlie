@@ -191,7 +191,7 @@ class Screen:
         representing the path of an image, a pygame surface, or a 2D numpy
         array.
         """
-        if type(image) == str:
+        if isinstance(image, basestring):
             image = pygame.image.load(image)
             image = image.convert_alpha()
         elif type(image) == np.ndarray:
