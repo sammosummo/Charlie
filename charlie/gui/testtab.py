@@ -9,7 +9,7 @@ from pkgutil import iter_modules
 import charlie.tests
 from os.path import dirname
 import importlib
-import charlie.tools.batch2 as batch
+import charlie.tools.batch as batch
 
 
 m = 'Make sure the Proband ID is set correctly before running a test!'

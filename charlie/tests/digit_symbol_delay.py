@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 16:52:26 2014
-
 digit_symbol_delay: Delayed digit-symbol recognition test.
 
 This is a very brief test designed to be administered immediately after the
@@ -99,18 +97,9 @@ def summary_method(data_obj, instructions):
     stats = summaries.get_universal_stats(data_obj)
     stats += summaries.get_accuracy_stats(df, '')
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
 
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

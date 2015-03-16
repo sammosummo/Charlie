@@ -197,4 +197,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

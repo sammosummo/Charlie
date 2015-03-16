@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct  1 12:08:08 2014
-
 matrix_reasoning: Matrix reasoning test.
 
 This is identical to the matrix reasoning test from the WAIS-III [1]. On each
@@ -185,18 +183,9 @@ def summary_method(data_obj, instructions):
     stats = summaries.get_universal_stats(data_obj)
     stats += summaries.get_accuracy_stats(df, '')
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
 
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

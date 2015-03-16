@@ -307,6 +307,8 @@ class Data:
 
         if summary_method is not None and self.proband_id != 'TEST':
             df2 = summary_method(self, instructions)
+            print '---Here are the summary stats:'
+            print df2.T
             df2.to_sql(self.test_name, con, index=False, if_exists='append')
             self.to_log('summary stats added to localdb')
 

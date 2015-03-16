@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 16:52:26 2014
-
 cvlt2: Computerised California verbal learning test.
 
 This is a modified and abridged version of the adult CVLT-II [1]. This script
@@ -20,16 +18,19 @@ learned. This is omitted from the current test. In addition to this script,
 there are 'recall' and 'recognition' portions to our version of the CVLT. These
 are executed by two other scripts in the battery.
 
+Time required: ~8 min
+
 Summary statistics:
 
-    trial_X_valid : Number of valid responses on trial X.
-    trial_X_intrusions : Number of intrusions on trial X.
-    trial_X_repetitions : Number of repetitions on trial X.
-    trial_X_semantic : List-based semantic clustering index on trial X [2].
-    trial_X_serial : List-based serial recall index on trial X [2].
-    trial_X_dprime : Recall discriminability index [4].
-    trial_x_criterion : Recall bias [5].
-    mean_* : Mean stats across the five trials.
+    trial_[i]* : results for the ith trial
+    [total or mean]_* : aggregate scores
+
+    *_valid : Number of valid responses on trial X
+    *_intrusions : Number of intrusions on trial X
+    *_repetitions : Number of repetitions on trial X
+    *_semantic : List-based semantic clustering index on trial X [2]
+    *_serial : List-based serial recall index on trial X [2]
+    *_dprime : Recall discriminability index [4]
 
 References:
 
@@ -41,17 +42,13 @@ Corporation, San Antonio, TX.
 
 [3] Stricker, J.L., Brown, G.G., Wixted, J., Baldo, J.V., & Delis, D.C. (2002).
 New semantic and serial clustering indices for the California Verbal Learning
-Test–Second Edition: Background, rationale, and formulae. J. Int. Neuropsychol.
-Soc., 8:425-435.
+Test–Second Edition: Background, rationale, and formulae. J Int Neuropsychol
+Soc, 8:425-435.
 
 [4] Delis, D.C., Wetter, S.R., Jacobson, M.W., Peavy, G., Hamilton, J.,
 Gongvatana, A., et al. (2005). Recall discriminability: utility of a new
-CVLT-II measure in the differential diagnosis of dementia. J. Int.
-Neuropsychol. Soc., 11(6):708-15.
-
-[5] This measure was not included by Delis, but I don't see why not. It
-provides an index of how many intrusions there were relative to the number of
-hits.
+CVLT-II measure in the differential diagnosis of dementia. J Int
+Neuropsychol Soc, 11(6):708-15.
 
 """
 __version__ = 1.0
@@ -62,8 +59,6 @@ try:
     from PySide import QtGui, QtCore
 except ImportError:
     from PyQt4 import QtGui, QtCore
-
-import pandas
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
 import charlie.tools.batch as batch
@@ -403,8 +398,7 @@ def summary_method(data_obj, instructions):
         'repetitions',
         'semantic',
         'serial',
-        'dprime',
-        'criterion'
+        'dprime'
     ]
     words = instructions[-1].split('\n')
 
@@ -419,8 +413,8 @@ def summary_method(data_obj, instructions):
         semantic = semantic_clustering(words, clusters, responses)
         serial = serial_clustering(words, responses)
         sdt = max([nintr, 16]), 16, nvalid, nintr
-        d, c = summaries.sdt_yesno(*sdt)
-        entries = [nvalid, nintr, nreps, semantic, serial, d, c]
+        d, _ = summaries.sdt_yesno(*sdt)
+        entries = [nvalid, nintr, nreps, semantic, serial, d]
         stats += zip(cols, entries)
 
     df = summaries.make_df(stats)
@@ -433,28 +427,18 @@ def summary_method(data_obj, instructions):
         entries.append(x)
     stats += zip(cols, entries)
 
-    cols = ['mean_%s' % dv for dv in ['semantic', 'serial', 'dprime',
-                                      'criterion']]
+    cols = ['mean_%s' % dv for dv in ['semantic', 'serial', 'dprime']]
     entries = []
-    for dv in ['semantic', 'serial', 'dprime', 'criterion']:
+    for dv in ['semantic', 'serial', 'dprime']:
         cs = [c for c in df.columns if '_' + dv in c]
         x = float(df[cs].mean(axis=1))
         entries.append(x)
     stats += zip(cols, entries)
 
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
 
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

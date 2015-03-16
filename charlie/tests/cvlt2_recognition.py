@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 16:52:26 2014
-
 cvlt2_recognition: Recognition portion of the computerised California verbal
 learning test.
 
@@ -14,6 +12,8 @@ categories ('unrelated' words).
 
 In the original CVLT, some of the noise words comprise list B. Since we don't
 perform list B, we just count these as prototypical or unrelated.
+
+Time_taken: ~2 min
 
 Summary statistics:
 
@@ -158,20 +158,9 @@ def summary_method(data_obj, instructions):
     stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
 
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
 
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
-
-# TODO: stimuli are currently missing!
+    batch.run_single_test(test_name)

@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Oct  3 15:12:07 2014
-
 ipcpts: The identical pairs continuous performance test, three-symbol version
 
 This test is based on the original continuous performance test introduced by
@@ -182,7 +180,8 @@ def trial_method(screen, instructions, trial_info):
 
             if current_time < pt and not symbols_on:
 
-                images = [screen.images[a] for a in trial_info[-3:]]
+                # images = [screen.images[a] for a in trial_info[-3:]]
+                images = trial_info[-3:]
                 screen.create_image_zones(images, 150, -50)
                 screen.create_keyboard_key_zones(['s'], 0, 250)
                 screen.update_image_zones(update=False)
@@ -246,12 +245,5 @@ def summary_method(data_obj, instructions):
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

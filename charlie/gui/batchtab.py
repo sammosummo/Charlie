@@ -6,7 +6,7 @@ try:
     from PySide import QtGui, QtCore
 except ImportError:
     from PyQt4 import QtGui, QtCore
-import charlie.tools.batch2 as batch
+import charlie.tools.batch as batch
 import charlie.tools.questionnaires as questionnaires
 
 

@@ -166,18 +166,9 @@ def summary_method(data_obj, instructions):
     stats += summaries.get_rt_stats(df, '')
     stats += summaries.get_sdt_stats(df, noise, signal, '')
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
 
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

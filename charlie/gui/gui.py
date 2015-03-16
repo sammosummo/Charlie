@@ -52,10 +52,16 @@ class HomeWidget(QtGui.QWidget):
         txt.setAlignment(QtCore.Qt.AlignCenter)
         vbox.addWidget(txt)
 
+        self.setup_tab = SetupTab(self)
         self.batch_tab = BatchTab(self)
+        self.test_tab = TestTab(self)
+        self.q_tab = QuestionnaireTab(self)
 
-        tabs = QtGui.QTabWidget()
-        tabs.addTab(batch_tab, self.tr('Batch'))
+        self.tabs = QtGui.QTabWidget()
+        self.tabs.addTab(self.setup_tab, self.tr('Session setup'))
+        self.tabs.addTab(self.batch_tab, self.tr('Batch'))
+        self.tabs.addTab(self.test_tab, self.tr('Individual tests'))
+        self.tabs.addTab(self.q_tab, self.tr('Questionnaires'))
 
         # setup_tab = SetupTab(self)
         # tabs.addTab(setup_tab, self.tr('Session setup'))
@@ -72,10 +78,11 @@ class HomeWidget(QtGui.QWidget):
         # tabs.addTab(notes_tab, self.tr('Notes'))
         # data_tab = DataTab(self)
         # tabs.addTab(data_tab, self.tr('Data transfer'))
-        vbox.addWidget(tabs)
+        vbox.addWidget(self.tabs)
 
         self.setLayout(vbox)
         self.show()
+        self.raise_()
 
     def quit_and_run_batch(self):
 

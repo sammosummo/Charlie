@@ -9,7 +9,7 @@ Created on Tue Jun 03 14:19:17 2014
 import pygame
 
 
-DEFAULT_ITI_NOFEEDBACK = 0.25
+DEFAULT_ITI_NOFEEDBACK = 0.1
 DEFAULT_ITI_FEEDBACK = 1.
 
 Clock = pygame.time.Clock

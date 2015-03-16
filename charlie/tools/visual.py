@@ -277,7 +277,7 @@ class Screen:
         x0 = - int(0.5 * spacing * (n - 1))
         for i, f in enumerate(images):
             x = x0 + spacing*i
-            q, r = self.blit_image(self.images[f], (x, y), True, False)
+            q, r = self.blit_image(f, (x, y), True, False)
             self.zones.append(r)
             self.imagezones[f] = (q, r)
 

@@ -1,171 +1,163 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
-Created on Tue Jan  6 16:15:06 2015
-
-
-@author: Sam
+Executing individual tests and batches of tests.
 """
 
 import importlib
 import os
-from os.path import join as pj
 import sys
-import charlie.tools.instructions as instructions
-import charlie.tools.data as data
-import charlie.tools.visual as visual
-import charlie.tools.questionnaires as questionnaires
+try:
+    from PySide import QtGui, QtCore
+except ImportError:
+    from PyQt4 import QtGui, QtCore
 import charlie.tools.arguments as arguments
-from os import listdir
+import charlie.tools.data as data
+import charlie.tools.instructions as instructions
+import charlie.tools.questionnaires as questionnaires
+import charlie.tools.misc as misc
+import charlie.tools.visual as visual
 
 
-def run_a_test(test_name, batch_mode=False):
+class Test:
+
     """
-    Initialises and runs a single test from the battery. The test script needs
-    to be present in the 'test' subdirectory.
-
-    This function loads the instructions in the specified language; checks to
-    see whether a pickled data object already exists for this proband on this
-    test; loads this object or creates a new one (along with a new control
-    iterable inside the object); creates a pygame screen; runs each trial until
-    the control iterable is empty; saves the data and computes summary
-    statistics; and finally calls the quit_single_test() function.
-
-    The function also optionally checks if the user exited the test (by hitting
-    escape) rather than exiting normally (when the control file is empty).  If
-    so, a prompt is displayed with various control-flow options.
+    Test class. Initialised using the test_name, which must be a string with
+    exactly the same name as a test in the test battery. Optionally supply a
+    batch_mode bool.
     """
-    print '--------' + ('-' * len(test_name))
-    print 'RUNNING %s' % test_name.upper()
-    print '--------' + ('-' * len(test_name)) + '\n'
 
-    # copy system arguments into local namespace
-    args = arguments.get_args()
-    proband_id = args.proband_id
-    user_id = args.user_id
-    proj_id = args.proj_id
-    lang = args.lang
+    def __init__(self, test_name, batch_mode=False, parent=None):
 
-    # import the test module
-    mod = importlib.import_module('charlie.tests.' + test_name)
-    print '---Printing docstring for this test.'
-    print mod.__doc__
+        print '---Test object initialised.'
+        self.batch_mode = batch_mode
+        args = arguments.get_args()
+        self.test_name = test_name
+        self.proband_id = args.proband_id
+        self.user_id = args.user_id
+        self.proj_id = args.proj_id
+        self.lang = args.lang
+        self.instr = instructions.read_instructions(self.test_name, self.lang)
 
-    # load language-dependent task instructions
-    instr = instructions.read_instructions(test_name, lang)
+        self.mod = importlib.import_module('charlie.tests.' + self.test_name)
+        self.output_format = getattr(self.mod, 'output_format')
+        self.control_method = getattr(self.mod, 'control_method')
+        self._control = self.control_method(self.proband_id, self.instr)
 
-    # load data object
-    print '---Loading data from %s, if exists.' % proband_id
-    data_obj = data.load_data(proband_id,
-                              lang,
-                              user_id,
-                              proj_id,
-                              test_name,
-                              getattr(mod, 'output_format'))
-    if not data_obj.control and not data_obj.data:
-        print '---New proband detected.'
-        control_method = getattr(mod, 'control_method')
-        data_obj.control = control_method(proband_id, instr)
-        data_obj.data = []
+        if hasattr(self.mod, 'trial_method'):
+            self.user_controlled = False
+        else:
+            self.user_controlled = True
 
-    # load the experimenter gui, if appropriate
-    if not hasattr(mod, 'trial_method'):
+        print '---Creating a data object.'
+        self.data_obj = data.load_data(
+            self.proband_id,
+            self.lang,
+            self.user_id,
+            self.proj_id,
+            self.test_name,
+            self.output_format
+        )
+        if not self.data_obj.control and not self.data_obj.data:
+            print '---New proband detected.'
+            self.data_obj.control = self._control
+            self.data_obj.data = []
+        else:
+            print '---Previous data found for this proband in this test.'
 
-        print '---No trial_method, must be an experimenter-operated test.'
-        screen = visual.Screen()
-        screen.splash(instr[0])
-        screen.kill()
+    def run(self, from_gui=False):
 
-        QtGui = getattr(mod, 'QtGui')
-        QtCore = getattr(mod, 'QtCore')
-        MainWindow = getattr(mod, 'MainWindow')
-        app = QtGui.QApplication.instance()
-        if not app: # create QApplication if it doesnt exist
-            app = QtGui.QApplication(sys.argv)
-            app.aboutToQuit.connect(app.deleteLater)
-            _ = MainWindow(data_obj, instr)
-    #            sys.exit(app.exec_())
-            app.exec_()
+        print '---Running test.'
+        if self.user_controlled is False:
+            return self.run_pygame()
+        else:
+            return self.run_qt(from_gui)
 
-    # set up a normal pygame session
-    else:
+    def run_pygame(self):
 
-        print '---Loading Pygame, etc..'
+        print '---This is a pygame test.'
+        self.screen = visual.Screen()
+        self.trial_method = getattr(self.mod, 'trial_method')
 
-        # make screen and load all images
-        screen = visual.Screen()
-        if hasattr(mod, 'black_bg'):
+        if hasattr(self.mod, 'black_bg'):
             visual.BG_COLOUR = visual.BLACK
             visual.DEFAULT_TEXT_COLOUR = visual.WHITE
         else:
             visual.BG_COLOUR = visual.LIGHT_GREY
             visual.DEFAULT_TEXT_COLOUR = visual.BLACK
-        p = pj(data.VISUAL_PATH, test_name)
-        imgfs = ['.png', '.jpg', '.gif', '.bmp']
-        if os.path.exists(p):
-            print '---Loading visual stimuli.'
-            imgs = [f for f in data.ld(p) if f[-4:].lower() in imgfs]
-            [screen.load_image(pj(p, i)) for i in imgs]
 
-        # run trials
-        while data_obj.control:
+        img_path = data.pj(data.VISUAL_PATH, self.test_name)
+        if os.path.exists(img_path):
+            print '---Preloading images.'
+            files = [data.pj(img_path, f) for f in os.listdir(img_path)]
+            [self.screen.load_image(f) for f in files if misc.is_imgfile(f)]
 
-            print '---Running new trial.'
-            t = data_obj.control.pop(0)
-            trial_method = getattr(mod, 'trial_method')
-            trial_info = trial_method(screen, instr, t)
+        while self.data_obj.control:
 
-            # record the outcome of the trial
+            print '---New trial.'
+            trial = self.data_obj.control.pop(0)
+            trial_info = self.trial_method(self.screen, self.instr, trial)
+
             if trial_info != 'EXIT':
 
+                print '---Trial over.'
                 if type(trial_info) == list:
-                    data_obj.data += trial_info
+                    self.data_obj.data += trial_info
                 else:
-                    data_obj.data.append(trial_info)
+                    self.data_obj.data.append(trial_info)
 
-                if proband_id != 'TEST':
-                    print '---Saving and writing csv.'
-                    data_obj.update()
-                    data_obj.to_csv()
+                if self.proband_id != 'TEST':
+                    print '---Saving the data.'
+                    self.data_obj.update()
+                    self.data_obj.to_csv()
 
-                # check for a stopping rule
-                if hasattr(mod, 'stopping_rule'):
-                    stopping_rule = getattr(mod, 'stopping_rule')
-                    print '--Testing stopping rule ...',
-                    if stopping_rule(data_obj):
-                        print 'failed.'
-                        data_obj.control = []
-                    else:
-                        print 'passed.'
+                if hasattr(self.mod, 'stopping_rule'):
+                    stopping_rule = getattr(self.mod, 'stopping_rule')
+                    if stopping_rule(self.data_obj):
+                        print '---Stopping rule failed.'
+                        self.data_obj.control = []
 
-                # check for remaining trials
-                if not data_obj.control:
-                    print '---No more trials in the queue.'
-                    data_obj.test_done = True
-                    if proband_id != 'TEST':
+                if not self.data_obj.control:
+                    print '---Test over.'
+                    self.data_obj.test_done = True
+                    if self.proband_id != 'TEST':
                         print '---Computing summary stats.'
-                        summary_method = getattr(mod, 'summary_method')
-                        data_obj.to_localdb(summary_method, instr)
+                        summary_method = getattr(self.mod, 'summary_method')
+                        self.data_obj.to_localdb(summary_method, self.instr)
 
-            # premature exit
             else:
 
-                print "---'EXIT' detected."
-                if not batch_mode:
-                    screen.kill()
+                print '---Exit detected.'
+                if self.batch_mode is False:
+                    self.screen.kill()
                     break  # act as if the session is over
 
                 else:
-                    screen.kill()
-                    return prompt(batch_mode), data_obj
-    print '---All trials done.\n---------'
-    print 'TEST OVER'
-    print '---------'
-    screen.kill()
-    return None, data_obj
+                    self.screen.kill()
+                    return self.data_obj
+
+        self.screen.kill()
+
+    def run_qt(self, from_gui):
+
+        if from_gui is False:
+
+            screen = visual.Screen()
+            screen.splash(self.instr[0])
+            screen.kill()
+
+            MainWindow = getattr(self.mod, 'MainWindow')
+            app = QtGui.QApplication(sys.argv)
+            app.aboutToQuit.connect(app.deleteLater)
+            window = MainWindow(self.data_obj, self.instr)
+            app.exec_()
+
+        else:
+
+            MainWindow = getattr(self.mod, 'MainWindow')
+            self.window = MainWindow(self.data_obj, self.instr)
+            self.window.raise_()
 
 
-def run_a_batch():
+def run_batch():
     """
     Run a sequence of tests. The command-line option -b must be a text file
     containing the names of the tests to be included in the batch, in the order
@@ -203,27 +195,31 @@ def run_a_batch():
     test_names = [quickfix(l) for l in f]
     print '---Running the following tests in a batch:', test_names
 
-    for test_name in test_names:
+    while test_names:
 
-        repeat = True
-        while repeat:
+        test_name = test_names.pop(0)
+        test = Test(test_name)
+        _data_obj = test.run()
 
-            choice, data_obj = run_a_test(test_name, True)
+        if _data_obj is not None:
 
-            if not choice or choice == 'skip':
+            choice = prompt()
 
-                repeat = False
-
-            elif choice == 'quit':
+            if choice == 'quit':
 
                 sys.exit()
 
             elif choice == 'restart':
 
-                data.delete_data(data_obj)
+                data.delete_data(_data_obj)
+                test_names = [test_name] + test_names
+
+            elif choice == 'resume':
+
+                test_names = [test_name] + test_names
 
 
-def prompt(batch_mode):
+def prompt():
     """
     Control-flow options.
     """
@@ -238,16 +234,17 @@ def prompt(batch_mode):
                Usually, this means from the last trial the proband
                saw before exiting. However, for some tests (e.g., the
                IPCPTS), this means starting from the beginning of the
-               last phase of trials. Also, if you are running this
-               batch script without a proband_id (i.e., in debug
-               mode), 'resume' is equivalent to 'restart'.
+               last phase of trials. If you are running this batch
+               script without a proband_id (i.e., in debug mode),
+               'resume' is equivalent to 'restart'.
 
     restart    Start the previous test again, deleting any data
                previously collected from the proband in this test.
 
     skip       Move on to the next test in the batch, leaving the
                previous test incomplete. Note that summary statistics
-               for incomplete tests will not appear in the localdb.
+               for incomplete tests will not appear in the local
+               database.
 
     quit       Kill the batch.
 
@@ -258,7 +255,7 @@ def prompt(batch_mode):
     choice = raw_input('Type an option >>>')
     if choice.lower() not in choices:
         print 'Not a valid option.'
-        prompt(batch_mode)
+        prompt()
     else:
         return choice
 
@@ -268,7 +265,7 @@ def get_available_batches():
     Returns a list of batch files.
     """
     s = '.txt'
-    files = listdir(data.BATCHES_PATH)
+    files = data.ld(data.BATCHES_PATH)
     f = lambda q: q.strip(s)
     return [f(q) for q in files if s in q]
 
@@ -283,16 +280,9 @@ def tests_in_batch(b):
     return blist
 
 
-def main():
+def run_single_test(test_name):
     """
-    Main function.
+    Convenience function for running a single test.
     """
-    args = arguments.get_parser().parse_args()
-    if args.batch_file:
-        run_a_batch()
-    elif args.test_name:
-        run_a_test(args.test_name)
-
-
-if __name__ == '__main__':
-    main()
+    test = Test(test_name)
+    test.run()

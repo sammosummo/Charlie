@@ -225,8 +225,5 @@ def summary_method(data_obj, instructions):
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
+if __name__ == '__main__':
+    batch.run_single_test(test_name)

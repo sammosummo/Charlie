@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 16:52:26 2014
-
 digit_symbol: Digit-symbol substitution test.
 
-This test is identical to the digit-symbol test found in STAN [1]. Although it
-is similar to the pen-and-paper digit-symbol test found in the WAIS-III [2] and
-other, the present test does not involving drawing each symbol, so it is not
-known how performance on the two versions are related. On each trial, the
-proband sees a key of digits and symbols at the top of the screen, as well as a
-single digit and a single symbol in the centre of the screen. The proband
-indicates whether the target symbol matches the target digit according to the
-key by responding either 'yes' or 'no'. During the test phase, the proband
-completes as many trials as they can within 90 seconds. The symbols were
-originally designed by D. Glahn for STAN.
+This test was originally designed by D. Glahn for an earlier computerised
+test battery called STAN [1]. Although it shares its name with a pen-and-paper
+test found in the WAIS-III [2], it is not known how performance on the two
+tests is related.
+
+On each trial, the proband sees a key of digits and symbols at the top of the
+screen, as well as a single digit and a single symbol in the centre of the
+screen. The proband indicates whether the target symbol matches the target
+digit according to the key by responding either 'yes' or 'no'. During the test
+phase, the proband completes as many trials as they can within 90 seconds. The
+symbols currently the same as those in the STAN.
 
 Summary statistics:
 
@@ -136,7 +135,6 @@ def trial_method(screen, instructions, trial_info):
     
         # set up trial
         screen.update_image_zones()
-        print screen.images
         img = screen.images[f]
         p = labels, [visual.DEFAULT_TEXT_COLOUR] * len(labels)
         screen.change_word_colour(*p)
@@ -231,7 +229,6 @@ def trial_method(screen, instructions, trial_info):
                 return 'EXIT'
             
             elif k:
-    
                 rt = trial_clock.tick_busy_loop()
                 new_trial = True
                 rsp = dict(zip(keys,labels))[k]
@@ -239,8 +236,8 @@ def trial_method(screen, instructions, trial_info):
                 screen.change_word_colour(rsp, visual.BLUE)
                 screen.change_key_colour(rspk, 'b', update=False)
                 screen.update()
-                screen.wipe(img.get_rect(center=(0,0)), update=False)
-                screen.wipe(r)
+                # screen.wipe(img.get_rect(center=(0,0)), update=False)
+                # screen.wipe(r)
                 trial_info = (proband_id, test_name, phase, trialn, digit,
                               symbol, ans, f, rsp, rt)
                 _data.append(trial_info)
@@ -270,12 +267,5 @@ def summary_method(data_obj, instructions):
     return df
 
 
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

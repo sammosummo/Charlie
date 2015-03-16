@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 16:52:26 2014
-
 cvlt2_recall: Recall portion of the computerised California verbal learning
 test.
 
@@ -11,8 +9,9 @@ The procedure and summary statistics are therefore the same as those for one of
 the trials in the first portion of the CVLT.
 
 Technical note: this script imports functions from cvlt.py. Therefore this
-script must be present in the 'tests' subfolder.
+script must be present in the 'tests' subpackage.
 
+Time required: ~1 min
 
 Summary statistics:
 
@@ -296,18 +295,8 @@ def summary_method(data_obj, instructions):
     stats += zip(cols, entries)
 
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
 
     return df
 
-
-def main():
-    """
-    Run this test.
-    """
-    batch.run_a_test(test_name)
-
-
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)

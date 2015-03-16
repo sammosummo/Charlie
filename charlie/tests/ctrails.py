@@ -1,50 +1,69 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 10 11:06:45 2014
-
 cTrails: Computerised trail-making test.
 
 In this task, the proband must click on circles drawn on the screen in a
 specified order, making a 'trail' between them. There are a total of six trials
 in the test, distributed over three phases. In the first phase, the proband
-draws trails between consequtive numbers starting from 1. In the second, the
-proband does the same with letters starting from a. In the third, the proband
-alternates between numbers and letters. Each phase contains a practice trial
-with 8 cirles, and test trial with 25 circles.
+draws trails between consecutive numbers, starting with 1. In the second phase,
+the proband does the same with letters starting with a. In the third phase, the
+proband alternates between numbers and letters. Each phase contains a practice
+trial with 8 circles, and test trial with 25 circles.
 
-The traditional trail-making test contains only two phases (parts A and B,
-equivalent to 'number' and 'number-letter' phases in the present version). The
+The traditional trail-making test [1, 2] contains only two phases (equivalent
+to the 'number' and 'number-letter' phases in the present version). The
 traditional test is also done with pen and paper, and requires an experienced
 experimenter to administer it. Thus the current version should be more
 convenient than the traditional test.
 
-Summary statistics include total response times and number of errors per trial,
-and response-time differences between trials.
+Please note that this test has not yet been compared or verified with the pen-
+and-paper trail-making test. It is unknown how performance on the two tests
+relate to one another.
 
-Please note that this test has not been compared or verified with the pen-and-
-paper trail-making test. It is unknown how performance on the two tests relate
-to one another.
+Time required: ~4 min
 
-Time taken by me to complete: 3 min.
+Version history:
 
-Useful references:
+    1.1     To be more consistent with the original TMT, the present version
+            has 25 circles per test trial.
 
-Corrigan, J.D., & Hinkeldey, M.S. (1987). Relationships between parts A and B
-of the Trail Making Test. J Clin Psychol, 43(4):402–409.
+            During pilot testing, one subject clicked the same (incorrect)
+            circle over and over, racking up a large number of errors. Now the
+            total number of errors and the total number of unique errors are
+            recorded separately.
 
-Reitan, R.M. (1958). Validity of the Trail Making test as an indicator of
+            Audio feedback on incorrect responses.
+
+Summary statistics:
+
+    [phase]_* : number, letter, or number-letter
+
+    *nerrors : number of errors
+    *nuniqueerrors : number of unique errors
+    *time : total time taken to complete
+
+References:
+
+[1] Reitan, R.M. (1958). Validity of the Trail Making test as an indicator of
 organic brain damage. Percept Mot Skills, 8:271-276.
 
-@author: Sam Mathias
-@status: completed
-@version: 1.0
+[2] Corrigan, J.D., & Hinkeldey, M.S. (1987). Relationships between parts A and
+B of the Trail Making Test. J Clin Psychol, 43(4):402–409.
+
+
 
 """
+__version__ = 1.1
+__author__ = 'smathias'
+
 
 import pandas
 import charlie.tools.data as data
 import charlie.tools.events as events
 import charlie.tools.summaries as summaries
+import charlie.tools.batch as batch
+import charlie.tools.audio as audio
+
 
 test_name = 'ctrails'
 
@@ -58,12 +77,10 @@ output_format = [('proband_id', str),
                  ('rt', int),
                  ('total_time', int)]
 
-
 phases = ('number', 'letter', 'number-letter')
 trial_types = ('practice', 'test')
 
 positions = {
-
 'number': {
 'practice': ((-238, -111), (387, 60), (347, -269), (135, -157),
              (34, -360),  (-227, 17),  (130, 122),  (400, 320)),
@@ -71,8 +88,8 @@ positions = {
          (205, -348),  (-209, -253), (-358, -211),  (-43, -37), (122, -264),
          (-176, -359), (-139, -185),    (170, 12),    (400, 0),   (396, 88),
          (347, 316),      (-5, 172),   (138, -67), (-11, -165), (211, -216),
-         (400, -300),    (250, -46),  (-200, 101),  (237, 103),   (35, 329),
-                                                                (300, -329))
+         (400, -300),    (250, -46),  (-200, 101),  (237, 103),   (35, 329)
+         )
     },
 'letter': {
 'practice': ((-285, -22), (-44, 131), (-291, 138), (26, -219),
@@ -81,8 +98,8 @@ positions = {
          (300, -309), (380, -18),  (-387, -47), (-186, -385), (-189, -153),
          (361, 125), (-311, 104),  (-231, 247),  (-71, -192),   (92, -310),
          (298, -88),   (-77, 36),     (98, 73),   (244, 187),    (33, 169),
-         (146, 341), (-136, 336),  (-147, 201), (-294, -102),  (-33, -313), 
-                                                                (80, -113))
+         (146, 341), (-136, 336),  (-147, 201), (-294, -102),  (-33, -313)
+         )
     },
 'number-letter': {
 'practice': ((337, 13),    (-345, -3),  (396, 280),  (-365, 118),
@@ -91,32 +108,36 @@ positions = {
          (308, 252),   (361, 23),    (127, 30), (-266, -64),  (-166, -64),
          (193, -217), (-88, 123),   (178, 213), (353, -240),  (-27, -399),
          (-65, -228), (-248, 58),   (-33, 270), (-371, 180), (-205, -274),
-         (60, -276),  (-132, 28),    (76, 101),   (91, 346),  (-126, 345),
-                                                              (-400, 366))
+         (60, -276),  (-132, 28),    (76, 101),   (91, 346),  (-126, 345)
+         )
     }
 }
 
-_d = range(1, 27)
-_l = 'abcdefghijklmnopqrstuvwxyz'
+_d = range(1, 26)
+_l = 'abcdefghijklmnopqrstuvwxy'
 
 sequences = {
 'number': {'practice': _d[:8], 'test': _d},
 'letter': {'practice': list(_l[:8]), 'test': list(_l)},
 'number-letter': {
     'practice': [i for l in zip(_d, _l)[:4] for i in l],
-    'test': [i for l in zip(_d, _l)[:13] for i in l]
+    'test': [i for l in zip(_d, _l)[:12] for i in l] + [13]
     }
 }
 
 
 def control_method(proband_id, instructions):
-    """Generates a control iterable. For this test, this is a list of tuples in
-    the format (proband_id, test_name, phase, trial_type)."""
+    """
+    Generates a control iterable. For this test, this is a list of tuples in
+    the format (proband_id, test_name, phase, trial_type).
+    """
     return [(proband_id, test_name, p, t) for p in phases for t in trial_types]
 
 
 def trial_method(screen, instructions, trial_info):
-    """Runs a single trial of the test."""
+    """
+    Runs a single trial of the test.
+    """
     _, _, phase, trial_type = trial_info
 
     # gather correct instructions from the instructions list
@@ -187,6 +208,9 @@ def trial_method(screen, instructions, trial_info):
                 screen.blit_line((x1, y1), (x2, y2), 10, prc=False)
             
             screen.update()
+
+        else:
+            audio.play_feedback(False)
         
         # record response
         response = sequence[r]
@@ -214,40 +238,26 @@ def trial_method(screen, instructions, trial_info):
     return data_from_this_trial
 
 
-def summary_method(data, instructions):
-    """Computes summary stats for the trails task."""
-    df = data.to_df()
-    cols, entries = summaries.get_universal_entries(data)
-
+def summary_method(data_obj, _):
+    """
+    Computes summary stats for the ctrails task.
+    """
+    df = data_obj.to_df()
     df = df[df.trial_type == 'test']
-    
+
+    stats = summaries.get_universal_stats(data_obj)
     for phase in df.phase.unique():
-        cols += ['%s_nerrors' % phase, '%s_total_time' % phase]
-        subdf = df[df.phase == phase]
-        entries.append(len(subdf) - len(subdf[subdf['corr'] == 'Correct']))
-        entries.append(list(subdf['total_time'])[0])
-    
-    cols += ['letter_minus_number_time',
-             'number-letter_minus_number_time',
-             'number-letter_minus_letter_time']
-    a = list(df[df.phase == 'number']['total_time'])[0]
-    b = list(df[df.phase == 'letter']['total_time'])[0]
-    c = list(df[df.phase == 'number-letter']['total_time'])[0]
-    entries += [b - a, c - a, c - b]
-    
-    dfsum = pandas.DataFrame(entries, cols).T
-    return dfsum
 
+        _df = df[df.phase == phase]
+        _errors = _df[_df['corr'] != 'Correct']
+        stats += [('%s_nerrors' % phase, len(_errors))]
+        _ue = _errors.rsp.unique()
+        stats += [('%s_nuniqueerrors' % phase, len(_ue))]
+        stats += [('%s_time' % phase, _df.total_time.tolist()[0])]
 
-#def main():
-#    """Command-line executor."""
-#    params = (test_name,
-#              control_method,
-#              trial_method,
-#              output_format,
-#              summary_method)
-#    batch.run_single_test(*params)
+    df = summaries.make_df(stats)
+    return df
 
 
 if __name__ == '__main__':
-    main()
+    batch.run_single_test(test_name)
