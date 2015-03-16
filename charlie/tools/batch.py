@@ -95,6 +95,7 @@ class Test:
             print '---New trial.'
             trial = self.data_obj.control.pop(0)
             trial_info = self.trial_method(self.screen, self.instr, trial)
+            print trial_info
 
             if trial_info != 'EXIT':
 
@@ -198,8 +199,9 @@ def run_batch():
     while test_names:
 
         test_name = test_names.pop(0)
-        test = Test(test_name)
+        test = Test(test_name, True)
         _data_obj = test.run()
+        print _data_obj
 
         if _data_obj is not None:
 
