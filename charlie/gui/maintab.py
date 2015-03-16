@@ -23,7 +23,6 @@ from charlie.gui.qtab import QuestionnaireTab
 from charlie.gui.batchtab import BatchTab
 from charlie.gui.notestab import NotesTab
 from charlie.gui.datatab import DataTab
-import charlie.tools.batch as batch
 
 
 class HomeWidget(QtGui.QWidget):
@@ -86,12 +85,17 @@ class HomeWidget(QtGui.QWidget):
         self.raise_()
 
 
-def main():
-    app = QtGui.QApplication(sys.argv)
-    app.aboutToQuit.connect(batch.run_batch)
-    _ = HomeWidget()
-    app.exec_()
+class CharlieGui:
+
+    def __init__(self):
+        self.run()
+
+    def run(self):
+        app = QtGui.QApplication(sys.argv)
+        app.aboutToQuit.connect(app.deleteLater)
+        window = HomeWidget()
+        app.exec_()
 
 
 if __name__ == '__main__':
-    main()
+    pass

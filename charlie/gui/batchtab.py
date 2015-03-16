@@ -1,6 +1,6 @@
 __author__ = 'smathias'
 
-import atexit
+import os
 import sys
 try:
     from PySide import QtGui, QtCore
