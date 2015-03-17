@@ -303,7 +303,7 @@ def summary_method(data_obj, instructions):
     _df = summaries.make_df(stats)
     for phase in df.phase.unique():
         if phase != 'practice':
-            for dv in ['ncorrect', 'pcorrect', 'dprime', 'rt_mean_outrmvd']:
+            for dv in ['ncorrect', 'dprime', 'rt_mean_outrmvd']:
                 x = 'cost_%s_%s' %(phase, dv)
                 y = float(_df['%s_switch_%s' % (phase, dv)] - _df[
                     '%s_non-switch_%s' % (phase, dv)])
