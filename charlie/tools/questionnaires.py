@@ -147,6 +147,8 @@ def create_questionnaire_app(questionnaires, lang):
     app = web.application(urls, dic, True)
     webbrowser.open('http://localhost:8080/')
     app.run()
+    print '---Please navigate to print http://localhost:8080/ if your browser'
+    print 'does not do so automatically.'
 
 
 def process_form_data(form):
