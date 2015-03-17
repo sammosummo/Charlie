@@ -207,7 +207,7 @@ def summary_method(data_obj, instructions):
         stats += summaries.get_sdt_stats(df1, noise, signal, prefix)
 
     df = summaries.make_df(stats)
-    for dv in ['ncorrect', 'pcorrect', 'dprime', 'rt_mean_outrmvd']:
+    for dv in ['ncorrect', 'dprime', 'rt_mean_outrmvd']:
         x = 'stroop_%s' %dv
         y = float(df['congruent_%s' % dv] - df['incongruent_%s' % dv])
         stats.append((x, y))
