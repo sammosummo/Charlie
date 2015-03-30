@@ -139,30 +139,30 @@ class Test:
 
     def run_qt(self, from_gui):
 
-        if from_gui is False:
+        if self.data_obj.test_done is False:
 
-            screen = visual.Screen()
-            screen.splash(self.instr[0])
-            screen.kill()
+            if from_gui is False:
 
-            MainWindow = getattr(self.mod, 'MainWindow')
-            app = QtGui.QApplication(sys.argv)
-            app.aboutToQuit.connect(app.deleteLater)
-            window = MainWindow(self.data_obj, self.instr)
-            app.exec_()
+                screen = visual.Screen()
+                screen.splash(self.instr[0])
+                screen.kill()
 
-        else:
+                MainWindow = getattr(self.mod, 'MainWindow')
+                app = QtGui.QApplication(sys.argv)
+                app.aboutToQuit.connect(app.deleteLater)
+                window = MainWindow(self.data_obj, self.instr)
+                app.exec_()
 
-            MainWindow = getattr(self.mod, 'MainWindow')
-            self.window = MainWindow(self.data_obj, self.instr)
-            self.window.raise_()
+            else:
+
+                MainWindow = getattr(self.mod, 'MainWindow')
+                self.window = MainWindow(self.data_obj, self.instr)
+                self.window.raise_()
 
 
 def run_batch():
     """
-    Run a sequence of tests. The command-line option -b must be a text file
-    containing the names of the tests to be included in the batch, in the order
-    they should be run.
+    Run a sequence of tests.
     """
     print '++++++++++\nBATCH MODE\n++++++++++\n'
     args = arguments.get_parser().parse_args()
@@ -182,6 +182,7 @@ def run_batch():
         qlist = [quickfix(l) for l in _qlist]
         print qlist
         questionnaires.create_questionnaire_app(qlist, args.lang)
+
     try:
         b = data.pj(data.BATCHES_PATH, args.batch_file + '.txt')
         f = open(b, 'rb')
@@ -291,4 +292,9 @@ def run_single_test(test_name):
 
 
 def main():
-    run_batch()
+    args = arguments.get_parser().parse_args()
+    if args.batch_file:
+        run_batch()
+    elif args.test_name:
+        test = Test(args.test_name)
+        test.run()
