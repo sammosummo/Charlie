@@ -56,7 +56,8 @@ def create_paths():
     """
     to_create = [
         DATA_PATH, LOG_PATH, RAW_DATA_PATH, BACKUP_DATA_PATH, CSV_DATA_PATH,
-        STIM_PATH, VISUAL_PATH, AUDIO_PATH, DB_PATH, INSPECTION_DATA_PATH
+        STIM_PATH, VISUAL_PATH, AUDIO_PATH, DB_PATH, INSPECTION_DATA_PATH,
+        QUESTIONNAIRE_DATA_PATH
     ]
     [os.makedirs(p) for p in to_create if not os.path.exists(p)]
 
