@@ -108,7 +108,7 @@ def process_form_data(form):
     new_form = {}
     new_form.update(form)
 
-    questionnaires_in_form = set([a for a.split('_')[0] in new_form])
+    questionnaires_in_form = set([a.split('_')[0] for a in new_form])
 
     if 'bdi2' in questionnaires_in_form:
         try:
@@ -175,6 +175,8 @@ def process_form_data(form):
                 if 'fnds_%i' % i in form:
 
                     score += int(form['fnds_%i' % i])
+                else:
+                    form['fnds_%i' % i] = ''
 
         new_form['fnds_score'] = score
 
@@ -197,7 +199,7 @@ def to_db(dfs):
             args.proband_id,
             args.lang,
             args.user_id,
-            args.project_id,
+            args.proj_id,
             q_name,
             None
         )
