@@ -165,7 +165,7 @@ def process_form_data(form):
             new_form['stai_a_total'] = ''
             new_form['stai_b_total'] = ''
 
-    if 'fnds_0' in questionnaires_in_form:
+    if 'fnds' in questionnaires_in_form:
 
         score = 0
         if int(form['fnds_0']) == 1:
@@ -176,7 +176,7 @@ def process_form_data(form):
 
                     score += int(form['fnds_%i' % i])
                 else:
-                    form['fnds_%i' % i] = ''
+                    new_form['fnds_%i' % i] = ''
 
         new_form['fnds_score'] = score
 
@@ -207,4 +207,6 @@ def to_db(dfs):
         stats = summaries.get_universal_stats(data_obj)
         df = pandas.concat([summaries.make_df(stats), df], axis=1)
         if args.proband_id != 'TEST':
+            f = '%s_%s.csv' % (args.proband_id, q_name)
+            df.to_csv(data.pj(data.QUESTIONNAIRE_DATA_PATH, f))
             df.to_sql(q_name, con, index=False, if_exists='append')

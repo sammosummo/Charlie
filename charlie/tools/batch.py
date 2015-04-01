@@ -294,6 +294,8 @@ def run_single_test(test_name):
 def main():
     args = arguments.get_parser().parse_args()
     quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+    data.create_paths()
+    data.create_db()
 
     if args.questionnaires:
         print '---Loading questionnaires to administer first:'
