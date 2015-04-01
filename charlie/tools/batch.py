@@ -293,6 +293,22 @@ def run_single_test(test_name):
 
 def main():
     args = arguments.get_parser().parse_args()
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+
+    if args.questionnaires:
+        print '---Loading questionnaires to administer first:'
+        qlist = args.questionnaires.split()
+        _qlist = []
+        for q in qlist:
+            try:
+                _q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
+                f = open(_q, 'rU').readlines()
+                _qlist += f
+            except:
+                _qlist.append(q)
+        qlist = [quickfix(l) for l in _qlist]
+        print qlist
+        questionnaires.create_questionnaire_app(qlist, args.lang)
     if args.batch_file:
         run_batch()
     elif args.test_name:

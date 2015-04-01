@@ -205,10 +205,16 @@ def process_form_data(form):
     if 'fnds_0' in form:
 
         score = 0
-        if form['fnds_0'] == 1:
+        if int(form['fnds_0']) == 1:
+
             for i in xrange(1, 7):
-                score += form['fnds_%i' % i]
+
+                if 'fnds_%i' % i in form:
+
+                    score += int(form['fnds_%i' % i])
+
         new_form['fnds_score'] = score
+        print new_form['fnds_score']
 
     questionnaires = set(k.split('_')[0] for k in new_form)
     dfs = {}
