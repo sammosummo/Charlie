@@ -134,7 +134,7 @@ def summarise_stai(form):
         'stai_33': True, 'stai_34': True, 'stai_35': False, 'stai_36': True,
         'stai_37': False, 'stai_38': False, 'stai_39': True, 'stai_40': False
     }
-    if all(item in form for item, _ in scorecard):
+    if all(item in form for item in scorecard):
 
         a_score = 0
         b_score = 0
@@ -146,7 +146,7 @@ def summarise_stai(form):
             else:
                 this_score = b_score
             if reverse is False:
-                this_score += int(form[item])
+               this_score += int(form[item])
             else:
                 this_score -= int(form[item])
         form['stai_a_total'] = a_score
@@ -234,7 +234,7 @@ def process_form_data(form):
     Analyse the form data and save to the local db
     """
     args = arguments.get_args()
-    for q_name in args.questionnaires:
+    for q_name in args.questionnaires.split():
         data_obj = data.Data(
             args.proband_id,
             args.lang,
@@ -245,11 +245,13 @@ def process_form_data(form):
         )
         data_obj.date_done = datetime.now()
         _stats = summaries.get_universal_stats(data_obj)
-        _func = locals()['summarise_%s' % q_name]
-        _stats.update(_func(form))
+        _func = globals()['summarise_%s' % q_name]
+        _form = _func(form)
+        _stats += [(k, v) for k, v in _form.iteritems()]
         df = summaries.make_df(_stats)
         if args.proband_id != 'TEST':
             f = '%s_%s.csv' % (args.proband_id, q_name)
             df.to_csv(data.pj(data.QUESTIONNAIRE_DATA_PATH, f))
             con = sqlite3.connect(data.LOCAL_DB_F)
             df.to_sql(q_name, con, index=False, if_exists='append')
+            con.close()

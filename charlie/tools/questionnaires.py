@@ -38,7 +38,6 @@ class Index:
 
     def POST(self):
         dfs = qp.process_form_data(web.input())
-        qp.to_db(dfs)
         sys.exit(0)
 
 

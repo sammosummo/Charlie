@@ -81,6 +81,7 @@ def create_db():
         ]
         df = pandas.DataFrame(columns=cols)
         df.to_sql('notes', con, index=False)
+        con.close()
 
 
 def populate_demographics():
@@ -129,6 +130,7 @@ def populate_demographics():
         df.ix[i, 'tests_compl'] = x
     df.replace('', np.nan, inplace=True)
     df.to_sql('probands', con, index=False, if_exists='replace')
+    con.close()
     return df
 
 
@@ -141,6 +143,7 @@ def replace_demographics(df):
     con = sqlite3.connect(LOCAL_DB_F)
     df.replace('', np.nan, inplace=True)
     df.to_sql('probands', con, index=False, if_exists='replace')
+    con.close()
 
 
 def load_data(proband_id, lang, user_id, proj_id, test_name, output_format,
@@ -313,6 +316,7 @@ class Data:
             print df2.T
             df2.to_sql(self.test_name, con, index=False, if_exists='append')
             self.to_log('summary stats added to localdb')
+        con.close()
 
 
 if __name__ == '__main__':
