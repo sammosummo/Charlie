@@ -64,6 +64,8 @@ def backup_to_olin():
         print 'FTP failed.'
         return False
 
+    return True
+
 
 if __name__ == '__main__':
     backup_to_olin()

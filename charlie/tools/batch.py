@@ -222,7 +222,12 @@ def run_batch():
 
                 test_names = [test_name] + test_names
 
-    data_management.backup_to_olin()
+    backed_up = False
+    for i in xrange(5):
+        if backed_up is False:
+            print '---Backup attempt %i/5' % i
+            backed_up = data_management.backup_to_olin()
+
 
 
 def prompt():
