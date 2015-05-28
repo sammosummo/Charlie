@@ -45,6 +45,10 @@ def get_parser():
         '-g', '--gui', action="store_true",
         help='Load the GUI (overrides other options).'
     )
+    parser.add_argument(
+        '-a', '--backup', choices=['', 'sftp'], default='',
+        help="Backup method (e.g., 'sftp')"
+    )
     return parser
 
 

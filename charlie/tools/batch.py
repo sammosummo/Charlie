@@ -15,7 +15,7 @@ import charlie.tools.instructions as instructions
 import charlie.tools.questionnaires as questionnaires
 import charlie.tools.misc as misc
 import charlie.tools.visual as visual
-import charlie.tools.data_management as data_management
+import charlie.tools.backup as backup
 
 
 class Test:
@@ -222,12 +222,6 @@ def run_batch():
 
                 test_names = [test_name] + test_names
 
-    backed_up = False
-    for i in xrange(5):
-        if backed_up is False:
-            print '---Backup attempt %i/5' % i
-            backed_up = data_management.backup_to_olin()
-
 
 
 def prompt():
@@ -324,3 +318,4 @@ def main():
     elif args.test_name:
         test = Test(args.test_name)
         test.run()
+    backup.backup()
