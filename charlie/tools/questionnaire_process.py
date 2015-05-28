@@ -8,7 +8,7 @@ import pandas
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
 import charlie.tools.arguments as arguments
-import charlie.tools.questionnaires as questionnaires
+import charlie.tools.questionnaires
 
 
 def summarise_bis11(form):
@@ -242,11 +242,11 @@ def process_form_data(form):
         try:
             _q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
             f = open(_q, 'rU').readlines()
-             _qlist += f
+            _qlist += f
         except:
              _qlist.append(q)
         qlist = [quickfix(l) for l in _qlist]
-    for q_name in args.questionnaires.split():
+    for q_name in qlist:
         data_obj = data.Data(
             args.proband_id,
             args.lang,
