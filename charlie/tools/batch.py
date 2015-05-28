@@ -15,6 +15,7 @@ import charlie.tools.instructions as instructions
 import charlie.tools.questionnaires as questionnaires
 import charlie.tools.misc as misc
 import charlie.tools.visual as visual
+import charlie.tools.data_management as data_management
 
 
 class Test:
@@ -220,6 +221,8 @@ def run_batch():
             elif choice == 'resume':
 
                 test_names = [test_name] + test_names
+
+    data_management.backup_to_olin()
 
 
 def prompt():
