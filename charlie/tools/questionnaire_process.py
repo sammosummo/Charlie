@@ -8,6 +8,7 @@ import pandas
 import charlie.tools.data as data
 import charlie.tools.summaries as summaries
 import charlie.tools.arguments as arguments
+import charlie.tools.questionnaires as questionnaires
 
 
 def summarise_bis11(form):
@@ -234,6 +235,17 @@ def process_form_data(form):
     Analyse the form data and save to the local db
     """
     args = arguments.get_args()
+    quickfix = lambda f: f.replace('\n', '').replace('\r', '')
+    qlist = args.questionnaires.split()
+    _qlist = []
+    for q in qlist:
+        try:
+            _q = data.pj(data.QUESTIONNAIRES_PATH, q + '.txt')
+            f = open(_q, 'rU').readlines()
+             _qlist += f
+        except:
+             _qlist.append(q)
+        qlist = [quickfix(l) for l in _qlist]
     for q_name in args.questionnaires.split():
         data_obj = data.Data(
             args.proband_id,
