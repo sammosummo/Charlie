@@ -38,11 +38,10 @@ def sftp(server, username, password, dir):
         f1 = os.path.join(data.PACKAGE_DIR, '_data.zip')
         f2 = d + '/_data.zip'
         ftp = ssh.open_sftp()
-        print os.path.exists(f1)
-
-        ftp.put(f1, f2)
+        obj = ftp.put(f1, f2)
+        print obj.attr
         ftp.close()
-        print 'FTPed.'
+        print 'FTPed to %s' % f2
     except:
         print 'FTP failed.'
         return False
