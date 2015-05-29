@@ -318,4 +318,4 @@ def main():
     elif args.test_name:
         test = Test(args.test_name)
         test.run()
-    backup.backup()
+    backup.backup('sftp', 5)

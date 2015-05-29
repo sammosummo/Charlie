@@ -31,12 +31,15 @@ def sftp(server, username, password, dir):
     try:
         t = str(datetime.now()).replace(' ', '_')
         if dir[-1] == '/':
-            d = dir + '/%s/%s' % (gethostname(), t)
-        else:
             d = dir + '%s/%s' % (gethostname(), t)
+        else:
+            d = dir + '/%s/%s' % (gethostname(), t)
         ssh.exec_command('mkdir -p %s' % d)
+        f1 = os.path.join(data.PACKAGE_DIR, '_data.zip')
         f2 = d + '/_data.zip'
         ftp = ssh.open_sftp()
+        print os.path.exists(f1)
+
         ftp.put(f1, f2)
         ftp.close()
         print 'FTPed.'
@@ -70,7 +73,6 @@ def backup(method, attempts):
             for _f in files:
                 zipf.write(os.path.join(root, _f))
         zipf.close()
-        os.remove(f1)
         print 'done.'
     except:
         print 'Failed.'
@@ -83,4 +85,4 @@ def backup(method, attempts):
 
 
 if __name__ == '__main__':
-    backup_to_olin()
+    backup('sftp', 5)
