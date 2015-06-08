@@ -16,6 +16,10 @@ def get_universal_stats(data_obj):
     :param data_obj: An instance of the data.Data class
     :return: (cols, entries)
     """
+    try:
+        time_taken = str(data_obj.date_done - data_obj.initialised)
+    except:
+        time_taken = ''
     return [
         ('computer_os', system()),
         ('computer_name', gethostname()),
@@ -27,7 +31,7 @@ def get_universal_stats(data_obj):
         ('lang', data_obj.lang),
         ('date_started', str(data_obj.initialised)),
         ('date_completed', str(data_obj.date_done)),
-        ('time_taken', str(data_obj.date_done - data_obj.initialised))
+        ('time_taken', time_taken)
     ]
 
 
@@ -92,16 +96,16 @@ def get_sdt_stats(df, noise, signal, prefix='', ans_col='ans', rsp_col='rsp',
     S = len(df[df[ans_col] == signal])
     H = len(df[(df[ans_col] == signal) & (df[rsp_col] == signal)])
     F = len(df[(df[ans_col] == noise) & (df[rsp_col] == signal)])
-    if N < 10 or S < 10:
-        print '---SDT warning: This does not look right:', (N, S, H, F)
+    # if N < 10 or S < 10:
+        # print '---SDT warning: This does not look right:', (N, S, H, F)
     if F == 0 or F == N:
         F += 0.5
         N += 1
-        print '---SDT warning: correction applied'
+        # print '---SDT warning: correction applied'
     if H == S or H == 0:
         H += 0.5
         S += 1
-        print '---SDT warning: correction applied'
+        # print '---SDT warning: correction applied'
     d = norm.ppf(H / float(S)) - norm.ppf(F / float(N))
     c = -0.5 * (norm.ppf(H / float(S)) + norm.ppf(F / float(N)))
     # k = - norm.ppf(F / float(N))
@@ -212,6 +216,11 @@ def get_universal_entries(data_obj):
     proband_id = data_obj.proband_id
     initialised = data_obj.initialised
     date_done = data_obj.date_done
+    if date_done is None:
+        date_done = ''
+        time_taken = ''
+    else:
+        time_taken = str(date_done - initialised)
     user_id = data_obj.user_id
     proj_id = data_obj.proj_id
     lang = data_obj.lang
@@ -220,7 +229,7 @@ def get_universal_entries(data_obj):
             'time_taken', 'computer_os', 'computer_name', 'computer_user',
             'user_id', 'proj_id', 'lang']
     entries = [test_name, proband_id, str(initialised)[:19],
-               str(date_done)[:19], str(date_done - initialised), system(),
+               str(date_done)[:19], time_taken, system(),
                gethostname(), getuser(), user_id, proj_id, lang]
 
     return cols, entries

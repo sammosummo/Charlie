@@ -307,8 +307,8 @@ def summary_method(data_obj, instructions):
     stats += summaries.get_accuracy_stats(df, '', ans_col='endpoint')
 
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
+    # print '---Here are the summary stats:'
+    # print df.T
 
     return df
 

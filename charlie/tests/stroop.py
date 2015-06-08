@@ -213,8 +213,8 @@ def summary_method(data_obj, instructions):
         stats.append((x, y))
 
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
+    # print '---Here are the summary stats:'
+    # print df.T
 
     return df
 

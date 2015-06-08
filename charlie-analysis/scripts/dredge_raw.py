@@ -30,7 +30,8 @@ def rename_proband(data_obj, new_id):
     for trial in data_obj.data:
         new_trial = list(trial)
         new_trial[0] = new_id
-        new_data.append(new_data)
+        new_trial = tuple(new_trial)
+        new_data.append(new_trial)
     data_obj.data = new_data
     return data_obj
 
@@ -39,6 +40,41 @@ def gather_raw_data():
     """
     Recursively extract the raw data files.
     """
+    known_subjects = [
+        4307,
+        4346,
+        4368,
+        4369,
+        4370,
+        4371,
+        4372,
+        4373,
+        4374,
+        4375,
+        4376,
+        4377,
+        4378,
+        4379,
+        4380,
+        4381,
+        4382,
+        4383,
+        4384,
+        4385,
+        4386,
+        4387,
+        4388,
+        4389,
+        4391,
+        4392,
+        4393,
+        4394,
+        4395,
+        4396,
+        4397,
+        4398
+    ]
+    known_subjects = [str(i) for i in known_subjects]
     all_data = []
     files_done = {}
     for path, dirs, files in os.walk(DATA_PATH):
@@ -55,8 +91,50 @@ def gather_raw_data():
                         if data_obj.proband_id == '4397':
                             data_obj = rename_proband(data_obj, '4398')
                 all_data.append(data_obj)
-                print data_obj.test_done
     return all_data
+
+
+def organise_by_task(all_data):
+    """
+    Returns the data objects organised into dictionaries depending on task.
+    """
+    unwanted_cols = [
+        'computer_os', 'computer_name', 'computer_user', 'user_id', 'proj_id',
+    'test_name', 'lang', 'date_started', 'date_completed', 'time_taken'
+    ]
+    data_dic = {}
+    for data_obj in all_data:
+        if data_obj.test_name in data_dic:
+            data_dic[data_obj.test_name].append(data_obj)
+        else:
+            data_dic[data_obj.test_name] = [data_obj]
+
+    all_summaries = []
+    for test_name, data_objs in data_dic.iteritems():
+        print test_name
+        trials = []
+        summaries = []
+        for data_obj in data_objs:
+            print data_obj.proband_id
+            df1, df2 = apply_summary(data_obj)
+            trials.append(df1)
+            summaries.append(df2)
+        print 'all collected for %s' % test_name
+
+        trials_df = pandas.concat(trials).drop_duplicates()
+        trials_df.to_csv('%s_trials.csv' % test_name)
+
+        summaries_df = pandas.concat(summaries).drop_duplicates()
+        summaries_df.to_csv('%s_summaries.csv' % test_name)
+
+        summaries_df.set_index('proband_id', inplace=True)
+        summaries_df.drop(unwanted_cols, axis=1, inplace=True)
+        summaries_df.columns = ['%s.%s' % (test_name, s) for s in summaries_df.columns]
+        all_summaries.append(summaries_df)
+
+    df = pandas.concat(all_summaries, axis=1)
+    df.to_csv('all_summaries.csv')
+
 
 
 def apply_summary(data_obj):
@@ -67,7 +145,6 @@ def apply_summary(data_obj):
     df1 = pandas.DataFrame(np.array(data_obj.data).T, names).transpose()
     for name, dtype in data_obj.output_format:
         df1[name] = df1[name].astype(dtype)
-
     mod = importlib.import_module('charlie.tests.' + data_obj.test_name)
     summary_method = getattr(mod, 'summary_method')
     instr = instructions.read_instructions(data_obj.test_name, data_obj.lang)
@@ -77,28 +154,32 @@ def apply_summary(data_obj):
     return df1, df2
 
 
-def summarise_data():
-    """
-    Create two master data frames.
-    """
-    data_objs = gather_raw_data()
-    trial_dfs = {}
-    summary_dfs = {}
+data_objs = gather_raw_data()
+organise_by_task(data_objs)
+# [apply_summary(data_obj) for data_obj in data_objs]
 
-    for data_obj in data_objs:
-
-        test_name = data_obj.test_name
-        a, b = apply_summary(data_obj)
-        if test_name not in trial_dfs:
-            trial_dfs[test_name] = [a]
-        else:
-            trial_dfs[test_name].append(a)
-        if test_name not in trial_dfs:
-            summary_dfs[test_name] = [b]
-        else:
-            summary_dfs[test_name].append(b)
-
-    trial_df =
+# def summarise_data():
+#     """
+#     Create two master data frames.
+#     """
+#     data_objs = gather_raw_data()
+#     trial_dfs = {}
+#     summary_dfs = {}
+#
+#     for data_obj in data_objs:
+#
+#         test_name = data_obj.test_name
+#         a, b = apply_summary(data_obj)
+#         if test_name not in trial_dfs:
+#             trial_dfs[test_name] = [a]
+#         else:
+#             trial_dfs[test_name].append(a)
+#         if test_name not in trial_dfs:
+#             summary_dfs[test_name] = [b]
+#         else:
+#             summary_dfs[test_name].append(b)
+#
+#     trial_df =
 
 
 # import os

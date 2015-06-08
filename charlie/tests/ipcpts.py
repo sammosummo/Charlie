@@ -239,8 +239,8 @@ def summary_method(data_obj, instructions):
     stats += summaries.get_rt_stats(df, '')
     stats += summaries.get_sdt_stats(df, 'No', 'Yes', '')
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
+    # print '---Here are the summary stats:'
+    # print df.T
 
     return df
 

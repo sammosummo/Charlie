@@ -199,8 +199,8 @@ def summary_method(data, instructions):
     cols += ['ntrials', 'ncorrect']
     entries += [len(df), len(df[df.rsp=='True'])]
     dfsum = pandas.DataFrame(entries, cols).T
-    print '---Here are the summary stats:'
-    print dfsum.T
+    # print '---Here are the summary stats:'
+    # print dfsum.T
     return dfsum
 
 

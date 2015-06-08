@@ -219,8 +219,8 @@ def summary_method(data_obj, instructions):
     stats += summaries.get_cowan_stats(df, noise, signal, '')
 
     df = summaries.make_df(stats)
-    print '---Here are the summary stats:'
-    print df.T
+    # print '---Here are the summary stats:'
+    # print df.T
 
     return df
 

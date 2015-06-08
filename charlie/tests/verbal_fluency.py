@@ -312,8 +312,8 @@ def summary_method(data, instructions):
     d, c = summaries.sdt_yesno(*sdt)
     entries += [valid, invalid, d, c]
     df= pandas.DataFrame(entries, cols).T
-    print '---Here are the summary stats:'
-    print df.T
+    # print '---Here are the summary stats:'
+    # print df.T
     return df
 
 

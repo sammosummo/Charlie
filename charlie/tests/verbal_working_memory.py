@@ -260,8 +260,8 @@ def summary_method(data, instructions):
             kmax = 0
         entries.append(kmax)
     df = pandas.DataFrame(entries, cols).T
-    print '---Here are the summary stats:'
-    print df.T
+    # print '---Here are the summary stats:'
+    # print df.T
     return df
 
 

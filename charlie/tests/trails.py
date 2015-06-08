@@ -312,8 +312,8 @@ def summary_method(data, instructions):
         entries += [int(df[df.phase == phase].rt),
                     int(df[df.phase == phase].nerrors)]
     dfsum = pandas.DataFrame(entries, cols).T
-    print '---Here are the summary stats:'
-    print dfsum.T
+    # print '---Here are the summary stats:'
+    # print dfsum.T
 
     return dfsum
 
