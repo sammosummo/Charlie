@@ -294,7 +294,6 @@ class Data:
         names = ('date', 'message')
         return pandas.DataFrame(np.array(self.log).T, names).transpose()
 
-
     def to_localdb(self, summary_method=None, instructions=None):
         """
         Sends data to the local sqlite database. If a 'summary_method'
