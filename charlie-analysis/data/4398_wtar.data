@@ -1,0 +1,868 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_opened'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x06\x03\x0f;\r\x06x@'
+tRp9
+sS'last_updated'
+p10
+g8
+(S'\x07\xdf\x06\x03\x10\x00.\x04M\x90'
+tRp11
+sS'test_done'
+p12
+I01
+sS'date_done'
+p13
+g8
+(S'\x07\xdf\x06\x03\x10\x00.\x04&\x80'
+tRp14
+sS'consequtive_errors'
+p15
+I10
+sS'data'
+p16
+(lp17
+(S'4398'
+p18
+S'wtar'
+p19
+I0
+S'Again'
+S'True'
+p20
+tp21
+a(g18
+g19
+I1
+S'Address'
+g20
+tp22
+a(g18
+g19
+I2
+S'Cough'
+g20
+tp23
+a(g18
+g19
+I3
+S'Preview'
+g20
+tp24
+a(g18
+g19
+I4
+S'Although'
+g20
+tp25
+a(g18
+g19
+I5
+S'Most'
+g20
+tp26
+a(g18
+g19
+I6
+S'Excitement'
+g20
+tp27
+a(g18
+g19
+I7
+S'Know'
+g20
+tp28
+a(g18
+g19
+I8
+S'Plumb'
+g20
+tp29
+a(g18
+g19
+I9
+S'Decorate'
+g20
+tp30
+a(g18
+g19
+I10
+S'Fierce'
+g20
+tp31
+a(g18
+g19
+I11
+S'Knead'
+g20
+tp32
+a(g18
+g19
+I12
+S'Aisle'
+g20
+tp33
+a(g18
+g19
+I13
+S'Vengeance'
+g20
+tp34
+a(g18
+g19
+I14
+S'Prestigious'
+g20
+tp35
+a(g18
+g19
+I15
+S'Wreathe'
+g20
+tp36
+a(g18
+g19
+I16
+S'Gnat'
+g20
+tp37
+a(g18
+g19
+I17
+S'Amphitheater'
+g20
+tp38
+a(g18
+g19
+I18
+S'Lieu'
+g20
+tp39
+a(g18
+g19
+I19
+S'Grotesque'
+g20
+tp40
+a(g18
+g19
+I20
+S'Iridescent'
+g20
+tp41
+a(g18
+g19
+I21
+S'Ballet'
+g20
+tp42
+a(g18
+g19
+I22
+S'Equestrian'
+g20
+tp43
+a(g18
+g19
+I23
+S'Porpoise'
+S'False'
+p44
+tp45
+a(g18
+g19
+I24
+S'Aesthetic'
+g20
+tp46
+a(g18
+g19
+I25
+S'Conscientious'
+g20
+tp47
+a(g18
+g19
+I26
+S'Homily'
+g20
+tp48
+a(g18
+g19
+I27
+S'Malady'
+g20
+tp49
+a(g18
+g19
+I28
+S'Subtle'
+g20
+tp50
+a(g18
+g19
+I29
+S'Fecund'
+g20
+tp51
+a(g18
+g19
+I30
+S'Palatable'
+g44
+tp52
+a(g18
+g19
+I31
+S'Menagerie'
+g44
+tp53
+a(g18
+g19
+I32
+S'Obfuscate'
+g20
+tp54
+a(g18
+g19
+I33
+S'Liaison'
+g20
+tp55
+a(g18
+g19
+I34
+S'Exigency'
+g44
+tp56
+a(g18
+g19
+I35
+S'Xenophobia'
+g20
+tp57
+a(g18
+g19
+I36
+S'Ogre'
+g20
+tp58
+a(g18
+g19
+I37
+S'Scurrilous'
+g20
+tp59
+a(g18
+g19
+I38
+S'Ethereal'
+g20
+tp60
+a(g18
+g19
+I39
+S'Paradigm'
+g20
+tp61
+a(g18
+g19
+I40
+S'Perspicuity'
+g20
+tp62
+a(g18
+g19
+I41
+S'Plethora'
+g20
+tp63
+a(g18
+g19
+I42
+S'Lugubrious'
+g20
+tp64
+a(g18
+g19
+I43
+S'Treatise'
+g44
+tp65
+a(g18
+g19
+I44
+S'Dilettante'
+g44
+tp66
+a(g18
+g19
+I45
+S'Vertiginous'
+g44
+tp67
+a(g18
+g19
+I46
+S'Ubiquitous'
+g44
+tp68
+a(g18
+g19
+I47
+S'Hyperbole'
+g44
+tp69
+a(g18
+g19
+I48
+S'Insouciant'
+g44
+tp70
+a(g18
+g19
+I49
+S'Hegemony'
+p71
+g20
+tp72
+asS'output_format'
+p73
+(lp74
+(S'proband_id'
+c__builtin__
+str
+p75
+tp76
+a(S'test_name'
+g75
+tp77
+a(S'trialn'
+c__builtin__
+int
+p78
+tp79
+a(S'word'
+g75
+tp80
+a(S'rsp'
+g75
+tp81
+asS'proband_id'
+p82
+g18
+sS'filename'
+p83
+S'4397_wtar.data'
+p84
+sS'proj_id'
+p85
+S'connectivity'
+p86
+sS'initialised'
+p87
+g8
+(S'\x07\xdf\x06\x03\x0f;\r\x06x@'
+tRp88
+sS'last_udated'
+p89
+g8
+(S'\x07\xdf\x06\x03\x0f;\r\x06x@'
+tRp90
+sS'test_name'
+p91
+S'wtar'
+p92
+sS'directory'
+p93
+S'c:\\Charlie\\charlie\\data\\raw'
+p94
+sS'user_id'
+p95
+S'oleach'
+p96
+sS'test_started'
+p97
+I01
+sS'abs_filename'
+p98
+S'c:\\Charlie\\charlie\\data\\raw\\4397_wtar.data'
+p99
+sS'date_started'
+p100
+g8
+(S'\x07\xdf\x06\x03\x0f;\x1e\x00*\xf8'
+tRp101
+sS'log'
+p102
+(lp103
+(S'2015-06-03 15:59:13.424000'
+S'instance created'
+tp104
+a(S'2015-06-03 15:59:30.026000'
+S'instance updated'
+p105
+tp106
+a(S'2015-06-03 15:59:30.031000'
+S'pandas DataFrame of data created'
+p107
+tp108
+a(S'2015-06-03 15:59:30.041000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp109
+a(S'2015-06-03 15:59:30.772000'
+g105
+tp110
+a(S'2015-06-03 15:59:30.778000'
+g107
+tp111
+a(S'2015-06-03 15:59:30.782000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp112
+a(S'2015-06-03 15:59:31.451000'
+g105
+tp113
+a(S'2015-06-03 15:59:31.458000'
+g107
+tp114
+a(S'2015-06-03 15:59:31.461000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp115
+a(S'2015-06-03 15:59:32.291000'
+g105
+tp116
+a(S'2015-06-03 15:59:32.297000'
+g107
+tp117
+a(S'2015-06-03 15:59:32.301000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp118
+a(S'2015-06-03 15:59:33.355000'
+g105
+tp119
+a(S'2015-06-03 15:59:33.361000'
+g107
+tp120
+a(S'2015-06-03 15:59:33.364000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp121
+a(S'2015-06-03 15:59:33.987000'
+g105
+tp122
+a(S'2015-06-03 15:59:33.993000'
+g107
+tp123
+a(S'2015-06-03 15:59:33.996000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp124
+a(S'2015-06-03 15:59:35.035000'
+g105
+tp125
+a(S'2015-06-03 15:59:35.041000'
+g107
+tp126
+a(S'2015-06-03 15:59:35.044000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp127
+a(S'2015-06-03 15:59:35.667000'
+g105
+tp128
+a(S'2015-06-03 15:59:35.672000'
+g107
+tp129
+a(S'2015-06-03 15:59:35.676000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp130
+a(S'2015-06-03 15:59:36.443000'
+g105
+tp131
+a(S'2015-06-03 15:59:36.449000'
+g107
+tp132
+a(S'2015-06-03 15:59:36.453000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp133
+a(S'2015-06-03 15:59:37.403000'
+g105
+tp134
+a(S'2015-06-03 15:59:37.409000'
+g107
+tp135
+a(S'2015-06-03 15:59:37.413000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp136
+a(S'2015-06-03 15:59:38.259000'
+g105
+tp137
+a(S'2015-06-03 15:59:38.265000'
+g107
+tp138
+a(S'2015-06-03 15:59:38.268000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp139
+a(S'2015-06-03 15:59:39.171000'
+g105
+tp140
+a(S'2015-06-03 15:59:39.177000'
+g107
+tp141
+a(S'2015-06-03 15:59:39.180000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp142
+a(S'2015-06-03 15:59:39.923000'
+g105
+tp143
+a(S'2015-06-03 15:59:39.929000'
+g107
+tp144
+a(S'2015-06-03 15:59:39.933000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp145
+a(S'2015-06-03 15:59:40.635000'
+g105
+tp146
+a(S'2015-06-03 15:59:40.641000'
+g107
+tp147
+a(S'2015-06-03 15:59:40.644000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp148
+a(S'2015-06-03 15:59:41.483000'
+g105
+tp149
+a(S'2015-06-03 15:59:41.489000'
+g107
+tp150
+a(S'2015-06-03 15:59:41.492000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp151
+a(S'2015-06-03 15:59:42.451000'
+g105
+tp152
+a(S'2015-06-03 15:59:42.457000'
+g107
+tp153
+a(S'2015-06-03 15:59:42.461000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp154
+a(S'2015-06-03 15:59:43.243000'
+g105
+tp155
+a(S'2015-06-03 15:59:43.249000'
+g107
+tp156
+a(S'2015-06-03 15:59:43.252000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp157
+a(S'2015-06-03 15:59:44.171000'
+g105
+tp158
+a(S'2015-06-03 15:59:44.177000'
+g107
+tp159
+a(S'2015-06-03 15:59:44.181000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp160
+a(S'2015-06-03 15:59:45.266000'
+g105
+tp161
+a(S'2015-06-03 15:59:45.272000'
+g107
+tp162
+a(S'2015-06-03 15:59:45.276000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp163
+a(S'2015-06-03 15:59:46.226000'
+g105
+tp164
+a(S'2015-06-03 15:59:46.232000'
+g107
+tp165
+a(S'2015-06-03 15:59:46.236000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp166
+a(S'2015-06-03 15:59:47.091000'
+g105
+tp167
+a(S'2015-06-03 15:59:47.097000'
+g107
+tp168
+a(S'2015-06-03 15:59:47.100000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp169
+a(S'2015-06-03 15:59:47.955000'
+g105
+tp170
+a(S'2015-06-03 15:59:47.961000'
+g107
+tp171
+a(S'2015-06-03 15:59:47.964000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp172
+a(S'2015-06-03 15:59:49.026000'
+g105
+tp173
+a(S'2015-06-03 15:59:49.032000'
+g107
+tp174
+a(S'2015-06-03 15:59:49.036000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp175
+a(S'2015-06-03 15:59:52.140000'
+g105
+tp176
+a(S'2015-06-03 15:59:52.146000'
+g107
+tp177
+a(S'2015-06-03 15:59:52.149000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp178
+a(S'2015-06-03 15:59:52.914000'
+g105
+tp179
+a(S'2015-06-03 15:59:52.920000'
+g107
+tp180
+a(S'2015-06-03 15:59:52.924000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp181
+a(S'2015-06-03 15:59:57.395000'
+g105
+tp182
+a(S'2015-06-03 15:59:57.401000'
+g107
+tp183
+a(S'2015-06-03 15:59:57.405000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp184
+a(S'2015-06-03 15:59:58.954000'
+g105
+tp185
+a(S'2015-06-03 15:59:58.960000'
+g107
+tp186
+a(S'2015-06-03 15:59:58.964000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp187
+a(S'2015-06-03 16:00:01.059000'
+g105
+tp188
+a(S'2015-06-03 16:00:01.065000'
+g107
+tp189
+a(S'2015-06-03 16:00:01.069000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp190
+a(S'2015-06-03 16:00:01.738000'
+g105
+tp191
+a(S'2015-06-03 16:00:01.744000'
+g107
+tp192
+a(S'2015-06-03 16:00:01.748000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp193
+a(S'2015-06-03 16:00:03.394000'
+g105
+tp194
+a(S'2015-06-03 16:00:03.400000'
+g107
+tp195
+a(S'2015-06-03 16:00:03.404000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp196
+a(S'2015-06-03 16:00:06.203000'
+g105
+tp197
+a(S'2015-06-03 16:00:06.209000'
+g107
+tp198
+a(S'2015-06-03 16:00:06.213000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp199
+a(S'2015-06-03 16:00:08.170000'
+g105
+tp200
+a(S'2015-06-03 16:00:08.176000'
+g107
+tp201
+a(S'2015-06-03 16:00:08.180000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp202
+a(S'2015-06-03 16:00:09.250000'
+g105
+tp203
+a(S'2015-06-03 16:00:09.256000'
+g107
+tp204
+a(S'2015-06-03 16:00:09.260000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp205
+a(S'2015-06-03 16:00:11.106000'
+g105
+tp206
+a(S'2015-06-03 16:00:11.112000'
+g107
+tp207
+a(S'2015-06-03 16:00:11.116000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp208
+a(S'2015-06-03 16:00:15.130000'
+g105
+tp209
+a(S'2015-06-03 16:00:15.136000'
+g107
+tp210
+a(S'2015-06-03 16:00:15.140000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp211
+a(S'2015-06-03 16:00:22.129000'
+g105
+tp212
+a(S'2015-06-03 16:00:22.135000'
+g107
+tp213
+a(S'2015-06-03 16:00:22.139000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp214
+a(S'2015-06-03 16:00:22.904000'
+g105
+tp215
+a(S'2015-06-03 16:00:22.910000'
+g107
+tp216
+a(S'2015-06-03 16:00:22.914000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp217
+a(S'2015-06-03 16:00:25.385000'
+g105
+tp218
+a(S'2015-06-03 16:00:25.391000'
+g107
+tp219
+a(S'2015-06-03 16:00:25.394000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp220
+a(S'2015-06-03 16:00:27.945000'
+g105
+tp221
+a(S'2015-06-03 16:00:27.951000'
+g107
+tp222
+a(S'2015-06-03 16:00:27.955000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp223
+a(S'2015-06-03 16:00:28.400000'
+g105
+tp224
+a(S'2015-06-03 16:00:28.406000'
+g107
+tp225
+a(S'2015-06-03 16:00:28.410000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp226
+a(S'2015-06-03 16:00:29.023000'
+g105
+tp227
+a(S'2015-06-03 16:00:29.030000'
+g107
+tp228
+a(S'2015-06-03 16:00:29.033000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp229
+a(S'2015-06-03 16:00:29.992000'
+g105
+tp230
+a(S'2015-06-03 16:00:29.998000'
+g107
+tp231
+a(S'2015-06-03 16:00:30.001000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp232
+a(S'2015-06-03 16:00:31.975000'
+g105
+tp233
+a(S'2015-06-03 16:00:31.982000'
+g107
+tp234
+a(S'2015-06-03 16:00:31.986000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp235
+a(S'2015-06-03 16:00:32.935000'
+g105
+tp236
+a(S'2015-06-03 16:00:32.941000'
+g107
+tp237
+a(S'2015-06-03 16:00:32.945000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp238
+a(S'2015-06-03 16:00:36.024000'
+g105
+tp239
+a(S'2015-06-03 16:00:36.030000'
+g107
+tp240
+a(S'2015-06-03 16:00:36.034000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp241
+a(S'2015-06-03 16:00:38.592000'
+g105
+tp242
+a(S'2015-06-03 16:00:38.599000'
+g107
+tp243
+a(S'2015-06-03 16:00:38.602000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp244
+a(S'2015-06-03 16:00:40.423000'
+g105
+tp245
+a(S'2015-06-03 16:00:40.429000'
+g107
+tp246
+a(S'2015-06-03 16:00:40.433000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp247
+a(S'2015-06-03 16:00:42.063000'
+g105
+tp248
+a(S'2015-06-03 16:00:42.069000'
+g107
+tp249
+a(S'2015-06-03 16:00:42.073000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp250
+a(S'2015-06-03 16:00:43.223000'
+g105
+tp251
+a(S'2015-06-03 16:00:43.229000'
+g107
+tp252
+a(S'2015-06-03 16:00:43.233000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp253
+a(S'2015-06-03 16:00:46.272000'
+g105
+tp254
+a(S'2015-06-03 16:00:46.278000'
+g107
+tp255
+a(S'2015-06-03 16:00:46.282000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_wtar.csv'
+tp256
+asb.
