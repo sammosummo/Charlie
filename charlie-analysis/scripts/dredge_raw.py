@@ -12,6 +12,8 @@ import os
 import pandas
 import numpy as np
 import charlie.tools.instructions as instructions
+import matplotlib.pyplot as plt
+import seaborn
 
 
 PACKAGE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
@@ -49,20 +51,35 @@ def apply_summary(data_obj):
     return df1, df2
 
 
-def plot_summary(s, path):
+def summary(s, path):
     """
     Make a summary plot of a given series.
     """
+    print s.name, path
+
+    s = s.astype(float)
+
     if not os.path.exists(path):
         os.makedirs(path)
+
     demos = pandas.read_csv('demo.csv', index_col=0)
-    df = pandas.concat([s, demos], axis=1)
-    print df
+    df = pandas.concat([s, demos.group], axis=1).dropna()
+
+    plt.clf()
+    seaborn.violinplot(data=df, x='group', y=s.name, inner=None)
+    seaborn.stripplot(data=df, x='group', y=s.name, jitter=True)
+    plt.savefig(os.path.join(path, s.name + '.png'))
+
+
+
 
 if __name__ == '__main__':
 
     objs = grab_all()
     tests = set(obj.test_name for obj in objs)
+
+    demographics = pandas.read_csv('demo.csv', index_col=0)
+    group = demographics.group
 
     for test_name in tests:
 
@@ -70,13 +87,14 @@ if __name__ == '__main__':
         df_trials, df_summaries = zip(*[apply_summary(o) for o in test_objs])
 
         df = pandas.concat(df_summaries)
-        df.proband_id = df.proband_id.astype(float)
         df.set_index('proband_id', inplace=True)
         df.drop(UNWANTED_COLS, axis=1, inplace=True)
-
-        for i, s in df.iteritems():
-            s = s.astype(float)
-            plot_summary(s, test_name)
+        df = df.astype(float)
+        df = pandas.concat([df, group], axis=1).dropna()
+        grouped = df.groupby('group')
+        f = os.path.join('summaries', test_name + '.csv')
+        grouped.describe().T.to_csv(f)
+        # [summary(s, test_name)for i, s in df.iteritems()]
 
 
 
