@@ -1,6 +1,6 @@
-************
-Introduction
-************
+*******
+Charlie
+*******
 
 :Author: Samuel R. Mathias
 :Contact: samuel.mathias@gmail.com
@@ -8,8 +8,8 @@ Introduction
 :Github: http://github.com/sammosummo/Charlie
 :Version: 0.1
 
-Purpose
-=======
+Introduction
+============
 
 Charlie is a free, open-source, cross-platform neurocognitive test battery
 written in Python. It is currently being used to collect data for a project
@@ -23,25 +23,22 @@ currently can and can't do.
 What works
 ==========
 
-* Charlie currently contains 21 neuocognitive tests, with many more planned.
-  Included are many widely used tests, including the trail-making test, the
-  California verbal-learning test, the Wechsler test of adult reading, and
-  so on; and some original tests, such as the updating spatial memory test.
-  Each test has a docstring with citations.
+* Charlie currently contains 21 neuocognitive tests, with more planned. Each
+  test has a docstring with citations; have a look in the `charlie/tests`
+  folder to see what's available.
 
 * Data are recorded after each trial. This means that you have access to trial-
-  specific data (which stimulus was presented, which response was made,
-  response time, etc.) rather than just the summary data. It also means that
-  the tests are "resumable"; that is, each test remembers the progress of each
-  subject, preventing the subject from performing a test twice, and picking
-  up from where they left off if a test gets interrupted for whatever reason.
+  specific data rather than just the summary data. It also means that the tests
+  are "resumable"; that is, the progress of each subject is retained. This
+  prevents a subject from performing a test twice, and allows them to pick up
+  where they left off, if a test gets interrupted.
 
 * Summary statistics are automatically computed after a subject completes a
   test. All of the data (summary and trial-specific) are stored within various
   formats, including within human-readable CSVs, "pickled" Python objects, and
   within an SQLite database.
 
-* Tests can be run individually or in batches (one after the other).
+* Tests can be run individually or in batches.
 
 * Because Charlie is written in Python, it is easy to modify or add new tests.
 
@@ -52,8 +49,8 @@ What sort-of works
 ==================
 
 * Charlie can administer self-report questionnaires prior to a test or battery
-  of tests. Th is feature is functional, but has not been as extensively tested
-  as the cognitive tests.
+  of tests. This feature is functional, but has not been debugged as
+  extensively tested as the cognitive tests.
 
 * At the end of a test or batch, the data stored locally can be automatically
   backed up to a remote server via sftp. This feature is currently very crude.
@@ -67,13 +64,13 @@ What doesn't work (i.e., future plans)
 
 * Charlie is a command-line program. It has a GUI, but I haven't figure out how
   to make it play well with tests run in batch mode. This has proven a great
-  source of frustration for me!
+  source of frustration for me.
 
 * Charlie isn't currently a regular Python package (i.e., installable via
-  `pip`). I haven't decided whether to do this.
+  `pip`). I haven't yet decided whether to do this.
 
-Installation instructions
-=========================
+Installation instructions (Windows)
+===================================
 
 Charlie uses Python as a number of its third-party pacakges: `numpy`, `scipy`,
 `pandas`, `pygame`, `web.py`, `paramiko`, and `pyside`/`pyqt`. If you are an
@@ -85,8 +82,7 @@ If you are not a Python user and are on Windows, do the following:
 1. Download and install Miniconda from here: https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe
 
 2. Open a command prompt, and type the following commands, one by one:
-::
-
+   ::
    conda update conda
    conda install pip numpy scipy pandas pyside paramiko
    pip install web.py
@@ -95,14 +91,20 @@ If you are not a Python user and are on Windows, do the following:
 
 4. Download Charlie: https://github.com/sammosummo/Charlie/archive/master.zip
 
+Installation instructions (Windows)
+===================================
 
 If you are on Mac, do the following instead:
 
-1. Download and install Miniconda from here: https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe
+1. Download the Miniconda bash script: https://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
 
-2. Open a command prompt, and type the following commands, one by one:
-::
+2. Execute the script by opening a terminal window, setting the current
+   directory to your downloads folder, and typing the line:
+   ::
+   sudo bash Miniconda-latest-MacOSX-x86_64.sh
 
+3. Restart your terminal and type these commands
+   ::
    conda update conda
    conda install pip numpy scipy pandas pyside paramiko binstar
    pip install web.py
@@ -110,5 +112,4 @@ If you are on Mac, do the following instead:
    brew install sdl sdl_ttf sdl_image sdl_mixer portmidi
    conda install -c https://conda.binstar.org/quasiben pygame
 
-Please note that you may need sudo privalges for some of these commands.
 4. Download Charlie: https://github.com/sammosummo/Charlie/archive/master.zip
