@@ -83,9 +83,9 @@ If you are not a Python user and are on Windows, do the following:
 
 2. Open a command prompt, and type the following commands, one by one:
    ::
-   conda update conda
-   conda install pip numpy scipy pandas pyside paramiko
-   pip install web.py
+      conda update conda
+      conda install pip numpy scipy pandas pyside paramiko
+      pip install web.py
 
 3. Download and install Pygame: http://pygame.org/ftp/pygame-1.9.2a0.win32-py2.7.msi
 
