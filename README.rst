@@ -95,7 +95,8 @@ If you are on Mac, do the following instead:
 1. Download the Miniconda bash script: https://repo.continuum.io/miniconda/Miniconda-latest-MacOSX-x86_64.sh
 
 2. Execute the script by opening a terminal window, setting the current
-   directory to your downloads folder, and typing the line:
+   directory to your downloads folder using the `cd` command, and typing the
+   line:
    ::
       sudo bash Miniconda-latest-MacOSX-x86_64.sh
 
@@ -113,11 +114,15 @@ If you are on Mac, do the following instead:
 Running Charlie
 ===============
 
+If you downloaded the zip file (step 4 above), unzip it somewhere on your
+computer, it shouldn't matter where. Then open a command window/terminal, and
+`cd` to the `Charlie-master/charlie` directory. There should be a file called
+`run.py` in that directory.
+
 Tests and batches are run from the command line by executing the `run.py`
-script in the `charlie` folder. Options are supplied Unix-style. To get a list
+script. Options are supplied Unix-style. To get a list
 of all available options, type:
 ::
    python run.py -h
-Assuming of course that your current directory contains `run.py`. The help
-string should be clear enough, but if you have any difficulties, feel free to
+The help string should be clear, but if you have any difficulties, feel free to
 drop me an email.
