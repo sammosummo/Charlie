@@ -91,8 +91,8 @@ If you are not a Python user and are on Windows, do the following:
 
 4. Download Charlie: https://github.com/sammosummo/Charlie/archive/master.zip
 
-Installation instructions (Windows)
-===================================
+Installation instructions (Mac)
+===============================
 
 If you are on Mac, do the following instead:
 
@@ -101,15 +101,27 @@ If you are on Mac, do the following instead:
 2. Execute the script by opening a terminal window, setting the current
    directory to your downloads folder, and typing the line:
    ::
-   sudo bash Miniconda-latest-MacOSX-x86_64.sh
+      sudo bash Miniconda-latest-MacOSX-x86_64.sh
 
 3. Restart your terminal and type these commands
    ::
-   conda update conda
-   conda install pip numpy scipy pandas pyside paramiko binstar
-   pip install web.py
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   brew install sdl sdl_ttf sdl_image sdl_mixer portmidi
-   conda install -c https://conda.binstar.org/quasiben pygame
+      conda update conda
+      conda install pip numpy scipy pandas pyside paramiko binstar
+      pip install web.py
+      ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      brew install sdl sdl_ttf sdl_image sdl_mixer portmidi
+      conda install -c https://conda.binstar.org/quasiben pygame
 
 4. Download Charlie: https://github.com/sammosummo/Charlie/archive/master.zip
+
+Running Charlie
+===============
+
+Tests and batches are run from the command line by executing the `run.py`
+script in the `charlie` folder. Options are supplied Unix-style. To get a list
+off all options, type:
+::
+   python run.py -h
+Assuming of course that your current directory contains `run.py`. The help
+string should be clear enough, but if you have any difficulties, feel free to
+drop me an email.
