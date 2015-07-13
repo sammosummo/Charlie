@@ -13,12 +13,10 @@ Introduction
 
 Charlie is a free, open-source, cross-platform neurocognitive test battery
 written in Python. It is currently being used to collect data for a project
-from our laboratory, but may be used freely by all.
-
-Although all of the tests are functional and there are some nice features (see
-below), Charlie is still under development. I'm continually adding more
-features and fixing bugs as they arise. Below is a summary of what Charlie
-currently can and can't do.
+from our laboratory, but may be used freely by all. Although all of the tests
+are functional and there are some nice features (see below), Charlie is still
+under development. I'm continually adding more features and fixing bugs as they
+arise.
 
 What works
 ==========
@@ -27,9 +25,9 @@ What works
   test has a docstring with citations; have a look in the `charlie/tests`
   folder to see what's available.
 
-* Data are recorded after each trial. This means that you have access to trial-
-  specific data rather than just the summary data. It also means that the tests
-  are "resumable"; that is, the progress of each subject is retained. This
+* Data are recorded after each trial. This means that you have access to
+  trial-specific data rather than just the summary data. It also means that the
+  tests are resumable; that is, the progress of each subject is retained. This
   prevents a subject from performing a test twice, and allows them to pick up
   where they left off, if a test gets interrupted.
 
@@ -43,7 +41,7 @@ What works
 * Because Charlie is written in Python, it is easy to modify or add new tests.
 
 * Charlie is cross-platform. So long as your system can run Python 2.7 (most
-  can), you can install and run Charlie.
+  can), you can use Charlie.
 
 What sort-of works
 ==================
@@ -62,12 +60,12 @@ What doesn't work (i.e., future plans)
 * Charlie is written in Python and uses various third-party packages. In the
   future, I plan to create a stand-alone version.
 
-* Charlie is a command-line program. It has a GUI, but I haven't figure out how
-  to make it play well with tests run in batch mode. This has proven a great
-  source of frustration for me.
+* Charlie is a command-line program. It has a GUI, but I haven't figured out
+  how to make it work with tests run in batch mode. (This has proven to be a
+  great source of frustration for me.)
 
-* Charlie isn't currently a regular Python package (i.e., installable via
-  `pip`). I haven't yet decided whether to do this.
+* Charlie isn't currently a regular Python package, so isn't installable via
+  `pip`. I haven't yet decided whether to do this.
 
 Installation instructions (Windows)
 ===================================
@@ -75,9 +73,7 @@ Installation instructions (Windows)
 Charlie uses Python as a number of its third-party pacakges: `numpy`, `scipy`,
 `pandas`, `pygame`, `web.py`, `paramiko`, and `pyside`/`pyqt`. If you are an
 experienced Python user, simply install all of these in whatever way you
-prefer.
-
-If you are not a Python user and are on Windows, do the following:
+prefer. If you are not a Python user and are on Windows, do the following:
 
 1. Download and install Miniconda from here: https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe
 
@@ -103,7 +99,7 @@ If you are on Mac, do the following instead:
    ::
       sudo bash Miniconda-latest-MacOSX-x86_64.sh
 
-3. Restart your terminal and type these commands
+3. Restart your terminal and type these commands:
    ::
       conda update conda
       conda install pip numpy scipy pandas pyside paramiko binstar
@@ -119,7 +115,7 @@ Running Charlie
 
 Tests and batches are run from the command line by executing the `run.py`
 script in the `charlie` folder. Options are supplied Unix-style. To get a list
-off all options, type:
+of all available options, type:
 ::
    python run.py -h
 Assuming of course that your current directory contains `run.py`. The help
