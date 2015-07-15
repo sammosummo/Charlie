@@ -6,7 +6,7 @@ Charlie
 :Contact: samuel.mathias@gmail.com
 :Web site: http://www.srmathias.com
 :Github: http://github.com/sammosummo/Charlie
-:Version: 0.1
+:Version: 0.0.1
 
 Introduction
 ============
