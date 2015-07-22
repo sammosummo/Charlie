@@ -120,8 +120,8 @@ computer, it shouldn't matter where. Then open a command window/terminal, and
 `run.py` in that directory.
 
 Tests and batches are run from the command line by executing the `run.py`
-script. Options are supplied Unix-style. To get a list
-of all available options, type:
+script. Options are supplied Unix-style. To get a list of all available
+options, type:
 ::
    python run.py -h
 The help string should be clear, but if you have any difficulties, feel free to

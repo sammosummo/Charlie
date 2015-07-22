@@ -96,24 +96,34 @@ def get_sdt_stats(df, noise, signal, prefix='', ans_col='ans', rsp_col='rsp',
     S = len(df[df[ans_col] == signal])
     H = len(df[(df[ans_col] == signal) & (df[rsp_col] == signal)])
     F = len(df[(df[ans_col] == noise) & (df[rsp_col] == signal)])
-    # if N < 10 or S < 10:
-        # print '---SDT warning: This does not look right:', (N, S, H, F)
-    if F == 0 or F == N:
-        F += 0.5
-        N += 1
-        # print '---SDT warning: correction applied'
-    if H == S or H == 0:
-        H += 0.5
-        S += 1
-        # print '---SDT warning: correction applied'
-    d = norm.ppf(H / float(S)) - norm.ppf(F / float(N))
-    c = -0.5 * (norm.ppf(H / float(S)) + norm.ppf(F / float(N)))
+    _N, _S, _H, _F = N, S, H, F
+    if F == 0:
+
+        _F += 0.5
+        _N += 1
+
+    elif F == N:
+
+        _F -= 0.5
+        _N += 1
+
+    if H == S:
+
+        _H += 0.5
+        _S += 1
+
+    elif H == 0:
+
+        _H -= 0.5
+        _S += 1
+    d = norm.ppf(_H / float(_S)) - norm.ppf(_F / float(_N))
+    c = -0.5 * (norm.ppf(_H / float(_S)) + norm.ppf(_F / float(_N)))
     # k = - norm.ppf(F / float(N))
     # beta = np.exp(d * c)
-    cols = ['dprime', 'criterion']
+    cols = ['dprime', 'criterion', 'N', 'S', 'H', 'F']
     if prefix:
         cols = ['%s_%s' % (prefix, col) for col in cols]
-    entries = [d, c]
+    entries = [d, c, N, S, H, F]
     return zip(cols, entries)
 
 
