@@ -1,0 +1,216 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x02\x12\x0e\x19\r\x00R\x08'
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x02\x12\x0e\x128\x08\x978'
+tRp11
+sS'proj_id'
+p12
+S''
+sS'date_done'
+p13
+NsS'test_done'
+p14
+I01
+sS'data'
+p15
+(lp16
+(S'S103'
+p17
+S'trails'
+p18
+S'number'
+p19
+S'practice'
+p20
+I6080
+I0
+tp21
+a(g17
+g18
+g19
+S'test'
+p22
+I34390
+I0
+tp23
+a(g17
+g18
+S'letter'
+p24
+g20
+I6890
+I0
+tp25
+a(g17
+g18
+g24
+g22
+I27810
+I0
+tp26
+a(g17
+g18
+S'number-letter'
+p27
+g20
+I25520
+I1
+tp28
+a(g17
+g18
+g27
+g22
+I97080
+I2
+tp29
+asS'output_format'
+p30
+(lp31
+(S'proband_id'
+p32
+c__builtin__
+str
+p33
+tp34
+a(S'test_name'
+p35
+g33
+tp36
+a(S'phase'
+p37
+g33
+tp38
+a(S'trial_type'
+p39
+g33
+tp40
+a(S'rt'
+p41
+c__builtin__
+int
+p42
+tp43
+a(S'nerrors'
+p44
+g42
+tp45
+asg32
+g17
+sS'filename'
+p46
+S'S103_trails.data'
+p47
+sS'initialised'
+p48
+g8
+(S'\x07\xdf\x02\x12\x0e\x128\x08\x978'
+tRp49
+sS'last_udated'
+p50
+g8
+(S'\x07\xdf\x02\x12\x0e\x128\x08\x978'
+tRp51
+sg35
+S'trails'
+p52
+sS'directory'
+p53
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p54
+sS'user_id'
+p55
+S''
+sS'test_started'
+p56
+I01
+sS'abs_filename'
+p57
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\S103_trails.data'
+p58
+sS'date_started'
+p59
+g8
+(S'\x07\xdf\x02\x12\x0e\x14\x0e\x030h'
+tRp60
+sS'log'
+p61
+(lp62
+(S'2015-02-18 14:18:56.563000'
+S'instance created'
+p63
+tp64
+a(S'2015-02-18 14:20:14.217000'
+S'instance updated'
+p65
+tp66
+a(S'2015-02-18 14:20:14.224000'
+S'pandas DataFrame of data created'
+p67
+tp68
+a(S'2015-02-18 14:20:14.228000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\S103_trails.csv'
+tp69
+a(S'2015-02-18 14:21:11.941000'
+g65
+tp70
+a(S'2015-02-18 14:21:11.948000'
+g67
+tp71
+a(S'2015-02-18 14:21:11.952000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\S103_trails.csv'
+tp72
+a(S'2015-02-18 14:21:37.348000'
+g65
+tp73
+a(S'2015-02-18 14:21:37.355000'
+g67
+tp74
+a(S'2015-02-18 14:21:37.359000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\S103_trails.csv'
+tp75
+a(S'2015-02-18 14:22:23.081000'
+g65
+tp76
+a(S'2015-02-18 14:22:23.089000'
+g67
+tp77
+a(S'2015-02-18 14:22:23.092000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\S103_trails.csv'
+tp78
+a(S'2015-02-18 14:23:12.815000'
+g65
+tp79
+a(S'2015-02-18 14:23:12.822000'
+g67
+tp80
+a(S'2015-02-18 14:23:12.826000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\S103_trails.csv'
+tp81
+a(S'2015-02-18 14:25:13.017000'
+g65
+tp82
+a(S'2015-02-18 14:25:13.019000'
+g67
+tp83
+a(S'2015-02-18 14:25:13.020000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\S103_trails.csv'
+tp84
+asb.

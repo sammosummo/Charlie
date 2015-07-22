@@ -1,0 +1,5 @@
+group,control,control,control,control,control,control,control,control,patient,patient,patient,patient,patient,patient,patient,patient,pilot,pilot,pilot,pilot,pilot,pilot,pilot,pilot
+,count,mean,std,min,25%,50%,75%,max,count,mean,std,min,25%,50%,75%,max,count,mean,std,min,25%,50%,75%,max
+,,,,,,,,,,,,,,,,,,,,,,,,
+ncorrect,32.0,19.03125,7.31540299421,6.0,13.75,21.0,24.25,32.0,12.0,16.3333333333,6.75995337979,7.0,9.75,19.0,21.25,26.0,10.0,27.3,6.41266108743,10.0,26.5,29.5,30.75,32.0
+ntrials,32.0,25.40625,7.32586832902,10.0,21.0,28.0,31.25,35.0,12.0,23.3333333333,8.2938458382,11.0,15.25,25.5,30.0,34.0,10.0,32.4,6.58618081879,14.0,34.25,35.0,35.0,35.0

@@ -1,0 +1,1037 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x02\x14\x0e6\x0f\rV\x10'
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x02\x14\x0e/)\x0ew '
+tRp11
+sS'proj_id'
+p12
+S''
+sS'date_done'
+p13
+NsS'test_done'
+p14
+I01
+sS'data'
+p15
+(lp16
+(S'KK107'
+p17
+S'scap'
+p18
+S'practice'
+p19
+I3
+I0
+S'Yes'
+p20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\practice-1.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\practice-2.BMP'
+g20
+I1480
+tp21
+a(g17
+g18
+g19
+I4
+I1
+S'No'
+p22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\practice-3.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\practice-4.BMP'
+g22
+I1650
+tp23
+a(g17
+g18
+g19
+I5
+I2
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\practice-5.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\practice-6.BMP'
+g20
+I631
+tp24
+a(g17
+g18
+S'test'
+p25
+I3
+I0
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-1.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-2.BMP'
+g20
+I1260
+tp26
+a(g17
+g18
+g25
+I3
+I1
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-3.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-4.BMP'
+g20
+I960
+tp27
+a(g17
+g18
+g25
+I3
+I2
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-5.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-6.BMP'
+g20
+I890
+tp28
+a(g17
+g18
+g25
+I3
+I3
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-7.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-8.BMP'
+g20
+I2290
+tp29
+a(g17
+g18
+g25
+I3
+I4
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-9.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-10.BMP'
+g22
+I1330
+tp30
+a(g17
+g18
+g25
+I3
+I5
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-11.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-12.BMP'
+g22
+I2250
+tp31
+a(g17
+g18
+g25
+I3
+I6
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-13.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-14.BMP'
+g22
+I910
+tp32
+a(g17
+g18
+g25
+I3
+I7
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-15.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-16.BMP'
+g22
+I1170
+tp33
+a(g17
+g18
+g25
+I3
+I8
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-17.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-18.BMP'
+g20
+I1080
+tp34
+a(g17
+g18
+g25
+I3
+I9
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-19.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-20.BMP'
+g20
+I870
+tp35
+a(g17
+g18
+g25
+I3
+I10
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-21.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-22.BMP'
+g22
+I1220
+tp36
+a(g17
+g18
+g25
+I3
+I11
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-23.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-24.BMP'
+g20
+I850
+tp37
+a(g17
+g18
+g25
+I3
+I12
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-25.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-26.BMP'
+g22
+I1290
+tp38
+a(g17
+g18
+g25
+I3
+I13
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-27.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load3-28.BMP'
+g22
+I990
+tp39
+a(g17
+g18
+g25
+I4
+I0
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-1.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-2.BMP'
+g22
+I830
+tp40
+a(g17
+g18
+g25
+I4
+I1
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-3.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-4.BMP'
+g20
+I760
+tp41
+a(g17
+g18
+g25
+I4
+I2
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-5.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-6.BMP'
+g20
+I950
+tp42
+a(g17
+g18
+g25
+I4
+I3
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-7.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-8.BMP'
+g22
+I880
+tp43
+a(g17
+g18
+g25
+I4
+I4
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-9.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-10.BMP'
+g22
+I1330
+tp44
+a(g17
+g18
+g25
+I4
+I5
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-11.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-12.BMP'
+g20
+I2010
+tp45
+a(g17
+g18
+g25
+I4
+I6
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-13.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-14.BMP'
+g22
+I811
+tp46
+a(g17
+g18
+g25
+I4
+I7
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-15.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-16.BMP'
+g22
+I860
+tp47
+a(g17
+g18
+g25
+I4
+I8
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-17.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-18.BMP'
+g22
+I1120
+tp48
+a(g17
+g18
+g25
+I4
+I9
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-19.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-20.BMP'
+g20
+I1220
+tp49
+a(g17
+g18
+g25
+I4
+I10
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-21.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-22.BMP'
+g20
+I1430
+tp50
+a(g17
+g18
+g25
+I4
+I11
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-23.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-24.BMP'
+g22
+I1340
+tp51
+a(g17
+g18
+g25
+I4
+I12
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-25.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-26.BMP'
+g20
+I1130
+tp52
+a(g17
+g18
+g25
+I4
+I13
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-27.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load4-28.BMP'
+g20
+I1241
+tp53
+a(g17
+g18
+g25
+I5
+I0
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-1.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-2.BMP'
+g20
+I1830
+tp54
+a(g17
+g18
+g25
+I5
+I1
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-3.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-4.BMP'
+g20
+I1160
+tp55
+a(g17
+g18
+g25
+I5
+I2
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-5.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-6.BMP'
+g22
+I1250
+tp56
+a(g17
+g18
+g25
+I5
+I3
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-7.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-8.BMP'
+g20
+I1010
+tp57
+a(g17
+g18
+g25
+I5
+I4
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-9.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-10.BMP'
+g20
+I1230
+tp58
+a(g17
+g18
+g25
+I5
+I5
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-11.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-12.BMP'
+g20
+I770
+tp59
+a(g17
+g18
+g25
+I5
+I6
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-13.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-14.BMP'
+g22
+I1501
+tp60
+a(g17
+g18
+g25
+I5
+I7
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-15.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-16.BMP'
+g22
+I1420
+tp61
+a(g17
+g18
+g25
+I5
+I8
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-17.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-18.BMP'
+g22
+I1180
+tp62
+a(g17
+g18
+g25
+I5
+I9
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-19.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-20.BMP'
+g22
+I1350
+tp63
+a(g17
+g18
+g25
+I5
+I10
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-21.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-22.BMP'
+g20
+I870
+tp64
+a(g17
+g18
+g25
+I5
+I11
+g20
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-23.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-24.BMP'
+g20
+I800
+tp65
+a(g17
+g18
+g25
+I5
+I12
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-25.BMP'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-26.BMP'
+g20
+I1540
+tp66
+a(g17
+g18
+g25
+I5
+I13
+g22
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-27.BMP'
+p67
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\scap\\load5-28.BMP'
+p68
+g22
+I1301
+tp69
+asS'output_format'
+p70
+(lp71
+(S'proband_id'
+p72
+c__builtin__
+str
+p73
+tp74
+a(S'test_name'
+p75
+g73
+tp76
+a(S'phase'
+p77
+g73
+tp78
+a(S'load'
+p79
+c__builtin__
+int
+p80
+tp81
+a(S'trialn'
+p82
+g80
+tp83
+a(S'ans'
+p84
+g73
+tp85
+a(S'array_f'
+p86
+g73
+tp87
+a(S'probe_f'
+p88
+g73
+tp89
+a(S'rsp'
+p90
+g73
+tp91
+a(S'rt'
+p92
+g80
+tp93
+asg72
+g17
+sS'filename'
+p94
+S'KK107_scap.data'
+p95
+sS'initialised'
+p96
+g8
+(S'\x07\xdf\x02\x14\x0e/)\x0ew '
+tRp97
+sS'last_udated'
+p98
+g8
+(S'\x07\xdf\x02\x14\x0e/)\x0ew '
+tRp99
+sg75
+S'scap'
+p100
+sS'directory'
+p101
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p102
+sS'user_id'
+p103
+S''
+sS'test_started'
+p104
+I01
+sS'abs_filename'
+p105
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\KK107_scap.data'
+p106
+sS'date_started'
+p107
+g8
+(S'\x07\xdf\x02\x14\x0e0\x1b\x08\x9f\x08'
+tRp108
+sS'log'
+p109
+(lp110
+(S'2015-02-20 14:47:41.948000'
+S'instance created'
+p111
+tp112
+a(S'2015-02-20 14:48:27.575000'
+S'instance updated'
+p113
+tp114
+a(S'2015-02-20 14:48:27.585000'
+S'pandas DataFrame of data created'
+p115
+tp116
+a(S'2015-02-20 14:48:27.590000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp117
+a(S'2015-02-20 14:48:36.260000'
+g113
+tp118
+a(S'2015-02-20 14:48:36.266000'
+g115
+tp119
+a(S'2015-02-20 14:48:36.269000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp120
+a(S'2015-02-20 14:48:43.921000'
+g113
+tp121
+a(S'2015-02-20 14:48:43.932000'
+g115
+tp122
+a(S'2015-02-20 14:48:43.936000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp123
+a(S'2015-02-20 14:49:08.852000'
+g113
+tp124
+a(S'2015-02-20 14:49:08.863000'
+g115
+tp125
+a(S'2015-02-20 14:49:08.866000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp126
+a(S'2015-02-20 14:49:16.100000'
+g113
+tp127
+a(S'2015-02-20 14:49:16.110000'
+g115
+tp128
+a(S'2015-02-20 14:49:16.114000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp129
+a(S'2015-02-20 14:49:23.270000'
+g113
+tp130
+a(S'2015-02-20 14:49:23.273000'
+g115
+tp131
+a(S'2015-02-20 14:49:23.274000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp132
+a(S'2015-02-20 14:49:31.834000'
+g113
+tp133
+a(S'2015-02-20 14:49:31.845000'
+g115
+tp134
+a(S'2015-02-20 14:49:31.849000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp135
+a(S'2015-02-20 14:49:39.451000'
+g113
+tp136
+a(S'2015-02-20 14:49:39.462000'
+g115
+tp137
+a(S'2015-02-20 14:49:39.466000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp138
+a(S'2015-02-20 14:49:47.988000'
+g113
+tp139
+a(S'2015-02-20 14:49:47.998000'
+g115
+tp140
+a(S'2015-02-20 14:49:48.002000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp141
+a(S'2015-02-20 14:49:55.184000'
+g113
+tp142
+a(S'2015-02-20 14:49:55.195000'
+g115
+tp143
+a(S'2015-02-20 14:49:55.199000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp144
+a(S'2015-02-20 14:50:02.641000'
+g113
+tp145
+a(S'2015-02-20 14:50:02.652000'
+g115
+tp146
+a(S'2015-02-20 14:50:02.656000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp147
+a(S'2015-02-20 14:50:10.008000'
+g113
+tp148
+a(S'2015-02-20 14:50:10.019000'
+g115
+tp149
+a(S'2015-02-20 14:50:10.022000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp150
+a(S'2015-02-20 14:50:17.166000'
+g113
+tp151
+a(S'2015-02-20 14:50:17.176000'
+g115
+tp152
+a(S'2015-02-20 14:50:17.180000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp153
+a(S'2015-02-20 14:50:24.672000'
+g113
+tp154
+a(S'2015-02-20 14:50:24.683000'
+g115
+tp155
+a(S'2015-02-20 14:50:24.687000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp156
+a(S'2015-02-20 14:50:31.809000'
+g113
+tp157
+a(S'2015-02-20 14:50:31.820000'
+g115
+tp158
+a(S'2015-02-20 14:50:31.824000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp159
+a(S'2015-02-20 14:50:39.388000'
+g113
+tp160
+a(S'2015-02-20 14:50:39.399000'
+g115
+tp161
+a(S'2015-02-20 14:50:39.403000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp162
+a(S'2015-02-20 14:50:46.665000'
+g113
+tp163
+a(S'2015-02-20 14:50:46.675000'
+g115
+tp164
+a(S'2015-02-20 14:50:46.679000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp165
+a(S'2015-02-20 14:50:53.781000'
+g113
+tp166
+a(S'2015-02-20 14:50:53.792000'
+g115
+tp167
+a(S'2015-02-20 14:50:53.796000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp168
+a(S'2015-02-20 14:51:00.829000'
+g113
+tp169
+a(S'2015-02-20 14:51:00.840000'
+g115
+tp170
+a(S'2015-02-20 14:51:00.842000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp171
+a(S'2015-02-20 14:51:08.064000'
+g113
+tp172
+a(S'2015-02-20 14:51:08.075000'
+g115
+tp173
+a(S'2015-02-20 14:51:08.079000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp174
+a(S'2015-02-20 14:51:15.232000'
+g113
+tp175
+a(S'2015-02-20 14:51:15.244000'
+g115
+tp176
+a(S'2015-02-20 14:51:15.248000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp177
+a(S'2015-02-20 14:51:22.851000'
+g113
+tp178
+a(S'2015-02-20 14:51:22.862000'
+g115
+tp179
+a(S'2015-02-20 14:51:22.866000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp180
+a(S'2015-02-20 14:51:31.149000'
+g113
+tp181
+a(S'2015-02-20 14:51:31.160000'
+g115
+tp182
+a(S'2015-02-20 14:51:31.164000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp183
+a(S'2015-02-20 14:51:38.247000'
+g113
+tp184
+a(S'2015-02-20 14:51:38.258000'
+g115
+tp185
+a(S'2015-02-20 14:51:38.262000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp186
+a(S'2015-02-20 14:51:45.395000'
+g113
+tp187
+a(S'2015-02-20 14:51:45.406000'
+g115
+tp188
+a(S'2015-02-20 14:51:45.410000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp189
+a(S'2015-02-20 14:51:52.803000'
+g113
+tp190
+a(S'2015-02-20 14:51:52.814000'
+g115
+tp191
+a(S'2015-02-20 14:51:52.819000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp192
+a(S'2015-02-20 14:52:00.309000'
+g113
+tp193
+a(S'2015-02-20 14:52:00.321000'
+g115
+tp194
+a(S'2015-02-20 14:52:00.325000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp195
+a(S'2015-02-20 14:52:08.027000'
+g113
+tp196
+a(S'2015-02-20 14:52:08.038000'
+g115
+tp197
+a(S'2015-02-20 14:52:08.042000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp198
+a(S'2015-02-20 14:52:15.655000'
+g113
+tp199
+a(S'2015-02-20 14:52:15.666000'
+g115
+tp200
+a(S'2015-02-20 14:52:15.671000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp201
+a(S'2015-02-20 14:52:23.073000'
+g113
+tp202
+a(S'2015-02-20 14:52:23.084000'
+g115
+tp203
+a(S'2015-02-20 14:52:23.089000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp204
+a(S'2015-02-20 14:52:30.601000'
+g113
+tp205
+a(S'2015-02-20 14:52:30.612000'
+g115
+tp206
+a(S'2015-02-20 14:52:30.617000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp207
+a(S'2015-02-20 14:52:38.719000'
+g113
+tp208
+a(S'2015-02-20 14:52:38.731000'
+g115
+tp209
+a(S'2015-02-20 14:52:38.735000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp210
+a(S'2015-02-20 14:52:46.168000'
+g113
+tp211
+a(S'2015-02-20 14:52:46.180000'
+g115
+tp212
+a(S'2015-02-20 14:52:46.185000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp213
+a(S'2015-02-20 14:52:53.707000'
+g113
+tp214
+a(S'2015-02-20 14:52:53.719000'
+g115
+tp215
+a(S'2015-02-20 14:52:53.723000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp216
+a(S'2015-02-20 14:53:01.004000'
+g113
+tp217
+a(S'2015-02-20 14:53:01.016000'
+g115
+tp218
+a(S'2015-02-20 14:53:01.020000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp219
+a(S'2015-02-20 14:53:08.524000'
+g113
+tp220
+a(S'2015-02-20 14:53:08.535000'
+g115
+tp221
+a(S'2015-02-20 14:53:08.539000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp222
+a(S'2015-02-20 14:53:15.582000'
+g113
+tp223
+a(S'2015-02-20 14:53:15.595000'
+g115
+tp224
+a(S'2015-02-20 14:53:15.599000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp225
+a(S'2015-02-20 14:53:23.372000'
+g113
+tp226
+a(S'2015-02-20 14:53:23.384000'
+g115
+tp227
+a(S'2015-02-20 14:53:23.388000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp228
+a(S'2015-02-20 14:53:31.081000'
+g113
+tp229
+a(S'2015-02-20 14:53:31.092000'
+g115
+tp230
+a(S'2015-02-20 14:53:31.096000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp231
+a(S'2015-02-20 14:53:38.550000'
+g113
+tp232
+a(S'2015-02-20 14:53:38.562000'
+g115
+tp233
+a(S'2015-02-20 14:53:38.566000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp234
+a(S'2015-02-20 14:53:46.189000'
+g113
+tp235
+a(S'2015-02-20 14:53:46.201000'
+g115
+tp236
+a(S'2015-02-20 14:53:46.205000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp237
+a(S'2015-02-20 14:53:53.349000'
+g113
+tp238
+a(S'2015-02-20 14:53:53.360000'
+g115
+tp239
+a(S'2015-02-20 14:53:53.364000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp240
+a(S'2015-02-20 14:54:00.438000'
+g113
+tp241
+a(S'2015-02-20 14:54:00.449000'
+g115
+tp242
+a(S'2015-02-20 14:54:00.453000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp243
+a(S'2015-02-20 14:54:08.267000'
+g113
+tp244
+a(S'2015-02-20 14:54:08.279000'
+g115
+tp245
+a(S'2015-02-20 14:54:08.284000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp246
+a(S'2015-02-20 14:54:15.857000'
+g113
+tp247
+a(S'2015-02-20 14:54:15.869000'
+g115
+tp248
+a(S'2015-02-20 14:54:15.873000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_scap.csv'
+tp249
+asb.

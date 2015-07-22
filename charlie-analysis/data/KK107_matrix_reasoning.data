@@ -1,0 +1,461 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x02\x14\x0e\x1d\x19\x0e\xf4 '
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x02\x14\x0e\x1c\x03\x00\xab\xe0'
+tRp11
+sS'proj_id'
+p12
+S''
+sS'date_done'
+p13
+NsS'test_done'
+p14
+I01
+sS'data'
+p15
+(lp16
+(S'KK107'
+p17
+S'matrix_reasoning'
+p18
+S'practice'
+p19
+I0
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\prac_MA.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\prac_MAa.png'
+I1
+I1
+I5021
+tp20
+a(g17
+g18
+S'test'
+p21
+I0
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M001.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M001a.png'
+I1
+I1
+I1510
+tp22
+a(g17
+g18
+g21
+I1
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M002.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M002a.png'
+I3
+I3
+I2556
+tp23
+a(g17
+g18
+g21
+I2
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M003.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M003a.png'
+I1
+I1
+I1849
+tp24
+a(g17
+g18
+g21
+I3
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M004.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M004a.png'
+I3
+I3
+I2140
+tp25
+a(g17
+g18
+g21
+I4
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M005.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M005a.png'
+I2
+I2
+I3308
+tp26
+a(g17
+g18
+g21
+I5
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M006.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M006a.png'
+I0
+I0
+I2611
+tp27
+a(g17
+g18
+g21
+I6
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M007.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M007a.png'
+I0
+I0
+I3043
+tp28
+a(g17
+g18
+g21
+I7
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M008.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M008a.png'
+I2
+I2
+I2658
+tp29
+a(g17
+g18
+g21
+I8
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M009.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M009a.png'
+I4
+I4
+I3677
+tp30
+a(g17
+g18
+g21
+I9
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M010.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M010a.png'
+I4
+I2
+I1961
+tp31
+a(g17
+g18
+g21
+I10
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M011.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M011a.png'
+I4
+I1
+I1555
+tp32
+a(g17
+g18
+g21
+I11
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M012.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M012a.png'
+I1
+I1
+I2776
+tp33
+a(g17
+g18
+g21
+I12
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M013.png'
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M013a.png'
+I2
+I4
+I4849
+tp34
+a(g17
+g18
+g21
+I13
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M014.png'
+p35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\matrix_reasoning\\M014a.png'
+p36
+I0
+I2
+I2041
+tp37
+asS'output_format'
+p38
+(lp39
+(S'proband_id'
+p40
+c__builtin__
+str
+p41
+tp42
+a(S'test_name'
+p43
+g41
+tp44
+a(S'phase'
+p45
+g41
+tp46
+a(S'trialn'
+p47
+c__builtin__
+int
+p48
+tp49
+a(S'matrix'
+p50
+g41
+tp51
+a(S'array'
+p52
+g41
+tp53
+a(S'ans'
+p54
+g48
+tp55
+a(S'rsp'
+p56
+g48
+tp57
+a(S'rt'
+p58
+g48
+tp59
+asg40
+g17
+sS'filename'
+p60
+S'KK107_matrix_reasoning.data'
+p61
+sS'initialised'
+p62
+g8
+(S'\x07\xdf\x02\x14\x0e\x1c\x03\x00\xab\xe0'
+tRp63
+sS'last_udated'
+p64
+g8
+(S'\x07\xdf\x02\x14\x0e\x1c\x03\x00\xab\xe0'
+tRp65
+sg43
+S'matrix_reasoning'
+p66
+sS'directory'
+p67
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p68
+sS'user_id'
+p69
+S''
+sS'test_started'
+p70
+I01
+sS'abs_filename'
+p71
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\KK107_matrix_reasoning.data'
+p72
+sS'date_started'
+p73
+g8
+(S'\x07\xdf\x02\x14\x0e\x1c$\x05G\x90'
+tRp74
+sS'log'
+p75
+(lp76
+(S'2015-02-20 14:28:03.044000'
+S'instance created'
+p77
+tp78
+a(S'2015-02-20 14:28:36.355000'
+S'instance updated'
+p79
+tp80
+a(S'2015-02-20 14:28:36.366000'
+S'pandas DataFrame of data created'
+p81
+tp82
+a(S'2015-02-20 14:28:36.370000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp83
+a(S'2015-02-20 14:28:36.379000'
+g81
+tp84
+a(S'2015-02-20 14:28:47.139000'
+g79
+tp85
+a(S'2015-02-20 14:28:47.149000'
+g81
+tp86
+a(S'2015-02-20 14:28:47.152000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp87
+a(S'2015-02-20 14:28:47.161000'
+g81
+tp88
+a(S'2015-02-20 14:28:49.995000'
+g79
+tp89
+a(S'2015-02-20 14:28:50.003000'
+g81
+tp90
+a(S'2015-02-20 14:28:50.006000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp91
+a(S'2015-02-20 14:28:50.013000'
+g81
+tp92
+a(S'2015-02-20 14:28:52.139000'
+g79
+tp93
+a(S'2015-02-20 14:28:52.149000'
+g81
+tp94
+a(S'2015-02-20 14:28:52.153000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp95
+a(S'2015-02-20 14:28:52.161000'
+g81
+tp96
+a(S'2015-02-20 14:28:54.571000'
+g79
+tp97
+a(S'2015-02-20 14:28:54.582000'
+g81
+tp98
+a(S'2015-02-20 14:28:54.585000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp99
+a(S'2015-02-20 14:28:54.592000'
+g81
+tp100
+a(S'2015-02-20 14:28:58.172000'
+g79
+tp101
+a(S'2015-02-20 14:28:58.182000'
+g81
+tp102
+a(S'2015-02-20 14:28:58.186000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp103
+a(S'2015-02-20 14:28:58.192000'
+g81
+tp104
+a(S'2015-02-20 14:29:01.074000'
+g79
+tp105
+a(S'2015-02-20 14:29:01.084000'
+g81
+tp106
+a(S'2015-02-20 14:29:01.088000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp107
+a(S'2015-02-20 14:29:01.097000'
+g81
+tp108
+a(S'2015-02-20 14:29:04.411000'
+g79
+tp109
+a(S'2015-02-20 14:29:04.421000'
+g81
+tp110
+a(S'2015-02-20 14:29:04.425000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp111
+a(S'2015-02-20 14:29:04.431000'
+g81
+tp112
+a(S'2015-02-20 14:29:07.356000'
+g79
+tp113
+a(S'2015-02-20 14:29:07.359000'
+g81
+tp114
+a(S'2015-02-20 14:29:07.360000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp115
+a(S'2015-02-20 14:29:07.363000'
+g81
+tp116
+a(S'2015-02-20 14:29:11.307000'
+g79
+tp117
+a(S'2015-02-20 14:29:11.317000'
+g81
+tp118
+a(S'2015-02-20 14:29:11.321000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp119
+a(S'2015-02-20 14:29:11.329000'
+g81
+tp120
+a(S'2015-02-20 14:29:13.563000'
+g79
+tp121
+a(S'2015-02-20 14:29:13.574000'
+g81
+tp122
+a(S'2015-02-20 14:29:13.577000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp123
+a(S'2015-02-20 14:29:13.583000'
+g81
+tp124
+a(S'2015-02-20 14:29:15.410000'
+g79
+tp125
+a(S'2015-02-20 14:29:15.420000'
+g81
+tp126
+a(S'2015-02-20 14:29:15.424000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp127
+a(S'2015-02-20 14:29:15.435000'
+g81
+tp128
+a(S'2015-02-20 14:29:18.483000'
+g79
+tp129
+a(S'2015-02-20 14:29:18.493000'
+g81
+tp130
+a(S'2015-02-20 14:29:18.496000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp131
+a(S'2015-02-20 14:29:18.502000'
+g81
+tp132
+a(S'2015-02-20 14:29:23.625000'
+g79
+tp133
+a(S'2015-02-20 14:29:23.631000'
+g81
+tp134
+a(S'2015-02-20 14:29:23.634000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp135
+a(S'2015-02-20 14:29:23.640000'
+g81
+tp136
+a(S'2015-02-20 14:29:25.954000'
+g79
+tp137
+a(S'2015-02-20 14:29:25.965000'
+g81
+tp138
+a(S'2015-02-20 14:29:25.968000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\KK107_matrix_reasoning.csv'
+tp139
+a(S'2015-02-20 14:29:25.976000'
+g81
+tp140
+asb.
