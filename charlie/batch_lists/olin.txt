@@ -8,7 +8,7 @@ cvlt2_recall
 cvlt2_recognition
 face_memory
 matrix_reasoning
-stroop
+updating
 verbal_fluency
 face_memory_delay
 scap
@@ -18,4 +18,3 @@ wtar
 switching
 trails
 pcet
-updating

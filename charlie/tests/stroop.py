@@ -41,6 +41,9 @@ References:
 size is an automatic property of object representation. J Exp Psychol Human
 Percept Performance, 38(3):561-569.
 
+NOTE: This test was not producing clear Stroop effects in the first batch of 60
+subjects and so was dropped from the Olin batch!
+
 """
 __version__ = 1.0
 __author__ = 'Sam Mathias'
