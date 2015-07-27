@@ -100,8 +100,10 @@ if __name__ == '__main__':
         df = df.astype(float)
         df = pandas.concat([df, group], axis=1)
         grouped = df.groupby('group')
-        f = os.path.join(path, test_name + '_summary.csv')
+        f = os.path.join(path, test_name + '_summary_grouped.csv')
         grouped.describe().T.to_csv(f)
+        f = os.path.join(path, test_name + '_summary.csv')
+        df.to_csv(f)
 
         [summary(s, path)for i, s in df.iteritems()]
 
