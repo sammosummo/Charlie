@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-
+"""
+This script contains a number of shortcut functions for generic summary stats
+for the tests, such as accuracy, mean RTs, etc.
+"""
+
 
 from platform import system
 from getpass import getuser

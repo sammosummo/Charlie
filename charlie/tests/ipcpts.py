@@ -10,15 +10,13 @@ each time the current array matches the array from the previous trial
 are 200 trials in the test phase. The symbols were originally designed by D.
 Glahn for STAN. The task is identical to the STAN version.
 
-Summary statistics:
+Important summary statistics:
 
-    ntrials : number of trials completed
-    ncorrect : number of trials correct
-    dprime : sensitivity
-    criterion : response bias
-    rt_mean : mean response time on correct trials in milliseconds.
-    rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
-    rt_outrmvd : number of outlier trials.
+    H : Number of correct responses.
+    F : Number of incorrect responses.
+    dprime : Sensitivity.
+    rt_mean : Mean response time on hit trials.
+    rt_mean_outrmvd : As above, except any trials <> 3 s.d. of mean excluded.
 
 References:
 
@@ -31,8 +29,13 @@ Erlenmeyer-Kimling, L. (1988). The continuous performance test, identical pairs
 version (CPT-IP): I. New findings about sustained attention in normal families.
 Psychiatr. Res., 26(2):223–38.
 
+Version history:
+
+1.0    Initial version.
+1.1    RTs now only calculated for hit trials.
+
 """
-__version__ = 1.0
+__version__ = 1.1
 __author__ = 'Sam Mathias'
 
 
@@ -114,7 +117,7 @@ symbols = [(0, 1, 2), (6, 9, 0), (6, 9, 0), (6, 9, 0), (3, 5, 8), (3, 5, 8),
 def control_method(proband_id, instructions):
     """
     Generates a control iterable. Both phases of the task are time-limited.
-    Therefofe, the control object contains only two items.
+    Therefore, the control object contains only two items.
     """
     return [(proband_id, test_name, phase) for phase in ('practice', 'test')]
 
@@ -149,7 +152,6 @@ def trial_method(screen, instructions, trial_info):
     screen.wipe()
     screen.countdown_splash(5, instructions[2])
     screen.wipe()
-
 
     # set up trials
     keys = [32]  # the space bar
@@ -222,7 +224,6 @@ def trial_method(screen, instructions, trial_info):
                 screen.update()
 
         trial_info = tuple(list(trial_info) + [rsp, rt])
-        print trial_info
         _data.append(trial_info)
     return _data
 
@@ -231,17 +232,14 @@ def summary_method(data_obj, instructions):
     """
     Computes summary stats for this task.
     """
-    df = data_obj.to_df()
-    df = df[df.phase == 'test']
-
     stats = summaries.get_universal_stats(data_obj)
-    stats += summaries.get_accuracy_stats(df, '')
-    stats += summaries.get_rt_stats(df, '')
-    stats += summaries.get_sdt_stats(df, 'No', 'Yes', '')
+    df = data_obj.to_df()
+    df1 = df[df.phase == 'test']
+    df2 = df[(df.phase == 'test') & (df.rsp == 'Yes')]
+    stats += summaries.get_accuracy_stats(df1, '')
+    stats += summaries.get_rt_stats(df2, '')
+    stats += summaries.get_sdt_stats(df1, 'No', 'Yes', '')
     df = summaries.make_df(stats)
-    # print '---Here are the summary stats:'
-    # print df.T
-
     return df
 
 
