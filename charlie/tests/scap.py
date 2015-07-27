@@ -34,8 +34,13 @@ References:
 Lönnqvist, J., & Cannon T. D. (2003). Spatial working memory as an
 endophenotype for schizophrenia. Biol. Psychiatry, 53(7):624-626.
 
+Version history:
+
+1.0 Initial version.
+1.1 Regenerated 3 trials that were producing poor performance.
+
 """
-__version__ = 1.0
+__version__ = 1.1
 __author__ = 'Sam Mathias'
 
 import pandas
