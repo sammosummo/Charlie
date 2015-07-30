@@ -1,0 +1,54 @@
+Spatial memory test, part 1 (practice)
+
+On the next screen you will see some squares. A
+circle will appear in some of the squares. Your task
+is to click on the squares that contained the
+circles. Start by clicking on the square that first
+contained the circle, then the square that next
+contained the circle, etc.
+
+Press any key to begin a practice trial.
+---
+Spatial memory test, part 1 (main test)
+
+Now you will perform the real test. It is the same
+as the practice. Try to complete the task as quickly
+as you can without making mistakes.
+
+Press any key to begin.
+---
+Spatial memory test, part 2 (practice)
+
+This part of the test is the same as before, except
+that now you must respond in reverse order. Start by
+clicking on the square that last contained the
+circle, then the square that contained the circle
+second-to-last, etc.
+
+Press any key to begin a practice trial.
+---
+Spatial memory test, part 2 (main test)
+
+Now you will perform the real test. It is the same
+as the practice. Try to complete the task as quickly
+as you can without making mistakes.
+
+Press any key to begin.
+---
+Spatial memory test, part 3 (practice)
+
+Now, a circle or an X will appear in the squares.
+Your task is to click on the squares that contained
+the circle, in order, and then click on the squares
+that contained the X, in order.
+
+Press any key to begin a practice trial.
+---
+Spatial memory test, part 3 (main test)
+
+Now you will perform the real test. It is the same
+as the practice. Try to complete the task as quickly
+as you can without making mistakes.
+
+Press any key to begin.
+---

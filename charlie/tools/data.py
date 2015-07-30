@@ -258,6 +258,7 @@ class Data:
         pandas DataFrame.
         """
         names, dtypes = zip(*self.output_format)
+        print self.data
         df = pandas.DataFrame(np.array(self.data).T, names).transpose()
         for name, dtype in self.output_format:
             df[name] = df[name].astype(dtype)
