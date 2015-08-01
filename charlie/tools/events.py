@@ -131,9 +131,14 @@ def wait_for_valid_mouse_click(screen, button, escape=True, clear=False):
             return 'EXIT'
         else:
             event, rt =  mouse_click
-        if event.button == button:
+        if button is not None and event.button == button:
             valid, i = screen.check_if_inside_clickable(event.pos)
-    return i, rt
+        if button is None:
+            valid, i = screen.check_if_inside_clickable(event.pos)
+    if button is not None:
+        return i, rt
+    else:
+        return i, rt, event.button
 
 
 def poll_for_valid_mouse_click(screen, button, escape=True):

@@ -1,18 +1,18 @@
 """
-corsi: Corsi test.
+corsi: Test of spatial memory span.
 
-This is a computerised and slightly modified version of the classic test of
-spatial-memory span by Corsi [1]. On each trial, the subject sees 9 empty
-squares ('blocks'). These blocks illuminate in a sequence that the proband
-reproduces by clicking on the squares. Blocks are illuminated for 0.5 s each.
-In the first trial, only two blocks illuminate during the study period, and the
-number of illuminating blocks increases by one every three trials. If the
-proband makes two errors with the same number of illuminating blocks, the test
-is terminated early.
+This is a modified version of the classic test of spatial-memory span by Corsi
+[1]. On each trial, the subject sees 9 empty squares positioned randomly on the
+screen. A circle appears in the squares one at a time, and the proband
+reproduces the sequence by clicking on the squares. In the first trial, the
+circle appears in two squares, and the number of appearances increases by one
+every three trials. The test is terminated early if a proband makes three
+errors in trials with the same number of appearances.
 
-Previous works suggest that the order in which subjects recall the sequence
-(forwards or in reverse) does not have much of an effect on performance [2, 3],
-so only the forwards version is included here.
+This task is analogous to the forward-digit-span test of verbal working memory.
+Unlike with verbal working-memory span, spatial span does not is not
+deleteriously affected by reporting the sequence backward [2], so only a
+forward version is included here.
 
 Time taken:
 

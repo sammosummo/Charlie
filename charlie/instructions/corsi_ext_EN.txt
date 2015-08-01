@@ -1,0 +1,46 @@
+Spatial memory test, part A.
+
+On the next screen you will see some squares. A
+circle will appear in some of the squares. Your
+task is to click on the squares that contained a
+circle. The order doesn't matter.
+
+Press any key to begin.
+---
+Spatial memory test, part B.
+
+Now, the circles and Xs will appear in the squares.
+Your task left-click on the squares that contained
+a circle, and right-click on the squares that
+contained an X. Again, the order doesn't matter.
+
+Press any key to begin.
+---
+Spatial memory test, part C.
+
+Now, the circles will appear one-by-one. Start by
+clicking on the square that first contained the
+circle, then the square that next contained the
+circle, etc.
+
+Press any key to begin.
+---
+Spatial memory test, part D.
+
+The circles will appear one-by-one, as before. Now,
+you must respond in reverse order. Start by
+clicking on the square that last contained the
+circle, then the square that contained the circle
+second-to-last, etc.
+
+Press any key to begin.
+---
+Spatial memory test, part E.
+
+Now, circles or Xs will appear in the squares one-
+by-one. Your task is to click on the squares that
+contained the circle, in order. Then click on the
+squares that contained the X, in order.
+
+Press any key to begin.
+---
