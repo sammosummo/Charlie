@@ -5,6 +5,8 @@ Executing individual tests and batches of tests.
 import importlib
 import os
 import sys
+import numpy as np
+import pandas
 try:
     from PySide import QtGui, QtCore
 except ImportError:
@@ -115,7 +117,37 @@ class Test:
                     stopping_rule = getattr(self.mod, 'stopping_rule')
                     if stopping_rule(self.data_obj):
                         print '---Stopping rule failed.'
-                        self.data_obj.control = []
+                        """HACK!!!---------------------------------------------
+                        We only want to exit the current phase of the test, not
+                        necessarily the whole test. To check this, we have to
+                        do some quite hacky things. :(
+                        -------------------------------------------------------
+                        """
+                        # convert the remaining control list to a dataframe
+                        ctl = self.data_obj.control
+                        n = len(ctl[0])
+                        names, dtypes = zip(*self.data_obj.output_format[:n])
+                        df = pandas.DataFrame(
+                            np.array(ctl).T, names
+                        ).transpose()
+                        for name, dtype in self.output_format[:n]:
+                            df[name] = df[name].astype(dtype)
+                        # find rows that are within the same phase as the
+                        # current trial
+                        print df.dtypes
+                        if 'phase' in df.columns:
+                            phases = df.phase
+                            current_phase = phases[0]
+                            x = (phases == current_phase).tolist()
+                            try:
+                                y = x.index(False)
+                                self.data_obj.control = ctl[y:]
+                            except:
+                                self.data_obj.control = []
+                        else:
+                            self.data_obj.control = []
+                    else:
+                        print '---Stopping rule passed.'
 
                 if not self.data_obj.control:
                     print '---Test over.'

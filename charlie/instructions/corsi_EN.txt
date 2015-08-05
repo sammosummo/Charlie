@@ -3,9 +3,7 @@ Spatial memory test, part 1 (practice)
 On the next screen you will see some squares. A
 circle will appear in some of the squares. Your task
 is to click on the squares that contained the
-circles. Start by clicking on the square that first
-contained the circle, then the square that next
-contained the circle, etc.
+circles.
 
 Press any key to begin a practice trial.
 ---
@@ -20,10 +18,11 @@ Press any key to begin.
 Spatial memory test, part 2 (practice)
 
 This part of the test is the same as before, except
-that now you must respond in reverse order. Start by
-clicking on the square that last contained the
-circle, then the square that contained the circle
-second-to-last, etc.
+that now the circles will appear one by one. Your task
+is to click on the squares in the correct order. Start
+by clicking on the square that first contained the
+circle, then the square that next contained the circle
+etc.
 
 Press any key to begin a practice trial.
 ---
