@@ -16,9 +16,9 @@ traditional test is also done with pen and paper, and requires an experienced
 experimenter to administer it. Thus the current version should be more
 convenient than the traditional test.
 
-Please note that this test has not yet been compared or verified with the pen-
-and-paper trail-making test. It is unknown how performance on the two tests
-relate to one another.
+Please note that this test has not yet been verified against the pen-and-paper
+trail-making test. However, preliminary data from our study suggests that they
+are correlated.
 
 Time required: ~4 min
 
@@ -30,7 +30,7 @@ Version history:
             During pilot testing, one subject clicked the same (incorrect)
             circle over and over, racking up a large number of errors. Now the
             total number of errors and the total number of unique errors are
-            recorded separately.
+            recorded separately. The latter statistic is probably better.
 
             Audio feedback on incorrect responses.
 
@@ -40,7 +40,7 @@ Summary statistics:
 
     *nerrors : number of errors
     *nuniqueerrors : number of unique errors
-    *time : total time taken to complete
+    *time : total time taken to complete the trial
 
 References:
 
@@ -50,11 +50,9 @@ organic brain damage. Percept Mot Skills, 8:271-276.
 [2] Corrigan, J.D., & Hinkeldey, M.S. (1987). Relationships between parts A and
 B of the Trail Making Test. J Clin Psychol, 43(4):402–409.
 
-
-
 """
 __version__ = 1.1
-__author__ = 'smathias'
+__author__ = 'Sam Mathias'
 
 
 import pandas

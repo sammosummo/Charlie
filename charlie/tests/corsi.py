@@ -4,17 +4,48 @@ corsi: Tests of spatial memory span.
 This is test shares some similarities with the original Corsi test [1]. On each
 trial, the proband sees several randomly distributed non-overlapping squares
 for 2 seconds. During the study period, circles or crosses appear in the
-squares. Then, during the test period, the proband clicks on the squares that
-contained the circles.
+squares, and during the test period, the proband clicks on the squares that
+contained the circles. There are three portions to the test. During the
+'simultaneous' portion, all circles appear in the sqaures at once, and the
+proband must report all of them, in any order. During the 'forward' portion,
+the circles appear one by one, and the proband must report them in the correct
+order. During the 'sequence' portion, circles and crosses appear in the
+squares, and the proband must report the circles in order, then the squares in
+order. Each portion contains practice and test trials. The number of circles/
+crosses per trial starts at 2, and increases by 1 every three trials, up to
+a maximum of 9. There are always twice as many squares as circles/crosses in a
+trial.
+
+Previous work has generally concluded that the reverse-reporting version of the
+Corsi produces the same results as the forward-reporting version [2]. I found
+the same thing when conducting pilot testing here. The three versions included
+in the present version produced very different scores, with simultaneous being
+the easiest and seqeunce being the most difficult.
+
+Summary statistics:
+
+    [portion]_* : simulaneous, forward, or sequence
+
+    *ntrials : number of trials.
+    *ncorrect : number of correct trials.
+    *k : trial with largest number of circles/crosses correctly reported.
+    *rt_mean : mean response time on correct trials in milliseconds.
+    *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
+    *rt_outrmvd : number of outlier trials.
+
+References:
+
+[1] Corsi P.M. (1972). Human memory and the medial temporal region of the
+brain. Dis Abstr Intl, 34, 891B.
+
+[2] Berch D.B., Krikorian R., & Huha E.M. (1998). The Corsi block-tapping task:
+Methodological and theoretical considerations. Brain Cogn, 38, 317–338.
 
 """
 __version__ = 1.0
 __author__ = 'smathias'
 
 
-from itertools import repeat
-import random
-import numpy as np
 import pandas
 from pygame import Rect
 import charlie.tools.data as data
@@ -25,29 +56,35 @@ import charlie.tools.audio as audio
 import charlie.tools.visual as visual
 import charlie.tools.events as events
 
-np.random.seed(2)
-test_name = 'corsi_ext'
+
+test_name = 'corsi'
 output_format = [('proband_id', str),
                  ('test_name', str),
-                 ('condition', str),
-                 ('blockn', str),
+                 ('portion', str),
+                 ('phase', str),
                  ('trialn', str),
                  ('n', int),
                  ('positions', str),
                  ('symbols', str),
                  ('correct', int),
-                 ('pcorrect', float),
                  ('rt', int),
                  ('responses', str)]
 conditions = [
-    #'forward_a', 'reverse_a', 'sequence_a',
-    'simultaneous_a',
-    'simultaneous_b',
-    'forward_b',
-    'reverse_b',
-    'sequence_b',
+    'simultaneous',
+    'forward',
+    'sequence',
 ]
 ns = range(2, 10)
+pre_trial_dur = 2
+study_dur = 0.5
+wipe_dur = 0.5
+timeout = 120
+trials_per_n = 3
+
+
+from itertools import repeat
+import random
+import numpy as np
 
 def gen_symbols(n):
     s = 'x' * (n/2)
@@ -72,12 +109,7 @@ def gen_positions(n):
             rects.append(rect)
     return [(r.left, r.top) for r in rects]
 
-pre_trial_dur = 2
-study_dur = 0.5
-wipe_dur = 0.5
-timeout = 120
-trials_per_n = 10
-blocks = 5
+
 
 
 def control_method(proband_id, instructions):

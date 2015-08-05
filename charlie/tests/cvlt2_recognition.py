@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-cvlt2_recognition: Recognition portion of the computerised California verbal
-learning test.
+cvlt2_recognition: Computerised California verbal learning test.
 
 This is third and final part of the modified and abridged CVLT-II [1]. In this
-test, the proband performs a yes-no recognition memory task. The 16 target
-words from the CVLT serve as signal (or 'yes') trials, and there are 32 noise
-(or 'no') words. Sixteen of the noise words come from one of the four semantic
-categories as the targets ('prototypical' words), and 16 come from other
-categories ('unrelated' words).
+test, the proband performs a yes-no recognition-memory task. The 16 target
+words from the CVLT serve as signal (or 'yes') words, and there are 32 noise
+(or 'no') words. Sixteen of the noise words come from one of the same four
+semantic categories as the targets ('prototypical' words), and 16 come from
+other categories ('unrelated' words).
 
 In the original CVLT, some of the noise words comprise list B. Since we don't
 perform list B, we just count these as prototypical or unrelated.

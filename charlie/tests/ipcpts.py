@@ -10,13 +10,22 @@ each time the current array matches the array from the previous trial
 are 200 trials in the test phase. The symbols were originally designed by D.
 Glahn for STAN. The task is identical to the STAN version.
 
-Important summary statistics:
+Time taken: ~6 min.
+
+Summary statistics:
 
     H : Number of correct responses.
     F : Number of incorrect responses.
     dprime : Sensitivity.
     rt_mean : Mean response time on hit trials.
     rt_mean_outrmvd : As above, except any trials <> 3 s.d. of mean excluded.
+
+
+Version history:
+
+    1.1    RTs were being calculated over all trials, even those that were
+           correct rejections. Now RTs are only calculated for 'hit' trials.
+
 
 References:
 
@@ -28,11 +37,6 @@ Psychol., 20:343-350.
 Erlenmeyer-Kimling, L. (1988). The continuous performance test, identical pairs
 version (CPT-IP): I. New findings about sustained attention in normal families.
 Psychiatr. Res., 26(2):223–38.
-
-Version history:
-
-1.0    Initial version.
-1.1    RTs now only calculated for hit trials.
 
 """
 __version__ = 1.1

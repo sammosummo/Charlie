@@ -8,6 +8,9 @@ symbol array, from the main test, and a symbol in the middle of the screen. The
 proband must click on the digit corresponding to the symbol. This test was
 originally part of STAN [1].
 
+Preliminary work suggests that this test does not produce great data. It might
+not be worth the ~1 minute it takes to complete.
+
 Summary statistics:
 
     *ntrials : number of trials.

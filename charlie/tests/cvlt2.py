@@ -3,7 +3,7 @@
 cvlt2: Computerised California verbal learning test.
 
 This is a modified and abridged version of the adult CVLT-II [1]. This script
-administers the "learning" portion to the CVLT. First, the proband sees a
+administers the 'learning' portion to the CVLT. First, the proband sees a
 screen instructing them to relinquish control of the testing computer to the
 experimenter. The experimenter then operates the CVLT GUI. On each trial, the
 proband hears audio recordings of 16 words [2], and then repeats out loud as

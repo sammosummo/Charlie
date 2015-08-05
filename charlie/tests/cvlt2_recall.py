@@ -1,25 +1,24 @@
 # -*- coding: utf-8 -*-
 """
-cvlt2_recall: Recall portion of the computerised California verbal learning
-test.
+cvlt2_recall: Computerised California verbal learning test.
 
 This is second part of the modified and abridged CVLT-II [1]. In this test the
 proband performs a 6th CVLT trial without hearing the target words beforehand.
 The procedure and summary statistics are therefore the same as those for one of
 the trials in the first portion of the CVLT.
 
-Technical note: this script imports functions from cvlt.py. Therefore this
-script must be present in the 'tests' subpackage.
+Technical note: this script imports functions from cvlt.py, so this must be
+present in the 'tests' subpackage.
 
 Time required: ~1 min
 
 Summary statistics:
 
-    valid : Number of valid responses on trial X.
-    intrusions : Number of intrusions on trial X.
-    repetitions : Number of repetitions on trial X.
-    semantic : List-based semantic clustering index on trial X.
-    serial : List-based serial recall index on trial X.
+    valid : Number of valid responses.
+    intrusions : Number of intrusions.
+    repetitions : Number of repetitions.
+    semantic : List-based semantic clustering index.
+    serial : List-based serial recall index.
     dprime : Recall discriminability index.
     criterion : Recall bias.
 
