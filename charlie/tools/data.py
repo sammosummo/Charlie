@@ -301,21 +301,33 @@ class Data:
         function is supplied, the summary statistics for the test are
         calculated and added to the local db.
         """
+        if self.proband_id == 'TEST':
+            print '---Not adding TEST to local db.'
+            return
+        # trial data
         self.update()
-        con = sqlite3.connect(LOCAL_DB_F)
-
         df1 = self.to_df()
-        test_name = self.test_name + '_trials'
-        if self.proband_id != 'TEST':
-            df1.to_sql(test_name, con, index=False, if_exists='append')
-        self.to_log('trial-by-trial data added to localdb')
-
-        if summary_method is not None and self.proband_id != 'TEST':
-            df2 = summary_method(self, instructions)
-            print '---Here are the summary stats:'
-            print df2.T
-            df2.to_sql(self.test_name, con, index=False, if_exists='append')
-            self.to_log('summary stats added to localdb')
+        table_name = self.test_name + '_trials'
+        con = sqlite3.connect(LOCAL_DB_F)
+        try:
+            df1.to_sql(table_name, con, index=False, if_exists='fail')
+        except:
+            df2 = pandas.read_sql_table(table_name, con, index_col=None)
+            df3 = pandas.concat([df1, df2])
+            df3 = df3.drop_duplicates()
+            df3.to_sql(table_name, con, index=False, if_exists='replace')
+        self.to_log('trial-by-trial data added to local db')
+        if summary_method is not None:
+            df1 = summary_method(self, instructions)
+            table_name = self.test_name
+            try:
+                df1.to_sql(table_name, con, index=False, if_exists='fail')
+            except:
+                df2 = pandas.read_sql_table(table_name, con, index_col=None)
+                df3 = pandas.concat([df1, df2])
+                df3 = df3.drop_duplicates()
+                df3.to_sql(table_name, con, index=False, if_exists='replace')
+            self.to_log('summary stats added to local db')
         con.close()
 
 
