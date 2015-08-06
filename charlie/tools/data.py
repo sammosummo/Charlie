@@ -304,7 +304,6 @@ class Data:
         if self.proband_id == 'TEST':
             print '---Not adding TEST to local db.'
             return
-        # trial data
         self.update()
         df1 = self.to_df()
         table_name = self.test_name + '_trials'
@@ -312,7 +311,8 @@ class Data:
         try:
             df1.to_sql(table_name, con, index=False, if_exists='fail')
         except:
-            df2 = pandas.read_sql_table(table_name, con, index_col=None)
+            s = 'SELECT * from %s' % table_name
+            df2 = pandas.read_sql(s, con, index_col=None)
             df3 = pandas.concat([df1, df2])
             df3 = df3.drop_duplicates()
             df3.to_sql(table_name, con, index=False, if_exists='replace')
@@ -323,7 +323,8 @@ class Data:
             try:
                 df1.to_sql(table_name, con, index=False, if_exists='fail')
             except:
-                df2 = pandas.read_sql_table(table_name, con, index_col=None)
+                s = 'SELECT * from %s' % table_name
+                df2 = pandas.read_sql(s, con, index_col=None)
                 df3 = pandas.concat([df1, df2])
                 df3 = df3.drop_duplicates()
                 df3.to_sql(table_name, con, index=False, if_exists='replace')

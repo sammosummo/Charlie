@@ -265,5 +265,12 @@ def process_form_data(form):
             f = '%s_%s.csv' % (args.proband_id, q_name)
             df.to_csv(data.pj(data.QUESTIONNAIRE_DATA_PATH, f))
             con = sqlite3.connect(data.LOCAL_DB_F)
-            df.to_sql(q_name, con, index=False, if_exists='append')
+            try:
+                df.to_sql(q_name, con, index=False, if_exists='fail')
+            except:
+                s = 'SELECT * from %s' % q_name
+                df2 = pandas.read_sql(s, con, index_col=None)
+                df3 = pandas.concat([df, df2])
+                df3 = df3.drop_duplicates()
+                df3.to_sql(q_name, con, index=False, if_exists='replace')
             con.close()
