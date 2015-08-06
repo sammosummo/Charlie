@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Mar 14 16:52:26 2014
-
 switching: Task-switching test
 
 This task-switching test is based on the Cantab attention-switching test [1]
@@ -9,43 +7,31 @@ and on the work by Monsell and colleagues [2, 3]. On each trial, the proband
 sees a 2-by-2 grid on the screen. There is an arrow in one of the cells of the
 grid. If the arrow is in either of the top two cells, the proband indicates its
 horizontal position (left or right). If the arrow is in either of the bottom
-cells, the proband indicates the direction it is facing (left or right). The
-arrows are also coloured differently (blue for position, red for direction).
+cells, the proband indicates the direction it is facing (left or right).
 The test follows on from Rogers and Monsell's work suggesting that subjects may
-handle predictable and unpredictable task switches differently, and improves on
-the Cantab, by removing the reliance on on-screen written instructions.
+handle predictable and unpredictable task switches differently.
 
 There are two main phases to the test. In the 'predictable' phase, the task
 switches every two trials. In the 'random' phase, task-switching is
 unpredictable. There are 101 trials in each phase, plus eight trials in the
 practice phase.
 
+Time taken: ~6 minutes.
+
+Version history:
+
+    1.1     Subjects found the switching colours confusing. Now all the arrows
+            are black. 'Position' and 'Direction' are now also written above/
+            below the grid.
+
 Summary statistics:
 
-    overall*
-    [predictable or random]*
-    [predictable or random]_[switch or nonswitch]*
-
-    *ntrials : number of trials.
-    *ncorrect : number of correct trials.
-    *pcorrect : proportion of trials correct.
-    *dprime : index of sensitivity.
-    *criterion : index of bias.
-    *rt_mean : mean response time on correct trials in milliseconds.
-    *rt_mean_outrmvd : as above, except any trials <> 3 s.d. of mean excluded.
-    *rt_outrmvd : number of outlier trials.
-
-
-    cost_[predictable or random]_ncorrect : cost of switching
-    cost_[predictable or random]_pcorrect
-    cost_[predictable or random]_dprime
-    cost_[predictable or random]_rt_mean_outrmvd
-
-    stroop_ncorrect : incongruent minus congruent
-    stroop_pcorrect
-    stroop_dprime
-    stroop_rt_mean_outrmvd
-
+    [switch]_[task]_[cong]_ncorrect : Number of correct trials.
+    [switch]_[task]_[cong]_dprime : Sensitivity.
+    [switch]_[task]_[cong]_criterion : Bias.
+    [switch]_[task]_[cong]_rt_mean : Mean RT in ms.
+    [switch]_[task]_[cong]_rt_outrmvd : As above, except any trials <> 3 s.d.
+    of mean excluded.
 
 References:
 
@@ -62,7 +48,7 @@ simple cognitive tasks. Journal of Experimental Psychology: General, 124(2):
 
 
 """
-__version__ = 1.0
+__version__ = 1.1
 __author__ = 'Sam Mathias'
 
 
@@ -153,7 +139,7 @@ def control_method(proband_id, instructions):
             else:
                 switch = switches[t == task[trialn - 1]]
             cong = ['Incongruent', 'Congruent'][p == d]
-            f = ('arrow_%s_%s.png' % (['blue', 'red'][t], labels[d])).lower()
+            f = ('arrow_%s_%s.png' % (['black', 'black'][t], labels[d])).lower()
             control.append((proband_id, test_name, phase, trialn, tasks[t], 
                            labels[p], labels[d], switch, cong, data.pj(path, f),
                            labels[[p, d][t]]))
@@ -206,6 +192,8 @@ def trial_method(screen, instructions, trial_info):
     grid_rects[2].topright = screen.x0, screen.y0 - 100
     grid_rects[3].topleft = screen.x0, screen.y0 - 100
     [screen.blit_rectangle(rect) for rect in grid_rects]
+    screen.blit_text('Position', (0, -300))
+    screen.blit_text('Direction', (0, 100))
     
     p = labels, [visual.DEFAULT_TEXT_COLOUR] * len(labels)
     screen.change_word_colour(*p)
