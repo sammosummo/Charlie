@@ -232,9 +232,9 @@ class Data:
         self.date_started = None
         self.test_done = False
         self.date_done = None
-        self.initialised = (str(datetime.now()))
-        self.last_opened = (str(datetime.now()))
-        self.last_updated = (str(datetime.now()))
+        self.initialised = datetime.now()
+        self.last_opened = datetime.now()
+        self.last_updated = datetime.now()
         self.log = []
         self.to_log('instance created')
 
@@ -246,11 +246,11 @@ class Data:
         self.last_updated = (str(datetime.now()))
         if not self.test_started:
             self.test_started = True
-            self.date_started = (str(datetime.now()))
+            self.date_started = datetime.now()
         save_data(self)
         self.to_log('instance updated')
         if self.test_done:
-            self.date_done = (str(datetime.now()))
+            self.date_done = datetime.now()
 
     def to_df(self):
         """

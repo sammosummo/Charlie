@@ -13,6 +13,7 @@ verbal_fluency
 face_memory_delay
 scap
 ctrails
+corsi
 verbal_working_memory
 wtar
 switching
