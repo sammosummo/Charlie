@@ -43,18 +43,16 @@ def download_data(server, username, password, backup_dir):
     print '---Attempting to create sftp ...',
     sftp = ssh.open_sftp()
     print 'created!'
-    print '---Downloading the following files:'
+    print '---Downloading the files.'
     for f in sftp.listdir(backup_dir):
-        print f,
         remote_f = os.path.join(backup_dir, f)
         local_f = os.path.join(data.BACKUP_DATA_PATH, f)
-        if os.path.exists(local_f):
+        if not os.path.exists(local_f):
             try:
+                print 'downloading %s' % f
                 sftp.get(remote_f, local_f)
-                print 'success!'
             except:
-                print 'failed.'
-            print 'skipping.'
+                pass
     print '---Downloading done.'
     return True
 
@@ -76,7 +74,7 @@ def upload_data(server, username, password, backup_dir):
     print '---Attempting to create sftp ...',
     sftp = ssh.open_sftp()
     print 'created!'
-    print '---Uploading the following files:'
+    print '---Uploading the files.'
     tmp_files = [f for f in os.listdir(data.BACKUP_DATA_PATH)]
     for p in [data.RAW_DATA_PATH,
               data.CSV_DATA_PATH,
@@ -85,28 +83,23 @@ def upload_data(server, username, password, backup_dir):
         for f in d:
             local_f = os.path.join(p, f)
             remote_f = os.path.join(backup_dir, f)
-            print f,
             if f not in tmp_files:
                 try:
+                    print 'uploading %s' %f
                     sftp.put(local_f, remote_f)
-                    print 'success.'
                 except:
-                    print 'failed.'
+                    pass
             else:
-                print 'duplicate filename',
                 tmp_f = os.path.join(data.BACKUP_DATA_PATH, f)
-                if filecmp.cmp(tmp_f, local_f, False) is True:
-                    print 'skipped.'
-                else:
-                    print 'conflict detected',
+                if not filecmp.cmp(tmp_f, local_f, False):
                     try:
                         s = '_CONFLICT_%s' % str(datetime.now().replace(' ', '_'))
+                        print 'uploading %s' %f
                         sftp.put(local_f, remote_f + s)
-                        print 'success.'
                     except:
-                        print 'failed.'
-    rmtree(data.BACKUP_DATA_PATH)
-    os.makedirs(data.BACKUP_DATA_PATH)
+                        pass
+    # rmtree(data.BACKUP_DATA_PATH)
+    # os.makedirs(data.BACKUP_DATA_PATH)
     return True
 
 
@@ -114,21 +107,10 @@ def backup(method, attempts):
     """
     Backup the data directory now.
     """
-    ok = False
-    while ok is False:
-        ok = download_data(*get_sftp_details())
-        attempts -= 1
-        if attempts == 0:
-            return False
-    ok = False
-    while ok is False:
-        ok = upload_data(*get_sftp_details())
-        attempts -= 1
-        if attempts == 0:
-            return False
-    return True
+    download_data(*get_sftp_details())
+    upload_data(*get_sftp_details())
 
 
 
 if __name__ == '__main__':
-    backup('sftp', 5)
+    backup('sftp', 1)
