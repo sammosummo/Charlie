@@ -15,10 +15,10 @@ from datetime import datetime
 
 def download_data(server, username, password, backup_dir):
     """
-    The raw data are all stored in a directory on the Olin cluster. This function
-    will download the contents of this folder to a local directory. This allows
-    us to check for duplicates within the local data set, and only upload those
-    that are new. Returns False if unsuccessful and True if successful.
+    Back up copies of the raw data files, csvs, and an SQLite database are
+    stored in a directory on the Olin cluster. This function will scan and
+    download the contents on that directory to a temporary local directory.
+    Returns False if unsuccessful and True if successful.
     """
     print '---Establishing connection ...',
     ssh = paramiko.SSHClient()
@@ -29,23 +29,22 @@ def download_data(server, username, password, backup_dir):
     except:
         print 'could not connect.'
         return False
-    tmp_dir = os.path.join(data.PACKAGE_DIR, '_tmp')
-    if not os.path.exists(tmp_dir):
-        os.makedirs(tmp_dir)
     print '---Attempting to create sftp ...',
-    ftp = ssh.open_sftp()
+    sftp = ssh.open_sftp()
     print 'created!'
-    for i in ftp.listdir(backup_dir):
-        lstatout  = str(ftp.lstat(i)).split()[0]
-        print ftp.lstatlstatout
+    for f in sftp.listdir(backup_dir):
+        abs_f = os.path.join(backup_dir ,f)
+        try:
+            sftp.get(abs_f, data.BACKUP_DATA_PATH)
+        except:
+            return False
+    return True
 
 
-def compare_raw_data():
+def upload_data():
     """
-    Returns two lists. The first contains paths of all the raw data files
-    in the data directory, minus those that already appear in the
-    temporarily downloaded data directory.  The second contains conflict
-    files (one with that filename exists, but is not an exact match).
+    Attempts to transfer the contents of the local data directory to the Olin
+    cluster. Before uploading, every file is checked with the
     """
     local_files = [f for f in os.listdir(data.RAW_DATA_PATH)]
     tmp_dir = os.path.join(data.PACKAGE_DIR, '_tmp')

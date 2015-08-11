@@ -1511,6 +1511,44 @@
 24,4409,verbal_working_memory,digit letter,6,T9A3,False
 25,4409,verbal_working_memory,digit letter,7,V1J5,False
 26,4409,verbal_working_memory,digit letter,8,7N4L,False
+0,4410,verbal_working_memory,forward,0,629,True
+1,4410,verbal_working_memory,forward,1,375,True
+2,4410,verbal_working_memory,forward,2,5417,True
+3,4410,verbal_working_memory,forward,3,8396,True
+4,4410,verbal_working_memory,forward,4,36925,True
+5,4410,verbal_working_memory,forward,5,69471,True
+6,4410,verbal_working_memory,forward,6,918427,True
+7,4410,verbal_working_memory,forward,7,635482,True
+8,4410,verbal_working_memory,forward,8,1285346,False
+9,4410,verbal_working_memory,forward,9,2814975,True
+10,4410,verbal_working_memory,forward,10,38295174,True
+11,4410,verbal_working_memory,forward,11,59182647,False
+12,4410,verbal_working_memory,backward,0,51,True
+13,4410,verbal_working_memory,backward,1,38,True
+14,4410,verbal_working_memory,backward,2,493,True
+15,4410,verbal_working_memory,backward,3,526,True
+16,4410,verbal_working_memory,backward,4,3814,False
+17,4410,verbal_working_memory,backward,5,1795,True
+18,4410,verbal_working_memory,backward,6,62972,False
+19,4410,verbal_working_memory,backward,7,48527,False
+20,4410,verbal_working_memory,practice,0,6F,False
+21,4410,verbal_working_memory,practice,1,G4,True
+22,4410,verbal_working_memory,practice,2,3W5,True
+23,4410,verbal_working_memory,practice,3,T7L,False
+24,4410,verbal_working_memory,practice,4,6GA2,False
+25,4410,verbal_working_memory,practice,5,9PF4,False
+26,4410,verbal_working_memory,digit letter,0,L2,True
+27,4410,verbal_working_memory,digit letter,1,6P,True
+28,4410,verbal_working_memory,digit letter,2,B5,True
+29,4410,verbal_working_memory,digit letter,3,F7L,True
+30,4410,verbal_working_memory,digit letter,4,R4D,True
+31,4410,verbal_working_memory,digit letter,5,H18,True
+32,4410,verbal_working_memory,digit letter,6,T9A3,True
+33,4410,verbal_working_memory,digit letter,7,V1J5,True
+34,4410,verbal_working_memory,digit letter,8,7N4L,True
+35,4410,verbal_working_memory,digit letter,9,8D6G1,False
+36,4410,verbal_working_memory,digit letter,10,K2C7S,False
+37,4410,verbal_working_memory,digit letter,11,5P3Y9,False
 0,4411,verbal_working_memory,forward,0,629,True
 1,4411,verbal_working_memory,forward,1,375,True
 2,4411,verbal_working_memory,forward,2,5417,True
@@ -1629,6 +1667,239 @@
 38,4413,verbal_working_memory,digit letter,12,M4E7Q2,False
 39,4413,verbal_working_memory,digit letter,13,W8H5F3,False
 40,4413,verbal_working_memory,digit letter,14,6G9A2S,False
+0,4414,verbal_working_memory,forward,0,629,True
+1,4414,verbal_working_memory,forward,1,375,True
+2,4414,verbal_working_memory,forward,2,5417,True
+3,4414,verbal_working_memory,forward,3,8396,True
+4,4414,verbal_working_memory,forward,4,36925,True
+5,4414,verbal_working_memory,forward,5,69471,False
+6,4414,verbal_working_memory,forward,6,918427,False
+7,4414,verbal_working_memory,forward,7,635482,False
+8,4414,verbal_working_memory,backward,0,51,True
+9,4414,verbal_working_memory,backward,1,38,True
+10,4414,verbal_working_memory,backward,2,493,True
+11,4414,verbal_working_memory,backward,3,526,True
+12,4414,verbal_working_memory,backward,4,3814,False
+13,4414,verbal_working_memory,backward,5,1795,False
+14,4414,verbal_working_memory,practice,0,6F,True
+15,4414,verbal_working_memory,practice,1,G4,True
+16,4414,verbal_working_memory,practice,2,3W5,True
+17,4414,verbal_working_memory,practice,3,T7L,True
+18,4414,verbal_working_memory,practice,4,6GA2,False
+19,4414,verbal_working_memory,practice,5,9PF4,True
+20,4414,verbal_working_memory,digit letter,0,L2,True
+21,4414,verbal_working_memory,digit letter,1,6P,True
+22,4414,verbal_working_memory,digit letter,2,B5,True
+23,4414,verbal_working_memory,digit letter,3,F7L,True
+24,4414,verbal_working_memory,digit letter,4,R4D,True
+25,4414,verbal_working_memory,digit letter,5,H18,True
+26,4414,verbal_working_memory,digit letter,6,T9A3,False
+27,4414,verbal_working_memory,digit letter,7,V1J5,False
+28,4414,verbal_working_memory,digit letter,8,7N4L,False
+0,4415,verbal_working_memory,forward,0,629,True
+1,4415,verbal_working_memory,forward,1,375,True
+2,4415,verbal_working_memory,forward,2,5417,True
+3,4415,verbal_working_memory,forward,3,8396,True
+4,4415,verbal_working_memory,forward,4,36925,True
+5,4415,verbal_working_memory,forward,5,69471,True
+6,4415,verbal_working_memory,forward,6,918427,True
+7,4415,verbal_working_memory,forward,7,635482,True
+8,4415,verbal_working_memory,forward,8,1285346,True
+9,4415,verbal_working_memory,forward,9,2814975,False
+10,4415,verbal_working_memory,forward,10,38295174,True
+11,4415,verbal_working_memory,forward,11,59182647,False
+12,4415,verbal_working_memory,backward,0,51,True
+13,4415,verbal_working_memory,backward,1,38,True
+14,4415,verbal_working_memory,backward,2,493,True
+15,4415,verbal_working_memory,backward,3,526,True
+16,4415,verbal_working_memory,backward,4,3814,True
+17,4415,verbal_working_memory,backward,5,1795,True
+18,4415,verbal_working_memory,backward,6,62972,True
+19,4415,verbal_working_memory,backward,7,48527,True
+20,4415,verbal_working_memory,backward,8,715286,True
+21,4415,verbal_working_memory,backward,9,831964,True
+22,4415,verbal_working_memory,backward,10,4739128,False
+23,4415,verbal_working_memory,backward,11,8129365,False
+24,4415,verbal_working_memory,practice,0,6F,True
+25,4415,verbal_working_memory,practice,1,G4,True
+26,4415,verbal_working_memory,practice,2,3W5,True
+27,4415,verbal_working_memory,practice,3,T7L,True
+28,4415,verbal_working_memory,practice,4,6GA2,True
+29,4415,verbal_working_memory,practice,5,9PF4,True
+30,4415,verbal_working_memory,digit letter,0,L2,True
+31,4415,verbal_working_memory,digit letter,1,6P,True
+32,4415,verbal_working_memory,digit letter,2,B5,True
+33,4415,verbal_working_memory,digit letter,3,F7L,True
+34,4415,verbal_working_memory,digit letter,4,R4D,True
+35,4415,verbal_working_memory,digit letter,5,H18,True
+36,4415,verbal_working_memory,digit letter,6,T9A3,True
+37,4415,verbal_working_memory,digit letter,7,V1J5,True
+38,4415,verbal_working_memory,digit letter,8,7N4L,True
+39,4415,verbal_working_memory,digit letter,9,8D6G1,True
+40,4415,verbal_working_memory,digit letter,10,K2C7S,True
+41,4415,verbal_working_memory,digit letter,11,5P3Y9,True
+42,4415,verbal_working_memory,digit letter,12,M4E7Q2,False
+43,4415,verbal_working_memory,digit letter,13,W8H5F3,False
+44,4415,verbal_working_memory,digit letter,14,6G9A2S,True
+45,4415,verbal_working_memory,digit letter,15,R3B4Z1C,False
+46,4415,verbal_working_memory,digit letter,16,5T9J2X7,False
+47,4415,verbal_working_memory,digit letter,17,E1H8R4D,False
+0,4416,verbal_working_memory,forward,0,629,True
+1,4416,verbal_working_memory,forward,1,375,True
+2,4416,verbal_working_memory,forward,2,5417,True
+3,4416,verbal_working_memory,forward,3,8396,True
+4,4416,verbal_working_memory,forward,4,36925,True
+5,4416,verbal_working_memory,forward,5,69471,True
+6,4416,verbal_working_memory,forward,6,918427,True
+7,4416,verbal_working_memory,forward,7,635482,True
+8,4416,verbal_working_memory,forward,8,1285346,True
+9,4416,verbal_working_memory,forward,9,2814975,False
+10,4416,verbal_working_memory,forward,10,38295174,True
+11,4416,verbal_working_memory,forward,11,59182647,False
+12,4416,verbal_working_memory,backward,0,51,True
+13,4416,verbal_working_memory,backward,1,38,True
+14,4416,verbal_working_memory,backward,2,493,True
+15,4416,verbal_working_memory,backward,3,526,True
+16,4416,verbal_working_memory,backward,4,3814,False
+17,4416,verbal_working_memory,backward,5,1795,False
+18,4416,verbal_working_memory,practice,0,6F,True
+19,4416,verbal_working_memory,practice,1,G4,True
+20,4416,verbal_working_memory,practice,2,3W5,True
+21,4416,verbal_working_memory,practice,3,T7L,True
+22,4416,verbal_working_memory,practice,4,6GA2,True
+23,4416,verbal_working_memory,practice,5,9PF4,True
+24,4416,verbal_working_memory,digit letter,0,L2,True
+25,4416,verbal_working_memory,digit letter,1,6P,True
+26,4416,verbal_working_memory,digit letter,2,B5,True
+27,4416,verbal_working_memory,digit letter,3,F7L,False
+28,4416,verbal_working_memory,digit letter,4,R4D,True
+29,4416,verbal_working_memory,digit letter,5,H18,True
+30,4416,verbal_working_memory,digit letter,6,T9A3,True
+31,4416,verbal_working_memory,digit letter,7,V1J5,True
+32,4416,verbal_working_memory,digit letter,8,7N4L,True
+33,4416,verbal_working_memory,digit letter,9,8D6G1,True
+34,4416,verbal_working_memory,digit letter,10,K2C7S,False
+35,4416,verbal_working_memory,digit letter,11,5P3Y9,False
+36,4416,verbal_working_memory,digit letter,12,M4E7Q2,False
+37,4416,verbal_working_memory,digit letter,13,W8H5F3,False
+38,4416,verbal_working_memory,digit letter,14,6G9A2S,False
+0,4422,verbal_working_memory,forward,0,629,True
+1,4422,verbal_working_memory,forward,1,375,True
+2,4422,verbal_working_memory,forward,2,5417,True
+3,4422,verbal_working_memory,forward,3,8396,True
+4,4422,verbal_working_memory,forward,4,36925,True
+5,4422,verbal_working_memory,forward,5,69471,False
+6,4422,verbal_working_memory,forward,6,918427,False
+7,4422,verbal_working_memory,forward,7,635482,True
+8,4422,verbal_working_memory,forward,8,1285346,True
+9,4422,verbal_working_memory,forward,9,2814975,True
+10,4422,verbal_working_memory,forward,10,38295174,False
+11,4422,verbal_working_memory,forward,11,59182647,False
+12,4422,verbal_working_memory,backward,0,51,True
+13,4422,verbal_working_memory,backward,1,38,True
+14,4422,verbal_working_memory,backward,2,493,True
+15,4422,verbal_working_memory,backward,3,526,True
+16,4422,verbal_working_memory,backward,4,3814,True
+17,4422,verbal_working_memory,backward,5,1795,True
+18,4422,verbal_working_memory,backward,6,62972,False
+19,4422,verbal_working_memory,backward,7,48527,False
+20,4422,verbal_working_memory,practice,0,6F,True
+21,4422,verbal_working_memory,practice,1,G4,True
+22,4422,verbal_working_memory,practice,2,3W5,True
+23,4422,verbal_working_memory,practice,3,T7L,True
+24,4422,verbal_working_memory,practice,4,6GA2,True
+25,4422,verbal_working_memory,practice,5,9PF4,True
+26,4422,verbal_working_memory,digit letter,0,L2,True
+27,4422,verbal_working_memory,digit letter,1,6P,True
+28,4422,verbal_working_memory,digit letter,2,B5,True
+29,4422,verbal_working_memory,digit letter,3,F7L,True
+30,4422,verbal_working_memory,digit letter,4,R4D,True
+31,4422,verbal_working_memory,digit letter,5,H18,True
+32,4422,verbal_working_memory,digit letter,6,T9A3,False
+33,4422,verbal_working_memory,digit letter,7,V1J5,False
+34,4422,verbal_working_memory,digit letter,8,7N4L,True
+35,4422,verbal_working_memory,digit letter,9,8D6G1,False
+36,4422,verbal_working_memory,digit letter,10,K2C7S,False
+37,4422,verbal_working_memory,digit letter,11,5P3Y9,False
+0,4424,verbal_working_memory,forward,0,629,True
+1,4424,verbal_working_memory,forward,1,375,True
+2,4424,verbal_working_memory,forward,2,5417,True
+3,4424,verbal_working_memory,forward,3,8396,True
+4,4424,verbal_working_memory,forward,4,36925,True
+5,4424,verbal_working_memory,forward,5,69471,True
+6,4424,verbal_working_memory,forward,6,918427,True
+7,4424,verbal_working_memory,forward,7,635482,True
+8,4424,verbal_working_memory,forward,8,1285346,True
+9,4424,verbal_working_memory,forward,9,2814975,False
+10,4424,verbal_working_memory,forward,10,38295174,False
+11,4424,verbal_working_memory,forward,11,59182647,False
+12,4424,verbal_working_memory,backward,0,51,True
+13,4424,verbal_working_memory,backward,1,38,True
+14,4424,verbal_working_memory,backward,2,493,False
+15,4424,verbal_working_memory,backward,3,526,True
+16,4424,verbal_working_memory,backward,4,3814,False
+17,4424,verbal_working_memory,backward,5,1795,True
+18,4424,verbal_working_memory,backward,6,62972,False
+19,4424,verbal_working_memory,backward,7,48527,False
+20,4424,verbal_working_memory,practice,0,6F,True
+21,4424,verbal_working_memory,practice,1,G4,True
+22,4424,verbal_working_memory,practice,2,3W5,True
+23,4424,verbal_working_memory,practice,3,T7L,True
+24,4424,verbal_working_memory,practice,4,6GA2,True
+25,4424,verbal_working_memory,practice,5,9PF4,True
+26,4424,verbal_working_memory,digit letter,0,L2,True
+27,4424,verbal_working_memory,digit letter,1,6P,True
+28,4424,verbal_working_memory,digit letter,2,B5,True
+29,4424,verbal_working_memory,digit letter,3,F7L,True
+30,4424,verbal_working_memory,digit letter,4,R4D,False
+31,4424,verbal_working_memory,digit letter,5,H18,True
+32,4424,verbal_working_memory,digit letter,6,T9A3,False
+33,4424,verbal_working_memory,digit letter,7,V1J5,False
+34,4424,verbal_working_memory,digit letter,8,7N4L,False
+0,4426,verbal_working_memory,forward,0,629,True
+1,4426,verbal_working_memory,forward,1,375,True
+2,4426,verbal_working_memory,forward,2,5417,True
+3,4426,verbal_working_memory,forward,3,8396,True
+4,4426,verbal_working_memory,forward,4,36925,True
+5,4426,verbal_working_memory,forward,5,69471,True
+6,4426,verbal_working_memory,forward,6,918427,True
+7,4426,verbal_working_memory,forward,7,635482,True
+8,4426,verbal_working_memory,forward,8,1285346,True
+9,4426,verbal_working_memory,forward,9,2814975,True
+10,4426,verbal_working_memory,forward,10,38295174,False
+11,4426,verbal_working_memory,forward,11,59182647,True
+12,4426,verbal_working_memory,backward,0,51,True
+13,4426,verbal_working_memory,backward,1,38,True
+14,4426,verbal_working_memory,backward,2,493,True
+15,4426,verbal_working_memory,backward,3,526,True
+16,4426,verbal_working_memory,backward,4,3814,False
+17,4426,verbal_working_memory,backward,5,1795,True
+18,4426,verbal_working_memory,backward,6,62972,False
+19,4426,verbal_working_memory,backward,7,48527,False
+20,4426,verbal_working_memory,practice,0,6F,False
+21,4426,verbal_working_memory,practice,1,G4,True
+22,4426,verbal_working_memory,practice,2,3W5,True
+23,4426,verbal_working_memory,practice,3,T7L,False
+24,4426,verbal_working_memory,practice,4,6GA2,True
+25,4426,verbal_working_memory,practice,5,9PF4,True
+26,4426,verbal_working_memory,digit letter,0,L2,True
+27,4426,verbal_working_memory,digit letter,1,6P,True
+28,4426,verbal_working_memory,digit letter,2,B5,True
+29,4426,verbal_working_memory,digit letter,3,F7L,True
+30,4426,verbal_working_memory,digit letter,4,R4D,True
+31,4426,verbal_working_memory,digit letter,5,H18,True
+32,4426,verbal_working_memory,digit letter,6,T9A3,True
+33,4426,verbal_working_memory,digit letter,7,V1J5,True
+34,4426,verbal_working_memory,digit letter,8,7N4L,True
+35,4426,verbal_working_memory,digit letter,9,8D6G1,False
+36,4426,verbal_working_memory,digit letter,10,K2C7S,True
+37,4426,verbal_working_memory,digit letter,11,5P3Y9,False
+38,4426,verbal_working_memory,digit letter,12,M4E7Q2,False
+39,4426,verbal_working_memory,digit letter,13,W8H5F3,True
+40,4426,verbal_working_memory,digit letter,14,6G9A2S,False
+41,4426,verbal_working_memory,digit letter,15,R3B4Z1C,False
+42,4426,verbal_working_memory,digit letter,16,5T9J2X7,False
+43,4426,verbal_working_memory,digit letter,17,E1H8R4D,False
 0,A109,verbal_working_memory,forward,0,629,True
 1,A109,verbal_working_memory,forward,1,375,True
 2,A109,verbal_working_memory,forward,2,5417,True
