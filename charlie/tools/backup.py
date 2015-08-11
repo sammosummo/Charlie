@@ -53,7 +53,6 @@ def download_data(server, username, password, backup_dir):
             print 'success!'
         except:
             print 'failed.'
-            return False
     print '---Downloading done.'
     return True
 
@@ -91,7 +90,6 @@ def upload_data(server, username, password, backup_dir):
                     print 'success.'
                 except:
                     print 'failed.'
-                    return False
             else:
                 print 'duplicate filename',
                 tmp_f = os.path.join(data.BACKUP_DATA_PATH, f)
@@ -105,7 +103,6 @@ def upload_data(server, username, password, backup_dir):
                         print 'success.'
                     except:
                         print 'failed.'
-                        return False
     rmtree(data.BACKUP_DATA_PATH)
     os.makedirs(data.BACKUP_DATA_PATH)
     return True
