@@ -113,7 +113,7 @@ symbols = {
             'ccccccccccccc', 'ccccccccccccc', 'cccccccccccccc',
             'cccccccccccccc', 'cccccccccccccc'
         ],
-        'practice': ['cc', 'cc']
+        'practice': ['cc']
     },
     'simultaneous': {
         'test': [
@@ -125,7 +125,7 @@ symbols = {
             'cccccccccccc', 'cccccccccccc', 'cccccccccccc', 'ccccccccccccc',
             'ccccccccccccc', 'ccccccccccccc', 'cccccccccccccc',
             'cccccccccccccc', 'cccccccccccccc'],
-        'practice': ['cc', 'cc']
+        'practice': ['cc']
     }, 'sequence': {
         'test': [
             'cx', 'cx', 'cx', 'xcx', 'cxx', 'cxx', 'cxxc', 'cxcx', 'cxcx',
@@ -694,7 +694,7 @@ def control_method(proband_id, instructions):
         for phase in ['practice', 'test']:
             if phase == 'practice':
                 if condition != 'sequence':
-                    _ns = [2, 2]
+                    _ns = [2]
                 else:
                     _ns = [2, 2, 3, 3]
             else:
@@ -774,10 +774,10 @@ def trial_method(screen, instructions, trial_info):
                 screen.update()
                 events.wait(wipe_dur)
     screen.update()
-    events.wait(pre_trial_dur / 2)
+    events.wait(pre_trial_dur / 2.)
     screen.wipe()
     screen.update()
-    events.wait(pre_trial_dur / 2)
+    events.wait(pre_trial_dur / 2.)
     screen.wipe()
     [screen.blit_rectangle(rect) for rect in squares]
     screen.update()
