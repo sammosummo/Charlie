@@ -100,7 +100,7 @@ def upload_data(server, username, password, backup_dir):
                 else:
                     print 'conflict detected',
                     try:
-                        s = '_CONFLICT_%s' % str(datetime.now())
+                        s = '_CONFLICT_%s' % str(datetime.now().replace(' ', '_'))
                         sftp.put(local_f, remote_f + s)
                         print 'success.'
                     except:
