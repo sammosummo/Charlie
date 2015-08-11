@@ -48,11 +48,13 @@ def download_data(server, username, password, backup_dir):
         print f,
         remote_f = os.path.join(backup_dir, f)
         local_f = os.path.join(data.BACKUP_DATA_PATH, f)
-        try:
-            sftp.get(remote_f, local_f)
-            print 'success!'
-        except:
-            print 'failed.'
+        if os.path.exists(local_f):
+            try:
+                sftp.get(remote_f, local_f)
+                print 'success!'
+            except:
+                print 'failed.'
+            print 'skipping.'
     print '---Downloading done.'
     return True
 
