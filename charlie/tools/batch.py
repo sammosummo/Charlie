@@ -152,6 +152,7 @@ class Test:
                 if not self.data_obj.control:
                     print '---Test over.'
                     self.data_obj.test_done = True
+                    self.data_obj.update()
                     if self.proband_id != 'TEST':
                         print '---Computing summary stats.'
                         summary_method = getattr(self.mod, 'summary_method')

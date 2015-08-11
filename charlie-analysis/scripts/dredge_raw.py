@@ -12,8 +12,8 @@ import os
 import pandas
 import numpy as np
 import charlie.tools.instructions as instructions
+import charlie.tools.data as data
 import matplotlib.pyplot as plt
-import seaborn
 
 
 PACKAGE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
@@ -28,9 +28,10 @@ def grab_all():
     """
     Returns all the data objects in the data directory.
     """
-    files = [f for f in os.path.join(os.listdir(DATA_PATH)) if '.data' in f]
+    files = [f for f in os.listdir(DATA_PATH) if '.data' in f]
     objs = []
     for f in files:
+        print f
         data_obj = cPickle.load(open(os.path.join(DATA_PATH, f), 'rU'))
         objs.append(data_obj)
     return objs

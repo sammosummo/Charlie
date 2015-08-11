@@ -20,6 +20,11 @@ Version history:
             Mouse hidden during study and retention intervals.
             Mouse reset to centre before each trial.
 
+    1.2     Tamara Beetham reported that sometimes the circle went off the
+            grid. I couldn't find any evidence of this after manually
+            checking the control lists and verifying that the coordinate
+            system matches what's drawn to the screen. No changes made.
+
 Summary statistics:
 
     ntrials : number of trials completed
@@ -33,7 +38,7 @@ the human spatial working memory circuit during location memory updating.
 Neuroimage, 35: 368-377.
 
 """
-__version__ = 1.1
+__version__ = 1.2
 __author__ = 'Sam Mathias'
 
 
@@ -90,13 +95,13 @@ trial_details = [
 ('test', 17, 6,  1,  9,  '-d-d-d-r-u-l', '1,1,5,5,9,9,13,13,14,14,10,10,9'),
 ('test', 18, 8,  10, 7,  '-lu-lu-rr-dr', '10,10,9,5,5,4,0,0,1,2,2,6,7'),
 ('test', 19, 8,  14, 9,  '-rl-rl-ul-lr', '14,14,15,14,14,15,14,14,10,9,9,8,9'),
-('test', 20, 8,  3,  1,  '-ld-rd-uu-ll', '3,3,2,6,6,7,11,11,7,3,3,2,1'),
-('test', 21, 9,  5,  4,  '-udd-ldr-luu', '5,5,1,5,9,9,8,12,13,13,12,8,4'),
-('test', 22, 9,  3,  0,  '-dll-rrl-llu', '3,3,7,6,5,5,6,7,6,6,5,4,0'),
-('test', 23, 9,  10, 9,  '-dur-udl-dul', '10,10,14,10,11,11,7,11,10,10,14,10,9'),
-('test', 24, 12, 1, 12,  'drududdldlrl', '1,5,6,2,6,2,6,10,9,13,12,13,12'),
-('test', 25, 12, 12, 9,  'rluuurrlldrd', '12,13,12,8,4,0,1,2,1,0,4,5,9'),
-('test', 26, 12, 11, 6,  'llrruddudluu', '11,10,9,10,11,7,11,15,11,15,14,10,6')]
+('test', 20, 8,  3,  1,  '-ld-rd-uu-ll', '3,3,2,6,6,7,11,11,7,3,3,2,1'),    # OK
+('test', 21, 9,  5,  4,  '-udd-ldr-luu', '5,5,1,5,9,9,8,12,13,13,12,8,4'),   # OK
+('test', 22, 9,  3,  0,  '-dll-rrl-llu', '3,3,7,6,5,5,6,7,6,6,5,4,0'),  # OK
+('test', 23, 9,  10, 9,  '-dur-udl-dul', '10,10,14,10,11,11,7,11,10,10,14,10,9'),  # OK
+('test', 24, 12, 1, 12,  'drududdldlrl', '1,5,6,2,6,2,6,10,9,13,12,13,12'),  #
+('test', 25, 12, 12, 9,  'rluuurrlldrd', '12,13,12,8,4,0,1,2,1,0,4,5,9'),  # OK
+('test', 26, 12, 11, 6,  'llrruddudluu', '11,10,9,10,11,7,11,15,11,15,14,10,6')]  # OK
 
 """
 # The following is for generating new trials. Don't use!-----------------------

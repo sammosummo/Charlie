@@ -278,6 +278,7 @@ class Data:
         if not os.path.exists(CSV_DATA_PATH):
             os.makedirs(CSV_DATA_PATH)
         if self.proband_id != 'TEST':
+            self.update()
             df.to_csv(f, index=False)
         self.to_log('data saved as csv to %s' % f)
 

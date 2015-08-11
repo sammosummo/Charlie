@@ -10,6 +10,7 @@ from socket import gethostname
 import zipfile
 import paramiko
 import charlie.tools.data as data
+from datetime import datetime
 
 
 def download_data(server, username, password, backup_dir):
@@ -28,18 +29,15 @@ def download_data(server, username, password, backup_dir):
     except:
         print 'could not connect.'
         return False
-    print '---Downloading files ...'
     tmp_dir = os.path.join(data.PACKAGE_DIR, '_tmp')
-    os.makedirs(tmp_dir, exist_ok=True)
-    try:
-        ftp = ssh.open_sftp()
-        obj = ftp.get(tmp_dir, backup_dir)
-        print obj.attr
-        ftp.close()
-        return True
-    except:
-        print '---Download failed.'
-        return False
+    if not os.path.exists(tmp_dir):
+        os.makedirs(tmp_dir)
+    print '---Attempting to create sftp ...',
+    ftp = ssh.open_sftp()
+    print 'created!'
+    for i in ftp.listdir(backup_dir):
+        lstatout  = str(ftp.lstat(i)).split()[0]
+        print ftp.lstatlstatout
 
 
 def compare_raw_data():
@@ -94,64 +92,24 @@ def upload_data(server, username, password, backup_dir,
         return False
 
 
-# ftp = ssh.open_sftp()
-#         obj = ftp.put(f1, f2)
-#     print '---FTPing zip ...',
-#     try:
-#         t = str(datetime.now()).replace(' ', '_')
-#         if dir[-1] == '/':
-#             d = dir + '%s/%s' % (gethostname(), t)
-#         else:
-#             d = dir + '/%s/%s' % (gethostname(), t)
-#         ssh.exec_command('mkdir -p %s' % d)
-#         f1 = os.path.join(data.PACKAGE_DIR, '_data.zip')
-#         f2 = d + '/_data.zip'
-#         ftp = ssh.open_sftp()
-#         obj = ftp.put(f1, f2)
-#         print obj.attr
-#         ftp.close()
-#         print 'FTPed to %s' % f2
-#     except:
-#         print 'FTP failed.'
-#         return False
-#
-#     return True
-#
-# def get_sftp_details():
-#     """
-#     To use the sftp method for backup, there must be a file called sftp.txt in
-#     charlie/ containing the server address, username, password, and remote
-#     directory. This function parses this file and returns those values.
-#     """
-#     f = os.path.join(data.PACKAGE_DIR, 'sftp.txt')
-#     return [l.rstrip() for l in open(f, 'rU').readlines()]
-#
-#
-# def backup(method, attempts):
-#     """
-#     Backup the data directory now.
-#     """
-#     print '---Zipping the data directory ...',
-#     try:
-#         f1 = os.path.join(data.PACKAGE_DIR, '_data.zip')
-#         if os.path.exists(f1):
-#             os.remove(f1)
-#         zipf = zipfile.ZipFile(f1, 'w', zipfile.ZIP_STORED)
-#         for root, dirs, files in os.walk(data.DATA_PATH):
-#             for _f in files:
-#                 _, ext =
-#                 zipf.write(os.path.join(root, _f))
-#         zipf.close()
-#         print 'done.'
-#     except:
-#         print 'Failed.'
-#         return
-#     success = False
-#     for i in xrange(attempts):
-#         if success is False:
-#             if method == 'sftp':
-#                 success = sftp(*get_sftp_details())
-#
-#
-# if __name__ == '__main__':
-#     backup('sftp', 5)
+def get_sftp_details():
+    """
+    To use the sftp method for backup, there must be a file called sftp.txt in
+    charlie/ containing the server address, username, password, and remote
+    directory. This function parses this file and returns those values.
+    """
+    f = os.path.join(data.PACKAGE_DIR, 'sftp.txt')
+    return [l.rstrip() for l in open(f, 'rU').readlines()]
+
+
+def backup(method, attempts):
+    """
+    Backup the data directory now.
+    """
+    for attempt in xrange(attempts):
+        download_data(*get_sftp_details())
+
+
+
+if __name__ == '__main__':
+    backup('sftp', 5)
