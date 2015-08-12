@@ -6,7 +6,7 @@ Charlie
 :Contact: samuel.mathias@gmail.com
 :Web site: http://www.srmathias.com
 :Github: http://github.com/sammosummo/Charlie
-:Version: 0.0.1
+:Version: 0.2.0
 
 Introduction
 ============
@@ -21,7 +21,7 @@ arise.
 What works
 ==========
 
-* Charlie currently contains 21 neuocognitive tests, with more planned. Each
+* Charlie currently contains 22 neuocognitive tests, with more planned. Each
   test has a docstring with citations; have a look in the `charlie/tests`
   folder to see what's available.
 
