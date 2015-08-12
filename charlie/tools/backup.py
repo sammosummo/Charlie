@@ -93,7 +93,7 @@ def upload_data(server, username, password, backup_dir):
                 tmp_f = os.path.join(data.BACKUP_DATA_PATH, f)
                 if not filecmp.cmp(tmp_f, local_f, False):
                     try:
-                        s = '_CONFLICT_%s' % str(datetime.now().replace(' ', '_'))
+                        s = '_CONFLICT_%s' % str(datetime.now()).replace(' ', '_')
                         print 'uploading %s' %f
                         sftp.put(local_f, remote_f + s)
                     except:
