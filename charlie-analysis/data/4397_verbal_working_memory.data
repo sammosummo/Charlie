@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S'\x07\xdf\x06\x02\n &\x04\x97\xc8'
+(S'\x07\xdf\x06\x03\x0f;\x0c\x0f.\xb8'
 tRp9
 sS'last_opened'
 p10
 g8
-(S'\x07\xdf\x06\x02\n\x188\x0e\x19`'
+(S'\x07\xdf\x06\x03\x0f3:\x0c\xe0\xe0'
 tRp11
 sS'proj_id'
 p12
@@ -28,7 +28,7 @@ p13
 sS'date_done'
 p14
 g8
-(S'\x07\xdf\x06\x02\n &\x04p\xb8'
+(S'\x07\xdf\x06\x03\x0f;\x0c\x0f\x07\xa8'
 tRp15
 sS'test_done'
 p16
@@ -80,816 +80,724 @@ g20
 g21
 I5
 S'69471'
-g22
-tp28
+S'False'
+p28
+tp29
 a(g19
 g20
 g21
 I6
 S'918427'
 g22
-tp29
+tp30
 a(g19
 g20
 g21
 I7
 S'635482'
-g22
-tp30
+g28
+tp31
 a(g19
 g20
 g21
 I8
 S'1285346'
 g22
-tp31
+tp32
 a(g19
 g20
 g21
 I9
 S'2814975'
-g22
-tp32
+g28
+tp33
 a(g19
 g20
 g21
 I10
 S'38295174'
 g22
-tp33
+tp34
 a(g19
 g20
 g21
 I11
 S'59182647'
-g22
-tp34
+g28
+tp35
 a(g19
 g20
 S'backward'
-p35
+p36
 I0
 S'51'
-g22
-tp36
-a(g19
-g20
-g35
-I1
-S'38'
 g22
 tp37
 a(g19
 g20
-g35
-I2
-S'493'
+g36
+I1
+S'38'
 g22
 tp38
 a(g19
 g20
-g35
-I3
-S'526'
-g22
+g36
+I2
+S'493'
+g28
 tp39
 a(g19
 g20
-g35
-I4
-S'3814'
+g36
+I3
+S'526'
 g22
 tp40
 a(g19
 g20
-g35
-I5
-S'1795'
-g22
+g36
+I4
+S'3814'
+g28
 tp41
 a(g19
 g20
-g35
-I6
-S'62972'
+g36
+I5
+S'1795'
 g22
 tp42
 a(g19
 g20
-g35
-I7
-S'48527'
-g22
+g36
+I6
+S'62972'
+g28
 tp43
 a(g19
 g20
-g35
-I8
-S'715286'
-g22
+g36
+I7
+S'48527'
+g28
 tp44
 a(g19
 g20
-g35
-I9
-S'831964'
-S'False'
+S'practice'
 p45
-tp46
-a(g19
-g20
-g35
-I10
-S'4739128'
-g22
+I0
+S'6F'
+p46
+g28
 tp47
 a(g19
 g20
-g35
-I11
-S'8129365'
-g22
-tp48
-a(g19
-g20
-S'practice'
-p49
-I0
-S'6F'
-g22
-tp50
-a(g19
-g20
-g49
+g45
 I1
 S'G4'
+p48
+g22
+tp49
+a(g19
+g20
+g45
+I2
+S'3W5'
+p50
 g22
 tp51
 a(g19
 g20
-g49
-I2
-S'3W5'
-g22
-tp52
-a(g19
-g20
-g49
+g45
 I3
 S'T7L'
+p52
 g22
 tp53
 a(g19
 g20
-g49
+g45
 I4
 S'6GA2'
-g22
-tp54
-a(g19
-g20
-g49
-I5
-S'9PF4'
+p54
 g22
 tp55
 a(g19
 g20
-S'digit letter'
+g45
+I5
+S'9PF4'
 p56
-I0
-S'L2'
 g22
 tp57
 a(g19
 g20
-g56
-I1
-S'6P'
-g22
-tp58
-a(g19
-g20
-g56
-I2
-S'B5'
-g22
-tp59
-a(g19
-g20
-g56
-I3
-S'F7L'
+S'digit letter'
+p58
+I0
+S'L2'
+p59
 g22
 tp60
 a(g19
 g20
-g56
-I4
-S'R4D'
-g22
-tp61
-a(g19
-g20
-g56
-I5
-S'H18'
+g58
+I1
+S'6P'
+p61
 g22
 tp62
 a(g19
 g20
-g56
-I6
-S'T9A3'
-g22
-tp63
-a(g19
-g20
-g56
-I7
-S'V1J5'
+g58
+I2
+S'B5'
+p63
 g22
 tp64
 a(g19
 g20
-g56
-I8
-S'7N4L'
-g22
-tp65
-a(g19
-g20
-g56
-I9
-S'8D6G1'
+g58
+I3
+S'F7L'
+p65
 g22
 tp66
 a(g19
 g20
-g56
-I10
-S'K2C7S'
-g22
-tp67
-a(g19
-g20
-g56
-I11
-S'5P3Y9'
+g58
+I4
+S'R4D'
+p67
 g22
 tp68
 a(g19
 g20
-g56
-I12
-S'M4E7Q2'
-g45
-tp69
-a(g19
-g20
-g56
-I13
-S'W8H5F3'
+g58
+I5
+S'H18'
+p69
 g22
 tp70
 a(g19
 g20
-g56
-I14
-S'6G9A2S'
+g58
+I6
+S'T9A3'
+p71
 g22
-tp71
-a(g19
-g20
-g56
-I15
-S'R3B4Z1C'
-g45
 tp72
 a(g19
 g20
-g56
-I16
-S'5T9J2X7'
-g45
-tp73
+g58
+I7
+S'V1J5'
+p73
+g22
+tp74
 a(g19
 g20
-g56
-I17
-S'E1H8R4D'
-p74
-g45
-tp75
+g58
+I8
+S'7N4L'
+p75
+g22
+tp76
+a(g19
+g20
+g58
+I9
+S'8D6G1'
+p77
+g28
+tp78
+a(g19
+g20
+g58
+I10
+S'K2C7S'
+p79
+g28
+tp80
+a(g19
+g20
+g58
+I11
+S'5P3Y9'
+p81
+g22
+tp82
+a(g19
+g20
+g58
+I12
+S'M4E7Q2'
+p83
+g28
+tp84
+a(g19
+g20
+g58
+I13
+S'W8H5F3'
+p85
+g28
+tp86
+a(g19
+g20
+g58
+I14
+S'6G9A2S'
+p87
+g28
+tp88
 asS'output_format'
-p76
-(lp77
+p89
+(lp90
 (S'proband_id'
-p78
+p91
 c__builtin__
 str
-p79
-tp80
+p92
+tp93
 a(S'test_name'
-p81
-g79
-tp82
+p94
+g92
+tp95
 a(S'phase'
-p83
-g79
-tp84
+p96
+g92
+tp97
 a(S'trialn'
-p85
+p98
 c__builtin__
 int
-p86
-tp87
+p99
+tp100
 a(S'sequence'
-p88
-g79
-tp89
+p101
+g92
+tp102
 a(S'rsp'
-p90
-g79
-tp91
-asg78
+p103
+g92
+tp104
+asg91
 g19
 sS'filename'
-p92
+p105
 S'4397_verbal_working_memory.data'
-p93
+p106
 sS'initialised'
-p94
+p107
 g8
-(S'\x07\xdf\x06\x02\n\x188\x0e\x19`'
-tRp95
+(S'\x07\xdf\x06\x03\x0f3:\x0c\xe0\xe0'
+tRp108
 sS'last_udated'
-p96
+p109
 g8
-(S'\x07\xdf\x06\x02\n\x188\x0e\x19`'
-tRp97
-sg81
+(S'\x07\xdf\x06\x03\x0f3:\x0c\xe0\xe0'
+tRp110
+sg94
 S'verbal_working_memory'
-p98
+p111
 sS'directory'
-p99
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
-p100
+p112
+S'c:\\Charlie\\charlie\\data\\raw'
+p113
 sS'user_id'
-p101
-S'barrett'
-p102
+p114
+S'oleach'
+p115
 sS'test_started'
-p103
+p116
 I01
 sS'abs_filename'
-p104
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_verbal_working_memory.data'
-p105
+p117
+S'c:\\Charlie\\charlie\\data\\raw\\4397_verbal_working_memory.data'
+p118
 sS'date_started'
-p106
+p119
 g8
-(S'\x07\xdf\x06\x02\n\x19\r\x014\x98'
-tRp107
+(S'\x07\xdf\x06\x03\x0f4\x1f\n%\xa8'
+tRp120
 sS'log'
-p108
-(lp109
-(S'2015-06-02 10:24:56.924000'
+p121
+(lp122
+(S'2015-06-03 15:51:58.844000'
 S'instance created'
-p110
-tp111
-a(S'2015-06-02 10:25:13.088000'
-S'instance updated'
-p112
-tp113
-a(S'2015-06-02 10:25:13.095000'
-S'pandas DataFrame of data created'
-p114
-tp115
-a(S'2015-06-02 10:25:13.099000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp116
-a(S'2015-06-02 10:25:16.672000'
-g112
-tp117
-a(S'2015-06-02 10:25:16.674000'
-g114
-tp118
-a(S'2015-06-02 10:25:16.675000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp119
-a(S'2015-06-02 10:25:21.382000'
-g112
-tp120
-a(S'2015-06-02 10:25:21.389000'
-g114
-tp121
-a(S'2015-06-02 10:25:21.392000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp122
-a(S'2015-06-02 10:25:25.566000'
-g112
-tp123
-a(S'2015-06-02 10:25:25.573000'
-g114
+p123
 tp124
-a(S'2015-06-02 10:25:25.576000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp125
-a(S'2015-06-02 10:25:31.358000'
-g112
+a(S'2015-06-03 15:52:31.680000'
+S'instance updated'
+p125
 tp126
-a(S'2015-06-02 10:25:31.364000'
-g114
-tp127
-a(S'2015-06-02 10:25:31.368000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:52:31.686000'
+S'pandas DataFrame of data created'
+p127
 tp128
-a(S'2015-06-02 10:25:37.078000'
-g112
+a(S'2015-06-03 15:52:31.710000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp129
-a(S'2015-06-02 10:25:37.084000'
-g114
+a(S'2015-06-03 15:52:35.914000'
+g125
 tp130
-a(S'2015-06-02 10:25:37.088000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:52:35.921000'
+g127
 tp131
-a(S'2015-06-02 10:25:43.998000'
-g112
+a(S'2015-06-03 15:52:35.925000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp132
-a(S'2015-06-02 10:25:44.004000'
-g114
+a(S'2015-06-03 15:52:41.658000'
+g125
 tp133
-a(S'2015-06-02 10:25:44.008000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:52:41.665000'
+g127
 tp134
-a(S'2015-06-02 10:25:50.901000'
-g112
+a(S'2015-06-03 15:52:41.668000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp135
-a(S'2015-06-02 10:25:50.908000'
-g114
+a(S'2015-06-03 15:52:46.818000'
+g125
 tp136
-a(S'2015-06-02 10:25:50.911000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:52:46.824000'
+g127
 tp137
-a(S'2015-06-02 10:26:00.525000'
-g112
+a(S'2015-06-03 15:52:46.828000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp138
-a(S'2015-06-02 10:26:00.531000'
-g114
+a(S'2015-06-03 15:52:53.835000'
+g125
 tp139
-a(S'2015-06-02 10:26:00.535000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:52:53.842000'
+g127
 tp140
-a(S'2015-06-02 10:26:09.652000'
-g112
+a(S'2015-06-03 15:52:53.845000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp141
-a(S'2015-06-02 10:26:09.659000'
-g114
+a(S'2015-06-03 15:53:00.651000'
+g125
 tp142
-a(S'2015-06-02 10:26:09.662000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:53:00.658000'
+g127
 tp143
-a(S'2015-06-02 10:26:20.219000'
-g112
+a(S'2015-06-03 15:53:00.662000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp144
-a(S'2015-06-02 10:26:20.225000'
-g114
+a(S'2015-06-03 15:53:10.308000'
+g125
 tp145
-a(S'2015-06-02 10:26:20.229000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:53:10.314000'
+g127
 tp146
-a(S'2015-06-02 10:26:30.570000'
-g112
+a(S'2015-06-03 15:53:10.318000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp147
-a(S'2015-06-02 10:26:30.577000'
-g114
+a(S'2015-06-03 15:53:19.123000'
+g125
 tp148
-a(S'2015-06-02 10:26:30.579000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:53:19.129000'
+g127
 tp149
-a(S'2015-06-02 10:26:45.018000'
-g112
+a(S'2015-06-03 15:53:19.133000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp150
-a(S'2015-06-02 10:26:45.024000'
-g114
+a(S'2015-06-03 15:53:29.332000'
+g125
 tp151
-a(S'2015-06-02 10:26:45.028000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:53:29.339000'
+g127
 tp152
-a(S'2015-06-02 10:26:48.217000'
-g112
+a(S'2015-06-03 15:53:29.343000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp153
-a(S'2015-06-02 10:26:48.224000'
-g114
+a(S'2015-06-03 15:53:38.836000'
+g125
 tp154
-a(S'2015-06-02 10:26:48.227000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:53:38.842000'
+g127
 tp155
-a(S'2015-06-02 10:26:51.761000'
-g112
+a(S'2015-06-03 15:53:38.846000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp156
-a(S'2015-06-02 10:26:51.768000'
-g114
+a(S'2015-06-03 15:53:51.893000'
+g125
 tp157
-a(S'2015-06-02 10:26:51.771000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:53:51.900000'
+g127
 tp158
-a(S'2015-06-02 10:26:55.497000'
-g112
+a(S'2015-06-03 15:53:51.903000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp159
-a(S'2015-06-02 10:26:55.503000'
-g114
+a(S'2015-06-03 15:54:02.190000'
+g125
 tp160
-a(S'2015-06-02 10:26:55.507000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:02.196000'
+g127
 tp161
-a(S'2015-06-02 10:27:02.016000'
-g112
+a(S'2015-06-03 15:54:02.200000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp162
-a(S'2015-06-02 10:27:02.023000'
-g114
+a(S'2015-06-03 15:54:18.877000'
+g125
 tp163
-a(S'2015-06-02 10:27:02.027000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:18.883000'
+g127
 tp164
-a(S'2015-06-02 10:27:06.424000'
-g112
+a(S'2015-06-03 15:54:18.887000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp165
-a(S'2015-06-02 10:27:06.431000'
-g114
+a(S'2015-06-03 15:54:21.349000'
+g125
 tp166
-a(S'2015-06-02 10:27:06.434000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:21.356000'
+g127
 tp167
-a(S'2015-06-02 10:27:13.792000'
-g112
+a(S'2015-06-03 15:54:21.359000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp168
-a(S'2015-06-02 10:27:13.798000'
-g114
+a(S'2015-06-03 15:54:27.229000'
+g125
 tp169
-a(S'2015-06-02 10:27:13.802000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:27.236000'
+g127
 tp170
-a(S'2015-06-02 10:27:20.727000'
-g112
+a(S'2015-06-03 15:54:27.240000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp171
-a(S'2015-06-02 10:27:20.733000'
-g114
+a(S'2015-06-03 15:54:32.101000'
+g125
 tp172
-a(S'2015-06-02 10:27:20.737000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:32.108000'
+g127
 tp173
-a(S'2015-06-02 10:27:32.990000'
-g112
+a(S'2015-06-03 15:54:32.112000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp174
-a(S'2015-06-02 10:27:32.996000'
-g114
+a(S'2015-06-03 15:54:38.973000'
+g125
 tp175
-a(S'2015-06-02 10:27:33'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:38.980000'
+g127
 tp176
-a(S'2015-06-02 10:27:50.453000'
-g112
+a(S'2015-06-03 15:54:38.984000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp177
-a(S'2015-06-02 10:27:50.459000'
-g114
+a(S'2015-06-03 15:54:50.887000'
+g125
 tp178
-a(S'2015-06-02 10:27:50.463000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:50.894000'
+g127
 tp179
-a(S'2015-06-02 10:28:07.676000'
-g112
+a(S'2015-06-03 15:54:50.897000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp180
-a(S'2015-06-02 10:28:07.683000'
-g114
+a(S'2015-06-03 15:54:59.158000'
+g125
 tp181
-a(S'2015-06-02 10:28:07.686000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:54:59.165000'
+g127
 tp182
-a(S'2015-06-02 10:28:22.403000'
-g112
+a(S'2015-06-03 15:54:59.169000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp183
-a(S'2015-06-02 10:28:22.410000'
-g114
+a(S'2015-06-03 15:55:07.471000'
+g125
 tp184
-a(S'2015-06-02 10:28:22.414000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:55:07.478000'
+g127
 tp185
-a(S'2015-06-02 10:28:33.970000'
-g112
+a(S'2015-06-03 15:55:07.481000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp186
-a(S'2015-06-02 10:28:33.977000'
-g114
+a(S'2015-06-03 15:56:07.130000'
+g125
 tp187
-a(S'2015-06-02 10:28:33.981000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:07.136000'
+g127
 tp188
-a(S'2015-06-02 10:28:38.850000'
-g112
+a(S'2015-06-03 15:56:07.140000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp189
-a(S'2015-06-02 10:28:38.857000'
-g114
+a(S'2015-06-03 15:56:13.113000'
+g125
 tp190
-a(S'2015-06-02 10:28:38.861000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:13.120000'
+g127
 tp191
-a(S'2015-06-02 10:28:42.674000'
-g112
+a(S'2015-06-03 15:56:13.124000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp192
-a(S'2015-06-02 10:28:42.681000'
-g114
+a(S'2015-06-03 15:56:17.937000'
+g125
 tp193
-a(S'2015-06-02 10:28:42.684000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:17.943000'
+g127
 tp194
-a(S'2015-06-02 10:28:45.618000'
-g112
+a(S'2015-06-03 15:56:17.947000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp195
-a(S'2015-06-02 10:28:45.625000'
-g114
+a(S'2015-06-03 15:56:26.026000'
+g125
 tp196
-a(S'2015-06-02 10:28:45.629000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:26.032000'
+g127
 tp197
-a(S'2015-06-02 10:29:02.320000'
-g112
+a(S'2015-06-03 15:56:26.036000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp198
-a(S'2015-06-02 10:29:02.327000'
-g114
+a(S'2015-06-03 15:56:33.378000'
+g125
 tp199
-a(S'2015-06-02 10:29:02.331000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:33.385000'
+g127
 tp200
-a(S'2015-06-02 10:29:09.423000'
-g112
+a(S'2015-06-03 15:56:33.389000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp201
-a(S'2015-06-02 10:29:09.430000'
-g114
+a(S'2015-06-03 15:56:40.419000'
+g125
 tp202
-a(S'2015-06-02 10:29:09.434000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:40.425000'
+g127
 tp203
-a(S'2015-06-02 10:29:11.054000'
-g112
+a(S'2015-06-03 15:56:40.429000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp204
-a(S'2015-06-02 10:29:11.061000'
-g114
+a(S'2015-06-03 15:56:47.618000'
+g125
 tp205
-a(S'2015-06-02 10:29:11.065000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:47.625000'
+g127
 tp206
-a(S'2015-06-02 10:29:13.639000'
-g112
+a(S'2015-06-03 15:56:47.629000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp207
-a(S'2015-06-02 10:29:13.646000'
-g114
+a(S'2015-06-03 15:56:50.763000'
+g125
 tp208
-a(S'2015-06-02 10:29:13.650000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:50.770000'
+g127
 tp209
-a(S'2015-06-02 10:29:15.831000'
-g112
+a(S'2015-06-03 15:56:50.774000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp210
-a(S'2015-06-02 10:29:15.838000'
-g114
+a(S'2015-06-03 15:56:53.723000'
+g125
 tp211
-a(S'2015-06-02 10:29:15.842000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:56:53.730000'
+g127
 tp212
-a(S'2015-06-02 10:29:28.822000'
-g112
+a(S'2015-06-03 15:56:53.734000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp213
-a(S'2015-06-02 10:29:28.824000'
-g114
+a(S'2015-06-03 15:57:01.060000'
+g125
 tp214
-a(S'2015-06-02 10:29:28.825000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:01.067000'
+g127
 tp215
-a(S'2015-06-02 10:29:36.197000'
-g112
+a(S'2015-06-03 15:57:01.070000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp216
-a(S'2015-06-02 10:29:36.204000'
-g114
+a(S'2015-06-03 15:57:08.683000'
+g125
 tp217
-a(S'2015-06-02 10:29:36.208000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:08.690000'
+g127
 tp218
-a(S'2015-06-02 10:29:39.933000'
-g112
+a(S'2015-06-03 15:57:08.694000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp219
-a(S'2015-06-02 10:29:39.940000'
-g114
+a(S'2015-06-03 15:57:13.987000'
+g125
 tp220
-a(S'2015-06-02 10:29:39.943000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:13.994000'
+g127
 tp221
-a(S'2015-06-02 10:29:47.045000'
-g112
+a(S'2015-06-03 15:57:13.998000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp222
-a(S'2015-06-02 10:29:47.051000'
-g114
+a(S'2015-06-03 15:57:20.476000'
+g125
 tp223
-a(S'2015-06-02 10:29:47.055000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:20.482000'
+g127
 tp224
-a(S'2015-06-02 10:29:52.100000'
-g112
+a(S'2015-06-03 15:57:20.486000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp225
-a(S'2015-06-02 10:29:52.107000'
-g114
+a(S'2015-06-03 15:57:26.371000'
+g125
 tp226
-a(S'2015-06-02 10:29:52.111000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:26.378000'
+g127
 tp227
-a(S'2015-06-02 10:29:58.756000'
-g112
+a(S'2015-06-03 15:57:26.382000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp228
-a(S'2015-06-02 10:29:58.763000'
-g114
+a(S'2015-06-03 15:57:36.260000'
+g125
 tp229
-a(S'2015-06-02 10:29:58.767000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:36.267000'
+g127
 tp230
-a(S'2015-06-02 10:30:13.115000'
-g112
+a(S'2015-06-03 15:57:36.270000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp231
-a(S'2015-06-02 10:30:13.122000'
-g114
+a(S'2015-06-03 15:57:46.028000'
+g125
 tp232
-a(S'2015-06-02 10:30:13.126000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:46.035000'
+g127
 tp233
-a(S'2015-06-02 10:30:26.241000'
-g112
+a(S'2015-06-03 15:57:46.039000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp234
-a(S'2015-06-02 10:30:26.248000'
-g114
+a(S'2015-06-03 15:57:54.981000'
+g125
 tp235
-a(S'2015-06-02 10:30:26.252000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:57:54.988000'
+g127
 tp236
-a(S'2015-06-02 10:30:35.897000'
-g112
+a(S'2015-06-03 15:57:54.991000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp237
-a(S'2015-06-02 10:30:35.904000'
-g114
+a(S'2015-06-03 15:58:06.597000'
+g125
 tp238
-a(S'2015-06-02 10:30:35.908000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:58:06.604000'
+g127
 tp239
-a(S'2015-06-02 10:30:56.632000'
-g112
+a(S'2015-06-03 15:58:06.608000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp240
-a(S'2015-06-02 10:30:56.639000'
-g114
+a(S'2015-06-03 15:58:26.694000'
+g125
 tp241
-a(S'2015-06-02 10:30:56.643000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:58:26.701000'
+g127
 tp242
-a(S'2015-06-02 10:31:17.942000'
-g112
+a(S'2015-06-03 15:58:26.705000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp243
-a(S'2015-06-02 10:31:17.949000'
-g114
+a(S'2015-06-03 15:58:53.280000'
+g125
 tp244
-a(S'2015-06-02 10:31:17.952000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:58:53.286000'
+g127
 tp245
-a(S'2015-06-02 10:31:35.685000'
-g112
+a(S'2015-06-03 15:58:53.290000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp246
-a(S'2015-06-02 10:31:35.692000'
-g114
+a(S'2015-06-03 15:59:12.985000'
+g125
 tp247
-a(S'2015-06-02 10:31:35.695000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
+a(S'2015-06-03 15:59:12.991000'
+g127
 tp248
-a(S'2015-06-02 10:31:58.460000'
-g112
+a(S'2015-06-03 15:59:12.995000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
 tp249
-a(S'2015-06-02 10:31:58.467000'
-g114
-tp250
-a(S'2015-06-02 10:31:58.471000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp251
-a(S'2015-06-02 10:32:17.667000'
-g112
-tp252
-a(S'2015-06-02 10:32:17.668000'
-g114
-tp253
-a(S'2015-06-02 10:32:17.669000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp254
-a(S'2015-06-02 10:32:38.291000'
-g112
-tp255
-a(S'2015-06-02 10:32:38.298000'
-g114
-tp256
-a(S'2015-06-02 10:32:38.301000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_working_memory.csv'
-tp257
 asb.

@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S'\x07\xdf\x06\x02\t("\x01\x01\xd0'
+(S'\x07\xdf\x06\x03\x0f\x1b\x16\n\x9a\xd8'
 tRp9
 sS'last_opened'
 p10
 g8
-(S"\x07\xdf\x06\x02\t'\x18\x05\x18\xb0"
+(S'\x07\xdf\x06\x03\x0f\x1a\x06\x03\xa5\x98'
 tRp11
 sS'proj_id'
 p12
@@ -38,49 +38,49 @@ p18
 S'cvlt2_recognition'
 p19
 I0
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\wallet.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\wallet.wav'
 S'wallet'
 S'u'
 S'No'
 p20
 g20
-I1520
+I1290
 tp21
 a(g18
 g19
 I1
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\boat.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\boat.wav'
 S'boat'
 S't'
 S'Yes'
 p22
 g22
-I1110
+I1100
 tp23
 a(g18
 g19
 I2
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\saxophone.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\saxophone.wav'
 S'saxophone'
 S'u'
 g20
 g20
-I970
+I1090
 tp24
 a(g18
 g19
 I3
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cucumber.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cucumber.wav'
 S'cucumber'
 S'p'
 g20
 g20
-I1310
+I930
 tp25
 a(g18
 g19
 I4
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\giraffe.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\giraffe.wav'
 S'giraffe'
 S't'
 g22
@@ -90,434 +90,434 @@ tp26
 a(g18
 g19
 I5
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\carrot.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\carrot.wav'
 S'carrot'
 S'p'
 g20
 g20
-I840
+I1080
 tp27
 a(g18
 g19
 I6
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\patio.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\patio.wav'
 S'patio'
 S'u'
 g20
 g20
-I920
+I971
 tp28
 a(g18
 g19
 I7
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cabbage.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cabbage.wav'
 S'cabbage'
 S't'
 g22
 g22
-I780
+I870
 tp29
 a(g18
 g19
 I8
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\desk.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\desk.wav'
 S'desk'
 S't'
 g22
 g22
-I820
+I940
 tp30
 a(g18
 g19
 I9
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\bracelet.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\bracelet.wav'
 S'bracelet'
 S'u'
 g20
 g20
-I711
+I790
 tp31
 a(g18
 g19
 I10
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\car.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\car.wav'
 S'car'
 S'p'
 g20
 g20
-I800
+I870
 tp32
 a(g18
 g19
 I11
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\elephant.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\elephant.wav'
 S'elephant'
 S'p'
 g20
 g20
-I940
+I1070
 tp33
 a(g18
 g19
 I12
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\violin.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\violin.wav'
 S'violin'
 S'u'
 g20
 g20
-I730
+I960
 tp34
 a(g18
 g19
 I13
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cow.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cow.wav'
 S'cow'
 S't'
 g22
 g22
-I1200
+I890
 tp35
 a(g18
 g19
 I14
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\fork.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\fork.wav'
 S'fork'
 S'u'
 g20
 g20
-I800
+I870
 tp36
 a(g18
 g19
 I15
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\bus.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\bus.wav'
 S'bus'
 S'p'
 g20
 g20
-I1130
+I1310
 tp37
 a(g18
 g19
 I16
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\celery.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\celery.wav'
 S'celery'
 S't'
 g22
 g22
-I830
+I1020
 tp38
 a(g18
 g19
 I17
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\lamp.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\lamp.wav'
 S'lamp'
 S't'
 g22
 g22
-I740
+I920
 tp39
 a(g18
 g19
 I18
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\radishes.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\radishes.wav'
 S'radishes'
 S'p'
 g20
 g20
-I710
+I960
 tp40
 a(g18
 g19
 I19
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\table.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\table.wav'
 S'table'
 S'p'
 g20
 g20
-I970
+I880
 tp41
 a(g18
 g19
 I20
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\rose.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\rose.wav'
 S'rose'
 S'u'
 g20
 g20
-I650
+I940
 tp42
 a(g18
 g19
 I21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\motorcycle.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\motorcycle.wav'
 S'motorcycle'
 S't'
 g22
 g22
-I760
+I890
 tp43
 a(g18
 g19
 I22
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\sheep.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\sheep.wav'
 S'sheep'
 S'p'
 g20
 g20
-I700
+I841
 tp44
 a(g18
 g19
 I23
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\basement.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\basement.wav'
 S'basement'
 S'u'
 g20
 g20
-I720
+I1020
 tp45
 a(g18
 g19
 I24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\dog.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\dog.wav'
 S'dog'
 S'p'
 g20
 g20
-I830
+I960
 tp46
 a(g18
 g19
 I25
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\bookcase.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\bookcase.wav'
 S'bookcase'
 S't'
 g22
 g22
-I790
+I930
 tp47
 a(g18
 g19
 I26
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\matches.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\matches.wav'
 S'matches'
 S'u'
 g20
 g20
-I990
+I870
 tp48
 a(g18
 g19
 I27
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\spinach.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\spinach.wav'
 S'spinach'
 S't'
 g22
 g22
-I1181
+I900
 tp49
 a(g18
 g19
 I28
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\clarinet.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\clarinet.wav'
 S'clarinet'
 S'u'
 g20
 g20
-I1100
+I820
 tp50
 a(g18
 g19
 I29
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\truck.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\truck.wav'
 S'truck'
 S't'
 g22
 g22
-I680
+I800
 tp51
 a(g18
 g19
 I30
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\rabbit.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\rabbit.wav'
 S'rabbit'
 S'p'
 g20
 g20
-I820
+I760
 tp52
 a(g18
 g19
 I31
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\chair.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\chair.wav'
 S'chair'
 S'p'
 g20
 g20
-I1210
+I950
 tp53
 a(g18
 g19
 I32
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\corn.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\corn.wav'
 S'corn'
 S'p'
 g20
 g20
-I720
+I790
 tp54
 a(g18
 g19
 I33
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\seashell.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\seashell.wav'
 S'seashell'
 S'u'
 g20
 g20
-I760
+I920
 tp55
 a(g18
 g19
 I34
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\garage.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\garage.wav'
 S'garage'
 S'u'
 g20
 g20
-I1090
+I920
 tp56
 a(g18
 g19
 I35
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\squirrel.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\squirrel.wav'
 S'squirrel'
 S't'
 g22
 g22
-I780
+I910
 tp57
 a(g18
 g19
 I36
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\turnip.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\turnip.wav'
 S'turnip'
 S'p'
 g20
 g20
-I820
+I701
 tp58
 a(g18
 g19
 I37
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cabinet.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\cabinet.wav'
 S'cabinet'
 S't'
 g22
 g22
-I800
+I960
 tp59
 a(g18
 g19
 I38
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\onion.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\onion.wav'
 S'onion'
 S't'
 g22
-g20
-I1320
+g22
+I900
 tp60
 a(g18
 g19
 I39
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\lion.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\lion.wav'
 S'lion'
 S'p'
 g20
 g20
-I950
+I761
 tp61
 a(g18
 g19
 I40
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\camera.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\camera.wav'
 S'camera'
 S'u'
 g20
 g20
-I670
+I850
 tp62
 a(g18
 g19
 I41
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\guitar.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\guitar.wav'
 S'guitar'
 S'u'
 g20
 g20
-I1130
+I850
 tp63
 a(g18
 g19
 I42
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\subway.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\subway.wav'
 S'subway'
 S't'
 g22
 g22
-I1640
+I880
 tp64
 a(g18
 g19
 I43
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\tiger.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\tiger.wav'
 S'tiger'
 S'p'
 g20
 g20
-I700
+I970
 tp65
 a(g18
 g19
 I44
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\coffee.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\coffee.wav'
 S'coffee'
 S'u'
 g20
 g20
-I790
+I920
 tp66
 a(g18
 g19
 I45
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\zebra.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\zebra.wav'
 S'zebra'
 S't'
 g22
 g22
-I780
+I890
 tp67
 a(g18
 g19
 I46
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\lettuce.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\lettuce.wav'
 S'lettuce'
 S'p'
 g20
 g20
-I870
+I1000
 tp68
 a(g18
 g19
 I47
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\closet.wav'
+S'c:\\Charlie\\charlie\\stimuli\\audio\\cvlt2\\closet.wav'
 p69
 S'closet'
 p70
 S'u'
 g20
-g22
-I1110
+g20
+I910
 tp71
 asS'output_format'
 p72
@@ -570,475 +570,475 @@ p94
 sS'initialised'
 p95
 g8
-(S"\x07\xdf\x06\x02\t'\x18\x05\x18\xb0"
+(S'\x07\xdf\x06\x03\x0f\x1a\x06\x03\xa5\x98'
 tRp96
 sS'last_udated'
 p97
 g8
-(S"\x07\xdf\x06\x02\t'\x18\x05\x18\xb0"
+(S'\x07\xdf\x06\x03\x0f\x1a\x06\x03\xa5\x98'
 tRp98
 sg77
 S'cvlt2_recognition'
 p99
 sS'directory'
 p100
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+S'c:\\Charlie\\charlie\\data\\raw'
 p101
 sS'user_id'
 p102
-S'barrett'
+S'oleach'
 p103
 sS'test_started'
 p104
 I01
 sS'abs_filename'
 p105
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_cvlt2_recognition.data'
+S'c:\\Charlie\\charlie\\data\\raw\\4397_cvlt2_recognition.data'
 p106
 sS'date_started'
 p107
 g8
-(S"\x07\xdf\x06\x02\t',\x07\xac\xd8"
+(S'\x07\xdf\x06\x03\x0f\x1a \x02\xf5\xd0'
 tRp108
 sS'log'
 p109
 (lp110
-(S'2015-06-02 09:39:24.334000'
+(S'2015-06-03 15:26:06.239000'
 S'instance created'
 p111
 tp112
-a(S'2015-06-02 09:39:44.512000'
+a(S'2015-06-03 15:26:32.209000'
 S'instance updated'
 p113
 tp114
-a(S'2015-06-02 09:39:44.522000'
+a(S'2015-06-03 15:26:32.218000'
 S'pandas DataFrame of data created'
 p115
 tp116
-a(S'2015-06-02 09:39:44.526000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:32.235000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp117
-a(S'2015-06-02 09:39:45.763000'
+a(S'2015-06-03 15:26:33.462000'
 g113
 tp118
-a(S'2015-06-02 09:39:45.773000'
+a(S'2015-06-03 15:26:33.471000'
 g115
 tp119
-a(S'2015-06-02 09:39:45.777000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:33.475000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp120
-a(S'2015-06-02 09:39:46.884000'
+a(S'2015-06-03 15:26:34.724000'
 g113
 tp121
-a(S'2015-06-02 09:39:46.894000'
+a(S'2015-06-03 15:26:34.733000'
 g115
 tp122
-a(S'2015-06-02 09:39:46.897000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:34.737000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp123
-a(S'2015-06-02 09:39:48.347000'
+a(S'2015-06-03 15:26:35.809000'
 g113
 tp124
-a(S'2015-06-02 09:39:48.356000'
+a(S'2015-06-03 15:26:35.819000'
 g115
 tp125
-a(S'2015-06-02 09:39:48.360000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:35.822000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp126
-a(S'2015-06-02 09:39:49.428000'
+a(S'2015-06-03 15:26:36.889000'
 g113
 tp127
-a(S'2015-06-02 09:39:49.437000'
+a(S'2015-06-03 15:26:36.898000'
 g115
 tp128
-a(S'2015-06-02 09:39:49.441000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:36.902000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp129
-a(S'2015-06-02 09:39:50.416000'
+a(S'2015-06-03 15:26:38.124000'
 g113
 tp130
-a(S'2015-06-02 09:39:50.426000'
+a(S'2015-06-03 15:26:38.133000'
 g115
 tp131
-a(S'2015-06-02 09:39:50.430000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:38.137000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp132
-a(S'2015-06-02 09:39:51.492000'
+a(S'2015-06-03 15:26:39.255000'
 g113
 tp133
-a(S'2015-06-02 09:39:51.502000'
+a(S'2015-06-03 15:26:39.264000'
 g115
 tp134
-a(S'2015-06-02 09:39:51.506000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:39.268000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp135
-a(S'2015-06-02 09:39:52.413000'
+a(S'2015-06-03 15:26:40.265000'
 g113
 tp136
-a(S'2015-06-02 09:39:52.423000'
+a(S'2015-06-03 15:26:40.275000'
 g115
 tp137
-a(S'2015-06-02 09:39:52.427000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:40.279000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp138
-a(S'2015-06-02 09:39:53.373000'
+a(S'2015-06-03 15:26:41.346000'
 g113
 tp139
-a(S'2015-06-02 09:39:53.383000'
+a(S'2015-06-03 15:26:41.355000'
 g115
 tp140
-a(S'2015-06-02 09:39:53.386000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:41.359000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp141
-a(S'2015-06-02 09:39:54.234000'
+a(S'2015-06-03 15:26:42.293000'
 g113
 tp142
-a(S'2015-06-02 09:39:54.244000'
+a(S'2015-06-03 15:26:42.303000'
 g115
 tp143
-a(S'2015-06-02 09:39:54.248000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:42.306000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp144
-a(S'2015-06-02 09:39:55.178000'
+a(S'2015-06-03 15:26:43.320000'
 g113
 tp145
-a(S'2015-06-02 09:39:55.188000'
+a(S'2015-06-03 15:26:43.330000'
 g115
 tp146
-a(S'2015-06-02 09:39:55.192000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:43.334000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp147
-a(S'2015-06-02 09:39:56.274000'
+a(S'2015-06-03 15:26:44.553000'
 g113
 tp148
-a(S'2015-06-02 09:39:56.284000'
+a(S'2015-06-03 15:26:44.562000'
 g115
 tp149
-a(S'2015-06-02 09:39:56.290000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:44.566000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp150
-a(S'2015-06-02 09:39:57.151000'
+a(S'2015-06-03 15:26:45.672000'
 g113
 tp151
-a(S'2015-06-02 09:39:57.161000'
+a(S'2015-06-03 15:26:45.681000'
 g115
 tp152
-a(S'2015-06-02 09:39:57.165000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:45.685000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp153
-a(S'2015-06-02 09:39:58.491000'
+a(S'2015-06-03 15:26:46.701000'
 g113
 tp154
-a(S'2015-06-02 09:39:58.499000'
+a(S'2015-06-03 15:26:46.711000'
 g115
 tp155
-a(S'2015-06-02 09:39:58.503000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:46.715000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp156
-a(S'2015-06-02 09:39:59.440000'
+a(S'2015-06-03 15:26:47.731000'
 g113
 tp157
-a(S'2015-06-02 09:39:59.449000'
+a(S'2015-06-03 15:26:47.740000'
 g115
 tp158
-a(S'2015-06-02 09:39:59.453000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:47.744000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp159
-a(S'2015-06-02 09:40:00.719000'
+a(S'2015-06-03 15:26:49.194000'
 g113
 tp160
-a(S'2015-06-02 09:40:00.730000'
+a(S'2015-06-03 15:26:49.204000'
 g115
 tp161
-a(S'2015-06-02 09:40:00.734000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:49.208000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp162
-a(S'2015-06-02 09:40:01.691000'
+a(S'2015-06-03 15:26:50.355000'
 g113
 tp163
-a(S'2015-06-02 09:40:01.700000'
+a(S'2015-06-03 15:26:50.365000'
 g115
 tp164
-a(S'2015-06-02 09:40:01.703000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:50.368000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp165
-a(S'2015-06-02 09:40:02.570000'
+a(S'2015-06-03 15:26:51.416000'
 g113
 tp166
-a(S'2015-06-02 09:40:02.580000'
+a(S'2015-06-03 15:26:51.426000'
 g115
 tp167
-a(S'2015-06-02 09:40:02.584000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:51.428000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp168
-a(S'2015-06-02 09:40:03.432000'
+a(S'2015-06-03 15:26:52.526000'
 g113
 tp169
-a(S'2015-06-02 09:40:03.443000'
+a(S'2015-06-03 15:26:52.536000'
 g115
 tp170
-a(S'2015-06-02 09:40:03.446000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:52.539000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp171
-a(S'2015-06-02 09:40:04.554000'
+a(S'2015-06-03 15:26:53.562000'
 g113
 tp172
-a(S'2015-06-02 09:40:04.564000'
+a(S'2015-06-03 15:26:53.571000'
 g115
 tp173
-a(S'2015-06-02 09:40:04.568000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:53.575000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp174
-a(S'2015-06-02 09:40:05.349000'
+a(S'2015-06-03 15:26:54.659000'
 g113
 tp175
-a(S'2015-06-02 09:40:05.359000'
+a(S'2015-06-03 15:26:54.669000'
 g115
 tp176
-a(S'2015-06-02 09:40:05.363000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:54.673000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp177
-a(S'2015-06-02 09:40:06.253000'
+a(S'2015-06-03 15:26:55.691000'
 g113
 tp178
-a(S'2015-06-02 09:40:06.264000'
+a(S'2015-06-03 15:26:55.700000'
 g115
 tp179
-a(S'2015-06-02 09:40:06.268000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:55.704000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp180
-a(S'2015-06-02 09:40:07.099000'
+a(S'2015-06-03 15:26:56.688000'
 g113
 tp181
-a(S'2015-06-02 09:40:07.109000'
+a(S'2015-06-03 15:26:56.698000'
 g115
 tp182
-a(S'2015-06-02 09:40:07.113000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:56.702000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp183
-a(S'2015-06-02 09:40:07.970000'
+a(S'2015-06-03 15:26:57.870000'
 g113
 tp184
-a(S'2015-06-02 09:40:07.976000'
+a(S'2015-06-03 15:26:57.879000'
 g115
 tp185
-a(S'2015-06-02 09:40:07.978000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:57.883000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp186
-a(S'2015-06-02 09:40:08.944000'
+a(S'2015-06-03 15:26:58.986000'
 g113
 tp187
-a(S'2015-06-02 09:40:08.954000'
+a(S'2015-06-03 15:26:58.996000'
 g115
 tp188
-a(S'2015-06-02 09:40:08.958000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:26:59'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp189
-a(S'2015-06-02 09:40:09.877000'
+a(S'2015-06-03 15:27:00.058000'
 g113
 tp190
-a(S'2015-06-02 09:40:09.888000'
+a(S'2015-06-03 15:27:00.068000'
 g115
 tp191
-a(S'2015-06-02 09:40:09.892000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:00.072000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp192
-a(S'2015-06-02 09:40:11.022000'
+a(S'2015-06-03 15:27:01.089000'
 g113
 tp193
-a(S'2015-06-02 09:40:11.032000'
+a(S'2015-06-03 15:27:01.098000'
 g115
 tp194
-a(S'2015-06-02 09:40:11.036000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:01.102000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp195
-a(S'2015-06-02 09:40:12.346000'
+a(S'2015-06-03 15:27:02.129000'
 g113
 tp196
-a(S'2015-06-02 09:40:12.356000'
+a(S'2015-06-03 15:27:02.139000'
 g115
 tp197
-a(S'2015-06-02 09:40:12.360000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:02.143000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp198
-a(S'2015-06-02 09:40:13.614000'
+a(S'2015-06-03 15:27:03.119000'
 g113
 tp199
-a(S'2015-06-02 09:40:13.624000'
+a(S'2015-06-03 15:27:03.129000'
 g115
 tp200
-a(S'2015-06-02 09:40:13.628000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:03.133000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp201
-a(S'2015-06-02 09:40:14.436000'
+a(S'2015-06-03 15:27:04.061000'
 g113
 tp202
-a(S'2015-06-02 09:40:14.446000'
+a(S'2015-06-03 15:27:04.071000'
 g115
 tp203
-a(S'2015-06-02 09:40:14.450000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:04.075000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp204
-a(S'2015-06-02 09:40:15.399000'
+a(S'2015-06-03 15:27:04.984000'
 g113
 tp205
-a(S'2015-06-02 09:40:15.409000'
+a(S'2015-06-03 15:27:04.994000'
 g115
 tp206
-a(S'2015-06-02 09:40:15.412000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:04.998000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp207
-a(S'2015-06-02 09:40:16.761000'
+a(S'2015-06-03 15:27:06.089000'
 g113
 tp208
-a(S'2015-06-02 09:40:16.772000'
+a(S'2015-06-03 15:27:06.099000'
 g115
 tp209
-a(S'2015-06-02 09:40:16.776000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:06.104000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp210
-a(S'2015-06-02 09:40:17.633000'
+a(S'2015-06-03 15:27:07.036000'
 g113
 tp211
-a(S'2015-06-02 09:40:17.643000'
+a(S'2015-06-03 15:27:07.046000'
 g115
 tp212
-a(S'2015-06-02 09:40:17.647000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:07.050000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp213
-a(S'2015-06-02 09:40:18.547000'
+a(S'2015-06-03 15:27:08.121000'
 g113
 tp214
-a(S'2015-06-02 09:40:18.556000'
+a(S'2015-06-03 15:27:08.130000'
 g115
 tp215
-a(S'2015-06-02 09:40:18.559000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:08.135000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp216
-a(S'2015-06-02 09:40:19.772000'
+a(S'2015-06-03 15:27:09.199000'
 g113
 tp217
-a(S'2015-06-02 09:40:19.775000'
+a(S'2015-06-03 15:27:09.209000'
 g115
 tp218
-a(S'2015-06-02 09:40:19.776000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:09.213000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp219
-a(S'2015-06-02 09:40:20.682000'
+a(S'2015-06-03 15:27:10.251000'
 g113
 tp220
-a(S'2015-06-02 09:40:20.693000'
+a(S'2015-06-03 15:27:10.261000'
 g115
 tp221
-a(S'2015-06-02 09:40:20.697000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:10.265000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp222
-a(S'2015-06-02 09:40:21.659000'
+a(S'2015-06-03 15:27:11.106000'
 g113
 tp223
-a(S'2015-06-02 09:40:21.669000'
+a(S'2015-06-03 15:27:11.116000'
 g115
 tp224
-a(S'2015-06-02 09:40:21.673000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:11.120000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp225
-a(S'2015-06-02 09:40:22.601000'
+a(S'2015-06-03 15:27:12.208000'
 g113
 tp226
-a(S'2015-06-02 09:40:22.612000'
+a(S'2015-06-03 15:27:12.218000'
 g115
 tp227
-a(S'2015-06-02 09:40:22.616000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:12.223000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp228
-a(S'2015-06-02 09:40:24.064000'
+a(S'2015-06-03 15:27:13.250000'
 g113
 tp229
-a(S'2015-06-02 09:40:24.075000'
+a(S'2015-06-03 15:27:13.261000'
 g115
 tp230
-a(S'2015-06-02 09:40:24.079000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:13.265000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp231
-a(S'2015-06-02 09:40:25.174000'
+a(S'2015-06-03 15:27:14.167000'
 g113
 tp232
-a(S'2015-06-02 09:40:25.185000'
+a(S'2015-06-03 15:27:14.177000'
 g115
 tp233
-a(S'2015-06-02 09:40:25.189000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:14.182000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp234
-a(S'2015-06-02 09:40:26.004000'
+a(S'2015-06-03 15:27:15.178000'
 g113
 tp235
-a(S'2015-06-02 09:40:26.014000'
+a(S'2015-06-03 15:27:15.188000'
 g115
 tp236
-a(S'2015-06-02 09:40:26.018000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:15.192000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp237
-a(S'2015-06-02 09:40:27.280000'
+a(S'2015-06-03 15:27:16.186000'
 g113
 tp238
-a(S'2015-06-02 09:40:27.289000'
+a(S'2015-06-03 15:27:16.196000'
 g115
 tp239
-a(S'2015-06-02 09:40:27.292000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:16.200000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp240
-a(S'2015-06-02 09:40:29.059000'
+a(S'2015-06-03 15:27:17.208000'
 g113
 tp241
-a(S'2015-06-02 09:40:29.070000'
+a(S'2015-06-03 15:27:17.218000'
 g115
 tp242
-a(S'2015-06-02 09:40:29.074000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:17.222000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp243
-a(S'2015-06-02 09:40:29.900000'
+a(S'2015-06-03 15:27:18.334000'
 g113
 tp244
-a(S'2015-06-02 09:40:29.905000'
+a(S'2015-06-03 15:27:18.345000'
 g115
 tp245
-a(S'2015-06-02 09:40:29.907000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:18.349000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp246
-a(S'2015-06-02 09:40:30.837000'
+a(S'2015-06-03 15:27:19.416000'
 g113
 tp247
-a(S'2015-06-02 09:40:30.848000'
+a(S'2015-06-03 15:27:19.426000'
 g115
 tp248
-a(S'2015-06-02 09:40:30.853000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:19.430000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp249
-a(S'2015-06-02 09:40:31.761000'
+a(S'2015-06-03 15:27:20.448000'
 g113
 tp250
-a(S'2015-06-02 09:40:31.772000'
+a(S'2015-06-03 15:27:20.458000'
 g115
 tp251
-a(S'2015-06-02 09:40:31.776000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:20.462000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp252
-a(S'2015-06-02 09:40:32.786000'
+a(S'2015-06-03 15:27:21.609000'
 g113
 tp253
-a(S'2015-06-02 09:40:32.797000'
+a(S'2015-06-03 15:27:21.619000'
 g115
 tp254
-a(S'2015-06-02 09:40:32.801000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:21.623000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp255
-a(S'2015-06-02 09:40:34.051000'
+a(S'2015-06-03 15:27:22.679000'
 g113
 tp256
-a(S'2015-06-02 09:40:34.061000'
+a(S'2015-06-03 15:27:22.690000'
 g115
 tp257
-a(S'2015-06-02 09:40:34.065000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
+a(S'2015-06-03 15:27:22.694000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recognition.csv'
 tp258
 asb.

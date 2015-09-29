@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S'\x07\xdf\x06\x02\n+\x01\x03\xa9\x80'
+(S'\x07\xdf\x06\x03\x10\n\x07\r\xfa '
 tRp9
 sS'last_opened'
 p10
 g8
-(S"\x07\xdf\x06\x02\n'-\x0f\x0b\x90"
+(S'\x07\xdf\x06\x03\x10\x06 \x02\xab\x98'
 tRp11
 sS'proj_id'
 p12
@@ -41,7 +41,7 @@ S'number'
 p20
 S'practice'
 p21
-I3830
+I5830
 I0
 tp22
 a(g18
@@ -49,22 +49,22 @@ g19
 g20
 S'test'
 p23
-I25600
-I1
+I16660
+I0
 tp24
 a(g18
 g19
 S'letter'
 p25
 g21
-I3390
+I4700
 I0
 tp26
 a(g18
 g19
 g25
 g23
-I18410
+I22910
 I0
 tp27
 a(g18
@@ -72,14 +72,14 @@ g19
 S'number-letter'
 p28
 g21
-I4530
-I0
+I12460
+I1
 tp29
 a(g18
 g19
 g28
 g23
-I57270
+I53890
 I0
 tp30
 asS'output_format'
@@ -122,97 +122,97 @@ p48
 sS'initialised'
 p49
 g8
-(S"\x07\xdf\x06\x02\n'-\x0f\x0b\x90"
+(S'\x07\xdf\x06\x03\x10\x06 \x02\xab\x98'
 tRp50
 sS'last_udated'
 p51
 g8
-(S"\x07\xdf\x06\x02\n'-\x0f\x0b\x90"
+(S'\x07\xdf\x06\x03\x10\x06 \x02\xab\x98'
 tRp52
 sg36
 S'trails'
 p53
 sS'directory'
 p54
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+S'c:\\Charlie\\charlie\\data\\raw'
 p55
 sS'user_id'
 p56
-S'barrett'
+S'oleach'
 p57
 sS'test_started'
 p58
 I01
 sS'abs_filename'
 p59
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_trails.data'
+S'c:\\Charlie\\charlie\\data\\raw\\4397_trails.data'
 p60
 sS'date_started'
 p61
 g8
-(S'\x07\xdf\x06\x02\n(\x10\x06\xae\xf0'
+(S'\x07\xdf\x06\x03\x10\x07\x17\x00*\xf8'
 tRp62
 sS'log'
 p63
 (lp64
-(S'2015-06-02 10:39:45.986000'
+(S'2015-06-03 16:06:32.175000'
 S'instance created'
 p65
 tp66
-a(S'2015-06-02 10:40:16.447000'
+a(S'2015-06-03 16:07:23.025000'
 S'instance updated'
 p67
 tp68
-a(S'2015-06-02 10:40:16.454000'
+a(S'2015-06-03 16:07:23.031000'
 S'pandas DataFrame of data created'
 p69
 tp70
-a(S'2015-06-02 10:40:16.458000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
+a(S'2015-06-03 16:07:23.041000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
 tp71
-a(S'2015-06-02 10:40:54.324000'
+a(S'2015-06-03 16:07:51.290000'
 g67
 tp72
-a(S'2015-06-02 10:40:54.330000'
+a(S'2015-06-03 16:07:51.297000'
 g69
 tp73
-a(S'2015-06-02 10:40:54.334000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
+a(S'2015-06-03 16:07:51.301000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
 tp74
-a(S'2015-06-02 10:41:08.907000'
+a(S'2015-06-03 16:08:10.137000'
 g67
 tp75
-a(S'2015-06-02 10:41:08.913000'
+a(S'2015-06-03 16:08:10.143000'
 g69
 tp76
-a(S'2015-06-02 10:41:08.917000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
+a(S'2015-06-03 16:08:10.147000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
 tp77
-a(S'2015-06-02 10:41:38.296000'
+a(S'2015-06-03 16:08:44.254000'
 g67
 tp78
-a(S'2015-06-02 10:41:38.303000'
+a(S'2015-06-03 16:08:44.261000'
 g69
 tp79
-a(S'2015-06-02 10:41:38.307000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
+a(S'2015-06-03 16:08:44.264000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
 tp80
-a(S'2015-06-02 10:41:52.447000'
+a(S'2015-06-03 16:09:05.917000'
 g67
 tp81
-a(S'2015-06-02 10:41:52.454000'
+a(S'2015-06-03 16:09:05.924000'
 g69
 tp82
-a(S'2015-06-02 10:41:52.458000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
+a(S'2015-06-03 16:09:05.927000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
 tp83
-a(S'2015-06-02 10:43:01.229000'
+a(S'2015-06-03 16:10:07.905000'
 g67
 tp84
-a(S'2015-06-02 10:43:01.236000'
+a(S'2015-06-03 16:10:07.912000'
 g69
 tp85
-a(S'2015-06-02 10:43:01.240000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
+a(S'2015-06-03 16:10:07.915000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_trails.csv'
 tp86
 asb.

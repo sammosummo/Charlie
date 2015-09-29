@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S"\x07\xdf\x06\x02\t'\x17\x0e\xa2\x18"
+(S'\x07\xdf\x06\x03\x0f\x1a\x05\rN@'
 tRp9
 sS'last_opened'
 p10
 g8
-(S'\x07\xdf\x06\x02\t&\x1e\x00\x8c\xa0'
+(S'\x07\xdf\x06\x03\x0f\x19\x14\r\xb3\xd0'
 tRp11
 sS'proj_id'
 p12
@@ -28,7 +28,7 @@ p13
 sS'date_done'
 p14
 g8
-(S"\x07\xdf\x06\x02\t'\x17\x0e\x19`"
+(S'\x07\xdf\x06\x03\x0f\x1a\x05\x0c\xd9\x10'
 tRp15
 sS'test_done'
 p16
@@ -47,7 +47,7 @@ p21
 (S'PyQt4.QtCore'
 p22
 S'QString'
-(Vspinach
+(Vcow
 p23
 ttRp24
 tp25
@@ -57,7 +57,7 @@ I0
 g21
 (g22
 S'QString'
-(Vcabinet
+(Vcabbage
 p26
 ttRp27
 tp28
@@ -67,7 +67,7 @@ I0
 g21
 (g22
 S'QString'
-(Vlamp
+(Vcelery
 p29
 ttRp30
 tp31
@@ -77,7 +77,7 @@ I0
 g21
 (g22
 S'QString'
-(Vmotorcycle
+(Vonion
 p32
 ttRp33
 tp34
@@ -87,7 +87,7 @@ I0
 g21
 (g22
 S'QString'
-(Vcelery
+(Vsquirrel
 p35
 ttRp36
 tp37
@@ -117,7 +117,7 @@ I0
 g21
 (g22
 S'QString'
-(Vsquirrel
+(Vdesk
 p44
 ttRp45
 tp46
@@ -127,7 +127,7 @@ I0
 g21
 (g22
 S'QString'
-(Vbookcase
+(Vlamp
 p47
 ttRp48
 tp49
@@ -137,7 +137,7 @@ I0
 g21
 (g22
 S'QString'
-(Vdesk
+(Vtruck
 p50
 ttRp51
 tp52
@@ -147,7 +147,7 @@ I0
 g21
 (g22
 S'QString'
-(Vsubway
+(Vboat
 p53
 ttRp54
 tp55
@@ -157,7 +157,7 @@ I0
 g21
 (g22
 S'QString'
-(Vtruck
+(Vsubway
 p56
 ttRp57
 tp58
@@ -167,88 +167,98 @@ I0
 g21
 (g22
 S'QString'
-(Vonion
+(Vtruck
 p59
 ttRp60
 tp61
-asS'output_format'
+a(g19
+g20
+I0
+g21
+(g22
+S'QString'
+(Vmotorcycle
 p62
-(lp63
+ttRp63
+tp64
+asS'output_format'
+p65
+(lp66
 (S'proband_id'
-p64
+p67
 c__builtin__
 str
-p65
-tp66
+p68
+tp69
 a(S'test_name'
-p67
-g65
-tp68
+p70
+g68
+tp71
 a(S'trialn'
-p69
+p72
 c__builtin__
 int
-p70
-tp71
+p73
+tp74
 a(S'rsp'
-p72
-g65
-tp73
-asg64
+p75
+g68
+tp76
+asg67
 g19
 sS'filename'
-p74
+p77
 S'4397_cvlt2_recall.data'
-p75
-sS'initialised'
-p76
-g8
-(S'\x07\xdf\x06\x02\t&\x1e\x00\x8c\xa0'
-tRp77
-sS'last_udated'
 p78
+sS'initialised'
+p79
 g8
-(S'\x07\xdf\x06\x02\t&\x1e\x00\x8c\xa0'
-tRp79
-sg67
-S'cvlt2_recall'
-p80
-sS'directory'
+(S'\x07\xdf\x06\x03\x0f\x19\x14\r\xb3\xd0'
+tRp80
+sS'last_udated'
 p81
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
-p82
-sS'user_id'
+g8
+(S'\x07\xdf\x06\x03\x0f\x19\x14\r\xb3\xd0'
+tRp82
+sg70
+S'cvlt2_recall'
 p83
-S'barrett'
+sS'directory'
 p84
-sS'test_started'
+S'c:\\Charlie\\charlie\\data\\raw'
 p85
+sS'user_id'
+p86
+S'oleach'
+p87
+sS'test_started'
+p88
 I01
 sS'abs_filename'
-p86
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_cvlt2_recall.data'
-p87
-sS'date_started'
-p88
-g8
-(S"\x07\xdf\x06\x02\t'\x17\r\xf2P"
-tRp89
-sS'log'
+p89
+S'c:\\Charlie\\charlie\\data\\raw\\4397_cvlt2_recall.data'
 p90
-(lp91
-(S'2015-06-02 09:38:30.036000'
+sS'date_started'
+p91
+g8
+(S'\x07\xdf\x06\x03\x0f\x1a\x05\x0c\x9ex'
+tRp92
+sS'log'
+p93
+(lp94
+(S'2015-06-03 15:25:20.898000'
 S'instance created'
-p92
-tp93
-a(S'2015-06-02 09:39:23.924000'
+p95
+tp96
+a(S'2015-06-03 15:26:05.842000'
 S'instance updated'
-p94
-tp95
-a(S'2015-06-02 09:39:23.955000'
-S'pandas DataFrame of data created'
-p96
-tp97
-a(S'2015-06-02 09:39:23.959000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recall.csv'
+p97
 tp98
+a(S'2015-06-03 15:26:05.866000'
+S'pandas DataFrame of data created'
+p99
+tp100
+a(S'2015-06-03 15:26:05.872000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2_recall.csv'
+tp101
 asb.

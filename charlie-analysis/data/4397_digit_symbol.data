@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S'\x07\xdf\x06\x02\t\x19/\x0e\xa6\x00'
+(S'\x07\xdf\x06\x03\x0f\x10\x1c\x0e\xf8\x08'
 tRp9
 sS'last_opened'
 p10
 g8
-(S'\x07\xdf\x06\x02\t\x17\x03\r\xcb@'
+(S'\x07\xdf\x06\x03\x0f\r\x16\n\xa6\x90'
 tRp11
 sS'proj_id'
 p12
@@ -44,9 +44,9 @@ I2
 I2
 S'Yes'
 p21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
 g21
-I12081
+I3720
 tp22
 a(g18
 g19
@@ -55,21 +55,21 @@ I1
 I6
 I6
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
-g21
-I3870
-tp23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+S'No'
+p23
+I1810
+tp24
 a(g18
 g19
 g20
 I2
 I8
 I4
-S'No'
-p24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
-g24
-I2760
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+g23
+I1960
 tp25
 a(g18
 g19
@@ -78,9 +78,9 @@ I3
 I4
 I4
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
 g21
-I2370
+I1530
 tp26
 a(g18
 g19
@@ -89,9 +89,9 @@ I4
 I7
 I7
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
 g21
-I2500
+I1500
 tp27
 a(g18
 g19
@@ -99,10 +99,10 @@ g20
 I5
 I6
 I5
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
-g24
-I3130
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
+g23
+I1671
 tp28
 a(g18
 g19
@@ -110,10 +110,10 @@ g20
 I6
 I2
 I8
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
-g24
-I2581
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+g21
+I1460
 tp29
 a(g18
 g19
@@ -121,10 +121,10 @@ g20
 I7
 I9
 I2
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
-g24
-I2270
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+g21
+I1450
 tp30
 a(g18
 g19
@@ -132,10 +132,10 @@ g20
 I8
 I3
 I7
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
-g24
-I1540
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+g23
+I2570
 tp31
 a(g18
 g19
@@ -143,10 +143,10 @@ g20
 I9
 I5
 I6
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
-g24
-I1580
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+g23
+I1560
 tp32
 a(g18
 g19
@@ -156,9 +156,9 @@ I0
 I8
 I8
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
 g21
-I2106
+I1907
 tp34
 a(g18
 g19
@@ -166,10 +166,10 @@ g33
 I1
 I1
 I4
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
-g24
-I3603
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+g23
+I1703
 tp35
 a(g18
 g19
@@ -177,10 +177,10 @@ g33
 I2
 I2
 I8
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
-g24
-I2203
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+g23
+I1703
 tp36
 a(g18
 g19
@@ -188,10 +188,10 @@ g33
 I3
 I6
 I2
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
-g24
-I2003
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+g23
+I3103
 tp37
 a(g18
 g19
@@ -200,9 +200,9 @@ I4
 I4
 I4
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
 g21
-I2003
+I1503
 tp38
 a(g18
 g19
@@ -210,10 +210,10 @@ g33
 I5
 I9
 I5
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
-g24
-I2303
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
+g23
+I1503
 tp39
 a(g18
 g19
@@ -221,10 +221,10 @@ g33
 I6
 I5
 I6
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
-g24
-I2603
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+g23
+I2203
 tp40
 a(g18
 g19
@@ -233,9 +233,9 @@ I7
 I3
 I3
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
 g21
-I1803
+I1303
 tp41
 a(g18
 g19
@@ -244,9 +244,9 @@ I8
 I4
 I4
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
 g21
-I2903
+I1402
 tp42
 a(g18
 g19
@@ -255,9 +255,9 @@ I9
 I9
 I9
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
 g21
-I1903
+I1804
 tp43
 a(g18
 g19
@@ -266,9 +266,9 @@ I10
 I6
 I6
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
 g21
-I2003
+I1403
 tp44
 a(g18
 g19
@@ -277,9 +277,9 @@ I11
 I1
 I1
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
 g21
-I1404
+I1403
 tp45
 a(g18
 g19
@@ -288,9 +288,9 @@ I12
 I2
 I2
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
 g21
-I1204
+I1203
 tp46
 a(g18
 g19
@@ -299,9 +299,9 @@ I13
 I7
 I7
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
 g21
-I3003
+I1303
 tp47
 a(g18
 g19
@@ -310,9 +310,9 @@ I14
 I3
 I3
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
 g21
-I1903
+I1303
 tp48
 a(g18
 g19
@@ -321,9 +321,9 @@ I15
 I8
 I8
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
 g21
-I1403
+I1703
 tp49
 a(g18
 g19
@@ -332,9 +332,9 @@ I16
 I7
 I7
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
 g21
-I1303
+I1703
 tp50
 a(g18
 g19
@@ -342,10 +342,10 @@ g33
 I17
 I5
 I3
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
-g24
-I2703
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+g23
+I1603
 tp51
 a(g18
 g19
@@ -353,10 +353,10 @@ g33
 I18
 I1
 I5
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
-g24
-I3103
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
+g23
+I2203
 tp52
 a(g18
 g19
@@ -365,9 +365,9 @@ I19
 I4
 I4
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
 g21
-I1804
+I1603
 tp53
 a(g18
 g19
@@ -375,10 +375,10 @@ g33
 I20
 I7
 I8
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
-g24
-I1703
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+g23
+I2204
 tp54
 a(g18
 g19
@@ -387,9 +387,9 @@ I21
 I4
 I4
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
 g21
-I1303
+I3303
 tp55
 a(g18
 g19
@@ -398,9 +398,9 @@ I22
 I8
 I8
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
 g21
-I1703
+I2103
 tp56
 a(g18
 g19
@@ -409,9 +409,9 @@ I23
 I3
 I3
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
 g21
-I1103
+I1603
 tp57
 a(g18
 g19
@@ -420,9 +420,9 @@ I24
 I5
 I5
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
 g21
-I1703
+I1203
 tp58
 a(g18
 g19
@@ -430,10 +430,10 @@ g33
 I25
 I3
 I1
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
-g24
-I2403
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
+g23
+I1503
 tp59
 a(g18
 g19
@@ -441,10 +441,10 @@ g33
 I26
 I6
 I9
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
-g24
-I1703
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
+g21
+I1803
 tp60
 a(g18
 g19
@@ -453,9 +453,9 @@ I27
 I2
 I2
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
 g21
-I1703
+I1803
 tp61
 a(g18
 g19
@@ -464,9 +464,9 @@ I28
 I8
 I8
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
 g21
-I1803
+I1904
 tp62
 a(g18
 g19
@@ -474,10 +474,10 @@ g33
 I29
 I9
 I2
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
-g24
-I1904
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+g23
+I2003
 tp63
 a(g18
 g19
@@ -485,10 +485,10 @@ g33
 I30
 I1
 I6
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
-g24
-I1803
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+g23
+I1603
 tp64
 a(g18
 g19
@@ -496,10 +496,10 @@ g33
 I31
 I5
 I4
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
-g24
-I2203
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+g23
+I1403
 tp65
 a(g18
 g19
@@ -508,7 +508,7 @@ I32
 I6
 I6
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
 g21
 I1603
 tp66
@@ -519,9 +519,9 @@ I33
 I2
 I2
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
 g21
-I1903
+I1303
 tp67
 a(g18
 g19
@@ -530,9 +530,9 @@ I34
 I9
 I9
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
 g21
-I2603
+I1303
 tp68
 a(g18
 g19
@@ -541,9 +541,9 @@ I35
 I7
 I7
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
 g21
-I1204
+I1203
 tp69
 a(g18
 g19
@@ -552,9 +552,9 @@ I36
 I3
 I3
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
 g21
-I1303
+I1203
 tp70
 a(g18
 g19
@@ -562,9 +562,9 @@ g33
 I37
 I1
 I8
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
-g24
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym8.bmp'
+g23
 I1103
 tp71
 a(g18
@@ -574,9 +574,9 @@ I38
 I6
 I6
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym6.bmp'
 g21
-I1504
+I1303
 tp72
 a(g18
 g19
@@ -585,9 +585,9 @@ I39
 I7
 I7
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
 g21
-I1304
+I1403
 tp73
 a(g18
 g19
@@ -595,10 +595,10 @@ g33
 I40
 I9
 I5
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
-g24
-I1503
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
+g23
+I1304
 tp74
 a(g18
 g19
@@ -606,10 +606,10 @@ g33
 I41
 I7
 I9
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
-g24
-I1403
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym9.bmp'
+g23
+I1702
 tp75
 a(g18
 g19
@@ -617,10 +617,10 @@ g33
 I42
 I5
 I7
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
-g24
-I1503
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym7.bmp'
+g23
+I1603
 tp76
 a(g18
 g19
@@ -629,7 +629,7 @@ I43
 I2
 I2
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
 g21
 I1303
 tp77
@@ -640,9 +640,9 @@ I44
 I1
 I1
 g21
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
 g21
-I903
+I1003
 tp78
 a(g18
 g19
@@ -650,202 +650,279 @@ g33
 I45
 I6
 I4
-g24
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
-g24
-I1703
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+g23
+I1503
 tp79
-asS'output_format'
-p80
-(lp81
-(S'proband_id'
-p82
-c__builtin__
-str
-p83
+a(g18
+g19
+g33
+I46
+I8
+I3
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+g23
+I1103
+tp80
+a(g18
+g19
+g33
+I47
+I2
+I2
+g21
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym2.bmp'
+g21
+I1303
+tp81
+a(g18
+g19
+g33
+I48
+I4
+I4
+g21
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+g21
+I1503
+tp82
+a(g18
+g19
+g33
+I49
+I9
+I1
+g23
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym1.bmp'
+g23
+I1303
+tp83
+a(g18
+g19
+g33
+I50
+I4
+I4
+g21
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym4.bmp'
+g21
+I1303
 tp84
-a(S'test_name'
-p85
-g83
+a(g18
+g19
+g33
+I51
+I5
+I5
+g21
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym5.bmp'
+g21
+I1603
+tp85
+a(g18
+g19
+g33
+I52
+I3
+I3
+g21
+S'c:\\Charlie\\charlie\\stimuli\\visual\\digit_symbol\\sym3.bmp'
+g21
+I1704
 tp86
-a(S'phase'
+asS'output_format'
 p87
-g83
-tp88
-a(S'trialn'
+(lp88
+(S'proband_id'
 p89
 c__builtin__
-int
+str
 p90
 tp91
-a(S'digit'
+a(S'test_name'
 p92
 g90
 tp93
-a(S'symbol'
+a(S'phase'
 p94
 g90
 tp95
-a(S'ans'
+a(S'trialn'
 p96
-g83
-tp97
-a(S'f'
-g83
+c__builtin__
+int
+p97
 tp98
-a(S'rsp'
+a(S'digit'
 p99
-g83
+g97
 tp100
-a(S'rt'
+a(S'symbol'
 p101
-g90
+g97
 tp102
-asg82
+a(S'ans'
+p103
+g90
+tp104
+a(S'f'
+g90
+tp105
+a(S'rsp'
+p106
+g90
+tp107
+a(S'rt'
+p108
+g97
+tp109
+asg89
 g18
 sS'filename'
-p103
-S'4397_digit_symbol.data'
-p104
-sS'initialised'
-p105
-g8
-(S'\x07\xdf\x06\x02\t\x17\x03\r\xcb@'
-tRp106
-sS'last_udated'
-p107
-g8
-(S'\x07\xdf\x06\x02\t\x17\x03\r\xcb@'
-tRp108
-sg85
-S'digit_symbol'
-p109
-sS'directory'
 p110
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+S'4397_digit_symbol.data'
 p111
-sS'user_id'
+sS'initialised'
 p112
-S'barrett'
-p113
-sS'test_started'
+g8
+(S'\x07\xdf\x06\x03\x0f\r\x16\n\xa6\x90'
+tRp113
+sS'last_udated'
 p114
+g8
+(S'\x07\xdf\x06\x03\x0f\r\x16\n\xa6\x90'
+tRp115
+sg92
+S'digit_symbol'
+p116
+sS'directory'
+p117
+S'c:\\Charlie\\charlie\\data\\raw'
+p118
+sS'user_id'
+p119
+S'oleach'
+p120
+sS'test_started'
+p121
 I01
 sS'abs_filename'
-p115
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_digit_symbol.data'
-p116
-sS'date_started'
-p117
-g8
-(S'\x07\xdf\x06\x02\t\x17\x1e\t?0'
-tRp118
-sS'log'
-p119
-(lp120
-(S'2015-06-02 09:23:03.904000'
-S'instance created'
-p121
-tp122
-a(S'2015-06-02 09:23:30.615000'
-S'instance updated'
+p122
+S'c:\\Charlie\\charlie\\data\\raw\\4397_digit_symbol.data'
 p123
-tp124
-a(S'2015-06-02 09:23:30.626000'
-S'pandas DataFrame of data created'
-p125
-tp126
-a(S'2015-06-02 09:23:30.630000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
-tp127
-a(S'2015-06-02 09:23:35.527000'
-g123
-tp128
-a(S'2015-06-02 09:23:35.535000'
-g125
+sS'date_started'
+p124
+g8
+(S'\x07\xdf\x06\x03\x0f\x0e\r\x00\xea`'
+tRp125
+sS'log'
+p126
+(lp127
+(S'2015-06-03 15:13:22.698000'
+S'instance created'
+p128
 tp129
-a(S'2015-06-02 09:23:35.538000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
-tp130
-a(S'2015-06-02 09:23:39.323000'
-g123
+a(S'2015-06-03 15:14:13.073000'
+S'instance updated'
+p130
 tp131
-a(S'2015-06-02 09:23:39.334000'
-g125
-tp132
-a(S'2015-06-02 09:23:39.338000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:13.084000'
+S'pandas DataFrame of data created'
+p132
 tp133
-a(S'2015-06-02 09:23:42.734000'
-g123
+a(S'2015-06-03 15:14:13.094000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp134
-a(S'2015-06-02 09:23:42.745000'
-g125
+a(S'2015-06-03 15:14:15.944000'
+g130
 tp135
-a(S'2015-06-02 09:23:42.748000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:15.955000'
+g132
 tp136
-a(S'2015-06-02 09:23:46.275000'
-g123
+a(S'2015-06-03 15:14:15.959000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp137
-a(S'2015-06-02 09:23:46.286000'
-g125
+a(S'2015-06-03 15:14:18.943000'
+g130
 tp138
-a(S'2015-06-02 09:23:46.290000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:18.954000'
+g132
 tp139
-a(S'2015-06-02 09:23:50.445000'
-g123
+a(S'2015-06-03 15:14:18.957000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp140
-a(S'2015-06-02 09:23:50.456000'
-g125
+a(S'2015-06-03 15:14:21.513000'
+g130
 tp141
-a(S'2015-06-02 09:23:50.460000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:21.523000'
+g132
 tp142
-a(S'2015-06-02 09:23:54.065000'
-g123
+a(S'2015-06-03 15:14:21.527000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp143
-a(S'2015-06-02 09:23:54.077000'
-g125
+a(S'2015-06-03 15:14:24.051000'
+g130
 tp144
-a(S'2015-06-02 09:23:54.081000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:24.062000'
+g132
 tp145
-a(S'2015-06-02 09:23:57.377000'
-g123
+a(S'2015-06-03 15:14:24.066000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp146
-a(S'2015-06-02 09:23:57.388000'
-g125
+a(S'2015-06-03 15:14:26.761000'
+g130
 tp147
-a(S'2015-06-02 09:23:57.392000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:26.771000'
+g132
 tp148
-a(S'2015-06-02 09:23:59.958000'
-g123
+a(S'2015-06-03 15:14:26.796000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp149
-a(S'2015-06-02 09:23:59.969000'
-g125
+a(S'2015-06-03 15:14:29.280000'
+g130
 tp150
-a(S'2015-06-02 09:23:59.974000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:29.291000'
+g132
 tp151
-a(S'2015-06-02 09:24:02.578000'
-g123
+a(S'2015-06-03 15:14:29.295000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp152
-a(S'2015-06-02 09:24:02.589000'
-g125
+a(S'2015-06-03 15:14:31.769000'
+g130
 tp153
-a(S'2015-06-02 09:24:02.593000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:31.780000'
+g132
 tp154
-a(S'2015-06-02 09:25:47.940000'
-g123
+a(S'2015-06-03 15:14:31.784000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
 tp155
-a(S'2015-06-02 09:25:47.952000'
-g125
+a(S'2015-06-03 15:14:35.378000'
+g130
 tp156
-a(S'2015-06-02 09:25:47.959000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+a(S'2015-06-03 15:14:35.388000'
+g132
 tp157
+a(S'2015-06-03 15:14:35.392000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+tp158
+a(S'2015-06-03 15:14:37.977000'
+g130
+tp159
+a(S'2015-06-03 15:14:37.988000'
+g132
+tp160
+a(S'2015-06-03 15:14:37.992000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+tp161
+a(S'2015-06-03 15:16:28.964000'
+g130
+tp162
+a(S'2015-06-03 15:16:28.976000'
+g132
+tp163
+a(S'2015-06-03 15:16:28.981000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_digit_symbol.csv'
+tp164
 asb.

@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S'\x07\xdf\x06\x02\n\r\t\x08\xd5\xb8'
+(S'\x07\xdf\x06\x03\x0f)\x03\x0c\x8e\xd8'
 tRp9
 sS'last_opened'
 p10
 g8
-(S'\x07\xdf\x06\x02\t7\x14\x02\xfd\xa0'
+(S'\x07\xdf\x06\x03\x0f#\x10\x01\x9a('
 tRp11
 sS'proj_id'
 p12
@@ -28,7 +28,7 @@ p13
 sS'date_done'
 p14
 g8
-(S'\x07\xdf\x06\x02\n\r\t\x08\xae\xa8'
+(S'\x07\xdf\x06\x03\x0f)\x03\x0ck\xb0'
 tRp15
 sS'test_done'
 p16
@@ -92,8 +92,12 @@ tp31
 a(g19
 g20
 I0
-S'False'
-p32
+g21
+tp32
+a(g19
+g20
+I0
+g21
 tp33
 a(g19
 g20
@@ -133,12 +137,8 @@ tp40
 a(g19
 g20
 I0
-g21
-tp41
-a(g19
-g20
-I0
-g21
+S'False'
+p41
 tp42
 a(g19
 g20
@@ -162,12 +162,12 @@ g21
 tp46
 a(g19
 g20
-I0
+I1
 g21
 tp47
 a(g19
 g20
-I0
+I1
 g21
 tp48
 a(g19
@@ -203,7 +203,7 @@ tp54
 a(g19
 g20
 I1
-g21
+g41
 tp55
 a(g19
 g20
@@ -272,8 +272,8 @@ g21
 tp68
 a(g19
 g20
-I2
-g21
+I1
+g41
 tp69
 a(g19
 g20
@@ -382,27 +382,27 @@ g21
 tp90
 a(g19
 g20
-I2
+I3
 g21
 tp91
 a(g19
 g20
-I2
+I3
 g21
 tp92
 a(g19
 g20
-I2
+I3
 g21
 tp93
 a(g19
 g20
-I2
+I3
 g21
 tp94
 a(g19
 g20
-I2
+I3
 g21
 tp95
 a(g19
@@ -473,7 +473,7 @@ tp108
 a(g19
 g20
 I3
-g21
+g41
 tp109
 a(g19
 g20
@@ -483,7 +483,7 @@ tp110
 a(g19
 g20
 I3
-g32
+g21
 tp111
 a(g19
 g20
@@ -498,7 +498,7 @@ tp113
 a(g19
 g20
 I3
-g32
+g21
 tp114
 a(g19
 g20
@@ -510,183 +510,138 @@ g20
 I3
 g21
 tp116
-a(g19
-g20
-I3
-g21
-tp117
-a(g19
-g20
-I3
-g21
-tp118
-a(g19
-g20
-I3
-g21
-tp119
-a(g19
-g20
-I3
-g21
-tp120
-a(g19
-g20
-I3
-g21
-tp121
-a(g19
-g20
-I3
-g21
-tp122
-a(g19
-g20
-I3
-g21
-tp123
-a(g19
-g20
-I3
-g21
-tp124
-a(g19
-g20
-I3
-g21
-tp125
 asS'output_format'
-p126
-(lp127
+p117
+(lp118
 (S'proband_id'
-p128
+p119
 c__builtin__
 str
-p129
-tp130
+p120
+tp121
 a(S'test_name'
-p131
-g129
-tp132
+p122
+g120
+tp123
 a(S'trialn'
-p133
+p124
 c__builtin__
 int
-p134
-tp135
+p125
+tp126
 a(S'rsp'
-p136
-g129
-tp137
-asg128
+p127
+g120
+tp128
+asg119
 g19
 sS'filename'
-p138
+p129
 S'4397_verbal_fluency.data'
-p139
+p130
 sS'initialised'
-p140
+p131
 g8
-(S'\x07\xdf\x06\x02\t7\x14\x02\xfd\xa0'
-tRp141
+(S'\x07\xdf\x06\x03\x0f#\x10\x01\x9a('
+tRp132
 sS'last_udated'
-p142
+p133
 g8
-(S'\x07\xdf\x06\x02\t7\x14\x02\xfd\xa0'
-tRp143
-sg131
+(S'\x07\xdf\x06\x03\x0f#\x10\x01\x9a('
+tRp134
+sg122
 S'verbal_fluency'
-p144
+p135
 sS'directory'
-p145
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
-p146
+p136
+S'c:\\Charlie\\charlie\\data\\raw'
+p137
 sS'user_id'
-p147
-S'barrett'
-p148
+p138
+S'oleach'
+p139
 sS'test_started'
-p149
+p140
 I01
 sS'abs_filename'
-p150
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_verbal_fluency.data'
-p151
+p141
+S'c:\\Charlie\\charlie\\data\\raw\\4397_verbal_fluency.data'
+p142
 sS'date_started'
-p152
+p143
 g8
-(S'\x07\xdf\x06\x02\n\t,\x05\x91\xc8'
-tRp153
+(S'\x07\xdf\x06\x03\x0f%"\x02F\x08'
+tRp144
 sS'log'
-p154
-(lp155
-(S'2015-06-02 09:55:20.196000'
+p145
+(lp146
+(S'2015-06-03 15:35:16.105000'
 S'instance created'
-p156
-tp157
-a(S'2015-06-02 10:09:44.376000'
+p147
+tp148
+a(S'2015-06-03 15:37:34.164000'
 S'instance updated'
-p158
-tp159
-a(S'2015-06-02 10:09:44.381000'
+p149
+tp150
+a(S'2015-06-03 15:37:34.169000'
 S'pandas DataFrame of data created'
-p160
+p151
+tp152
+a(S'2015-06-03 15:37:34.178000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+tp153
+a(S'2015-06-03 15:37:38.192000'
+g149
+tp154
+a(S'2015-06-03 15:37:38.197000'
+g151
+tp155
+a(S'2015-06-03 15:37:38.201000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+tp156
+a(S'2015-06-03 15:38:41.663000'
+g149
+tp157
+a(S'2015-06-03 15:38:41.668000'
+g151
+tp158
+a(S'2015-06-03 15:38:41.672000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+tp159
+a(S'2015-06-03 15:38:45.223000'
+g149
+tp160
+a(S'2015-06-03 15:38:45.229000'
+g151
 tp161
-a(S'2015-06-02 10:09:44.386000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+a(S'2015-06-03 15:38:45.232000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
 tp162
-a(S'2015-06-02 10:09:46.828000'
-g158
+a(S'2015-06-03 15:39:49.186000'
+g149
 tp163
-a(S'2015-06-02 10:09:46.834000'
-g160
+a(S'2015-06-03 15:39:49.192000'
+g151
 tp164
-a(S'2015-06-02 10:09:46.837000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+a(S'2015-06-03 15:39:49.196000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
 tp165
-a(S'2015-06-02 10:10:50.633000'
-g158
+a(S'2015-06-03 15:39:57.874000'
+g149
 tp166
-a(S'2015-06-02 10:10:50.638000'
-g160
+a(S'2015-06-03 15:39:57.879000'
+g151
 tp167
-a(S'2015-06-02 10:10:50.642000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+a(S'2015-06-03 15:39:57.883000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
 tp168
-a(S'2015-06-02 10:10:52.975000'
-g158
+a(S'2015-06-03 15:41:03.814000'
+g149
 tp169
-a(S'2015-06-02 10:10:52.981000'
-g160
+a(S'2015-06-03 15:41:03.819000'
+g151
 tp170
-a(S'2015-06-02 10:10:52.985000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
+a(S'2015-06-03 15:41:03.823000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
 tp171
-a(S'2015-06-02 10:11:56.501000'
-g158
-tp172
-a(S'2015-06-02 10:11:56.506000'
-g160
-tp173
-a(S'2015-06-02 10:11:56.510000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
-tp174
-a(S'2015-06-02 10:12:05.932000'
-g158
-tp175
-a(S'2015-06-02 10:12:05.938000'
-g160
-tp176
-a(S'2015-06-02 10:12:05.942000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
-tp177
-a(S'2015-06-02 10:13:09.569000'
-g158
-tp178
-a(S'2015-06-02 10:13:09.575000'
-g160
-tp179
-a(S'2015-06-02 10:13:09.579000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_verbal_fluency.csv'
-tp180
 asb.

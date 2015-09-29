@@ -31,10 +31,11 @@ def grab_all():
     files = [f for f in os.listdir(DATA_PATH) if '.data' in f]
     objs = []
     for f in files:
-        print f
-        data_obj = cPickle.load(open(os.path.join(DATA_PATH, f), 'rU'))
-        objs.append(data_obj)
-        print data_obj.test_name, data_obj.initialised, data_obj.date_done
+        # print f
+        if 'CONFLICT' not in f:
+            data_obj = cPickle.load(open(os.path.join(DATA_PATH, f), 'rU'))
+            objs.append(data_obj)
+        # print data_obj.test_name, data_obj.initialised, data_obj.date_done
     return objs
 
 
@@ -65,7 +66,8 @@ def summary(s, path):
         if not os.path.exists(path):
             os.makedirs(path)
 
-        demos = pandas.read_csv('demo.csv', index_col=0)
+        demos = pandas.read_csv(
+            os.path.join(DATA_PATH, 'demo.csv'), index_col=0)
         df = pandas.concat([s, demos.group], axis=1).dropna()
 
         plt.clf()
@@ -81,31 +83,47 @@ def summary(s, path):
 if __name__ == '__main__':
 
     objs = grab_all()
-    # tests = set(obj.test_name for obj in objs)
-    #
-    # demographics = pandas.read_csv('demo.csv', index_col=0)
-    # group = demographics.group
-    # print group
-    #
-    # for test_name in tests:
-    #
-    #     path = os.path.join('summaries', test_name)
-    #     if not os.path.exists(path):
-    #         os.makedirs(path)
-    #
-    #     test_objs = [o for o in objs if o.test_name == test_name]
-    #     df_trials, df_summaries = zip(*[apply_summary(o) for o in test_objs])
-    #
-    #     df = pandas.concat(df_summaries)
-    #     df.set_index('proband_id', inplace=True)
-    #     df.drop(UNWANTED_COLS, axis=1, inplace=True)
-    #     df = df.astype(float)
-    #     df = pandas.concat([df, group], axis=1)
-    #     grouped = df.groupby('group')
-    #     f = os.path.join(path, test_name + '_summary_grouped.csv')
-    #     grouped.describe().T.to_csv(f)
-    #     f = os.path.join(path, test_name + '_summary.csv')
-    #     df.to_csv(f)
+    tests = set(obj.test_name for obj in objs)
+    demos = pandas.read_csv(
+            os.path.join(DATA_PATH, 'demo.csv'), index_col=0
+    )
+    group = demos.group
+    group.index = group.index.astype(str)
+    # group = demos.group.astype(str)
+    probands = [str(i) for i in demos.index.tolist()]
+
+    # for proband in probands:
+    #     print str(proband) + ',',
+    #     for test_name in tests:
+    #         if test_name not in ['corsi', 'stroop']:
+    #             test_objs = [o for o in objs if o.test_name == test_name and str(o.proband_id) == str(proband)]
+    #             if len(test_objs) == 0:
+    #                 print test_name, '(missing), ',
+    #             elif len(test_objs) > 1:
+    #                 print test_name, '(multiple files), ',
+    #     print ''
+
+
+    for test_name in tests:
+
+        path = os.path.join('summaries', test_name)
+        if not os.path.exists(path):
+            os.makedirs(path)
+        test_objs = [o for o in objs if o.test_name == test_name and o.proband_id in probands]
+        print test_name, len(test_objs)
+        df_trials, df_summaries = zip(*[apply_summary(o) for o in test_objs])
+        df = pandas.concat(df_summaries)
+        print df.proband_id.astype(float)
+        df.set_index('proband_id', inplace=True)
+        df.drop(UNWANTED_COLS, axis=1, inplace=True)
+        # df = df.astype(float)
+        df = pandas.concat([df, group], axis=1)
+        df = df.astype(float)
+        grouped = df.groupby('group')
+        f = os.path.join(path, test_name + '_summary_grouped.csv')
+        grouped.describe().T.to_csv(f)
+        f = os.path.join(path, test_name + '_summary.csv')
+        df.to_csv(f)
     #
     #     [summary(s, path)for i, s in df.iteritems()]
     #

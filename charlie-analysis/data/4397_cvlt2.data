@@ -14,12 +14,12 @@ p7
 cdatetime
 datetime
 p8
-(S'\x07\xdf\x06\x02\t\x17\x03\x06d\xb8'
+(S'\x07\xdf\x06\x03\x0f\r\x16\x026h'
 tRp9
 sS'last_opened'
 p10
 g8
-(S'\x07\xdf\x06\x02\t\x10\x1e\x04\x03X'
+(S'\x07\xdf\x06\x03\x0f\x06\x1a\x00\xb7\x98'
 tRp11
 sS'proj_id'
 p12
@@ -28,7 +28,7 @@ p13
 sS'date_done'
 p14
 g8
-(S'\x07\xdf\x06\x02\t\x17\x03\x05j\xb8'
+(S'\x07\xdf\x06\x03\x0f\r\x16\x01(\xe0'
 tRp15
 sS'test_done'
 p16
@@ -47,7 +47,7 @@ p21
 (S'PyQt4.QtCore'
 p22
 S'QString'
-(Vboat
+(Vtruck
 p23
 ttRp24
 tp25
@@ -57,7 +57,7 @@ I0
 g21
 (g22
 S'QString'
-(Vsquirrel
+(Vmotorcycle
 p26
 ttRp27
 tp28
@@ -67,7 +67,7 @@ I0
 g21
 (g22
 S'QString'
-(Vspinach
+(Vzebra
 p29
 ttRp30
 tp31
@@ -77,7 +77,7 @@ I0
 g21
 (g22
 S'QString'
-(Vtruck
+(Vgiraffe
 p32
 ttRp33
 tp34
@@ -87,7 +87,7 @@ I0
 g21
 (g22
 S'QString'
-(Vdesk
+(Vspinach
 p35
 ttRp36
 tp37
@@ -97,7 +97,7 @@ I0
 g21
 (g22
 S'QString'
-(Vsubway
+(Vonion
 p38
 ttRp39
 tp40
@@ -107,37 +107,37 @@ I0
 g21
 (g22
 S'QString'
-(Vonion
+(Vcelery
 p41
 ttRp42
 tp43
 a(g19
 g20
-I0
+I1
 g21
 (g22
 S'QString'
-(Vgiraffe
+(Vcabbage
 p44
 ttRp45
 tp46
 a(g19
 g20
-I0
+I1
 g21
 (g22
 S'QString'
-(Vzebra
+(Vsquirrel
 p47
 ttRp48
 tp49
 a(g19
 g20
-I0
+I1
 g21
 (g22
 S'QString'
-(Vtruck
+(Vcelery
 p50
 ttRp51
 tp52
@@ -147,7 +147,7 @@ I1
 g21
 (g22
 S'QString'
-(Vbookcase
+(Vcabinet
 p53
 ttRp54
 tp55
@@ -157,7 +157,7 @@ I1
 g21
 (g22
 S'QString'
-(Vonion
+(Vdesk
 p56
 ttRp57
 tp58
@@ -167,7 +167,7 @@ I1
 g21
 (g22
 S'QString'
-(Vlamp
+(Vgiraffe
 p59
 ttRp60
 tp61
@@ -187,7 +187,7 @@ I1
 g21
 (g22
 S'QString'
-(Vtruck
+(Vmotorcycle
 p65
 ttRp66
 tp67
@@ -197,7 +197,7 @@ I1
 g21
 (g22
 S'QString'
-(Vgiraffe
+(Vspinach
 p68
 ttRp69
 tp70
@@ -207,7 +207,7 @@ I1
 g21
 (g22
 S'QString'
-(Vsquirrel
+(Vlamp
 p71
 ttRp72
 tp73
@@ -217,7 +217,7 @@ I1
 g21
 (g22
 S'QString'
-(Vcabbage
+(Vsquirrel
 p74
 ttRp75
 tp76
@@ -227,7 +227,7 @@ I1
 g21
 (g22
 S'QString'
-(Vzebra
+(Vtruck
 p77
 ttRp78
 tp79
@@ -237,37 +237,37 @@ I1
 g21
 (g22
 S'QString'
-(Vcabinet
+(Vmotorcycle
 p80
 ttRp81
 tp82
 a(g19
 g20
-I1
+I2
 g21
 (g22
 S'QString'
-(Vdesk
+(Vcabbage
 p83
 ttRp84
 tp85
 a(g19
 g20
-I1
+I2
 g21
 (g22
 S'QString'
-(Vlamp
+(Vsquirrel
 p86
 ttRp87
 tp88
 a(g19
 g20
-I1
+I2
 g21
 (g22
 S'QString'
-(Vsubway
+(Vboat
 p89
 ttRp90
 tp91
@@ -277,7 +277,7 @@ I2
 g21
 (g22
 S'QString'
-(Vcelery
+(Vlamp
 p92
 ttRp93
 tp94
@@ -287,7 +287,7 @@ I2
 g21
 (g22
 S'QString'
-(Vlamp
+(Vspinach
 p95
 ttRp96
 tp97
@@ -297,7 +297,7 @@ I2
 g21
 (g22
 S'QString'
-(Vcow
+(Vcelery
 p98
 ttRp99
 tp100
@@ -307,7 +307,7 @@ I2
 g21
 (g22
 S'QString'
-(Vboat
+(Vbookcase
 p101
 ttRp102
 tp103
@@ -317,7 +317,7 @@ I2
 g21
 (g22
 S'QString'
-(Vsquirrel
+(Vdesk
 p104
 ttRp105
 tp106
@@ -327,7 +327,7 @@ I2
 g21
 (g22
 S'QString'
-(Vzebra
+(Vmotorcycle
 p107
 ttRp108
 tp109
@@ -337,7 +337,7 @@ I2
 g21
 (g22
 S'QString'
-(Vgiraffe
+(Vtruck
 p110
 ttRp111
 tp112
@@ -347,7 +347,7 @@ I2
 g21
 (g22
 S'QString'
-(Vtruck
+(Vzebra
 p113
 ttRp114
 tp115
@@ -357,7 +357,7 @@ I2
 g21
 (g22
 S'QString'
-(Vspinach
+(Vgiraffe
 p116
 ttRp117
 tp118
@@ -367,7 +367,7 @@ I2
 g21
 (g22
 S'QString'
-(Vcabinet
+(Vtruck
 p119
 ttRp120
 tp121
@@ -387,7 +387,7 @@ I2
 g21
 (g22
 S'QString'
-(Vlamp
+(Vbookcase
 p125
 ttRp126
 tp127
@@ -397,7 +397,7 @@ I2
 g21
 (g22
 S'QString'
-(Vintrusion
+(Vonion
 p128
 ttRp129
 tp130
@@ -407,7 +407,7 @@ I2
 g21
 (g22
 S'QString'
-(Vbookcase
+(Vcelery
 p131
 ttRp132
 tp133
@@ -417,7 +417,7 @@ I3
 g21
 (g22
 S'QString'
-(Vmotorcycle
+(Vcabbage
 p134
 ttRp135
 tp136
@@ -427,7 +427,7 @@ I3
 g21
 (g22
 S'QString'
-(Vcow
+(Vcelery
 p137
 ttRp138
 tp139
@@ -437,7 +437,7 @@ I3
 g21
 (g22
 S'QString'
-(Vsquirrel
+(Vspinach
 p140
 ttRp141
 tp142
@@ -457,7 +457,7 @@ I3
 g21
 (g22
 S'QString'
-(Vboat
+(Vsquirrel
 p146
 ttRp147
 tp148
@@ -467,7 +467,7 @@ I3
 g21
 (g22
 S'QString'
-(Vcabinet
+(Vzebra
 p149
 ttRp150
 tp151
@@ -477,7 +477,7 @@ I3
 g21
 (g22
 S'QString'
-(Vtruck
+(Vgiraffe
 p152
 ttRp153
 tp154
@@ -487,7 +487,7 @@ I3
 g21
 (g22
 S'QString'
-(Vspinach
+(Vtruck
 p155
 ttRp156
 tp157
@@ -497,7 +497,7 @@ I3
 g21
 (g22
 S'QString'
-(Vcabbage
+(Vboat
 p158
 ttRp159
 tp160
@@ -507,7 +507,7 @@ I3
 g21
 (g22
 S'QString'
-(Vlamp
+(Vmotorcycle
 p161
 ttRp162
 tp163
@@ -517,7 +517,7 @@ I3
 g21
 (g22
 S'QString'
-(Vbookcase
+(Vcabinet
 p164
 ttRp165
 tp166
@@ -527,7 +527,7 @@ I3
 g21
 (g22
 S'QString'
-(Vcelery
+(Vdesk
 p167
 ttRp168
 tp169
@@ -537,7 +537,7 @@ I3
 g21
 (g22
 S'QString'
-(Vgiraffe
+(Vlamp
 p170
 ttRp171
 tp172
@@ -547,7 +547,7 @@ I3
 g21
 (g22
 S'QString'
-(Vzebra
+(Vcabbage
 p173
 ttRp174
 tp175
@@ -557,37 +557,37 @@ I3
 g21
 (g22
 S'QString'
-(Vsquirrel
+(Vtruck
 p176
 ttRp177
 tp178
 a(g19
 g20
-I4
+I3
 g21
 (g22
 S'QString'
-(Vtruck
+(Vsquirrel
 p179
 ttRp180
 tp181
 a(g19
 g20
-I4
+I3
 g21
 (g22
 S'QString'
-(Vbookcase
+(Vsubway
 p182
 ttRp183
 tp184
 a(g19
 g20
-I4
+I3
 g21
 (g22
 S'QString'
-(Vspinach
+(Vonion
 p185
 ttRp186
 tp187
@@ -597,7 +597,7 @@ I4
 g21
 (g22
 S'QString'
-(Vmotorcycle
+(Vdesk
 p188
 ttRp189
 tp190
@@ -607,7 +607,7 @@ I4
 g21
 (g22
 S'QString'
-(Vcow
+(Vlamp
 p191
 ttRp192
 tp193
@@ -617,7 +617,7 @@ I4
 g21
 (g22
 S'QString'
-(Vlamp
+(Vcabinet
 p194
 ttRp195
 tp196
@@ -627,7 +627,7 @@ I4
 g21
 (g22
 S'QString'
-(Vcabinet
+(Vbookcase
 p197
 ttRp198
 tp199
@@ -667,7 +667,7 @@ I4
 g21
 (g22
 S'QString'
-(Vcelery
+(Vonion
 p209
 ttRp210
 tp211
@@ -677,7 +677,7 @@ I4
 g21
 (g22
 S'QString'
-(Vcabbage
+(Vcelery
 p212
 ttRp213
 tp214
@@ -687,7 +687,7 @@ I4
 g21
 (g22
 S'QString'
-(Vlamp
+(Vspinach
 p215
 ttRp216
 tp217
@@ -697,7 +697,7 @@ I4
 g21
 (g22
 S'QString'
-(Vonion
+(Vcabbage
 p218
 ttRp219
 tp220
@@ -707,7 +707,7 @@ I4
 g21
 (g22
 S'QString'
-(Vboat
+(Vtruck
 p221
 ttRp222
 tp223
@@ -717,160 +717,200 @@ I4
 g21
 (g22
 S'QString'
-(Vbookcase
+(Vboat
 p224
 ttRp225
 tp226
-asS'output_format'
+a(g19
+g20
+I4
+g21
+(g22
+S'QString'
+(Vsubway
 p227
-(lp228
+ttRp228
+tp229
+a(g19
+g20
+I4
+g21
+(g22
+S'QString'
+(Vmotorcycle
+p230
+ttRp231
+tp232
+a(g19
+g20
+I4
+g21
+(g22
+S'QString'
+(Vlamp
+p233
+ttRp234
+tp235
+a(g19
+g20
+I4
+g21
+(g22
+S'QString'
+(Vcow
+p236
+ttRp237
+tp238
+asS'output_format'
+p239
+(lp240
 (S'proband_id'
-p229
+p241
 c__builtin__
 str
-p230
-tp231
+p242
+tp243
 a(S'test_name'
-p232
-g230
-tp233
+p244
+g242
+tp245
 a(S'trialn'
-p234
+p246
 c__builtin__
 int
-p235
-tp236
+p247
+tp248
 a(S'rsp'
-p237
-g230
-tp238
-asg229
+p249
+g242
+tp250
+asg241
 g19
 sS'filename'
-p239
-S'4397_cvlt2.data'
-p240
-sS'initialised'
-p241
-g8
-(S'\x07\xdf\x06\x02\t\x10\x1e\x04\x03X'
-tRp242
-sS'last_udated'
-p243
-g8
-(S'\x07\xdf\x06\x02\t\x10\x1e\x04\x03X'
-tRp244
-sg232
-S'cvlt2'
-p245
-sS'directory'
-p246
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
-p247
-sS'user_id'
-p248
-S'barrett'
-p249
-sS'test_started'
-p250
-I01
-sS'abs_filename'
 p251
-S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4397_cvlt2.data'
+S'4397_cvlt2.data'
 p252
-sS'date_started'
+sS'initialised'
 p253
 g8
-(S'\x07\xdf\x06\x02\t\x118\x0f\x17H'
+(S'\x07\xdf\x06\x03\x0f\x06\x1a\x00\xb7\x98'
 tRp254
-sS'log'
+sS'last_udated'
 p255
-(lp256
-(S'2015-06-02 09:16:30.263000'
-S'instance created'
+g8
+(S'\x07\xdf\x06\x03\x0f\x06\x1a\x00\xb7\x98'
+tRp256
+sg244
+S'cvlt2'
 p257
-tp258
-a(S'2015-06-02 09:17:56.998000'
-S'instance updated'
+sS'directory'
+p258
+S'c:\\Charlie\\charlie\\data\\raw'
 p259
-tp260
-a(S'2015-06-02 09:17:57.023000'
-S'pandas DataFrame of data created'
+sS'user_id'
+p260
+S'oleach'
 p261
-tp262
-a(S'2015-06-02 09:17:57.027000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
-tp263
-a(S'2015-06-02 09:18:41.290000'
-g259
-tp264
-a(S'2015-06-02 09:18:41.312000'
-g261
-tp265
-a(S'2015-06-02 09:18:41.314000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
-tp266
-a(S'2015-06-02 09:19:15.192000'
-g259
-tp267
-a(S'2015-06-02 09:19:15.226000'
-g261
-tp268
-a(S'2015-06-02 09:19:15.228000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
-tp269
-a(S'2015-06-02 09:19:54.518000'
-g259
+sS'test_started'
+p262
+I01
+sS'abs_filename'
+p263
+S'c:\\Charlie\\charlie\\data\\raw\\4397_cvlt2.data'
+p264
+sS'date_started'
+p265
+g8
+(S'\x07\xdf\x06\x03\x0f\x072\x05\xef\x88'
+tRp266
+sS'log'
+p267
+(lp268
+(S'2015-06-03 15:06:26.047000'
+S'instance created'
+p269
 tp270
-a(S'2015-06-02 09:19:54.552000'
-g261
-tp271
-a(S'2015-06-02 09:19:54.554000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+a(S'2015-06-03 15:07:50.403000'
+S'instance updated'
+p271
 tp272
-a(S'2015-06-02 09:20:25.852000'
-g259
-tp273
-a(S'2015-06-02 09:20:25.901000'
-g261
+a(S'2015-06-03 15:07:50.423000'
+S'pandas DataFrame of data created'
+p273
 tp274
-a(S'2015-06-02 09:20:25.903000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+a(S'2015-06-03 15:07:50.432000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
 tp275
-a(S'2015-06-02 09:21:07.315000'
-g259
+a(S'2015-06-03 15:08:33.372000'
+g271
 tp276
-a(S'2015-06-02 09:21:07.364000'
-g261
+a(S'2015-06-03 15:08:33.391000'
+g273
 tp277
-a(S'2015-06-02 09:21:07.366000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+a(S'2015-06-03 15:08:33.395000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
 tp278
-a(S'2015-06-02 09:21:48.414000'
-g259
+a(S'2015-06-03 15:09:22.576000'
+g271
 tp279
-a(S'2015-06-02 09:21:48.471000'
-g261
+a(S'2015-06-03 15:09:22.610000'
+g273
 tp280
-a(S'2015-06-02 09:21:48.472000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+a(S'2015-06-03 15:09:22.612000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
 tp281
-a(S'2015-06-02 09:22:33.526000'
-g259
+a(S'2015-06-03 15:10:04.246000'
+g271
 tp282
-a(S'2015-06-02 09:22:33.581000'
-g261
+a(S'2015-06-03 15:10:04.281000'
+g273
 tp283
-a(S'2015-06-02 09:22:33.583000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+a(S'2015-06-03 15:10:04.283000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
 tp284
-a(S'2015-06-02 09:23:03.355000'
-g259
+a(S'2015-06-03 15:10:47.476000'
+g271
 tp285
-a(S'2015-06-02 09:23:03.418000'
-g261
+a(S'2015-06-03 15:10:47.524000'
+g273
 tp286
-a(S'2015-06-02 09:23:03.419000'
-S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+a(S'2015-06-03 15:10:47.526000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
 tp287
+a(S'2015-06-03 15:11:23.746000'
+g271
+tp288
+a(S'2015-06-03 15:11:23.805000'
+g273
+tp289
+a(S'2015-06-03 15:11:23.807000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+tp290
+a(S'2015-06-03 15:12:12.448000'
+g271
+tp291
+a(S'2015-06-03 15:12:12.510000'
+g273
+tp292
+a(S'2015-06-03 15:12:12.511000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+tp293
+a(S'2015-06-03 15:12:49.110000'
+g271
+tp294
+a(S'2015-06-03 15:12:49.171000'
+g273
+tp295
+a(S'2015-06-03 15:12:49.172000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+tp296
+a(S'2015-06-03 15:13:22.076000'
+g271
+tp297
+a(S'2015-06-03 15:13:22.144000'
+g273
+tp298
+a(S'2015-06-03 15:13:22.145000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4397_cvlt2.csv'
+tp299
 asb.
