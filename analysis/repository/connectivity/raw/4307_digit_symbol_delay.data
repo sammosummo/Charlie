@@ -1,0 +1,272 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x03\x11\n\x07\x0c\x0e\xa2\x18'
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x03\x11\n\x06\x11\x08\x7f\xc8'
+tRp11
+sS'proj_id'
+p12
+S''
+sS'date_done'
+p13
+NsS'test_done'
+p14
+I01
+sS'data'
+p15
+(lp16
+(S'4307'
+p17
+S'digit_symbol_delay'
+p18
+I0
+I6
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym6.bmp'
+I5
+I9421
+tp19
+a(g17
+g18
+I1
+I7
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym7.bmp'
+I7
+I3650
+tp20
+a(g17
+g18
+I2
+I4
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym4.bmp'
+I8
+I4020
+tp21
+a(g17
+g18
+I3
+I8
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym8.bmp'
+I8
+I1060
+tp22
+a(g17
+g18
+I4
+I5
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym5.bmp'
+I3
+I1010
+tp23
+a(g17
+g18
+I5
+I1
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym1.bmp'
+I4
+I1821
+tp24
+a(g17
+g18
+I6
+I9
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym9.bmp'
+I5
+I1770
+tp25
+a(g17
+g18
+I7
+I2
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym2.bmp'
+I2
+I5510
+tp26
+a(g17
+g18
+I8
+I3
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym3.bmp'
+p27
+I9
+I2280
+tp28
+asS'output_format'
+p29
+(lp30
+(S'proband_id'
+p31
+c__builtin__
+str
+p32
+tp33
+a(S'test_name'
+p34
+g32
+tp35
+a(S'trialn'
+p36
+c__builtin__
+int
+p37
+tp38
+a(S'ans'
+p39
+g32
+tp40
+a(S'f'
+g32
+tp41
+a(S'rsp'
+p42
+g32
+tp43
+a(S'rt'
+p44
+g37
+tp45
+asg31
+g17
+sS'filename'
+p46
+S'4307_digit_symbol_delay.data'
+p47
+sS'initialised'
+p48
+g8
+(S'\x07\xdf\x03\x11\n\x06\x11\x08\x7f\xc8'
+tRp49
+sS'last_udated'
+p50
+g8
+(S'\x07\xdf\x03\x11\n\x06\x11\x08\x7f\xc8'
+tRp51
+sg34
+S'digit_symbol_delay'
+p52
+sS'directory'
+p53
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p54
+sS'user_id'
+p55
+S''
+sS'test_started'
+p56
+I01
+sS'abs_filename'
+p57
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4307_digit_symbol_delay.data'
+p58
+sS'date_started'
+p59
+g8
+(S'\x07\xdf\x03\x11\n\x06+\x06\xdd\xd0'
+tRp60
+sS'log'
+p61
+(lp62
+(S'2015-03-17 10:06:17.557000'
+S'instance created'
+p63
+tp64
+a(S'2015-03-17 10:06:43.459000'
+S'instance updated'
+p65
+tp66
+a(S'2015-03-17 10:06:43.466000'
+S'pandas DataFrame of data created'
+p67
+tp68
+a(S'2015-03-17 10:06:43.470000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp69
+a(S'2015-03-17 10:06:47.133000'
+g65
+tp70
+a(S'2015-03-17 10:06:47.140000'
+g67
+tp71
+a(S'2015-03-17 10:06:47.144000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp72
+a(S'2015-03-17 10:06:51.176000'
+g65
+tp73
+a(S'2015-03-17 10:06:51.183000'
+g67
+tp74
+a(S'2015-03-17 10:06:51.187000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp75
+a(S'2015-03-17 10:06:52.258000'
+g65
+tp76
+a(S'2015-03-17 10:06:52.266000'
+g67
+tp77
+a(S'2015-03-17 10:06:52.270000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp78
+a(S'2015-03-17 10:06:58.143000'
+g65
+tp79
+a(S'2015-03-17 10:06:58.151000'
+g67
+tp80
+a(S'2015-03-17 10:06:58.155000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp81
+a(S'2015-03-17 10:06:59.986000'
+g65
+tp82
+a(S'2015-03-17 10:06:59.994000'
+g67
+tp83
+a(S'2015-03-17 10:06:59.997000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp84
+a(S'2015-03-17 10:07:01.779000'
+g65
+tp85
+a(S'2015-03-17 10:07:01.787000'
+g67
+tp86
+a(S'2015-03-17 10:07:01.791000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp87
+a(S'2015-03-17 10:07:10.644000'
+g65
+tp88
+a(S'2015-03-17 10:07:10.652000'
+g67
+tp89
+a(S'2015-03-17 10:07:10.655000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp90
+a(S'2015-03-17 10:07:12.947000'
+g65
+tp91
+a(S'2015-03-17 10:07:12.955000'
+g67
+tp92
+a(S'2015-03-17 10:07:12.958000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_digit_symbol_delay.csv'
+tp93
+asb.

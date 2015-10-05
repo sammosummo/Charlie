@@ -1,0 +1,397 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-08-12 13:30:00.077000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\x08\x0c\r\x18#\x02\xc6\xf0'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g10
+(S'\x07\xdf\x08\x0c\r\x1e\x00\x01$\xf8'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4443'
+p19
+S'verbal_fluency'
+p20
+I0
+S'True'
+p21
+tp22
+a(g19
+g20
+I0
+g21
+tp23
+a(g19
+g20
+I0
+g21
+tp24
+a(g19
+g20
+I0
+g21
+tp25
+a(g19
+g20
+I0
+g21
+tp26
+a(g19
+g20
+I1
+g21
+tp27
+a(g19
+g20
+I1
+g21
+tp28
+a(g19
+g20
+I1
+g21
+tp29
+a(g19
+g20
+I1
+g21
+tp30
+a(g19
+g20
+I1
+g21
+tp31
+a(g19
+g20
+I2
+g21
+tp32
+a(g19
+g20
+I2
+g21
+tp33
+a(g19
+g20
+I2
+g21
+tp34
+a(g19
+g20
+I2
+g21
+tp35
+a(g19
+g20
+I2
+g21
+tp36
+a(g19
+g20
+I2
+g21
+tp37
+a(g19
+g20
+I2
+S'False'
+p38
+tp39
+a(g19
+g20
+I3
+g21
+tp40
+a(g19
+g20
+I3
+g21
+tp41
+a(g19
+g20
+I3
+g21
+tp42
+a(g19
+g20
+I3
+g21
+tp43
+a(g19
+g20
+I3
+g21
+tp44
+a(g19
+g20
+I3
+g21
+tp45
+a(g19
+g20
+I3
+g21
+tp46
+a(g19
+g20
+I3
+g21
+tp47
+a(g19
+g20
+I3
+g21
+tp48
+a(g19
+g20
+I3
+g21
+tp49
+a(g19
+g20
+I3
+g21
+tp50
+a(g19
+g20
+I3
+g21
+tp51
+a(g19
+g20
+I3
+g21
+tp52
+a(g19
+g20
+I3
+g21
+tp53
+a(g19
+g20
+I3
+g21
+tp54
+a(g19
+g20
+I3
+g21
+tp55
+a(g19
+g20
+I3
+g38
+tp56
+a(g19
+g20
+I3
+g21
+tp57
+a(g19
+g20
+I3
+g21
+tp58
+a(g19
+g20
+I3
+g38
+tp59
+a(g19
+g20
+I3
+g21
+tp60
+a(g19
+g20
+I3
+g21
+tp61
+a(g19
+g20
+I3
+g38
+tp62
+a(g19
+g20
+I3
+g21
+tp63
+asS'output_format'
+p64
+(lp65
+(S'proband_id'
+p66
+c__builtin__
+str
+p67
+tp68
+a(S'test_name'
+p69
+g67
+tp70
+a(S'trialn'
+p71
+c__builtin__
+int
+p72
+tp73
+a(S'rsp'
+p74
+g67
+tp75
+asg66
+g19
+sS'filename'
+p76
+S'4443_verbal_fluency.data'
+p77
+sS'initialised'
+p78
+g10
+(S'\x07\xdf\x08\x0c\r\x18#\x02\xc6\xf0'
+tRp79
+sg69
+S'verbal_fluency'
+p80
+sS'directory'
+p81
+S'c:\\Charlie\\charlie\\data\\raw'
+p82
+sS'user_id'
+p83
+S'sbuccheri'
+p84
+sS'test_started'
+p85
+I01
+sS'abs_filename'
+p86
+S'c:\\Charlie\\charlie\\data\\raw\\4443_verbal_fluency.data'
+p87
+sS'date_started'
+p88
+g10
+(S'\x07\xdf\x08\x0c\r\x1a+\x01\x15X'
+tRp89
+sS'log'
+p90
+(lp91
+(S'2015-08-12 13:24:35.182000'
+S'instance created'
+p92
+tp93
+a(S'2015-08-12 13:26:43.088000'
+S'instance updated'
+p94
+tp95
+a(S'2015-08-12 13:26:43.110000'
+S'pandas DataFrame of data created'
+p96
+tp97
+a(S'2015-08-12 13:26:43.115000'
+g94
+tp98
+a(S'2015-08-12 13:26:43.132000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp99
+a(S'2015-08-12 13:26:55.022000'
+g94
+tp100
+a(S'2015-08-12 13:26:55.051000'
+g96
+tp101
+a(S'2015-08-12 13:26:55.059000'
+g94
+tp102
+a(S'2015-08-12 13:26:55.063000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp103
+a(S'2015-08-12 13:27:58.531000'
+g94
+tp104
+a(S'2015-08-12 13:27:58.580000'
+g96
+tp105
+a(S'2015-08-12 13:27:58.585000'
+g94
+tp106
+a(S'2015-08-12 13:27:58.587000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp107
+a(S'2015-08-12 13:28:04.195000'
+g94
+tp108
+a(S'2015-08-12 13:28:04.246000'
+g96
+tp109
+a(S'2015-08-12 13:28:04.254000'
+g94
+tp110
+a(S'2015-08-12 13:28:04.258000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp111
+a(S'2015-08-12 13:28:47.425000'
+g94
+tp112
+a(S'2015-08-12 13:28:47.494000'
+g96
+tp113
+a(S'2015-08-12 13:28:47.499000'
+g94
+tp114
+a(S'2015-08-12 13:28:47.501000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp115
+a(S'2015-08-12 13:28:56.983000'
+g94
+tp116
+a(S'2015-08-12 13:28:57.044000'
+g96
+tp117
+a(S'2015-08-12 13:28:57.048000'
+g94
+tp118
+a(S'2015-08-12 13:28:57.050000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp119
+a(S'2015-08-12 13:29:59.965000'
+g94
+tp120
+a(S'2015-08-12 13:30:00.073000'
+g96
+tp121
+a(S'2015-08-12 13:30:00.075000'
+g94
+tp122
+a(S'2015-08-12 13:30:00.076000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4443_verbal_fluency.csv'
+tp123
+asb.

@@ -1,0 +1,317 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-08-20 09:43:35.758000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\x08\x14\t)\x1b\x07^\xb8'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g10
+(S'\x07\xdf\x08\x14\t+#\x0b\x90\xf0'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4433'
+p19
+S'updating'
+p20
+S'prac'
+p21
+I0
+I0
+I4
+I4
+S'------------'
+p22
+S'4,4,4,4,4,4,4,4,4,4,4,4,4'
+p23
+I4
+I4620
+tp24
+a(g19
+g20
+S'prac'
+p25
+I1
+I1
+I8
+I12
+S'-----------d'
+p26
+S'8,8,8,8,8,8,8,8,8,8,8,8,12'
+p27
+I12
+I8610
+tp28
+a(g19
+g20
+S'prac'
+p29
+I2
+I2
+I9
+I6
+S'-----u-----r'
+p30
+S'9,9,9,9,9,9,5,5,5,5,5,5,6'
+p31
+I9
+I4890
+tp32
+a(g19
+g20
+S'test'
+p33
+I0
+I0
+I13
+I13
+S'------------'
+p34
+S'13,13,13,13,13,13,13,13,13,13,13,13,13'
+p35
+I6
+I4891
+tp36
+a(g19
+g20
+S'test'
+p37
+I1
+I0
+I15
+I15
+S'------------'
+p38
+S'15,15,15,15,15,15,15,15,15,15,15,15,15'
+p39
+I10
+I1110
+tp40
+a(g19
+g20
+S'test'
+p41
+I2
+I0
+I13
+I13
+S'------------'
+p42
+S'13,13,13,13,13,13,13,13,13,13,13,13,13'
+p43
+I10
+I6220
+tp44
+asS'output_format'
+p45
+(lp46
+(S'proband_id'
+p47
+c__builtin__
+str
+p48
+tp49
+a(S'test_name'
+p50
+g48
+tp51
+a(S'phase'
+p52
+g48
+tp53
+a(S'trialn'
+p54
+c__builtin__
+int
+p55
+tp56
+a(S'updates'
+p57
+g55
+tp58
+a(S'origin'
+p59
+g55
+tp60
+a(S'endpoint'
+p61
+g55
+tp62
+a(S'moves'
+p63
+g48
+tp64
+a(S'marginalpositions'
+p65
+g48
+tp66
+a(S'rsp'
+p67
+g55
+tp68
+a(S'rt'
+p69
+g55
+tp70
+asg47
+g19
+sS'filename'
+p71
+S'4433_updating.data'
+p72
+sS'initialised'
+p73
+g10
+(S'\x07\xdf\x08\x14\t)\x1b\x07^\xb8'
+tRp74
+sg50
+S'updating'
+p75
+sS'directory'
+p76
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p77
+sS'user_id'
+p78
+S'barrett'
+p79
+sS'test_started'
+p80
+I01
+sS'abs_filename'
+p81
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4433_updating.data'
+p82
+sS'date_started'
+p83
+g10
+(S'\x07\xdf\x08\x14\t*\t\x02\xaf\x80'
+tRp84
+sS'log'
+p85
+(lp86
+(S'2015-08-20 09:41:27.483000'
+S'instance created'
+p87
+tp88
+a(S'2015-08-20 09:42:09.178000'
+S'instance updated'
+p89
+tp90
+a(S'2015-08-20 09:42:09.183000'
+S'pandas DataFrame of data created'
+p91
+tp92
+a(S'2015-08-20 09:42:09.185000'
+g89
+tp93
+a(S'2015-08-20 09:42:09.187000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_updating.csv'
+tp94
+a(S'2015-08-20 09:42:09.191000'
+g91
+tp95
+a(S'2015-08-20 09:42:27.473000'
+g89
+tp96
+a(S'2015-08-20 09:42:27.480000'
+g91
+tp97
+a(S'2015-08-20 09:42:27.482000'
+g89
+tp98
+a(S'2015-08-20 09:42:27.483000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_updating.csv'
+tp99
+a(S'2015-08-20 09:42:27.490000'
+g91
+tp100
+a(S'2015-08-20 09:42:42.051000'
+g89
+tp101
+a(S'2015-08-20 09:42:42.060000'
+g91
+tp102
+a(S'2015-08-20 09:42:42.062000'
+g89
+tp103
+a(S'2015-08-20 09:42:42.063000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_updating.csv'
+tp104
+a(S'2015-08-20 09:42:42.072000'
+g91
+tp105
+a(S'2015-08-20 09:43:10.794000'
+g89
+tp106
+a(S'2015-08-20 09:43:10.806000'
+g91
+tp107
+a(S'2015-08-20 09:43:10.810000'
+g89
+tp108
+a(S'2015-08-20 09:43:10.811000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_updating.csv'
+tp109
+a(S'2015-08-20 09:43:10.821000'
+g91
+tp110
+a(S'2015-08-20 09:43:20.699000'
+g89
+tp111
+a(S'2015-08-20 09:43:20.713000'
+g91
+tp112
+a(S'2015-08-20 09:43:20.715000'
+g89
+tp113
+a(S'2015-08-20 09:43:20.716000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_updating.csv'
+tp114
+a(S'2015-08-20 09:43:20.729000'
+g91
+tp115
+a(S'2015-08-20 09:43:35.716000'
+g89
+tp116
+a(S'2015-08-20 09:43:35.732000'
+g91
+tp117
+a(S'2015-08-20 09:43:35.734000'
+g89
+tp118
+a(S'2015-08-20 09:43:35.735000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_updating.csv'
+tp119
+a(S'2015-08-20 09:43:35.751000'
+g91
+tp120
+a(S'2015-08-20 09:43:35.758000'
+g89
+tp121
+asb.

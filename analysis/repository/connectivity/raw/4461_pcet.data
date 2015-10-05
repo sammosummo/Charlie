@@ -1,0 +1,2225 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-09-21 14:52:32.018000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\t\x15\x0e-!\x0f\x03\xc0'
+tRp11
+sS'proj_id'
+p12
+S''
+sS'date_done'
+p13
+g10
+(S'\x07\xdf\t\x15\x0e4 \x00FP'
+tRp14
+sS'test_done'
+p15
+I01
+sS'data'
+p16
+(lp17
+(S'4461'
+p18
+S'pcet'
+p19
+S'practice'
+p20
+I0
+NI2
+I2
+I2
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I2
+I3530
+tp21
+a(g18
+g19
+S'test'
+p22
+I0
+S'thickness'
+p23
+I3
+NNI1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I0
+I3010
+tp24
+a(g18
+g19
+g22
+I1
+g23
+I2
+NNI0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I2
+I3791
+tp25
+a(g18
+g19
+g22
+I2
+g23
+I0
+NNI3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I0
+I2260
+tp26
+a(g18
+g19
+g22
+I3
+g23
+I3
+NNI1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I3
+I3080
+tp27
+a(g18
+g19
+g22
+I4
+g23
+I0
+NNI3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I0
+I2290
+tp28
+a(g18
+g19
+g22
+I5
+g23
+I3
+NNI1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I3
+I2261
+tp29
+a(g18
+g19
+g22
+I6
+g23
+I1
+NNI3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I1
+I2330
+tp30
+a(g18
+g19
+g22
+I7
+g23
+I0
+NNI1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I0
+I1910
+tp31
+a(g18
+g19
+g22
+I8
+g23
+I0
+NNI1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I0
+I2210
+tp32
+a(g18
+g19
+g22
+I9
+g23
+I1
+NNI3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I1
+I1560
+tp33
+a(g18
+g19
+g22
+I10
+g23
+I2
+NNI0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I2
+I1820
+tp34
+a(g18
+g19
+g22
+I11
+g23
+I0
+NNI1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I0
+I2710
+tp35
+a(g18
+g19
+g22
+I12
+S'shape'
+p36
+I0
+I3
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I3
+I1370
+tp37
+a(g18
+g19
+g22
+I13
+S'shape'
+p38
+I3
+I2
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I2
+I2920
+tp39
+a(g18
+g19
+g22
+I14
+S'shape'
+p40
+I3
+I1
+I0
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I3
+I2860
+tp41
+a(g18
+g19
+g22
+I15
+S'shape'
+p42
+I1
+I3
+I0
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I1
+I3931
+tp43
+a(g18
+g19
+g22
+I16
+S'shape'
+p44
+I1
+I0
+I3
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I1
+I6500
+tp45
+a(g18
+g19
+g22
+I17
+S'shape'
+p46
+I2
+I1
+I3
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I1
+I9711
+tp47
+a(g18
+g19
+g22
+I18
+S'shape'
+p48
+I3
+I2
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I3
+I3270
+tp49
+a(g18
+g19
+g22
+I19
+S'shape'
+p50
+I1
+I0
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I1
+I8461
+tp51
+a(g18
+g19
+g22
+I20
+S'shape'
+p52
+I3
+I2
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I3
+I1440
+tp53
+a(g18
+g19
+g22
+I21
+S'shape'
+p54
+I1
+I0
+I3
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I1
+I3060
+tp55
+a(g18
+g19
+g22
+I22
+S'shape'
+p56
+I2
+I1
+I0
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I2
+I4760
+tp57
+a(g18
+g19
+g22
+I23
+S'shape'
+p58
+I1
+I0
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I1
+I2311
+tp59
+a(g18
+g19
+g22
+I24
+S'size'
+p60
+I0
+I2
+I3
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I2
+I1590
+tp61
+a(g18
+g19
+g22
+I25
+S'size'
+p62
+I3
+I2
+I0
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I0
+I2340
+tp63
+a(g18
+g19
+g22
+I26
+S'size'
+p64
+I0
+I3
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I3
+I6290
+tp65
+a(g18
+g19
+g22
+I27
+S'size'
+p66
+I1
+I2
+I3
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I2
+I3650
+tp67
+a(g18
+g19
+g22
+I28
+S'size'
+p68
+I2
+I3
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I3
+I2580
+tp69
+a(g18
+g19
+g22
+I29
+S'size'
+p70
+I1
+I0
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I2
+I1440
+tp71
+a(g18
+g19
+g22
+I30
+S'size'
+p72
+I0
+I1
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I1
+I7971
+tp73
+a(g18
+g19
+g22
+I31
+S'size'
+p74
+I3
+I1
+I0
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I0
+I15441
+tp75
+a(g18
+g19
+g22
+I32
+S'size'
+p76
+I0
+I2
+I1
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I2
+I4020
+tp77
+a(g18
+g19
+g22
+I33
+S'size'
+p78
+I3
+I1
+I2
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I2
+I2780
+tp79
+a(g18
+g19
+g22
+I34
+S'size'
+p80
+I2
+I3
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I3
+I2041
+tp81
+a(g18
+g19
+g22
+I35
+S'size'
+p82
+I2
+I0
+I1
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I0
+I2820
+tp83
+a(g18
+g19
+g22
+I36
+g23
+I2
+I3
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I1
+I5590
+tp84
+a(g18
+g19
+g22
+I37
+g23
+I3
+I2
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I3
+I4341
+tp85
+a(g18
+g19
+g22
+I38
+g23
+I0
+I3
+I1
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I0
+I2360
+tp86
+a(g18
+g19
+g22
+I39
+g23
+I0
+I3
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I0
+I2560
+tp87
+a(g18
+g19
+g22
+I40
+g23
+I0
+I1
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I0
+I1660
+tp88
+a(g18
+g19
+g22
+I41
+g23
+I3
+I0
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I3
+I2121
+tp89
+a(g18
+g19
+g22
+I42
+g23
+I0
+I3
+I1
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I0
+I2180
+tp90
+a(g18
+g19
+g22
+I43
+g23
+I0
+I3
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I0
+I1810
+tp91
+a(g18
+g19
+g22
+I44
+g23
+I2
+I1
+I3
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I2
+I4130
+tp92
+a(g18
+g19
+g22
+I45
+g23
+I3
+I0
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I3
+I2631
+tp93
+a(g18
+g19
+g22
+I46
+g23
+I1
+I3
+I2
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I1
+I2020
+tp94
+a(g18
+g19
+g22
+I47
+g23
+I1
+I3
+I2
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I1
+I6130
+tp95
+a(g18
+g19
+g22
+I48
+S'shape'
+p96
+I3
+I2
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I2
+I2141
+tp97
+a(g18
+g19
+g22
+I49
+S'shape'
+p98
+I1
+I0
+I3
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I0
+I3070
+tp99
+a(g18
+g19
+g22
+I50
+S'shape'
+p100
+I2
+I0
+I3
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I0
+I13871
+tp101
+a(g18
+g19
+g22
+I51
+S'shape'
+p102
+I1
+I3
+I0
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I1
+I4500
+tp103
+a(g18
+g19
+g22
+I52
+S'shape'
+p104
+I1
+I3
+I2
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I1
+I5601
+tp105
+a(g18
+g19
+g22
+I53
+S'shape'
+p106
+I1
+I2
+I0
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I1
+I1590
+tp107
+a(g18
+g19
+g22
+I54
+S'shape'
+p108
+I3
+I0
+I1
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I3
+I3060
+tp109
+a(g18
+g19
+g22
+I55
+S'shape'
+p110
+I3
+I0
+I2
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I3
+I3630
+tp111
+a(g18
+g19
+g22
+I56
+S'shape'
+p112
+I2
+I1
+I3
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+I2
+I2250
+tp113
+a(g18
+g19
+g22
+I57
+S'shape'
+p114
+I0
+I2
+I1
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+I0
+I2380
+tp115
+a(g18
+g19
+g22
+I58
+S'shape'
+p116
+I2
+I3
+I1
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I2
+I2970
+tp117
+a(g18
+g19
+g22
+I59
+S'shape'
+p118
+I0
+I1
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I0
+I2961
+tp119
+a(g18
+g19
+g22
+I60
+S'size'
+p120
+I0
+I2
+I1
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I2
+I2230
+tp121
+a(g18
+g19
+g22
+I61
+S'size'
+p122
+I2
+I3
+I0
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I3
+I2190
+tp123
+a(g18
+g19
+g22
+I62
+S'size'
+p124
+I2
+I0
+I1
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I0
+I4680
+tp125
+a(g18
+g19
+g22
+I63
+S'size'
+p126
+I1
+I0
+I3
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+I3
+I2610
+tp127
+a(g18
+g19
+g22
+I64
+S'size'
+p128
+I0
+I2
+I3
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+I2
+I2760
+tp129
+a(g18
+g19
+g22
+I65
+S'size'
+p130
+I3
+I1
+I0
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I0
+I2660
+tp131
+a(g18
+g19
+g22
+I66
+S'size'
+p132
+I3
+I1
+I2
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+I1
+I2620
+tp133
+a(g18
+g19
+g22
+I67
+S'size'
+p134
+I1
+I2
+I3
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+I3
+I9810
+tp135
+a(g18
+g19
+g22
+I68
+S'size'
+p136
+I0
+I2
+I3
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I3
+I2921
+tp137
+a(g18
+g19
+g22
+I69
+S'size'
+p138
+I0
+I1
+I2
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+I1
+I1650
+tp139
+a(g18
+g19
+g22
+I70
+S'size'
+p140
+I1
+I0
+I3
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\111.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\100.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\101.png'
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\001.png'
+I3
+I4190
+tp141
+a(g18
+g19
+g22
+I71
+S'size'
+p142
+I1
+I2
+I3
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\010.png'
+p143
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\011.png'
+p144
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\000.png'
+p145
+S'c:\\Charlie\\charlie\\stimuli\\visual\\pcet\\110.png'
+p146
+I2
+I4331
+tp147
+asS'output_format'
+p148
+(lp149
+(S'proband_id'
+p150
+c__builtin__
+str
+p151
+tp152
+a(S'test_name'
+p153
+g151
+tp154
+a(S'phase'
+p155
+g151
+tp156
+a(S'trialn'
+p157
+c__builtin__
+int
+p158
+tp159
+a(S'rule'
+p160
+g151
+tp161
+a(S'ans'
+p162
+g151
+tp163
+a(S'pers'
+p164
+g151
+tp165
+a(S'other'
+p166
+g151
+tp167
+a(S'lapse'
+p168
+g151
+tp169
+a(S'f1'
+p170
+g151
+tp171
+a(S'f2'
+p172
+g151
+tp173
+a(S'f3'
+p174
+g151
+tp175
+a(S'f4'
+p176
+g151
+tp177
+a(S'rsp'
+p178
+g151
+tp179
+a(S'rt'
+p180
+g158
+tp181
+asg150
+g18
+sS'filename'
+p182
+S'4461_pcet.data'
+p183
+sS'initialised'
+p184
+g10
+(S'\x07\xdf\t\x15\x0e-!\x0f\x03\xc0'
+tRp185
+sg153
+S'pcet'
+p186
+sS'directory'
+p187
+S'c:\\Charlie\\charlie\\data\\raw'
+p188
+sS'user_id'
+p189
+S''
+sS'test_started'
+p190
+I01
+sS'abs_filename'
+p191
+S'c:\\Charlie\\charlie\\data\\raw\\4461_pcet.data'
+p192
+sS'date_started'
+p193
+g10
+(S'\x07\xdf\t\x15\x0e-1\x08\x02\xc8'
+tRp194
+sS'log'
+p195
+(lp196
+(S'2015-09-21 14:45:33.984000'
+S'instance created'
+p197
+tp198
+a(S'2015-09-21 14:45:49.545000'
+S'instance updated'
+p199
+tp200
+a(S'2015-09-21 14:45:49.567000'
+S'pandas DataFrame of data created'
+p201
+tp202
+a(S'2015-09-21 14:45:49.574000'
+g199
+tp203
+a(S'2015-09-21 14:45:49.579000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp204
+a(S'2015-09-21 14:46:01.183000'
+g199
+tp205
+a(S'2015-09-21 14:46:01.240000'
+g201
+tp206
+a(S'2015-09-21 14:46:01.247000'
+g199
+tp207
+a(S'2015-09-21 14:46:01.249000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp208
+a(S'2015-09-21 14:46:06.108000'
+g199
+tp209
+a(S'2015-09-21 14:46:06.185000'
+g201
+tp210
+a(S'2015-09-21 14:46:06.195000'
+g199
+tp211
+a(S'2015-09-21 14:46:06.197000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp212
+a(S'2015-09-21 14:46:09.526000'
+g199
+tp213
+a(S'2015-09-21 14:46:09.626000'
+g201
+tp214
+a(S'2015-09-21 14:46:09.636000'
+g199
+tp215
+a(S'2015-09-21 14:46:09.640000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp216
+a(S'2015-09-21 14:46:13.788000'
+g199
+tp217
+a(S'2015-09-21 14:46:13.911000'
+g201
+tp218
+a(S'2015-09-21 14:46:13.921000'
+g199
+tp219
+a(S'2015-09-21 14:46:13.925000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp220
+a(S'2015-09-21 14:46:17.301000'
+g199
+tp221
+a(S'2015-09-21 14:46:17.445000'
+g201
+tp222
+a(S'2015-09-21 14:46:17.456000'
+g199
+tp223
+a(S'2015-09-21 14:46:17.459000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp224
+a(S'2015-09-21 14:46:20.803000'
+g199
+tp225
+a(S'2015-09-21 14:46:20.968000'
+g201
+tp226
+a(S'2015-09-21 14:46:20.979000'
+g199
+tp227
+a(S'2015-09-21 14:46:20.983000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp228
+a(S'2015-09-21 14:46:24.383000'
+g199
+tp229
+a(S'2015-09-21 14:46:24.570000'
+g201
+tp230
+a(S'2015-09-21 14:46:24.581000'
+g199
+tp231
+a(S'2015-09-21 14:46:24.584000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp232
+a(S'2015-09-21 14:46:27.566000'
+g199
+tp233
+a(S'2015-09-21 14:46:27.775000'
+g201
+tp234
+a(S'2015-09-21 14:46:27.786000'
+g199
+tp235
+a(S'2015-09-21 14:46:27.790000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp236
+a(S'2015-09-21 14:46:31.069000'
+g199
+tp237
+a(S'2015-09-21 14:46:31.300000'
+g201
+tp238
+a(S'2015-09-21 14:46:31.307000'
+g199
+tp239
+a(S'2015-09-21 14:46:31.309000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp240
+a(S'2015-09-21 14:46:33.938000'
+g199
+tp241
+a(S'2015-09-21 14:46:34.122000'
+g201
+tp242
+a(S'2015-09-21 14:46:34.129000'
+g199
+tp243
+a(S'2015-09-21 14:46:34.131000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp244
+a(S'2015-09-21 14:46:37.028000'
+g199
+tp245
+a(S'2015-09-21 14:46:37.303000'
+g201
+tp246
+a(S'2015-09-21 14:46:37.314000'
+g199
+tp247
+a(S'2015-09-21 14:46:37.318000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp248
+a(S'2015-09-21 14:46:41.115000'
+g199
+tp249
+a(S'2015-09-21 14:46:41.413000'
+g201
+tp250
+a(S'2015-09-21 14:46:41.424000'
+g199
+tp251
+a(S'2015-09-21 14:46:41.429000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp252
+a(S'2015-09-21 14:46:43.869000'
+g199
+tp253
+a(S'2015-09-21 14:46:44.193000'
+g201
+tp254
+a(S'2015-09-21 14:46:44.202000'
+g199
+tp255
+a(S'2015-09-21 14:46:44.205000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp256
+a(S'2015-09-21 14:46:48.199000'
+g199
+tp257
+a(S'2015-09-21 14:46:48.544000'
+g201
+tp258
+a(S'2015-09-21 14:46:48.553000'
+g199
+tp259
+a(S'2015-09-21 14:46:48.555000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp260
+a(S'2015-09-21 14:46:52.475000'
+g199
+tp261
+a(S'2015-09-21 14:46:52.837000'
+g201
+tp262
+a(S'2015-09-21 14:46:52.845000'
+g199
+tp263
+a(S'2015-09-21 14:46:52.847000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp264
+a(S'2015-09-21 14:46:57.842000'
+g199
+tp265
+a(S'2015-09-21 14:46:58.225000'
+g201
+tp266
+a(S'2015-09-21 14:46:58.236000'
+g199
+tp267
+a(S'2015-09-21 14:46:58.239000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp268
+a(S'2015-09-21 14:47:05.815000'
+g199
+tp269
+a(S'2015-09-21 14:47:06.220000'
+g201
+tp270
+a(S'2015-09-21 14:47:06.231000'
+g199
+tp271
+a(S'2015-09-21 14:47:06.235000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp272
+a(S'2015-09-21 14:47:17.027000'
+g199
+tp273
+a(S'2015-09-21 14:47:17.454000'
+g201
+tp274
+a(S'2015-09-21 14:47:17.465000'
+g199
+tp275
+a(S'2015-09-21 14:47:17.469000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp276
+a(S'2015-09-21 14:47:21.808000'
+g199
+tp277
+a(S'2015-09-21 14:47:22.256000'
+g201
+tp278
+a(S'2015-09-21 14:47:22.267000'
+g199
+tp279
+a(S'2015-09-21 14:47:22.270000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp280
+a(S'2015-09-21 14:47:31.796000'
+g199
+tp281
+a(S'2015-09-21 14:47:32.266000'
+g201
+tp282
+a(S'2015-09-21 14:47:32.277000'
+g199
+tp283
+a(S'2015-09-21 14:47:32.281000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp284
+a(S'2015-09-21 14:47:34.804000'
+g199
+tp285
+a(S'2015-09-21 14:47:35.175000'
+g201
+tp286
+a(S'2015-09-21 14:47:35.183000'
+g199
+tp287
+a(S'2015-09-21 14:47:35.185000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp288
+a(S'2015-09-21 14:47:39.314000'
+g199
+tp289
+a(S'2015-09-21 14:47:39.826000'
+g201
+tp290
+a(S'2015-09-21 14:47:39.838000'
+g199
+tp291
+a(S'2015-09-21 14:47:39.842000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp292
+a(S'2015-09-21 14:47:45.682000'
+g199
+tp293
+a(S'2015-09-21 14:47:46.213000'
+g201
+tp294
+a(S'2015-09-21 14:47:46.225000'
+g199
+tp295
+a(S'2015-09-21 14:47:46.229000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp296
+a(S'2015-09-21 14:47:49.609000'
+g199
+tp297
+a(S'2015-09-21 14:47:50.164000'
+g201
+tp298
+a(S'2015-09-21 14:47:50.172000'
+g199
+tp299
+a(S'2015-09-21 14:47:50.174000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp300
+a(S'2015-09-21 14:47:52.830000'
+g199
+tp301
+a(S'2015-09-21 14:47:53.188000'
+g201
+tp302
+a(S'2015-09-21 14:47:53.195000'
+g199
+tp303
+a(S'2015-09-21 14:47:53.197000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp304
+a(S'2015-09-21 14:47:56.612000'
+g199
+tp305
+a(S'2015-09-21 14:47:57.208000'
+g201
+tp306
+a(S'2015-09-21 14:47:57.220000'
+g199
+tp307
+a(S'2015-09-21 14:47:57.224000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp308
+a(S'2015-09-21 14:48:04.594000'
+g199
+tp309
+a(S'2015-09-21 14:48:05.212000'
+g201
+tp310
+a(S'2015-09-21 14:48:05.223000'
+g199
+tp311
+a(S'2015-09-21 14:48:05.227000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp312
+a(S'2015-09-21 14:48:09.951000'
+g199
+tp313
+a(S'2015-09-21 14:48:10.592000'
+g201
+tp314
+a(S'2015-09-21 14:48:10.600000'
+g199
+tp315
+a(S'2015-09-21 14:48:10.603000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp316
+a(S'2015-09-21 14:48:14.252000'
+g199
+tp317
+a(S'2015-09-21 14:48:14.916000'
+g201
+tp318
+a(S'2015-09-21 14:48:14.924000'
+g199
+tp319
+a(S'2015-09-21 14:48:14.926000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp320
+a(S'2015-09-21 14:48:17.445000'
+g199
+tp321
+a(S'2015-09-21 14:48:17.920000'
+g201
+tp322
+a(S'2015-09-21 14:48:17.926000'
+g199
+tp323
+a(S'2015-09-21 14:48:17.929000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp324
+a(S'2015-09-21 14:48:26.966000'
+g199
+tp325
+a(S'2015-09-21 14:48:27.671000'
+g201
+tp326
+a(S'2015-09-21 14:48:27.683000'
+g199
+tp327
+a(S'2015-09-21 14:48:27.687000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp328
+a(S'2015-09-21 14:48:44.196000'
+g199
+tp329
+a(S'2015-09-21 14:48:44.922000'
+g201
+tp330
+a(S'2015-09-21 14:48:44.934000'
+g199
+tp331
+a(S'2015-09-21 14:48:44.938000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp332
+a(S'2015-09-21 14:48:50.038000'
+g199
+tp333
+a(S'2015-09-21 14:48:50.785000'
+g201
+tp334
+a(S'2015-09-21 14:48:50.796000'
+g199
+tp335
+a(S'2015-09-21 14:48:50.801000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp336
+a(S'2015-09-21 14:48:54.665000'
+g199
+tp337
+a(S'2015-09-21 14:48:55.138000'
+g201
+tp338
+a(S'2015-09-21 14:48:55.141000'
+g199
+tp339
+a(S'2015-09-21 14:48:55.142000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp340
+a(S'2015-09-21 14:48:58.251000'
+g199
+tp341
+a(S'2015-09-21 14:48:59.040000'
+g201
+tp342
+a(S'2015-09-21 14:48:59.048000'
+g199
+tp343
+a(S'2015-09-21 14:48:59.050000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp344
+a(S'2015-09-21 14:49:02.934000'
+g199
+tp345
+a(S'2015-09-21 14:49:03.745000'
+g201
+tp346
+a(S'2015-09-21 14:49:03.755000'
+g199
+tp347
+a(S'2015-09-21 14:49:03.757000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp348
+a(S'2015-09-21 14:49:10.415000'
+g199
+tp349
+a(S'2015-09-21 14:49:11.247000'
+g201
+tp350
+a(S'2015-09-21 14:49:11.256000'
+g199
+tp351
+a(S'2015-09-21 14:49:11.259000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp352
+a(S'2015-09-21 14:49:16.674000'
+g199
+tp353
+a(S'2015-09-21 14:49:17.527000'
+g201
+tp354
+a(S'2015-09-21 14:49:17.538000'
+g199
+tp355
+a(S'2015-09-21 14:49:17.543000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp356
+a(S'2015-09-21 14:49:20.971000'
+g199
+tp357
+a(S'2015-09-21 14:49:21.848000'
+g201
+tp358
+a(S'2015-09-21 14:49:21.860000'
+g199
+tp359
+a(S'2015-09-21 14:49:21.864000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp360
+a(S'2015-09-21 14:49:25.496000'
+g199
+tp361
+a(S'2015-09-21 14:49:26.394000'
+g201
+tp362
+a(S'2015-09-21 14:49:26.404000'
+g199
+tp363
+a(S'2015-09-21 14:49:26.406000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp364
+a(S'2015-09-21 14:49:29.142000'
+g199
+tp365
+a(S'2015-09-21 14:49:30.062000'
+g201
+tp366
+a(S'2015-09-21 14:49:30.074000'
+g199
+tp367
+a(S'2015-09-21 14:49:30.079000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp368
+a(S'2015-09-21 14:49:33.272000'
+g199
+tp369
+a(S'2015-09-21 14:49:34.213000'
+g201
+tp370
+a(S'2015-09-21 14:49:34.225000'
+g199
+tp371
+a(S'2015-09-21 14:49:34.230000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp372
+a(S'2015-09-21 14:49:37.484000'
+g199
+tp373
+a(S'2015-09-21 14:49:38.447000'
+g201
+tp374
+a(S'2015-09-21 14:49:38.459000'
+g199
+tp375
+a(S'2015-09-21 14:49:38.463000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp376
+a(S'2015-09-21 14:49:41.341000'
+g199
+tp377
+a(S'2015-09-21 14:49:42.020000'
+g201
+tp378
+a(S'2015-09-21 14:49:42.023000'
+g199
+tp379
+a(S'2015-09-21 14:49:42.024000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp380
+a(S'2015-09-21 14:49:47.218000'
+g199
+tp381
+a(S'2015-09-21 14:49:48.223000'
+g201
+tp382
+a(S'2015-09-21 14:49:48.235000'
+g199
+tp383
+a(S'2015-09-21 14:49:48.240000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp384
+a(S'2015-09-21 14:49:51.938000'
+g199
+tp385
+a(S'2015-09-21 14:49:52.967000'
+g201
+tp386
+a(S'2015-09-21 14:49:52.980000'
+g199
+tp387
+a(S'2015-09-21 14:49:52.982000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp388
+a(S'2015-09-21 14:49:56.078000'
+g199
+tp389
+a(S'2015-09-21 14:49:57.128000'
+g201
+tp390
+a(S'2015-09-21 14:49:57.140000'
+g199
+tp391
+a(S'2015-09-21 14:49:57.145000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp392
+a(S'2015-09-21 14:50:04.349000'
+g199
+tp393
+a(S'2015-09-21 14:50:05.422000'
+g201
+tp394
+a(S'2015-09-21 14:50:05.432000'
+g199
+tp395
+a(S'2015-09-21 14:50:05.434000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp396
+a(S'2015-09-21 14:50:08.643000'
+g199
+tp397
+a(S'2015-09-21 14:50:09.735000'
+g201
+tp398
+a(S'2015-09-21 14:50:09.747000'
+g199
+tp399
+a(S'2015-09-21 14:50:09.751000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp400
+a(S'2015-09-21 14:50:13.893000'
+g199
+tp401
+a(S'2015-09-21 14:50:15.012000'
+g201
+tp402
+a(S'2015-09-21 14:50:15.024000'
+g199
+tp403
+a(S'2015-09-21 14:50:15.029000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp404
+a(S'2015-09-21 14:50:29.972000'
+g199
+tp405
+a(S'2015-09-21 14:50:31.107000'
+g201
+tp406
+a(S'2015-09-21 14:50:31.119000'
+g199
+tp407
+a(S'2015-09-21 14:50:31.124000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp408
+a(S'2015-09-21 14:50:36.702000'
+g199
+tp409
+a(S'2015-09-21 14:50:37.862000'
+g201
+tp410
+a(S'2015-09-21 14:50:37.875000'
+g199
+tp411
+a(S'2015-09-21 14:50:37.879000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp412
+a(S'2015-09-21 14:50:44.553000'
+g199
+tp413
+a(S'2015-09-21 14:50:45.734000'
+g201
+tp414
+a(S'2015-09-21 14:50:45.747000'
+g199
+tp415
+a(S'2015-09-21 14:50:45.750000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp416
+a(S'2015-09-21 14:50:48.405000'
+g199
+tp417
+a(S'2015-09-21 14:50:49.121000'
+g201
+tp418
+a(S'2015-09-21 14:50:49.129000'
+g199
+tp419
+a(S'2015-09-21 14:50:49.131000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp420
+a(S'2015-09-21 14:50:53.263000'
+g199
+tp421
+a(S'2015-09-21 14:50:54.487000'
+g201
+tp422
+a(S'2015-09-21 14:50:54.499000'
+g199
+tp423
+a(S'2015-09-21 14:50:54.504000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp424
+a(S'2015-09-21 14:50:59.218000'
+g199
+tp425
+a(S'2015-09-21 14:51:00.460000'
+g201
+tp426
+a(S'2015-09-21 14:51:00.472000'
+g199
+tp427
+a(S'2015-09-21 14:51:00.477000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp428
+a(S'2015-09-21 14:51:03.799000'
+g199
+tp429
+a(S'2015-09-21 14:51:05.064000'
+g201
+tp430
+a(S'2015-09-21 14:51:05.072000'
+g199
+tp431
+a(S'2015-09-21 14:51:05.075000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp432
+a(S'2015-09-21 14:51:08.525000'
+g199
+tp433
+a(S'2015-09-21 14:51:09.812000'
+g201
+tp434
+a(S'2015-09-21 14:51:09.825000'
+g199
+tp435
+a(S'2015-09-21 14:51:09.829000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp436
+a(S'2015-09-21 14:51:13.881000'
+g199
+tp437
+a(S'2015-09-21 14:51:15.191000'
+g201
+tp438
+a(S'2015-09-21 14:51:15.204000'
+g199
+tp439
+a(S'2015-09-21 14:51:15.207000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp440
+a(S'2015-09-21 14:51:19.242000'
+g199
+tp441
+a(S'2015-09-21 14:51:20.573000'
+g201
+tp442
+a(S'2015-09-21 14:51:20.581000'
+g199
+tp443
+a(S'2015-09-21 14:51:20.583000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp444
+a(S'2015-09-21 14:51:23.880000'
+g199
+tp445
+a(S'2015-09-21 14:51:24.338000'
+g201
+tp446
+a(S'2015-09-21 14:51:24.342000'
+g199
+tp447
+a(S'2015-09-21 14:51:24.344000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp448
+a(S'2015-09-21 14:51:27.594000'
+g199
+tp449
+a(S'2015-09-21 14:51:28.969000'
+g201
+tp450
+a(S'2015-09-21 14:51:28.978000'
+g199
+tp451
+a(S'2015-09-21 14:51:28.981000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp452
+a(S'2015-09-21 14:51:34.736000'
+g199
+tp453
+a(S'2015-09-21 14:51:36.127000'
+g201
+tp454
+a(S'2015-09-21 14:51:36.140000'
+g199
+tp455
+a(S'2015-09-21 14:51:36.144000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp456
+a(S'2015-09-21 14:51:39.820000'
+g199
+tp457
+a(S'2015-09-21 14:51:41.239000'
+g201
+tp458
+a(S'2015-09-21 14:51:41.248000'
+g199
+tp459
+a(S'2015-09-21 14:51:41.251000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp460
+a(S'2015-09-21 14:51:45.088000'
+g199
+tp461
+a(S'2015-09-21 14:51:46.528000'
+g201
+tp462
+a(S'2015-09-21 14:51:46.541000'
+g199
+tp463
+a(S'2015-09-21 14:51:46.546000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp464
+a(S'2015-09-21 14:51:50.278000'
+g199
+tp465
+a(S'2015-09-21 14:51:51.739000'
+g201
+tp466
+a(S'2015-09-21 14:51:51.748000'
+g199
+tp467
+a(S'2015-09-21 14:51:51.751000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp468
+a(S'2015-09-21 14:51:55.446000'
+g199
+tp469
+a(S'2015-09-21 14:51:55.938000'
+g201
+tp470
+a(S'2015-09-21 14:51:55.941000'
+g199
+tp471
+a(S'2015-09-21 14:51:55.943000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp472
+a(S'2015-09-21 14:52:06.823000'
+g199
+tp473
+a(S'2015-09-21 14:52:08.320000'
+g201
+tp474
+a(S'2015-09-21 14:52:08.332000'
+g199
+tp475
+a(S'2015-09-21 14:52:08.335000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp476
+a(S'2015-09-21 14:52:12.331000'
+g199
+tp477
+a(S'2015-09-21 14:52:13.853000'
+g201
+tp478
+a(S'2015-09-21 14:52:13.866000'
+g199
+tp479
+a(S'2015-09-21 14:52:13.871000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp480
+a(S'2015-09-21 14:52:16.604000'
+g199
+tp481
+a(S'2015-09-21 14:52:18.147000'
+g201
+tp482
+a(S'2015-09-21 14:52:18.160000'
+g199
+tp483
+a(S'2015-09-21 14:52:18.165000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp484
+a(S'2015-09-21 14:52:23.440000'
+g199
+tp485
+a(S'2015-09-21 14:52:25.006000'
+g201
+tp486
+a(S'2015-09-21 14:52:25.015000'
+g199
+tp487
+a(S'2015-09-21 14:52:25.018000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp488
+a(S'2015-09-21 14:52:30.415000'
+g199
+tp489
+a(S'2015-09-21 14:52:32.001000'
+g201
+tp490
+a(S'2015-09-21 14:52:32.008000'
+g199
+tp491
+a(S'2015-09-21 14:52:32.011000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_pcet.csv'
+tp492
+a(S'2015-09-21 14:52:32.018000'
+g199
+tp493
+asb.

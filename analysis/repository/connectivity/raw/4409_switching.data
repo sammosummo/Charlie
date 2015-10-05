@@ -1,0 +1,5011 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x06\x1a\n0\r\x0e%\x18'
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x06\x1a\n%\x17\t\xb0x'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+NsS'test_done'
+p15
+I01
+sS'data'
+p16
+(lp17
+(S'4409'
+p18
+S'switching'
+p19
+S'practice'
+p20
+I0
+S'Position'
+p21
+S'Left'
+p22
+S'Right'
+p23
+S'n/a'
+p24
+S'Incongruent'
+p25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+S'Left'
+p26
+I9261
+tp27
+a(g18
+g19
+g20
+I1
+g21
+g22
+g23
+S'Non-switch'
+p28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1360
+tp29
+a(g18
+g19
+g20
+I2
+S'Direction'
+p30
+g22
+g23
+S'Switch'
+p31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+S'Right'
+p32
+I11371
+tp33
+a(g18
+g19
+g20
+I3
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I5530
+tp34
+a(g18
+g19
+g20
+I4
+g21
+g23
+g23
+g31
+S'Congruent'
+p35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I5891
+tp36
+a(g18
+g19
+g20
+I5
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I18311
+tp37
+a(g18
+g19
+g20
+I6
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I6750
+tp38
+a(g18
+g19
+g20
+I7
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2310
+tp39
+a(g18
+g19
+g20
+I8
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I2991
+tp40
+a(g18
+g19
+S'predictable'
+p41
+I0
+g21
+g22
+g22
+g24
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1330
+tp42
+a(g18
+g19
+g41
+I1
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1750
+tp43
+a(g18
+g19
+g41
+I2
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1430
+tp44
+a(g18
+g19
+g41
+I3
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1270
+tp45
+a(g18
+g19
+g41
+I4
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2800
+tp46
+a(g18
+g19
+g41
+I5
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1600
+tp47
+a(g18
+g19
+g41
+I6
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1900
+tp48
+a(g18
+g19
+g41
+I7
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1340
+tp49
+a(g18
+g19
+g41
+I8
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I2691
+tp50
+a(g18
+g19
+g41
+I9
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1210
+tp51
+a(g18
+g19
+g41
+I10
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1570
+tp52
+a(g18
+g19
+g41
+I11
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1270
+tp53
+a(g18
+g19
+g41
+I12
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1510
+tp54
+a(g18
+g19
+g41
+I13
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1680
+tp55
+a(g18
+g19
+g41
+I14
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1430
+tp56
+a(g18
+g19
+g41
+I15
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1330
+tp57
+a(g18
+g19
+g41
+I16
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1900
+tp58
+a(g18
+g19
+g41
+I17
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g32
+I1880
+tp59
+a(g18
+g19
+g41
+I18
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1470
+tp60
+a(g18
+g19
+g41
+I19
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1230
+tp61
+a(g18
+g19
+g41
+I20
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I12120
+tp62
+a(g18
+g19
+g41
+I21
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1350
+tp63
+a(g18
+g19
+g41
+I22
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1151
+tp64
+a(g18
+g19
+g41
+I23
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2980
+tp65
+a(g18
+g19
+g41
+I24
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g26
+I1220
+tp66
+a(g18
+g19
+g41
+I25
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1060
+tp67
+a(g18
+g19
+g41
+I26
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1190
+tp68
+a(g18
+g19
+g41
+I27
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I3490
+tp69
+a(g18
+g19
+g41
+I28
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2340
+tp70
+a(g18
+g19
+g41
+I29
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g26
+I6191
+tp71
+a(g18
+g19
+g41
+I30
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1030
+tp72
+a(g18
+g19
+g41
+I31
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I3690
+tp73
+a(g18
+g19
+g41
+I32
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1040
+tp74
+a(g18
+g19
+g41
+I33
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I740
+tp75
+a(g18
+g19
+g41
+I34
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I26442
+tp76
+a(g18
+g19
+g41
+I35
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I4980
+tp77
+a(g18
+g19
+g41
+I36
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2710
+tp78
+a(g18
+g19
+g41
+I37
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I3490
+tp79
+a(g18
+g19
+g41
+I38
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I6671
+tp80
+a(g18
+g19
+g41
+I39
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1590
+tp81
+a(g18
+g19
+g41
+I40
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I7090
+tp82
+a(g18
+g19
+g41
+I41
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I4110
+tp83
+a(g18
+g19
+g41
+I42
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2621
+tp84
+a(g18
+g19
+g41
+I43
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I750
+tp85
+a(g18
+g19
+g41
+I44
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I2050
+tp86
+a(g18
+g19
+g41
+I45
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1310
+tp87
+a(g18
+g19
+g41
+I46
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1300
+tp88
+a(g18
+g19
+g41
+I47
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1660
+tp89
+a(g18
+g19
+g41
+I48
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1590
+tp90
+a(g18
+g19
+g41
+I49
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1470
+tp91
+a(g18
+g19
+g41
+I50
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2100
+tp92
+a(g18
+g19
+g41
+I51
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I660
+tp93
+a(g18
+g19
+g41
+I52
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1140
+tp94
+a(g18
+g19
+g41
+I53
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I770
+tp95
+a(g18
+g19
+g41
+I54
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1181
+tp96
+a(g18
+g19
+g41
+I55
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1300
+tp97
+a(g18
+g19
+g41
+I56
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2400
+tp98
+a(g18
+g19
+g41
+I57
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1230
+tp99
+a(g18
+g19
+g41
+I58
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1730
+tp100
+a(g18
+g19
+g41
+I59
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2170
+tp101
+a(g18
+g19
+g41
+I60
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1680
+tp102
+a(g18
+g19
+g41
+I61
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I560
+tp103
+a(g18
+g19
+g41
+I62
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I3270
+tp104
+a(g18
+g19
+g41
+I63
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I811
+tp105
+a(g18
+g19
+g41
+I64
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I3470
+tp106
+a(g18
+g19
+g41
+I65
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g32
+I860
+tp107
+a(g18
+g19
+g41
+I66
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I5190
+tp108
+a(g18
+g19
+g41
+I67
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1860
+tp109
+a(g18
+g19
+g41
+I68
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1340
+tp110
+a(g18
+g19
+g41
+I69
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1670
+tp111
+a(g18
+g19
+g41
+I70
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2011
+tp112
+a(g18
+g19
+g41
+I71
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I640
+tp113
+a(g18
+g19
+g41
+I72
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1700
+tp114
+a(g18
+g19
+g41
+I73
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1130
+tp115
+a(g18
+g19
+g41
+I74
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2400
+tp116
+a(g18
+g19
+g41
+I75
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I540
+tp117
+a(g18
+g19
+g41
+I76
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1450
+tp118
+a(g18
+g19
+g41
+I77
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1090
+tp119
+a(g18
+g19
+g41
+I78
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1570
+tp120
+a(g18
+g19
+g41
+I79
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1200
+tp121
+a(g18
+g19
+g41
+I80
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I4931
+tp122
+a(g18
+g19
+g41
+I81
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1460
+tp123
+a(g18
+g19
+g41
+I82
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2810
+tp124
+a(g18
+g19
+g41
+I83
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I930
+tp125
+a(g18
+g19
+g41
+I84
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I3250
+tp126
+a(g18
+g19
+g41
+I85
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I420
+tp127
+a(g18
+g19
+g41
+I86
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2140
+tp128
+a(g18
+g19
+g41
+I87
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I990
+tp129
+a(g18
+g19
+g41
+I88
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1670
+tp130
+a(g18
+g19
+g41
+I89
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1711
+tp131
+a(g18
+g19
+g41
+I90
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I940
+tp132
+a(g18
+g19
+g41
+I91
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1340
+tp133
+a(g18
+g19
+g41
+I92
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1540
+tp134
+a(g18
+g19
+g41
+I93
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I960
+tp135
+a(g18
+g19
+g41
+I94
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I960
+tp136
+a(g18
+g19
+g41
+I95
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I550
+tp137
+a(g18
+g19
+g41
+I96
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1310
+tp138
+a(g18
+g19
+g41
+I97
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I760
+tp139
+a(g18
+g19
+g41
+I98
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I880
+tp140
+a(g18
+g19
+g41
+I99
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1280
+tp141
+a(g18
+g19
+g41
+I100
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1380
+tp142
+a(g18
+g19
+S'random'
+p143
+I0
+g21
+g23
+g23
+g24
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I3010
+tp144
+a(g18
+g19
+g143
+I1
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I2811
+tp145
+a(g18
+g19
+g143
+I2
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I2020
+tp146
+a(g18
+g19
+g143
+I3
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1500
+tp147
+a(g18
+g19
+g143
+I4
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I13821
+tp148
+a(g18
+g19
+g143
+I5
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1910
+tp149
+a(g18
+g19
+g143
+I6
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1690
+tp150
+a(g18
+g19
+g143
+I7
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2150
+tp151
+a(g18
+g19
+g143
+I8
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1210
+tp152
+a(g18
+g19
+g143
+I9
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2790
+tp153
+a(g18
+g19
+g143
+I10
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I4260
+tp154
+a(g18
+g19
+g143
+I11
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I2581
+tp155
+a(g18
+g19
+g143
+I12
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2630
+tp156
+a(g18
+g19
+g143
+I13
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I5170
+tp157
+a(g18
+g19
+g143
+I14
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I3380
+tp158
+a(g18
+g19
+g143
+I15
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1940
+tp159
+a(g18
+g19
+g143
+I16
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1330
+tp160
+a(g18
+g19
+g143
+I17
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g26
+I3681
+tp161
+a(g18
+g19
+g143
+I18
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I4660
+tp162
+a(g18
+g19
+g143
+I19
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2230
+tp163
+a(g18
+g19
+g143
+I20
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1820
+tp164
+a(g18
+g19
+g143
+I21
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I3670
+tp165
+a(g18
+g19
+g143
+I22
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I2031
+tp166
+a(g18
+g19
+g143
+I23
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I4500
+tp167
+a(g18
+g19
+g143
+I24
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I8460
+tp168
+a(g18
+g19
+g143
+I25
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1440
+tp169
+a(g18
+g19
+g143
+I26
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1210
+tp170
+a(g18
+g19
+g143
+I27
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I800
+tp171
+a(g18
+g19
+g143
+I28
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1311
+tp172
+a(g18
+g19
+g143
+I29
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g26
+I4050
+tp173
+a(g18
+g19
+g143
+I30
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1620
+tp174
+a(g18
+g19
+g143
+I31
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1250
+tp175
+a(g18
+g19
+g143
+I32
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I770
+tp176
+a(g18
+g19
+g143
+I33
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g32
+I1930
+tp177
+a(g18
+g19
+g143
+I34
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I2580
+tp178
+a(g18
+g19
+g143
+I35
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1490
+tp179
+a(g18
+g19
+g143
+I36
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I4601
+tp180
+a(g18
+g19
+g143
+I37
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I2670
+tp181
+a(g18
+g19
+g143
+I38
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I780
+tp182
+a(g18
+g19
+g143
+I39
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1660
+tp183
+a(g18
+g19
+g143
+I40
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2750
+tp184
+a(g18
+g19
+g143
+I41
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1610
+tp185
+a(g18
+g19
+g143
+I42
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2050
+tp186
+a(g18
+g19
+g143
+I43
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2161
+tp187
+a(g18
+g19
+g143
+I44
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1850
+tp188
+a(g18
+g19
+g143
+I45
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g26
+I1440
+tp189
+a(g18
+g19
+g143
+I46
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I2790
+tp190
+a(g18
+g19
+g143
+I47
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1360
+tp191
+a(g18
+g19
+g143
+I48
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I8060
+tp192
+a(g18
+g19
+g143
+I49
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2151
+tp193
+a(g18
+g19
+g143
+I50
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1170
+tp194
+a(g18
+g19
+g143
+I51
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I3290
+tp195
+a(g18
+g19
+g143
+I52
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I2420
+tp196
+a(g18
+g19
+g143
+I53
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1060
+tp197
+a(g18
+g19
+g143
+I54
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g26
+I1740
+tp198
+a(g18
+g19
+g143
+I55
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I3300
+tp199
+a(g18
+g19
+g143
+I56
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2351
+tp200
+a(g18
+g19
+g143
+I57
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I2020
+tp201
+a(g18
+g19
+g143
+I58
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2020
+tp202
+a(g18
+g19
+g143
+I59
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1630
+tp203
+a(g18
+g19
+g143
+I60
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2320
+tp204
+a(g18
+g19
+g143
+I61
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1390
+tp205
+a(g18
+g19
+g143
+I62
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1870
+tp206
+a(g18
+g19
+g143
+I63
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1020
+tp207
+a(g18
+g19
+g143
+I64
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1190
+tp208
+a(g18
+g19
+g143
+I65
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1220
+tp209
+a(g18
+g19
+g143
+I66
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1851
+tp210
+a(g18
+g19
+g143
+I67
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I760
+tp211
+a(g18
+g19
+g143
+I68
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2630
+tp212
+a(g18
+g19
+g143
+I69
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I4430
+tp213
+a(g18
+g19
+g143
+I70
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I2010
+tp214
+a(g18
+g19
+g143
+I71
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I980
+tp215
+a(g18
+g19
+g143
+I72
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1950
+tp216
+a(g18
+g19
+g143
+I73
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1960
+tp217
+a(g18
+g19
+g143
+I74
+g30
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I3871
+tp218
+a(g18
+g19
+g143
+I75
+g21
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1470
+tp219
+a(g18
+g19
+g143
+I76
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1680
+tp220
+a(g18
+g19
+g143
+I77
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I1470
+tp221
+a(g18
+g19
+g143
+I78
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I560
+tp222
+a(g18
+g19
+g143
+I79
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I3730
+tp223
+a(g18
+g19
+g143
+I80
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I2380
+tp224
+a(g18
+g19
+g143
+I81
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g32
+I2031
+tp225
+a(g18
+g19
+g143
+I82
+g30
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g32
+I1350
+tp226
+a(g18
+g19
+g143
+I83
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1890
+tp227
+a(g18
+g19
+g143
+I84
+g30
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g32
+I1190
+tp228
+a(g18
+g19
+g143
+I85
+g30
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g26
+I2410
+tp229
+a(g18
+g19
+g143
+I86
+g21
+g22
+g23
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I8140
+tp230
+a(g18
+g19
+g143
+I87
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I1501
+tp231
+a(g18
+g19
+g143
+I88
+g30
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I3940
+tp232
+a(g18
+g19
+g143
+I89
+g21
+g23
+g22
+g31
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1710
+tp233
+a(g18
+g19
+g143
+I90
+g21
+g22
+g23
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g22
+g26
+I2240
+tp234
+a(g18
+g19
+g143
+I91
+g21
+g23
+g22
+g28
+g25
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g23
+g32
+I1840
+tp235
+a(g18
+g19
+g143
+I92
+g30
+g22
+g22
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I1870
+tp236
+a(g18
+g19
+g143
+I93
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g26
+I80
+tp237
+a(g18
+g19
+g143
+I94
+g30
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_right.png'
+g23
+g32
+I3070
+tp238
+a(g18
+g19
+g143
+I95
+g30
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_red_left.png'
+g22
+g26
+I991
+tp239
+a(g18
+g19
+g143
+I96
+g21
+g23
+g23
+g31
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I1490
+tp240
+a(g18
+g19
+g143
+I97
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I1140
+tp241
+a(g18
+g19
+g143
+I98
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+g23
+g32
+I840
+tp242
+a(g18
+g19
+g143
+I99
+g21
+g22
+g22
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_left.png'
+g22
+g26
+I790
+tp243
+a(g18
+g19
+g143
+I100
+g21
+g23
+g23
+g28
+g35
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_blue_right.png'
+p244
+g23
+g32
+I810
+tp245
+asS'output_format'
+p246
+(lp247
+(S'proband_id'
+p248
+c__builtin__
+str
+p249
+tp250
+a(S'test_name'
+p251
+g249
+tp252
+a(S'phase'
+p253
+g249
+tp254
+a(S'trialn'
+p255
+c__builtin__
+int
+p256
+tp257
+a(S'task'
+p258
+g249
+tp259
+a(S'pos'
+p260
+g249
+tp261
+a(S'dir'
+p262
+g249
+tp263
+a(S'switch'
+p264
+g249
+tp265
+a(S'cong'
+p266
+g249
+tp267
+a(S'f'
+g249
+tp268
+a(S'ans'
+p269
+g249
+tp270
+a(S'rsp'
+p271
+g249
+tp272
+a(S'rt'
+p273
+g256
+tp274
+asg248
+g18
+sS'filename'
+p275
+S'4409_switching.data'
+p276
+sS'initialised'
+p277
+g8
+(S'\x07\xdf\x06\x1a\n%\x17\t\xb0x'
+tRp278
+sS'last_udated'
+p279
+g8
+(S'\x07\xdf\x06\x1a\n%\x17\t\xb0x'
+tRp280
+sg251
+S'switching'
+p281
+sS'directory'
+p282
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p283
+sS'user_id'
+p284
+S''
+sS'test_started'
+p285
+I01
+sS'abs_filename'
+p286
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4409_switching.data'
+p287
+sS'date_started'
+p288
+g8
+(S'\x07\xdf\x06\x1a\n&\x17\x03\xb1P'
+tRp289
+sS'log'
+p290
+(lp291
+(S'2015-06-26 10:37:23.635000'
+S'instance created'
+p292
+tp293
+a(S'2015-06-26 10:38:23.254000'
+S'instance updated'
+p294
+tp295
+a(S'2015-06-26 10:38:23.267000'
+S'pandas DataFrame of data created'
+p296
+tp297
+a(S'2015-06-26 10:38:23.271000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp298
+a(S'2015-06-26 10:38:25.666000'
+g294
+tp299
+a(S'2015-06-26 10:38:25.678000'
+g296
+tp300
+a(S'2015-06-26 10:38:25.680000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp301
+a(S'2015-06-26 10:38:38.084000'
+g294
+tp302
+a(S'2015-06-26 10:38:38.096000'
+g296
+tp303
+a(S'2015-06-26 10:38:38.099000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp304
+a(S'2015-06-26 10:38:44.663000'
+g294
+tp305
+a(S'2015-06-26 10:38:44.672000'
+g296
+tp306
+a(S'2015-06-26 10:38:44.674000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp307
+a(S'2015-06-26 10:38:51.598000'
+g294
+tp308
+a(S'2015-06-26 10:38:51.610000'
+g296
+tp309
+a(S'2015-06-26 10:38:51.614000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp310
+a(S'2015-06-26 10:39:10.960000'
+g294
+tp311
+a(S'2015-06-26 10:39:10.973000'
+g296
+tp312
+a(S'2015-06-26 10:39:10.977000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp313
+a(S'2015-06-26 10:39:18.760000'
+g294
+tp314
+a(S'2015-06-26 10:39:18.772000'
+g296
+tp315
+a(S'2015-06-26 10:39:18.775000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp316
+a(S'2015-06-26 10:39:22.120000'
+g294
+tp317
+a(S'2015-06-26 10:39:22.132000'
+g296
+tp318
+a(S'2015-06-26 10:39:22.135000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp319
+a(S'2015-06-26 10:39:26.160000'
+g294
+tp320
+a(S'2015-06-26 10:39:26.172000'
+g296
+tp321
+a(S'2015-06-26 10:39:26.175000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp322
+a(S'2015-06-26 10:39:44.799000'
+g294
+tp323
+a(S'2015-06-26 10:39:44.811000'
+g296
+tp324
+a(S'2015-06-26 10:39:44.815000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp325
+a(S'2015-06-26 10:39:46.700000'
+g294
+tp326
+a(S'2015-06-26 10:39:46.709000'
+g296
+tp327
+a(S'2015-06-26 10:39:46.711000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp328
+a(S'2015-06-26 10:39:48.276000'
+g294
+tp329
+a(S'2015-06-26 10:39:48.289000'
+g296
+tp330
+a(S'2015-06-26 10:39:48.292000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp331
+a(S'2015-06-26 10:39:49.699000'
+g294
+tp332
+a(S'2015-06-26 10:39:49.708000'
+g296
+tp333
+a(S'2015-06-26 10:39:49.710000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp334
+a(S'2015-06-26 10:39:52.647000'
+g294
+tp335
+a(S'2015-06-26 10:39:52.660000'
+g296
+tp336
+a(S'2015-06-26 10:39:52.663000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp337
+a(S'2015-06-26 10:39:54.401000'
+g294
+tp338
+a(S'2015-06-26 10:39:54.414000'
+g296
+tp339
+a(S'2015-06-26 10:39:54.416000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp340
+a(S'2015-06-26 10:39:56.452000'
+g294
+tp341
+a(S'2015-06-26 10:39:56.460000'
+g296
+tp342
+a(S'2015-06-26 10:39:56.462000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp343
+a(S'2015-06-26 10:39:57.938000'
+g294
+tp344
+a(S'2015-06-26 10:39:57.951000'
+g296
+tp345
+a(S'2015-06-26 10:39:57.954000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp346
+a(S'2015-06-26 10:40:00.781000'
+g294
+tp347
+a(S'2015-06-26 10:40:00.794000'
+g296
+tp348
+a(S'2015-06-26 10:40:00.798000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp349
+a(S'2015-06-26 10:40:02.145000'
+g294
+tp350
+a(S'2015-06-26 10:40:02.156000'
+g296
+tp351
+a(S'2015-06-26 10:40:02.159000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp352
+a(S'2015-06-26 10:40:03.864000'
+g294
+tp353
+a(S'2015-06-26 10:40:03.877000'
+g296
+tp354
+a(S'2015-06-26 10:40:03.881000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp355
+a(S'2015-06-26 10:40:05.288000'
+g294
+tp356
+a(S'2015-06-26 10:40:05.301000'
+g296
+tp357
+a(S'2015-06-26 10:40:05.304000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp358
+a(S'2015-06-26 10:40:06.950000'
+g294
+tp359
+a(S'2015-06-26 10:40:06.959000'
+g296
+tp360
+a(S'2015-06-26 10:40:06.961000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp361
+a(S'2015-06-26 10:40:08.777000'
+g294
+tp362
+a(S'2015-06-26 10:40:08.787000'
+g296
+tp363
+a(S'2015-06-26 10:40:08.789000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp364
+a(S'2015-06-26 10:40:10.355000'
+g294
+tp365
+a(S'2015-06-26 10:40:10.368000'
+g296
+tp366
+a(S'2015-06-26 10:40:10.372000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp367
+a(S'2015-06-26 10:40:11.838000'
+g294
+tp368
+a(S'2015-06-26 10:40:11.848000'
+g296
+tp369
+a(S'2015-06-26 10:40:11.850000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp370
+a(S'2015-06-26 10:40:13.887000'
+g294
+tp371
+a(S'2015-06-26 10:40:13.900000'
+g296
+tp372
+a(S'2015-06-26 10:40:13.904000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp373
+a(S'2015-06-26 10:40:15.923000'
+g294
+tp374
+a(S'2015-06-26 10:40:15.936000'
+g296
+tp375
+a(S'2015-06-26 10:40:15.940000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp376
+a(S'2015-06-26 10:40:17.547000'
+g294
+tp377
+a(S'2015-06-26 10:40:17.560000'
+g296
+tp378
+a(S'2015-06-26 10:40:17.564000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp379
+a(S'2015-06-26 10:40:18.931000'
+g294
+tp380
+a(S'2015-06-26 10:40:18.944000'
+g296
+tp381
+a(S'2015-06-26 10:40:18.948000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp382
+a(S'2015-06-26 10:40:31.206000'
+g294
+tp383
+a(S'2015-06-26 10:40:31.219000'
+g296
+tp384
+a(S'2015-06-26 10:40:31.223000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp385
+a(S'2015-06-26 10:40:32.708000'
+g294
+tp386
+a(S'2015-06-26 10:40:32.721000'
+g296
+tp387
+a(S'2015-06-26 10:40:32.724000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp388
+a(S'2015-06-26 10:40:34.009000'
+g294
+tp389
+a(S'2015-06-26 10:40:34.018000'
+g296
+tp390
+a(S'2015-06-26 10:40:34.020000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp391
+a(S'2015-06-26 10:40:37.137000'
+g294
+tp392
+a(S'2015-06-26 10:40:37.151000'
+g296
+tp393
+a(S'2015-06-26 10:40:37.155000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp394
+a(S'2015-06-26 10:40:38.512000'
+g294
+tp395
+a(S'2015-06-26 10:40:38.521000'
+g296
+tp396
+a(S'2015-06-26 10:40:38.524000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp397
+a(S'2015-06-26 10:40:39.719000'
+g294
+tp398
+a(S'2015-06-26 10:40:39.732000'
+g296
+tp399
+a(S'2015-06-26 10:40:39.736000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp400
+a(S'2015-06-26 10:40:41.062000'
+g294
+tp401
+a(S'2015-06-26 10:40:41.076000'
+g296
+tp402
+a(S'2015-06-26 10:40:41.080000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp403
+a(S'2015-06-26 10:40:44.708000'
+g294
+tp404
+a(S'2015-06-26 10:40:44.721000'
+g296
+tp405
+a(S'2015-06-26 10:40:44.724000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp406
+a(S'2015-06-26 10:40:47.200000'
+g294
+tp407
+a(S'2015-06-26 10:40:47.212000'
+g296
+tp408
+a(S'2015-06-26 10:40:47.214000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp409
+a(S'2015-06-26 10:40:53.542000'
+g294
+tp410
+a(S'2015-06-26 10:40:53.555000'
+g296
+tp411
+a(S'2015-06-26 10:40:53.560000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp412
+a(S'2015-06-26 10:40:54.727000'
+g294
+tp413
+a(S'2015-06-26 10:40:54.739000'
+g296
+tp414
+a(S'2015-06-26 10:40:54.743000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp415
+a(S'2015-06-26 10:40:58.569000'
+g294
+tp416
+a(S'2015-06-26 10:40:58.581000'
+g296
+tp417
+a(S'2015-06-26 10:40:58.583000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp418
+a(S'2015-06-26 10:40:59.759000'
+g294
+tp419
+a(S'2015-06-26 10:40:59.772000'
+g296
+tp420
+a(S'2015-06-26 10:40:59.777000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp421
+a(S'2015-06-26 10:41:00.654000'
+g294
+tp422
+a(S'2015-06-26 10:41:00.668000'
+g296
+tp423
+a(S'2015-06-26 10:41:00.672000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp424
+a(S'2015-06-26 10:41:27.250000'
+g294
+tp425
+a(S'2015-06-26 10:41:27.262000'
+g296
+tp426
+a(S'2015-06-26 10:41:27.265000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp427
+a(S'2015-06-26 10:41:32.382000'
+g294
+tp428
+a(S'2015-06-26 10:41:32.392000'
+g296
+tp429
+a(S'2015-06-26 10:41:32.395000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp430
+a(S'2015-06-26 10:41:35.241000'
+g294
+tp431
+a(S'2015-06-26 10:41:35.254000'
+g296
+tp432
+a(S'2015-06-26 10:41:35.258000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp433
+a(S'2015-06-26 10:41:38.888000'
+g294
+tp434
+a(S'2015-06-26 10:41:38.900000'
+g296
+tp435
+a(S'2015-06-26 10:41:38.902000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp436
+a(S'2015-06-26 10:41:45.709000'
+g294
+tp437
+a(S'2015-06-26 10:41:45.722000'
+g296
+tp438
+a(S'2015-06-26 10:41:45.727000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp439
+a(S'2015-06-26 10:41:47.454000'
+g294
+tp440
+a(S'2015-06-26 10:41:47.468000'
+g296
+tp441
+a(S'2015-06-26 10:41:47.472000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp442
+a(S'2015-06-26 10:41:54.702000'
+g294
+tp443
+a(S'2015-06-26 10:41:54.712000'
+g296
+tp444
+a(S'2015-06-26 10:41:54.715000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp445
+a(S'2015-06-26 10:41:58.962000'
+g294
+tp446
+a(S'2015-06-26 10:41:58.972000'
+g296
+tp447
+a(S'2015-06-26 10:41:58.975000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp448
+a(S'2015-06-26 10:42:01.717000'
+g294
+tp449
+a(S'2015-06-26 10:42:01.725000'
+g296
+tp450
+a(S'2015-06-26 10:42:01.727000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp451
+a(S'2015-06-26 10:42:02.613000'
+g294
+tp452
+a(S'2015-06-26 10:42:02.627000'
+g296
+tp453
+a(S'2015-06-26 10:42:02.630000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp454
+a(S'2015-06-26 10:42:04.817000'
+g294
+tp455
+a(S'2015-06-26 10:42:04.831000'
+g296
+tp456
+a(S'2015-06-26 10:42:04.835000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp457
+a(S'2015-06-26 10:42:06.283000'
+g294
+tp458
+a(S'2015-06-26 10:42:06.292000'
+g296
+tp459
+a(S'2015-06-26 10:42:06.295000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp460
+a(S'2015-06-26 10:42:07.731000'
+g294
+tp461
+a(S'2015-06-26 10:42:07.745000'
+g296
+tp462
+a(S'2015-06-26 10:42:07.750000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp463
+a(S'2015-06-26 10:42:09.547000'
+g294
+tp464
+a(S'2015-06-26 10:42:09.559000'
+g296
+tp465
+a(S'2015-06-26 10:42:09.561000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp466
+a(S'2015-06-26 10:42:11.288000'
+g294
+tp467
+a(S'2015-06-26 10:42:11.299000'
+g296
+tp468
+a(S'2015-06-26 10:42:11.302000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp469
+a(S'2015-06-26 10:42:12.909000'
+g294
+tp470
+a(S'2015-06-26 10:42:12.920000'
+g296
+tp471
+a(S'2015-06-26 10:42:12.922000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp472
+a(S'2015-06-26 10:42:15.160000'
+g294
+tp473
+a(S'2015-06-26 10:42:15.170000'
+g296
+tp474
+a(S'2015-06-26 10:42:15.173000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp475
+a(S'2015-06-26 10:42:15.970000'
+g294
+tp476
+a(S'2015-06-26 10:42:15.980000'
+g296
+tp477
+a(S'2015-06-26 10:42:15.983000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp478
+a(S'2015-06-26 10:42:17.260000'
+g294
+tp479
+a(S'2015-06-26 10:42:17.270000'
+g296
+tp480
+a(S'2015-06-26 10:42:17.273000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp481
+a(S'2015-06-26 10:42:18.180000'
+g294
+tp482
+a(S'2015-06-26 10:42:18.193000'
+g296
+tp483
+a(S'2015-06-26 10:42:18.198000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp484
+a(S'2015-06-26 10:42:19.517000'
+g294
+tp485
+a(S'2015-06-26 10:42:19.525000'
+g296
+tp486
+a(S'2015-06-26 10:42:19.528000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp487
+a(S'2015-06-26 10:42:20.964000'
+g294
+tp488
+a(S'2015-06-26 10:42:20.978000'
+g296
+tp489
+a(S'2015-06-26 10:42:20.983000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp490
+a(S'2015-06-26 10:42:23.523000'
+g294
+tp491
+a(S'2015-06-26 10:42:23.536000'
+g296
+tp492
+a(S'2015-06-26 10:42:23.539000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp493
+a(S'2015-06-26 10:42:24.906000'
+g294
+tp494
+a(S'2015-06-26 10:42:24.918000'
+g296
+tp495
+a(S'2015-06-26 10:42:24.920000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp496
+a(S'2015-06-26 10:42:26.786000'
+g294
+tp497
+a(S'2015-06-26 10:42:26.800000'
+g296
+tp498
+a(S'2015-06-26 10:42:26.805000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp499
+a(S'2015-06-26 10:42:29.113000'
+g294
+tp500
+a(S'2015-06-26 10:42:29.122000'
+g296
+tp501
+a(S'2015-06-26 10:42:29.125000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp502
+a(S'2015-06-26 10:42:30.941000'
+g294
+tp503
+a(S'2015-06-26 10:42:30.950000'
+g296
+tp504
+a(S'2015-06-26 10:42:30.952000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp505
+a(S'2015-06-26 10:42:31.648000'
+g294
+tp506
+a(S'2015-06-26 10:42:31.662000'
+g296
+tp507
+a(S'2015-06-26 10:42:31.666000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp508
+a(S'2015-06-26 10:42:35.074000'
+g294
+tp509
+a(S'2015-06-26 10:42:35.086000'
+g296
+tp510
+a(S'2015-06-26 10:42:35.089000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp511
+a(S'2015-06-26 10:42:36.035000'
+g294
+tp512
+a(S'2015-06-26 10:42:36.047000'
+g296
+tp513
+a(S'2015-06-26 10:42:36.050000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp514
+a(S'2015-06-26 10:42:39.657000'
+g294
+tp515
+a(S'2015-06-26 10:42:39.671000'
+g296
+tp516
+a(S'2015-06-26 10:42:39.676000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp517
+a(S'2015-06-26 10:42:40.672000'
+g294
+tp518
+a(S'2015-06-26 10:42:40.686000'
+g296
+tp519
+a(S'2015-06-26 10:42:40.691000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp520
+a(S'2015-06-26 10:42:46.020000'
+g294
+tp521
+a(S'2015-06-26 10:42:46.034000'
+g296
+tp522
+a(S'2015-06-26 10:42:46.037000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp523
+a(S'2015-06-26 10:42:48.035000'
+g294
+tp524
+a(S'2015-06-26 10:42:48.047000'
+g296
+tp525
+a(S'2015-06-26 10:42:48.049000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp526
+a(S'2015-06-26 10:42:49.526000'
+g294
+tp527
+a(S'2015-06-26 10:42:49.540000'
+g296
+tp528
+a(S'2015-06-26 10:42:49.545000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp529
+a(S'2015-06-26 10:42:51.351000'
+g294
+tp530
+a(S'2015-06-26 10:42:51.366000'
+g296
+tp531
+a(S'2015-06-26 10:42:51.371000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp532
+a(S'2015-06-26 10:42:53.519000'
+g294
+tp533
+a(S'2015-06-26 10:42:53.534000'
+g296
+tp534
+a(S'2015-06-26 10:42:53.537000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp535
+a(S'2015-06-26 10:42:54.314000'
+g294
+tp536
+a(S'2015-06-26 10:42:54.328000'
+g296
+tp537
+a(S'2015-06-26 10:42:54.333000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp538
+a(S'2015-06-26 10:42:56.172000'
+g294
+tp539
+a(S'2015-06-26 10:42:56.181000'
+g296
+tp540
+a(S'2015-06-26 10:42:56.184000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp541
+a(S'2015-06-26 10:42:57.451000'
+g294
+tp542
+a(S'2015-06-26 10:42:57.465000'
+g296
+tp543
+a(S'2015-06-26 10:42:57.467000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp544
+a(S'2015-06-26 10:43:00.005000'
+g294
+tp545
+a(S'2015-06-26 10:43:00.016000'
+g296
+tp546
+a(S'2015-06-26 10:43:00.019000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp547
+a(S'2015-06-26 10:43:00.696000'
+g294
+tp548
+a(S'2015-06-26 10:43:00.707000'
+g296
+tp549
+a(S'2015-06-26 10:43:00.710000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp550
+a(S'2015-06-26 10:43:02.296000'
+g294
+tp551
+a(S'2015-06-26 10:43:02.311000'
+g296
+tp552
+a(S'2015-06-26 10:43:02.316000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp553
+a(S'2015-06-26 10:43:03.544000'
+g294
+tp554
+a(S'2015-06-26 10:43:03.556000'
+g296
+tp555
+a(S'2015-06-26 10:43:03.558000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp556
+a(S'2015-06-26 10:43:05.265000'
+g294
+tp557
+a(S'2015-06-26 10:43:05.279000'
+g296
+tp558
+a(S'2015-06-26 10:43:05.285000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp559
+a(S'2015-06-26 10:43:06.624000'
+g294
+tp560
+a(S'2015-06-26 10:43:06.638000'
+g296
+tp561
+a(S'2015-06-26 10:43:06.644000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp562
+a(S'2015-06-26 10:43:11.712000'
+g294
+tp563
+a(S'2015-06-26 10:43:11.721000'
+g296
+tp564
+a(S'2015-06-26 10:43:11.724000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp565
+a(S'2015-06-26 10:43:13.322000'
+g294
+tp566
+a(S'2015-06-26 10:43:13.335000'
+g296
+tp567
+a(S'2015-06-26 10:43:13.339000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp568
+a(S'2015-06-26 10:43:16.287000'
+g294
+tp569
+a(S'2015-06-26 10:43:16.302000'
+g296
+tp570
+a(S'2015-06-26 10:43:16.305000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp571
+a(S'2015-06-26 10:43:17.372000'
+g294
+tp572
+a(S'2015-06-26 10:43:17.384000'
+g296
+tp573
+a(S'2015-06-26 10:43:17.387000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp574
+a(S'2015-06-26 10:43:20.774000'
+g294
+tp575
+a(S'2015-06-26 10:43:20.789000'
+g296
+tp576
+a(S'2015-06-26 10:43:20.794000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp577
+a(S'2015-06-26 10:43:21.354000'
+g294
+tp578
+a(S'2015-06-26 10:43:21.369000'
+g296
+tp579
+a(S'2015-06-26 10:43:21.373000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp580
+a(S'2015-06-26 10:43:23.651000'
+g294
+tp581
+a(S'2015-06-26 10:43:23.660000'
+g296
+tp582
+a(S'2015-06-26 10:43:23.663000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp583
+a(S'2015-06-26 10:43:24.791000'
+g294
+tp584
+a(S'2015-06-26 10:43:24.805000'
+g296
+tp585
+a(S'2015-06-26 10:43:24.811000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp586
+a(S'2015-06-26 10:43:26.620000'
+g294
+tp587
+a(S'2015-06-26 10:43:26.629000'
+g296
+tp588
+a(S'2015-06-26 10:43:26.632000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp589
+a(S'2015-06-26 10:43:28.480000'
+g294
+tp590
+a(S'2015-06-26 10:43:28.489000'
+g296
+tp591
+a(S'2015-06-26 10:43:28.492000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp592
+a(S'2015-06-26 10:43:29.569000'
+g294
+tp593
+a(S'2015-06-26 10:43:29.584000'
+g296
+tp594
+a(S'2015-06-26 10:43:29.590000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp595
+a(S'2015-06-26 10:43:31.065000'
+g294
+tp596
+a(S'2015-06-26 10:43:31.076000'
+g296
+tp597
+a(S'2015-06-26 10:43:31.080000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp598
+a(S'2015-06-26 10:43:32.757000'
+g294
+tp599
+a(S'2015-06-26 10:43:32.772000'
+g296
+tp600
+a(S'2015-06-26 10:43:32.774000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp601
+a(S'2015-06-26 10:43:33.872000'
+g294
+tp602
+a(S'2015-06-26 10:43:33.884000'
+g296
+tp603
+a(S'2015-06-26 10:43:33.887000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp604
+a(S'2015-06-26 10:43:34.983000'
+g294
+tp605
+a(S'2015-06-26 10:43:34.995000'
+g296
+tp606
+a(S'2015-06-26 10:43:34.997000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp607
+a(S'2015-06-26 10:43:35.685000'
+g294
+tp608
+a(S'2015-06-26 10:43:35.700000'
+g296
+tp609
+a(S'2015-06-26 10:43:35.706000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp610
+a(S'2015-06-26 10:43:37.154000'
+g294
+tp611
+a(S'2015-06-26 10:43:37.169000'
+g296
+tp612
+a(S'2015-06-26 10:43:37.175000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp613
+a(S'2015-06-26 10:43:38.074000'
+g294
+tp614
+a(S'2015-06-26 10:43:38.085000'
+g296
+tp615
+a(S'2015-06-26 10:43:38.088000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp616
+a(S'2015-06-26 10:43:39.105000'
+g294
+tp617
+a(S'2015-06-26 10:43:39.119000'
+g296
+tp618
+a(S'2015-06-26 10:43:39.126000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp619
+a(S'2015-06-26 10:43:40.546000'
+g294
+tp620
+a(S'2015-06-26 10:43:40.561000'
+g296
+tp621
+a(S'2015-06-26 10:43:40.566000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp622
+a(S'2015-06-26 10:43:42.086000'
+g294
+tp623
+a(S'2015-06-26 10:43:42.100000'
+g296
+tp624
+a(S'2015-06-26 10:43:42.104000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp625
+a(S'2015-06-26 10:44:00.541000'
+g294
+tp626
+a(S'2015-06-26 10:44:00.553000'
+g296
+tp627
+a(S'2015-06-26 10:44:00.555000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp628
+a(S'2015-06-26 10:44:03.504000'
+g294
+tp629
+a(S'2015-06-26 10:44:03.519000'
+g296
+tp630
+a(S'2015-06-26 10:44:03.523000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp631
+a(S'2015-06-26 10:44:05.682000'
+g294
+tp632
+a(S'2015-06-26 10:44:05.697000'
+g296
+tp633
+a(S'2015-06-26 10:44:05.703000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp634
+a(S'2015-06-26 10:44:07.341000'
+g294
+tp635
+a(S'2015-06-26 10:44:07.356000'
+g296
+tp636
+a(S'2015-06-26 10:44:07.361000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp637
+a(S'2015-06-26 10:44:21.319000'
+g294
+tp638
+a(S'2015-06-26 10:44:21.333000'
+g296
+tp639
+a(S'2015-06-26 10:44:21.339000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp640
+a(S'2015-06-26 10:44:23.388000'
+g294
+tp641
+a(S'2015-06-26 10:44:23.403000'
+g296
+tp642
+a(S'2015-06-26 10:44:23.409000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp643
+a(S'2015-06-26 10:44:25.237000'
+g294
+tp644
+a(S'2015-06-26 10:44:25.246000'
+g296
+tp645
+a(S'2015-06-26 10:44:25.249000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp646
+a(S'2015-06-26 10:44:27.538000'
+g294
+tp647
+a(S'2015-06-26 10:44:27.550000'
+g296
+tp648
+a(S'2015-06-26 10:44:27.553000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp649
+a(S'2015-06-26 10:44:28.900000'
+g294
+tp650
+a(S'2015-06-26 10:44:28.908000'
+g296
+tp651
+a(S'2015-06-26 10:44:28.911000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp652
+a(S'2015-06-26 10:44:31.841000'
+g294
+tp653
+a(S'2015-06-26 10:44:31.856000'
+g296
+tp654
+a(S'2015-06-26 10:44:31.862000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp655
+a(S'2015-06-26 10:44:36.260000'
+g294
+tp656
+a(S'2015-06-26 10:44:36.271000'
+g296
+tp657
+a(S'2015-06-26 10:44:36.276000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp658
+a(S'2015-06-26 10:44:38.988000'
+g294
+tp659
+a(S'2015-06-26 10:44:38.996000'
+g296
+tp660
+a(S'2015-06-26 10:44:38.999000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp661
+a(S'2015-06-26 10:44:41.768000'
+g294
+tp662
+a(S'2015-06-26 10:44:41.777000'
+g296
+tp663
+a(S'2015-06-26 10:44:41.781000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp664
+a(S'2015-06-26 10:44:47.090000'
+g294
+tp665
+a(S'2015-06-26 10:44:47.104000'
+g296
+tp666
+a(S'2015-06-26 10:44:47.109000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp667
+a(S'2015-06-26 10:44:50.627000'
+g294
+tp668
+a(S'2015-06-26 10:44:50.642000'
+g296
+tp669
+a(S'2015-06-26 10:44:50.648000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp670
+a(S'2015-06-26 10:44:52.728000'
+g294
+tp671
+a(S'2015-06-26 10:44:52.743000'
+g296
+tp672
+a(S'2015-06-26 10:44:52.748000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp673
+a(S'2015-06-26 10:44:54.216000'
+g294
+tp674
+a(S'2015-06-26 10:44:54.226000'
+g296
+tp675
+a(S'2015-06-26 10:44:54.229000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp676
+a(S'2015-06-26 10:44:58.048000'
+g294
+tp677
+a(S'2015-06-26 10:44:58.060000'
+g296
+tp678
+a(S'2015-06-26 10:44:58.063000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp679
+a(S'2015-06-26 10:45:02.862000'
+g294
+tp680
+a(S'2015-06-26 10:45:02.877000'
+g296
+tp681
+a(S'2015-06-26 10:45:02.884000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp682
+a(S'2015-06-26 10:45:05.253000'
+g294
+tp683
+a(S'2015-06-26 10:45:05.263000'
+g296
+tp684
+a(S'2015-06-26 10:45:05.267000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp685
+a(S'2015-06-26 10:45:07.224000'
+g294
+tp686
+a(S'2015-06-26 10:45:07.238000'
+g296
+tp687
+a(S'2015-06-26 10:45:07.241000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp688
+a(S'2015-06-26 10:45:11.049000'
+g294
+tp689
+a(S'2015-06-26 10:45:11.065000'
+g296
+tp690
+a(S'2015-06-26 10:45:11.071000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp691
+a(S'2015-06-26 10:45:13.241000'
+g294
+tp692
+a(S'2015-06-26 10:45:13.257000'
+g296
+tp693
+a(S'2015-06-26 10:45:13.263000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp694
+a(S'2015-06-26 10:45:17.903000'
+g294
+tp695
+a(S'2015-06-26 10:45:17.917000'
+g296
+tp696
+a(S'2015-06-26 10:45:17.920000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp697
+a(S'2015-06-26 10:45:26.518000'
+g294
+tp698
+a(S'2015-06-26 10:45:26.529000'
+g296
+tp699
+a(S'2015-06-26 10:45:26.533000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp700
+a(S'2015-06-26 10:45:28.111000'
+g294
+tp701
+a(S'2015-06-26 10:45:28.121000'
+g296
+tp702
+a(S'2015-06-26 10:45:28.124000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp703
+a(S'2015-06-26 10:45:29.473000'
+g294
+tp704
+a(S'2015-06-26 10:45:29.488000'
+g296
+tp705
+a(S'2015-06-26 10:45:29.494000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp706
+a(S'2015-06-26 10:45:30.432000'
+g294
+tp707
+a(S'2015-06-26 10:45:30.448000'
+g296
+tp708
+a(S'2015-06-26 10:45:30.454000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp709
+a(S'2015-06-26 10:45:31.902000'
+g294
+tp710
+a(S'2015-06-26 10:45:31.918000'
+g296
+tp711
+a(S'2015-06-26 10:45:31.924000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp712
+a(S'2015-06-26 10:45:36.113000'
+g294
+tp713
+a(S'2015-06-26 10:45:36.128000'
+g296
+tp714
+a(S'2015-06-26 10:45:36.131000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp715
+a(S'2015-06-26 10:45:37.889000'
+g294
+tp716
+a(S'2015-06-26 10:45:37.900000'
+g296
+tp717
+a(S'2015-06-26 10:45:37.903000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp718
+a(S'2015-06-26 10:45:39.292000'
+g294
+tp719
+a(S'2015-06-26 10:45:39.305000'
+g296
+tp720
+a(S'2015-06-26 10:45:39.308000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp721
+a(S'2015-06-26 10:45:40.216000'
+g294
+tp722
+a(S'2015-06-26 10:45:40.232000'
+g296
+tp723
+a(S'2015-06-26 10:45:40.237000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp724
+a(S'2015-06-26 10:45:42.307000'
+g294
+tp725
+a(S'2015-06-26 10:45:42.323000'
+g296
+tp726
+a(S'2015-06-26 10:45:42.329000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp727
+a(S'2015-06-26 10:45:45.050000'
+g294
+tp728
+a(S'2015-06-26 10:45:45.065000'
+g296
+tp729
+a(S'2015-06-26 10:45:45.068000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp730
+a(S'2015-06-26 10:45:46.695000'
+g294
+tp731
+a(S'2015-06-26 10:45:46.711000'
+g296
+tp732
+a(S'2015-06-26 10:45:46.716000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp733
+a(S'2015-06-26 10:45:51.456000'
+g294
+tp734
+a(S'2015-06-26 10:45:51.471000'
+g296
+tp735
+a(S'2015-06-26 10:45:51.478000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp736
+a(S'2015-06-26 10:45:54.289000'
+g294
+tp737
+a(S'2015-06-26 10:45:54.304000'
+g296
+tp738
+a(S'2015-06-26 10:45:54.307000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp739
+a(S'2015-06-26 10:45:55.225000'
+g294
+tp740
+a(S'2015-06-26 10:45:55.237000'
+g296
+tp741
+a(S'2015-06-26 10:45:55.240000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp742
+a(S'2015-06-26 10:45:57.037000'
+g294
+tp743
+a(S'2015-06-26 10:45:57.053000'
+g296
+tp744
+a(S'2015-06-26 10:45:57.059000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp745
+a(S'2015-06-26 10:45:59.949000'
+g294
+tp746
+a(S'2015-06-26 10:45:59.964000'
+g296
+tp747
+a(S'2015-06-26 10:45:59.971000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp748
+a(S'2015-06-26 10:46:01.720000'
+g294
+tp749
+a(S'2015-06-26 10:46:01.736000'
+g296
+tp750
+a(S'2015-06-26 10:46:01.743000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp751
+a(S'2015-06-26 10:46:03.933000'
+g294
+tp752
+a(S'2015-06-26 10:46:03.942000'
+g296
+tp753
+a(S'2015-06-26 10:46:03.946000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp754
+a(S'2015-06-26 10:46:06.246000'
+g294
+tp755
+a(S'2015-06-26 10:46:06.261000'
+g296
+tp756
+a(S'2015-06-26 10:46:06.268000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp757
+a(S'2015-06-26 10:46:08.258000'
+g294
+tp758
+a(S'2015-06-26 10:46:08.274000'
+g296
+tp759
+a(S'2015-06-26 10:46:08.280000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp760
+a(S'2015-06-26 10:46:09.859000'
+g294
+tp761
+a(S'2015-06-26 10:46:09.874000'
+g296
+tp762
+a(S'2015-06-26 10:46:09.876000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp763
+a(S'2015-06-26 10:46:12.806000'
+g294
+tp764
+a(S'2015-06-26 10:46:12.817000'
+g296
+tp765
+a(S'2015-06-26 10:46:12.821000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp766
+a(S'2015-06-26 10:46:14.318000'
+g294
+tp767
+a(S'2015-06-26 10:46:14.334000'
+g296
+tp768
+a(S'2015-06-26 10:46:14.341000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp769
+a(S'2015-06-26 10:46:22.541000'
+g294
+tp770
+a(S'2015-06-26 10:46:22.557000'
+g296
+tp771
+a(S'2015-06-26 10:46:22.563000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp772
+a(S'2015-06-26 10:46:24.852000'
+g294
+tp773
+a(S'2015-06-26 10:46:24.868000'
+g296
+tp774
+a(S'2015-06-26 10:46:24.874000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp775
+a(S'2015-06-26 10:46:26.170000'
+g294
+tp776
+a(S'2015-06-26 10:46:26.176000'
+g296
+tp777
+a(S'2015-06-26 10:46:26.179000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp778
+a(S'2015-06-26 10:46:29.608000'
+g294
+tp779
+a(S'2015-06-26 10:46:29.618000'
+g296
+tp780
+a(S'2015-06-26 10:46:29.622000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp781
+a(S'2015-06-26 10:46:32.183000'
+g294
+tp782
+a(S'2015-06-26 10:46:32.194000'
+g296
+tp783
+a(S'2015-06-26 10:46:32.198000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp784
+a(S'2015-06-26 10:46:33.396000'
+g294
+tp785
+a(S'2015-06-26 10:46:33.412000'
+g296
+tp786
+a(S'2015-06-26 10:46:33.419000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp787
+a(S'2015-06-26 10:46:35.299000'
+g294
+tp788
+a(S'2015-06-26 10:46:35.313000'
+g296
+tp789
+a(S'2015-06-26 10:46:35.316000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp790
+a(S'2015-06-26 10:46:38.755000'
+g294
+tp791
+a(S'2015-06-26 10:46:38.766000'
+g296
+tp792
+a(S'2015-06-26 10:46:38.770000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp793
+a(S'2015-06-26 10:46:41.260000'
+g294
+tp794
+a(S'2015-06-26 10:46:41.275000'
+g296
+tp795
+a(S'2015-06-26 10:46:41.282000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp796
+a(S'2015-06-26 10:46:43.442000'
+g294
+tp797
+a(S'2015-06-26 10:46:43.451000'
+g296
+tp798
+a(S'2015-06-26 10:46:43.455000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp799
+a(S'2015-06-26 10:46:45.615000'
+g294
+tp800
+a(S'2015-06-26 10:46:45.631000'
+g296
+tp801
+a(S'2015-06-26 10:46:45.634000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp802
+a(S'2015-06-26 10:46:47.401000'
+g294
+tp803
+a(S'2015-06-26 10:46:47.410000'
+g296
+tp804
+a(S'2015-06-26 10:46:47.414000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp805
+a(S'2015-06-26 10:46:49.874000'
+g294
+tp806
+a(S'2015-06-26 10:46:49.891000'
+g296
+tp807
+a(S'2015-06-26 10:46:49.895000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp808
+a(S'2015-06-26 10:46:51.423000'
+g294
+tp809
+a(S'2015-06-26 10:46:51.434000'
+g296
+tp810
+a(S'2015-06-26 10:46:51.438000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp811
+a(S'2015-06-26 10:46:53.449000'
+g294
+tp812
+a(S'2015-06-26 10:46:53.463000'
+g296
+tp813
+a(S'2015-06-26 10:46:53.467000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp814
+a(S'2015-06-26 10:46:54.626000'
+g294
+tp815
+a(S'2015-06-26 10:46:54.636000'
+g296
+tp816
+a(S'2015-06-26 10:46:54.640000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp817
+a(S'2015-06-26 10:46:55.969000'
+g294
+tp818
+a(S'2015-06-26 10:46:55.983000'
+g296
+tp819
+a(S'2015-06-26 10:46:55.986000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp820
+a(S'2015-06-26 10:46:57.345000'
+g294
+tp821
+a(S'2015-06-26 10:46:57.361000'
+g296
+tp822
+a(S'2015-06-26 10:46:57.368000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp823
+a(S'2015-06-26 10:46:59.359000'
+g294
+tp824
+a(S'2015-06-26 10:46:59.375000'
+g296
+tp825
+a(S'2015-06-26 10:46:59.382000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp826
+a(S'2015-06-26 10:47:00.284000'
+g294
+tp827
+a(S'2015-06-26 10:47:00.300000'
+g296
+tp828
+a(S'2015-06-26 10:47:00.303000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp829
+a(S'2015-06-26 10:47:03.073000'
+g294
+tp830
+a(S'2015-06-26 10:47:03.089000'
+g296
+tp831
+a(S'2015-06-26 10:47:03.092000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp832
+a(S'2015-06-26 10:47:07.663000'
+g294
+tp833
+a(S'2015-06-26 10:47:07.679000'
+g296
+tp834
+a(S'2015-06-26 10:47:07.682000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp835
+a(S'2015-06-26 10:47:09.833000'
+g294
+tp836
+a(S'2015-06-26 10:47:09.845000'
+g296
+tp837
+a(S'2015-06-26 10:47:09.848000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp838
+a(S'2015-06-26 10:47:10.968000'
+g294
+tp839
+a(S'2015-06-26 10:47:10.981000'
+g296
+tp840
+a(S'2015-06-26 10:47:10.985000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp841
+a(S'2015-06-26 10:47:13.074000'
+g294
+tp842
+a(S'2015-06-26 10:47:13.085000'
+g296
+tp843
+a(S'2015-06-26 10:47:13.089000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp844
+a(S'2015-06-26 10:47:15.190000'
+g294
+tp845
+a(S'2015-06-26 10:47:15.206000'
+g296
+tp846
+a(S'2015-06-26 10:47:15.213000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp847
+a(S'2015-06-26 10:47:19.226000'
+g294
+tp848
+a(S'2015-06-26 10:47:19.236000'
+g296
+tp849
+a(S'2015-06-26 10:47:19.240000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp850
+a(S'2015-06-26 10:47:20.848000'
+g294
+tp851
+a(S'2015-06-26 10:47:20.858000'
+g296
+tp852
+a(S'2015-06-26 10:47:20.862000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp853
+a(S'2015-06-26 10:47:22.679000'
+g294
+tp854
+a(S'2015-06-26 10:47:22.685000'
+g296
+tp855
+a(S'2015-06-26 10:47:22.687000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp856
+a(S'2015-06-26 10:47:24.296000'
+g294
+tp857
+a(S'2015-06-26 10:47:24.307000'
+g296
+tp858
+a(S'2015-06-26 10:47:24.311000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp859
+a(S'2015-06-26 10:47:25.011000'
+g294
+tp860
+a(S'2015-06-26 10:47:25.023000'
+g296
+tp861
+a(S'2015-06-26 10:47:25.027000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp862
+a(S'2015-06-26 10:47:28.896000'
+g294
+tp863
+a(S'2015-06-26 10:47:28.912000'
+g296
+tp864
+a(S'2015-06-26 10:47:28.919000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp865
+a(S'2015-06-26 10:47:31.440000'
+g294
+tp866
+a(S'2015-06-26 10:47:31.450000'
+g296
+tp867
+a(S'2015-06-26 10:47:31.454000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp868
+a(S'2015-06-26 10:47:33.625000'
+g294
+tp869
+a(S'2015-06-26 10:47:33.635000'
+g296
+tp870
+a(S'2015-06-26 10:47:33.639000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp871
+a(S'2015-06-26 10:47:35.128000'
+g294
+tp872
+a(S'2015-06-26 10:47:35.138000'
+g296
+tp873
+a(S'2015-06-26 10:47:35.142000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp874
+a(S'2015-06-26 10:47:37.173000'
+g294
+tp875
+a(S'2015-06-26 10:47:37.190000'
+g296
+tp876
+a(S'2015-06-26 10:47:37.197000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp877
+a(S'2015-06-26 10:47:38.527000'
+g294
+tp878
+a(S'2015-06-26 10:47:38.544000'
+g296
+tp879
+a(S'2015-06-26 10:47:38.549000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp880
+a(S'2015-06-26 10:47:41.100000'
+g294
+tp881
+a(S'2015-06-26 10:47:41.117000'
+g296
+tp882
+a(S'2015-06-26 10:47:41.124000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp883
+a(S'2015-06-26 10:47:49.406000'
+g294
+tp884
+a(S'2015-06-26 10:47:49.416000'
+g296
+tp885
+a(S'2015-06-26 10:47:49.420000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp886
+a(S'2015-06-26 10:47:51.059000'
+g294
+tp887
+a(S'2015-06-26 10:47:51.068000'
+g296
+tp888
+a(S'2015-06-26 10:47:51.072000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp889
+a(S'2015-06-26 10:47:55.154000'
+g294
+tp890
+a(S'2015-06-26 10:47:55.168000'
+g296
+tp891
+a(S'2015-06-26 10:47:55.172000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp892
+a(S'2015-06-26 10:47:57.021000'
+g294
+tp893
+a(S'2015-06-26 10:47:57.031000'
+g296
+tp894
+a(S'2015-06-26 10:47:57.035000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp895
+a(S'2015-06-26 10:47:59.415000'
+g294
+tp896
+a(S'2015-06-26 10:47:59.429000'
+g296
+tp897
+a(S'2015-06-26 10:47:59.432000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp898
+a(S'2015-06-26 10:48:01.412000'
+g294
+tp899
+a(S'2015-06-26 10:48:01.429000'
+g296
+tp900
+a(S'2015-06-26 10:48:01.437000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp901
+a(S'2015-06-26 10:48:03.447000'
+g294
+tp902
+a(S'2015-06-26 10:48:03.456000'
+g296
+tp903
+a(S'2015-06-26 10:48:03.460000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp904
+a(S'2015-06-26 10:48:03.680000'
+g294
+tp905
+a(S'2015-06-26 10:48:03.691000'
+g296
+tp906
+a(S'2015-06-26 10:48:03.695000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp907
+a(S'2015-06-26 10:48:06.905000'
+g294
+tp908
+a(S'2015-06-26 10:48:06.922000'
+g296
+tp909
+a(S'2015-06-26 10:48:06.928000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp910
+a(S'2015-06-26 10:48:08.058000'
+g294
+tp911
+a(S'2015-06-26 10:48:08.070000'
+g296
+tp912
+a(S'2015-06-26 10:48:08.074000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp913
+a(S'2015-06-26 10:48:09.703000'
+g294
+tp914
+a(S'2015-06-26 10:48:09.718000'
+g296
+tp915
+a(S'2015-06-26 10:48:09.721000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp916
+a(S'2015-06-26 10:48:11.001000'
+g294
+tp917
+a(S'2015-06-26 10:48:11.012000'
+g296
+tp918
+a(S'2015-06-26 10:48:11.015000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp919
+a(S'2015-06-26 10:48:11.995000'
+g294
+tp920
+a(S'2015-06-26 10:48:12.005000'
+g296
+tp921
+a(S'2015-06-26 10:48:12.010000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp922
+a(S'2015-06-26 10:48:12.940000'
+g294
+tp923
+a(S'2015-06-26 10:48:12.956000'
+g296
+tp924
+a(S'2015-06-26 10:48:12.962000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp925
+a(S'2015-06-26 10:48:13.913000'
+g294
+tp926
+a(S'2015-06-26 10:48:13.923000'
+g296
+tp927
+a(S'2015-06-26 10:48:13.927000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4409_switching.csv'
+tp928
+asb.

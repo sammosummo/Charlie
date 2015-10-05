@@ -1,0 +1,230 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-08-23 14:51:42.439000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\x08\x17\x0e0\x13\n\xe8\xf8'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+NsS'test_done'
+p15
+I01
+sS'data'
+p16
+(lp17
+(S'4449'
+p18
+S'trails'
+p19
+S'number'
+p20
+S'practice'
+p21
+I5350
+I0
+tp22
+a(g18
+g19
+g20
+S'test'
+p23
+I20480
+I0
+tp24
+a(g18
+g19
+S'letter'
+p25
+g21
+I4750
+I0
+tp26
+a(g18
+g19
+g25
+g23
+I24050
+I0
+tp27
+a(g18
+g19
+S'number-letter'
+p28
+g21
+I6250
+I0
+tp29
+a(g18
+g19
+g28
+g23
+I47090
+I0
+tp30
+asS'output_format'
+p31
+(lp32
+(S'proband_id'
+p33
+c__builtin__
+str
+p34
+tp35
+a(S'test_name'
+p36
+g34
+tp37
+a(S'phase'
+p38
+g34
+tp39
+a(S'trial_type'
+p40
+g34
+tp41
+a(S'rt'
+p42
+c__builtin__
+int
+p43
+tp44
+a(S'nerrors'
+p45
+g43
+tp46
+asg33
+g18
+sS'filename'
+p47
+S'4449_trails.data'
+p48
+sS'initialised'
+p49
+g10
+(S'\x07\xdf\x08\x17\x0e0\x13\n\xe8\xf8'
+tRp50
+sg36
+S'trails'
+p51
+sS'directory'
+p52
+S'c:\\Charlie\\charlie\\data\\raw'
+p53
+sS'user_id'
+p54
+S'sbuccheri'
+p55
+sS'test_started'
+p56
+I01
+sS'abs_filename'
+p57
+S'c:\\Charlie\\charlie\\data\\raw\\4449_trails.data'
+p58
+sS'date_started'
+p59
+g10
+(S'\x07\xdf\x08\x17\x0e07\x08\x87\x98'
+tRp60
+sS'log'
+p61
+(lp62
+(S'2015-08-23 14:48:19.715000'
+S'instance created'
+p63
+tp64
+a(S'2015-08-23 14:48:55.576000'
+S'instance updated'
+p65
+tp66
+a(S'2015-08-23 14:48:55.589000'
+S'pandas DataFrame of data created'
+p67
+tp68
+a(S'2015-08-23 14:48:55.597000'
+g65
+tp69
+a(S'2015-08-23 14:48:55.607000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4449_trails.csv'
+tp70
+a(S'2015-08-23 14:49:28.683000'
+g65
+tp71
+a(S'2015-08-23 14:49:28.701000'
+g67
+tp72
+a(S'2015-08-23 14:49:28.708000'
+g65
+tp73
+a(S'2015-08-23 14:49:28.712000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4449_trails.csv'
+tp74
+a(S'2015-08-23 14:49:51.770000'
+g65
+tp75
+a(S'2015-08-23 14:49:51.793000'
+g67
+tp76
+a(S'2015-08-23 14:49:51.800000'
+g65
+tp77
+a(S'2015-08-23 14:49:51.804000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4449_trails.csv'
+tp78
+a(S'2015-08-23 14:50:27.184000'
+g65
+tp79
+a(S'2015-08-23 14:50:27.212000'
+g67
+tp80
+a(S'2015-08-23 14:50:27.220000'
+g65
+tp81
+a(S'2015-08-23 14:50:27.223000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4449_trails.csv'
+tp82
+a(S'2015-08-23 14:50:44.854000'
+g65
+tp83
+a(S'2015-08-23 14:50:44.888000'
+g67
+tp84
+a(S'2015-08-23 14:50:44.896000'
+g65
+tp85
+a(S'2015-08-23 14:50:44.899000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4449_trails.csv'
+tp86
+a(S'2015-08-23 14:51:42.387000'
+g65
+tp87
+a(S'2015-08-23 14:51:42.427000'
+g67
+tp88
+a(S'2015-08-23 14:51:42.435000'
+g65
+tp89
+a(S'2015-08-23 14:51:42.439000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4449_trails.csv'
+tp90
+asb.

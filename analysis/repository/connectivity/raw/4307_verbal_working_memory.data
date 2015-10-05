@@ -1,0 +1,680 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_opened'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x03\x11\x0b\x1a!\x0e\xa9\xe8'
+tRp9
+sS'last_updated'
+p10
+g8
+(S'\x07\xdf\x03\x11\x0b\x1a%\x01\x1d('
+tRp11
+sS'test_done'
+p12
+I01
+sS'date_done'
+p13
+g8
+(S'\x07\xdf\x03\x11\x0b\x1a%\x01\r\x88'
+tRp14
+sS'proj_id'
+p15
+S''
+sS'data'
+p16
+(lp17
+(S'4307'
+p18
+S'verbal_working_memory'
+p19
+S'forward'
+p20
+I0
+S'629'
+S'True'
+p21
+tp22
+a(g18
+g19
+g20
+I1
+S'375'
+g21
+tp23
+a(g18
+g19
+g20
+I2
+S'5417'
+g21
+tp24
+a(g18
+g19
+g20
+I3
+S'8396'
+g21
+tp25
+a(g18
+g19
+g20
+I4
+S'36925'
+g21
+tp26
+a(g18
+g19
+g20
+I5
+S'69471'
+g21
+tp27
+a(g18
+g19
+g20
+I6
+S'918427'
+S'False'
+p28
+tp29
+a(g18
+g19
+g20
+I7
+S'635482'
+g21
+tp30
+a(g18
+g19
+g20
+I8
+S'1285346'
+g28
+tp31
+a(g18
+g19
+g20
+I9
+S'2814975'
+g28
+tp32
+a(g18
+g19
+S'backward'
+p33
+I0
+S'51'
+g21
+tp34
+a(g18
+g19
+g33
+I1
+S'38'
+g21
+tp35
+a(g18
+g19
+g33
+I2
+S'493'
+g21
+tp36
+a(g18
+g19
+g33
+I3
+S'526'
+g21
+tp37
+a(g18
+g19
+g33
+I4
+S'3814'
+g28
+tp38
+a(g18
+g19
+g33
+I5
+S'1795'
+g28
+tp39
+a(g18
+g19
+S'practice'
+p40
+I0
+S'6F'
+g21
+tp41
+a(g18
+g19
+g40
+I1
+S'G4'
+g21
+tp42
+a(g18
+g19
+g40
+I2
+S'3W5'
+g21
+tp43
+a(g18
+g19
+g40
+I3
+S'T7L'
+g21
+tp44
+a(g18
+g19
+g40
+I4
+S'6GA2'
+g21
+tp45
+a(g18
+g19
+g40
+I5
+S'9PF4'
+g21
+tp46
+a(g18
+g19
+S'digit letter'
+p47
+I0
+S'L2'
+g21
+tp48
+a(g18
+g19
+g47
+I1
+S'6P'
+g21
+tp49
+a(g18
+g19
+g47
+I2
+S'B5'
+g21
+tp50
+a(g18
+g19
+g47
+I3
+S'F7L'
+g21
+tp51
+a(g18
+g19
+g47
+I4
+S'R4D'
+g21
+tp52
+a(g18
+g19
+g47
+I5
+S'H18'
+g21
+tp53
+a(g18
+g19
+g47
+I6
+S'T9A3'
+g28
+tp54
+a(g18
+g19
+g47
+I7
+S'V1J5'
+g21
+tp55
+a(g18
+g19
+g47
+I8
+S'7N4L'
+g21
+tp56
+a(g18
+g19
+g47
+I9
+S'8D6G1'
+g28
+tp57
+a(g18
+g19
+g47
+I10
+S'K2C7S'
+g28
+tp58
+a(g18
+g19
+g47
+I11
+S'5P3Y9'
+g28
+tp59
+asS'output_format'
+p60
+(lp61
+(S'proband_id'
+p62
+c__builtin__
+str
+p63
+tp64
+a(S'test_name'
+p65
+g63
+tp66
+a(S'phase'
+p67
+g63
+tp68
+a(S'trialn'
+p69
+c__builtin__
+int
+p70
+tp71
+a(S'sequence'
+p72
+g63
+tp73
+a(S'rsp'
+p74
+g63
+tp75
+asS'proband_id'
+p76
+g18
+sS'filename'
+p77
+S'4307_verbal_working_memory.data'
+p78
+sS'initialised'
+p79
+g8
+(S'\x07\xdf\x03\x11\x0b\t\x1c\x0c\xdc\xf8'
+tRp80
+sS'last_udated'
+p81
+g8
+(S'\x07\xdf\x03\x11\x0b\t\x1c\x0c\xdc\xf8'
+tRp82
+sS'test_name'
+p83
+S'verbal_working_memory'
+p84
+sS'directory'
+p85
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p86
+sS'user_id'
+p87
+S''
+sS'test_started'
+p88
+I01
+sS'abs_filename'
+p89
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4307_verbal_working_memory.data'
+p90
+sS'date_started'
+p91
+g8
+(S'\x07\xdf\x03\x11\x0b\t2\x02\xdax'
+tRp92
+sS'log'
+p93
+(lp94
+(S'2015-03-17 11:09:28.843000'
+S'instance created'
+tp95
+a(S'2015-03-17 11:09:50.196000'
+S'instance updated'
+p96
+tp97
+a(S'2015-03-17 11:09:50.202000'
+S'pandas DataFrame of data created'
+p98
+tp99
+a(S'2015-03-17 11:09:50.206000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp100
+a(S'2015-03-17 11:09:55.628000'
+g96
+tp101
+a(S'2015-03-17 11:09:55.634000'
+g98
+tp102
+a(S'2015-03-17 11:09:55.638000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp103
+a(S'2015-03-17 11:10:02.949000'
+g96
+tp104
+a(S'2015-03-17 11:10:02.955000'
+g98
+tp105
+a(S'2015-03-17 11:10:02.959000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp106
+a(S'2015-03-17 11:10:10.212000'
+g96
+tp107
+a(S'2015-03-17 11:10:10.219000'
+g98
+tp108
+a(S'2015-03-17 11:10:10.222000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp109
+a(S'2015-03-17 11:10:19.677000'
+g96
+tp110
+a(S'2015-03-17 11:10:19.683000'
+g98
+tp111
+a(S'2015-03-17 11:10:19.686000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp112
+a(S'2015-03-17 11:10:29.221000'
+g96
+tp113
+a(S'2015-03-17 11:10:29.228000'
+g98
+tp114
+a(S'2015-03-17 11:10:29.231000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp115
+a(S'2015-03-17 11:10:42.815000'
+g96
+tp116
+a(S'2015-03-17 11:10:42.821000'
+g98
+tp117
+a(S'2015-03-17 11:10:42.825000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp118
+a(S'2015-03-17 11:10:55.647000'
+g96
+tp119
+a(S'2015-03-17 11:10:55.654000'
+g98
+tp120
+a(S'2015-03-17 11:10:55.657000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp121
+a(S'2015-03-17 11:11:09.247000'
+g96
+tp122
+a(S'2015-03-17 11:11:09.254000'
+g98
+tp123
+a(S'2015-03-17 11:11:09.257000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp124
+a(S'2015-03-17 11:11:26.144000'
+g96
+tp125
+a(S'2015-03-17 11:11:26.151000'
+g98
+tp126
+a(S'2015-03-17 11:11:26.155000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp127
+a(S'2015-03-17 11:11:37.777000'
+g96
+tp128
+a(S'2015-03-17 11:11:37.784000'
+g98
+tp129
+a(S'2015-03-17 11:11:37.787000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp130
+a(S'2015-03-17 11:11:40.392000'
+g96
+tp131
+a(S'2015-03-17 11:11:40.399000'
+g98
+tp132
+a(S'2015-03-17 11:11:40.402000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp133
+a(S'2015-03-17 11:11:47.153000'
+g96
+tp134
+a(S'2015-03-17 11:11:47.160000'
+g98
+tp135
+a(S'2015-03-17 11:11:47.163000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp136
+a(S'2015-03-17 11:11:53.594000'
+g96
+tp137
+a(S'2015-03-17 11:11:53.601000'
+g98
+tp138
+a(S'2015-03-17 11:11:53.604000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp139
+a(S'2015-03-17 11:12:06.346000'
+g96
+tp140
+a(S'2015-03-17 11:12:06.353000'
+g98
+tp141
+a(S'2015-03-17 11:12:06.356000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp142
+a(S'2015-03-17 11:12:19.707000'
+g96
+tp143
+a(S'2015-03-17 11:12:19.713000'
+g98
+tp144
+a(S'2015-03-17 11:12:19.717000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp145
+a(S'2015-03-17 11:12:53.604000'
+g96
+tp146
+a(S'2015-03-17 11:12:53.611000'
+g98
+tp147
+a(S'2015-03-17 11:12:53.614000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp148
+a(S'2015-03-17 11:12:55.251000'
+g96
+tp149
+a(S'2015-03-17 11:12:55.258000'
+g98
+tp150
+a(S'2015-03-17 11:12:55.261000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp151
+a(S'2015-03-17 11:13:17.869000'
+g96
+tp152
+a(S'2015-03-17 11:13:17.876000'
+g98
+tp153
+a(S'2015-03-17 11:13:17.879000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp154
+a(S'2015-03-17 11:13:31.718000'
+g96
+tp155
+a(S'2015-03-17 11:13:31.725000'
+g98
+tp156
+a(S'2015-03-17 11:13:31.728000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp157
+a(S'2015-03-17 11:13:41.991000'
+g96
+tp158
+a(S'2015-03-17 11:13:41.997000'
+g98
+tp159
+a(S'2015-03-17 11:13:42.001000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp160
+a(S'2015-03-17 11:13:52.839000'
+g96
+tp161
+a(S'2015-03-17 11:13:52.846000'
+g98
+tp162
+a(S'2015-03-17 11:13:52.850000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp163
+a(S'2015-03-17 11:13:59.983000'
+g96
+tp164
+a(S'2015-03-17 11:13:59.990000'
+g98
+tp165
+a(S'2015-03-17 11:13:59.993000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp166
+a(S'2015-03-17 11:14:05.680000'
+g96
+tp167
+a(S'2015-03-17 11:14:05.686000'
+g98
+tp168
+a(S'2015-03-17 11:14:05.690000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp169
+a(S'2015-03-17 11:14:11.680000'
+g96
+tp170
+a(S'2015-03-17 11:14:11.687000'
+g98
+tp171
+a(S'2015-03-17 11:14:11.691000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp172
+a(S'2015-03-17 11:14:17.376000'
+g96
+tp173
+a(S'2015-03-17 11:14:17.383000'
+g98
+tp174
+a(S'2015-03-17 11:14:17.386000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp175
+a(S'2015-03-17 11:14:23.161000'
+g96
+tp176
+a(S'2015-03-17 11:14:23.168000'
+g98
+tp177
+a(S'2015-03-17 11:14:23.172000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp178
+a(S'2015-03-17 11:14:28.960000'
+g96
+tp179
+a(S'2015-03-17 11:14:28.967000'
+g98
+tp180
+a(S'2015-03-17 11:14:28.971000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp181
+a(S'2015-03-17 11:14:43.002000'
+g96
+tp182
+a(S'2015-03-17 11:14:43.009000'
+g98
+tp183
+a(S'2015-03-17 11:14:43.012000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp184
+a(S'2015-03-17 11:14:52.562000'
+g96
+tp185
+a(S'2015-03-17 11:14:52.569000'
+g98
+tp186
+a(S'2015-03-17 11:14:52.573000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp187
+a(S'2015-03-17 11:15:05.307000'
+g96
+tp188
+a(S'2015-03-17 11:15:05.314000'
+g98
+tp189
+a(S'2015-03-17 11:15:05.317000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp190
+a(S'2015-03-17 11:15:22.739000'
+g96
+tp191
+a(S'2015-03-17 11:15:22.746000'
+g98
+tp192
+a(S'2015-03-17 11:15:22.750000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp193
+a(S'2015-03-17 11:15:37.523000'
+g96
+tp194
+a(S'2015-03-17 11:15:37.530000'
+g98
+tp195
+a(S'2015-03-17 11:15:37.534000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp196
+a(S'2015-03-17 11:15:49.180000'
+g96
+tp197
+a(S'2015-03-17 11:15:49.187000'
+g98
+tp198
+a(S'2015-03-17 11:15:49.190000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp199
+a(S'2015-03-17 11:26:37.069000'
+S'instance updated'
+p200
+tp201
+a(S'2015-03-17 11:26:37.071000'
+S'pandas DataFrame of data created'
+p202
+tp203
+a(S'2015-03-17 11:26:37.073000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4307_verbal_working_memory.csv'
+tp204
+asb.

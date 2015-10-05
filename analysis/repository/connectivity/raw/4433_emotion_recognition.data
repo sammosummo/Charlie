@@ -1,0 +1,1020 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-08-20 09:26:18.750000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\x08\x14\t\x17\x1f\x07/\xd8'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g10
+(S'\x07\xdf\x08\x14\t\x1a\x12\x0bq\xb0'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4433'
+p19
+S'emotion_recognition'
+p20
+I0
+S'Female'
+p21
+S'Happy'
+p22
+S'Strong'
+p23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FHZ_152.png'
+S'Happy'
+p24
+I7300
+tp25
+a(g19
+g20
+I1
+g21
+S'Afraid'
+p26
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FFZ_236.png'
+S'Happy'
+I5641
+tp27
+a(g19
+g20
+I2
+S'Male'
+p28
+g22
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MHZ_216.png'
+S'Happy'
+I1060
+tp29
+a(g19
+g20
+I3
+g28
+S'Angry'
+p30
+S'Weak'
+p31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MAX_39.png'
+S'Neutral'
+I7120
+tp32
+a(g19
+g20
+I4
+g28
+g22
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MHX_140.png'
+S'Happy'
+I3080
+tp33
+a(g19
+g20
+I5
+g21
+g26
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FFX_54.png'
+S'Afraid'
+I4711
+tp34
+a(g19
+g20
+I6
+g21
+S'Neutral'
+p35
+S'N/A'
+p36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FN_30.png'
+S'Neutral'
+I4450
+tp37
+a(g19
+g20
+I7
+g21
+S'Sad'
+p38
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FSZ_219.png'
+S'Afraid'
+I4290
+tp39
+a(g19
+g20
+I8
+g28
+g22
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MHX_104.png'
+S'Happy'
+I3410
+tp40
+a(g19
+g20
+I9
+g21
+g30
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FAX_45.png'
+S'Angry'
+I3310
+tp41
+a(g19
+g20
+I10
+g21
+g22
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FHZ_131.png'
+S'Happy'
+I2350
+tp42
+a(g19
+g20
+I11
+g28
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MN_111.png'
+S'Neutral'
+I3060
+tp43
+a(g19
+g20
+I12
+g21
+g30
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FAZ_32.png'
+S'Angry'
+I2880
+tp44
+a(g19
+g20
+I13
+g21
+g22
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FHX_220.png'
+S'Happy'
+I6630
+tp45
+a(g19
+g20
+I14
+g21
+g26
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FFX_130.png'
+S'Afraid'
+I5491
+tp46
+a(g19
+g20
+I15
+g21
+g38
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FSX_20.png'
+S'Neutral'
+I2160
+tp47
+a(g19
+g20
+I16
+g28
+g38
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MSX_108.png'
+S'Angry'
+I3290
+tp48
+a(g19
+g20
+I17
+g28
+g38
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MSX_147.png'
+S'Sad'
+I2270
+tp49
+a(g19
+g20
+I18
+g21
+g30
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FAZ_129.png'
+S'Angry'
+I6511
+tp50
+a(g19
+g20
+I19
+g28
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MN_123.png'
+S'Sad'
+I6040
+tp51
+a(g19
+g20
+I20
+g28
+g38
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MSZ_126.png'
+S'Sad'
+I4600
+tp52
+a(g19
+g20
+I21
+g28
+g30
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MAZ_128.png'
+S'Angry'
+I2350
+tp53
+a(g19
+g20
+I22
+g28
+g26
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MFZ_7.png'
+S'Afraid'
+I3361
+tp54
+a(g19
+g20
+I23
+g21
+g30
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FAX_25.png'
+S'Neutral'
+I5320
+tp55
+a(g19
+g20
+I24
+g28
+g38
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MSZ_112.png'
+S'Sad'
+I4360
+tp56
+a(g19
+g20
+I25
+g28
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MN_223.png'
+S'Neutral'
+I3820
+tp57
+a(g19
+g20
+I26
+g28
+g30
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MAX_201.png'
+S'Neutral'
+I1540
+tp58
+a(g19
+g20
+I27
+g28
+g22
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MHZ_227.png'
+S'Happy'
+I2591
+tp59
+a(g19
+g20
+I28
+g28
+g26
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MFX_153.png'
+S'Afraid'
+I4490
+tp60
+a(g19
+g20
+I29
+g28
+g30
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MAZ_146.png'
+S'Angry'
+I1950
+tp61
+a(g19
+g20
+I30
+g21
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FN_13.png'
+S'Neutral'
+I2460
+tp62
+a(g19
+g20
+I31
+g21
+g22
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FHX_127.png'
+S'Happy'
+I3610
+tp63
+a(g19
+g20
+I32
+g21
+g38
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FSZ_210.png'
+S'Afraid'
+I5151
+tp64
+a(g19
+g20
+I33
+g21
+g38
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FSX_47.png'
+S'Neutral'
+I2240
+tp65
+a(g19
+g20
+I34
+g28
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MN_21.png'
+S'Happy'
+I4190
+tp66
+a(g19
+g20
+I35
+g21
+g26
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FFZ_29.png'
+S'Afraid'
+I2570
+tp67
+a(g19
+g20
+I36
+g21
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FN_228.png'
+S'Neutral'
+I1780
+tp68
+a(g19
+g20
+I37
+g28
+g26
+g23
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MFZ_132.png'
+S'Afraid'
+I2451
+tp69
+a(g19
+g20
+I38
+g21
+g35
+g36
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\FN_204.png'
+S'Neutral'
+I1320
+tp70
+a(g19
+g20
+I39
+g28
+g26
+g31
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\stimuli\\visual\\emotion_recognition\\MFX_137.png'
+p71
+S'Afraid'
+I2100
+tp72
+asS'output_format'
+p73
+(lp74
+(S'proband_id'
+p75
+c__builtin__
+str
+p76
+tp77
+a(S'test_name'
+p78
+g76
+tp79
+a(S'trialn'
+p80
+c__builtin__
+int
+p81
+tp82
+a(S'sex'
+p83
+g76
+tp84
+a(S'emotion'
+p85
+g76
+tp86
+a(S'salience'
+p87
+g76
+tp88
+a(S'f'
+g76
+tp89
+a(S'rsp'
+p90
+g76
+tp91
+a(S'rt'
+p92
+g81
+tp93
+asg75
+g19
+sS'filename'
+p94
+S'4433_emotion_recognition.data'
+p95
+sS'initialised'
+p96
+g10
+(S'\x07\xdf\x08\x14\t\x17\x1f\x07/\xd8'
+tRp97
+sg78
+S'emotion_recognition'
+p98
+sS'directory'
+p99
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p100
+sS'user_id'
+p101
+S'barrett'
+p102
+sS'test_started'
+p103
+I01
+sS'abs_filename'
+p104
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4433_emotion_recognition.data'
+p105
+sS'date_started'
+p106
+g10
+(S'\x07\xdf\x08\x14\t\x171\r\xda\xe0'
+tRp107
+sS'log'
+p108
+(lp109
+(S'2015-08-20 09:23:31.471000'
+S'instance created'
+p110
+tp111
+a(S'2015-08-20 09:23:49.911000'
+S'instance updated'
+p112
+tp113
+a(S'2015-08-20 09:23:49.917000'
+S'pandas DataFrame of data created'
+p114
+tp115
+a(S'2015-08-20 09:23:49.919000'
+g112
+tp116
+a(S'2015-08-20 09:23:49.920000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp117
+a(S'2015-08-20 09:23:55.669000'
+g112
+tp118
+a(S'2015-08-20 09:23:55.678000'
+g114
+tp119
+a(S'2015-08-20 09:23:55.680000'
+g112
+tp120
+a(S'2015-08-20 09:23:55.681000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp121
+a(S'2015-08-20 09:23:56.849000'
+g112
+tp122
+a(S'2015-08-20 09:23:56.862000'
+g114
+tp123
+a(S'2015-08-20 09:23:56.864000'
+g112
+tp124
+a(S'2015-08-20 09:23:56.865000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp125
+a(S'2015-08-20 09:24:04.095000'
+g112
+tp126
+a(S'2015-08-20 09:24:04.112000'
+g114
+tp127
+a(S'2015-08-20 09:24:04.114000'
+g112
+tp128
+a(S'2015-08-20 09:24:04.115000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp129
+a(S'2015-08-20 09:24:07.304000'
+g112
+tp130
+a(S'2015-08-20 09:24:07.324000'
+g114
+tp131
+a(S'2015-08-20 09:24:07.326000'
+g112
+tp132
+a(S'2015-08-20 09:24:07.327000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp133
+a(S'2015-08-20 09:24:12.147000'
+g112
+tp134
+a(S'2015-08-20 09:24:12.170000'
+g114
+tp135
+a(S'2015-08-20 09:24:12.172000'
+g112
+tp136
+a(S'2015-08-20 09:24:12.173000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp137
+a(S'2015-08-20 09:24:16.732000'
+g112
+tp138
+a(S'2015-08-20 09:24:16.758000'
+g114
+tp139
+a(S'2015-08-20 09:24:16.760000'
+g112
+tp140
+a(S'2015-08-20 09:24:16.761000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp141
+a(S'2015-08-20 09:24:21.160000'
+g112
+tp142
+a(S'2015-08-20 09:24:21.189000'
+g114
+tp143
+a(S'2015-08-20 09:24:21.191000'
+g112
+tp144
+a(S'2015-08-20 09:24:21.192000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp145
+a(S'2015-08-20 09:24:24.711000'
+g112
+tp146
+a(S'2015-08-20 09:24:24.744000'
+g114
+tp147
+a(S'2015-08-20 09:24:24.746000'
+g112
+tp148
+a(S'2015-08-20 09:24:24.747000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp149
+a(S'2015-08-20 09:24:28.167000'
+g112
+tp150
+a(S'2015-08-20 09:24:28.203000'
+g114
+tp151
+a(S'2015-08-20 09:24:28.206000'
+g112
+tp152
+a(S'2015-08-20 09:24:28.206000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp153
+a(S'2015-08-20 09:24:30.666000'
+g112
+tp154
+a(S'2015-08-20 09:24:30.706000'
+g114
+tp155
+a(S'2015-08-20 09:24:30.708000'
+g112
+tp156
+a(S'2015-08-20 09:24:30.709000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp157
+a(S'2015-08-20 09:24:33.878000'
+g112
+tp158
+a(S'2015-08-20 09:24:33.920000'
+g114
+tp159
+a(S'2015-08-20 09:24:33.923000'
+g112
+tp160
+a(S'2015-08-20 09:24:33.924000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp161
+a(S'2015-08-20 09:24:36.913000'
+g112
+tp162
+a(S'2015-08-20 09:24:36.959000'
+g114
+tp163
+a(S'2015-08-20 09:24:36.961000'
+g112
+tp164
+a(S'2015-08-20 09:24:36.962000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp165
+a(S'2015-08-20 09:24:43.702000'
+g112
+tp166
+a(S'2015-08-20 09:24:43.751000'
+g114
+tp167
+a(S'2015-08-20 09:24:43.754000'
+g112
+tp168
+a(S'2015-08-20 09:24:43.755000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp169
+a(S'2015-08-20 09:24:49.354000'
+g112
+tp170
+a(S'2015-08-20 09:24:49.407000'
+g114
+tp171
+a(S'2015-08-20 09:24:49.409000'
+g112
+tp172
+a(S'2015-08-20 09:24:49.410000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp173
+a(S'2015-08-20 09:24:51.680000'
+g112
+tp174
+a(S'2015-08-20 09:24:51.737000'
+g114
+tp175
+a(S'2015-08-20 09:24:51.739000'
+g112
+tp176
+a(S'2015-08-20 09:24:51.740000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp177
+a(S'2015-08-20 09:24:55.140000'
+g112
+tp178
+a(S'2015-08-20 09:24:55.199000'
+g114
+tp179
+a(S'2015-08-20 09:24:55.201000'
+g112
+tp180
+a(S'2015-08-20 09:24:55.202000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp181
+a(S'2015-08-20 09:24:57.581000'
+g112
+tp182
+a(S'2015-08-20 09:24:57.643000'
+g114
+tp183
+a(S'2015-08-20 09:24:57.646000'
+g112
+tp184
+a(S'2015-08-20 09:24:57.647000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp185
+a(S'2015-08-20 09:25:04.266000'
+g112
+tp186
+a(S'2015-08-20 09:25:04.332000'
+g114
+tp187
+a(S'2015-08-20 09:25:04.334000'
+g112
+tp188
+a(S'2015-08-20 09:25:04.335000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp189
+a(S'2015-08-20 09:25:10.484000'
+g112
+tp190
+a(S'2015-08-20 09:25:10.553000'
+g114
+tp191
+a(S'2015-08-20 09:25:10.556000'
+g112
+tp192
+a(S'2015-08-20 09:25:10.556000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp193
+a(S'2015-08-20 09:25:15.266000'
+g112
+tp194
+a(S'2015-08-20 09:25:15.338000'
+g114
+tp195
+a(S'2015-08-20 09:25:15.340000'
+g112
+tp196
+a(S'2015-08-20 09:25:15.341000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp197
+a(S'2015-08-20 09:25:17.801000'
+g112
+tp198
+a(S'2015-08-20 09:25:17.878000'
+g114
+tp199
+a(S'2015-08-20 09:25:17.881000'
+g112
+tp200
+a(S'2015-08-20 09:25:17.882000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp201
+a(S'2015-08-20 09:25:21.351000'
+g112
+tp202
+a(S'2015-08-20 09:25:21.430000'
+g114
+tp203
+a(S'2015-08-20 09:25:21.432000'
+g112
+tp204
+a(S'2015-08-20 09:25:21.433000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp205
+a(S'2015-08-20 09:25:26.862000'
+g112
+tp206
+a(S'2015-08-20 09:25:26.944000'
+g114
+tp207
+a(S'2015-08-20 09:25:26.947000'
+g112
+tp208
+a(S'2015-08-20 09:25:26.948000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp209
+a(S'2015-08-20 09:25:31.417000'
+g112
+tp210
+a(S'2015-08-20 09:25:31.503000'
+g114
+tp211
+a(S'2015-08-20 09:25:31.505000'
+g112
+tp212
+a(S'2015-08-20 09:25:31.506000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp213
+a(S'2015-08-20 09:25:35.436000'
+g112
+tp214
+a(S'2015-08-20 09:25:35.525000'
+g114
+tp215
+a(S'2015-08-20 09:25:35.527000'
+g112
+tp216
+a(S'2015-08-20 09:25:35.528000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp217
+a(S'2015-08-20 09:25:37.178000'
+g112
+tp218
+a(S'2015-08-20 09:25:37.271000'
+g114
+tp219
+a(S'2015-08-20 09:25:37.274000'
+g112
+tp220
+a(S'2015-08-20 09:25:37.275000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp221
+a(S'2015-08-20 09:25:39.974000'
+g112
+tp222
+a(S'2015-08-20 09:25:40.069000'
+g114
+tp223
+a(S'2015-08-20 09:25:40.071000'
+g112
+tp224
+a(S'2015-08-20 09:25:40.072000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp225
+a(S'2015-08-20 09:25:44.671000'
+g112
+tp226
+a(S'2015-08-20 09:25:44.769000'
+g114
+tp227
+a(S'2015-08-20 09:25:44.772000'
+g112
+tp228
+a(S'2015-08-20 09:25:44.773000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp229
+a(S'2015-08-20 09:25:46.832000'
+g112
+tp230
+a(S'2015-08-20 09:25:46.936000'
+g114
+tp231
+a(S'2015-08-20 09:25:46.939000'
+g112
+tp232
+a(S'2015-08-20 09:25:46.939000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp233
+a(S'2015-08-20 09:25:49.509000'
+g112
+tp234
+a(S'2015-08-20 09:25:49.614000'
+g114
+tp235
+a(S'2015-08-20 09:25:49.616000'
+g112
+tp236
+a(S'2015-08-20 09:25:49.617000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp237
+a(S'2015-08-20 09:25:53.336000'
+g112
+tp238
+a(S'2015-08-20 09:25:53.446000'
+g114
+tp239
+a(S'2015-08-20 09:25:53.448000'
+g112
+tp240
+a(S'2015-08-20 09:25:53.449000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp241
+a(S'2015-08-20 09:25:58.708000'
+g112
+tp242
+a(S'2015-08-20 09:25:58.822000'
+g114
+tp243
+a(S'2015-08-20 09:25:58.825000'
+g112
+tp244
+a(S'2015-08-20 09:25:58.826000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp245
+a(S'2015-08-20 09:26:01.175000'
+g112
+tp246
+a(S'2015-08-20 09:26:01.291000'
+g114
+tp247
+a(S'2015-08-20 09:26:01.293000'
+g112
+tp248
+a(S'2015-08-20 09:26:01.294000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp249
+a(S'2015-08-20 09:26:05.593000'
+g112
+tp250
+a(S'2015-08-20 09:26:05.713000'
+g114
+tp251
+a(S'2015-08-20 09:26:05.715000'
+g112
+tp252
+a(S'2015-08-20 09:26:05.717000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp253
+a(S'2015-08-20 09:26:08.396000'
+g112
+tp254
+a(S'2015-08-20 09:26:08.519000'
+g114
+tp255
+a(S'2015-08-20 09:26:08.522000'
+g112
+tp256
+a(S'2015-08-20 09:26:08.523000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp257
+a(S'2015-08-20 09:26:10.412000'
+g112
+tp258
+a(S'2015-08-20 09:26:10.539000'
+g114
+tp259
+a(S'2015-08-20 09:26:10.542000'
+g112
+tp260
+a(S'2015-08-20 09:26:10.543000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp261
+a(S'2015-08-20 09:26:13.102000'
+g112
+tp262
+a(S'2015-08-20 09:26:13.231000'
+g114
+tp263
+a(S'2015-08-20 09:26:13.233000'
+g112
+tp264
+a(S'2015-08-20 09:26:13.234000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp265
+a(S'2015-08-20 09:26:16.264000'
+g112
+tp266
+a(S'2015-08-20 09:26:16.395000'
+g114
+tp267
+a(S'2015-08-20 09:26:16.397000'
+g112
+tp268
+a(S'2015-08-20 09:26:16.398000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp269
+a(S'2015-08-20 09:26:18.608000'
+g112
+tp270
+a(S'2015-08-20 09:26:18.744000'
+g114
+tp271
+a(S'2015-08-20 09:26:18.746000'
+g112
+tp272
+a(S'2015-08-20 09:26:18.747000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4433_emotion_recognition.csv'
+tp273
+a(S'2015-08-20 09:26:18.750000'
+g112
+tp274
+asb.

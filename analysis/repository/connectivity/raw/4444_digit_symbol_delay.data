@@ -1,0 +1,301 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-08-13 10:49:02.459000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\x08\r\n/\x19\t\xdfX'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g10
+(S'\x07\xdf\x08\r\n1\x02\x07\x00\xf8'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4444'
+p19
+S'digit_symbol_delay'
+p20
+I0
+I6
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym6.bmp'
+I6
+I6580
+tp21
+a(g19
+g20
+I1
+I7
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym7.bmp'
+I7
+I3021
+tp22
+a(g19
+g20
+I2
+I4
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym4.bmp'
+I4
+I2440
+tp23
+a(g19
+g20
+I3
+I8
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym8.bmp'
+I8
+I2090
+tp24
+a(g19
+g20
+I4
+I5
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym5.bmp'
+I3
+I3400
+tp25
+a(g19
+g20
+I5
+I1
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym1.bmp'
+I1
+I2150
+tp26
+a(g19
+g20
+I6
+I9
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym9.bmp'
+I9
+I5631
+tp27
+a(g19
+g20
+I7
+I2
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym2.bmp'
+I2
+I3570
+tp28
+a(g19
+g20
+I8
+I3
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\digit_symbol_delay\\sym3.bmp'
+p29
+I5
+I4120
+tp30
+asS'output_format'
+p31
+(lp32
+(S'proband_id'
+p33
+c__builtin__
+str
+p34
+tp35
+a(S'test_name'
+p36
+g34
+tp37
+a(S'trialn'
+p38
+c__builtin__
+int
+p39
+tp40
+a(S'ans'
+p41
+g34
+tp42
+a(S'f'
+g34
+tp43
+a(S'rsp'
+p44
+g34
+tp45
+a(S'rt'
+p46
+g39
+tp47
+asg33
+g19
+sS'filename'
+p48
+S'4444_digit_symbol_delay.data'
+p49
+sS'initialised'
+p50
+g10
+(S'\x07\xdf\x08\r\n/\x19\t\xdfX'
+tRp51
+sg36
+S'digit_symbol_delay'
+p52
+sS'directory'
+p53
+S'C:\\Users\\oleach\\Charlie\\charlie\\data\\raw'
+p54
+sS'user_id'
+p55
+S'tbeetham'
+p56
+sS'test_started'
+p57
+I01
+sS'abs_filename'
+p58
+S'C:\\Users\\oleach\\Charlie\\charlie\\data\\raw\\4444_digit_symbol_delay.data'
+p59
+sS'date_started'
+p60
+g10
+(S'\x07\xdf\x08\r\n0#\x03S\x90'
+tRp61
+sS'log'
+p62
+(lp63
+(S'2015-08-13 10:47:25.647000'
+S'instance created'
+p64
+tp65
+a(S'2015-08-13 10:48:35.227000'
+S'instance updated'
+p66
+tp67
+a(S'2015-08-13 10:48:35.247000'
+S'pandas DataFrame of data created'
+p68
+tp69
+a(S'2015-08-13 10:48:35.253000'
+g66
+tp70
+a(S'2015-08-13 10:48:35.257000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp71
+a(S'2015-08-13 10:48:38.297000'
+g66
+tp72
+a(S'2015-08-13 10:48:38.326000'
+g68
+tp73
+a(S'2015-08-13 10:48:38.333000'
+g66
+tp74
+a(S'2015-08-13 10:48:38.337000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp75
+a(S'2015-08-13 10:48:40.799000'
+g66
+tp76
+a(S'2015-08-13 10:48:40.837000'
+g68
+tp77
+a(S'2015-08-13 10:48:40.845000'
+g66
+tp78
+a(S'2015-08-13 10:48:40.848000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp79
+a(S'2015-08-13 10:48:42.961000'
+g66
+tp80
+a(S'2015-08-13 10:48:43.002000'
+g68
+tp81
+a(S'2015-08-13 10:48:43.006000'
+g66
+tp82
+a(S'2015-08-13 10:48:43.008000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp83
+a(S'2015-08-13 10:48:46.431000'
+g66
+tp84
+a(S'2015-08-13 10:48:46.491000'
+g68
+tp85
+a(S'2015-08-13 10:48:46.498000'
+g66
+tp86
+a(S'2015-08-13 10:48:46.502000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp87
+a(S'2015-08-13 10:48:48.675000'
+g66
+tp88
+a(S'2015-08-13 10:48:48.746000'
+g68
+tp89
+a(S'2015-08-13 10:48:48.753000'
+g66
+tp90
+a(S'2015-08-13 10:48:48.757000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp91
+a(S'2015-08-13 10:48:54.411000'
+g66
+tp92
+a(S'2015-08-13 10:48:54.491000'
+g68
+tp93
+a(S'2015-08-13 10:48:54.499000'
+g66
+tp94
+a(S'2015-08-13 10:48:54.502000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp95
+a(S'2015-08-13 10:48:58.095000'
+g66
+tp96
+a(S'2015-08-13 10:48:58.185000'
+g68
+tp97
+a(S'2015-08-13 10:48:58.193000'
+g66
+tp98
+a(S'2015-08-13 10:48:58.196000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp99
+a(S'2015-08-13 10:49:02.339000'
+g66
+tp100
+a(S'2015-08-13 10:49:02.440000'
+g68
+tp101
+a(S'2015-08-13 10:49:02.448000'
+g66
+tp102
+a(S'2015-08-13 10:49:02.451000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4444_digit_symbol_delay.csv'
+tp103
+a(S'2015-08-13 10:49:02.459000'
+g66
+tp104
+asb.

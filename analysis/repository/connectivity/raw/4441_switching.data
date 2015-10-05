@@ -1,0 +1,5645 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-08-24 11:51:54.027000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\x08\x18\x0b,$\x0e\xecP'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g10
+(S'\x07\xdf\x08\x18\x0b36\x00ix'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4441'
+p19
+S'switching'
+p20
+S'practice'
+p21
+I0
+S'Position'
+p22
+S'Left'
+p23
+S'Right'
+p24
+S'n/a'
+p25
+S'Incongruent'
+p26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+S'Right'
+p27
+I2810
+tp28
+a(g19
+g20
+g21
+I1
+g22
+g23
+g24
+S'Non-switch'
+p29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+S'Left'
+p30
+I6590
+tp31
+a(g19
+g20
+g21
+I2
+S'Direction'
+p32
+g23
+g24
+S'Switch'
+p33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I4711
+tp34
+a(g19
+g20
+g21
+I3
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I3450
+tp35
+a(g19
+g20
+g21
+I4
+g22
+g24
+g24
+g33
+S'Congruent'
+p36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I7060
+tp37
+a(g19
+g20
+g21
+I5
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I6841
+tp38
+a(g19
+g20
+g21
+I6
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I3890
+tp39
+a(g19
+g20
+g21
+I7
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I2940
+tp40
+a(g19
+g20
+g21
+I8
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I1330
+tp41
+a(g19
+g20
+S'predictable'
+p42
+I0
+g22
+g23
+g23
+g25
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I4830
+tp43
+a(g19
+g20
+g42
+I1
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I1250
+tp44
+a(g19
+g20
+g42
+I2
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I670
+tp45
+a(g19
+g20
+g42
+I3
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I1000
+tp46
+a(g19
+g20
+g42
+I4
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I800
+tp47
+a(g19
+g20
+g42
+I5
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I1070
+tp48
+a(g19
+g20
+g42
+I6
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I860
+tp49
+a(g19
+g20
+g42
+I7
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I490
+tp50
+a(g19
+g20
+g42
+I8
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I740
+tp51
+a(g19
+g20
+g42
+I9
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I400
+tp52
+a(g19
+g20
+g42
+I10
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I840
+tp53
+a(g19
+g20
+g42
+I11
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I20
+tp54
+a(g19
+g20
+g42
+I12
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I800
+tp55
+a(g19
+g20
+g42
+I13
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I960
+tp56
+a(g19
+g20
+g42
+I14
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I990
+tp57
+a(g19
+g20
+g42
+I15
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I1210
+tp58
+a(g19
+g20
+g42
+I16
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I650
+tp59
+a(g19
+g20
+g42
+I17
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I520
+tp60
+a(g19
+g20
+g42
+I18
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I860
+tp61
+a(g19
+g20
+g42
+I19
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I360
+tp62
+a(g19
+g20
+g42
+I20
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I500
+tp63
+a(g19
+g20
+g42
+I21
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I350
+tp64
+a(g19
+g20
+g42
+I22
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I400
+tp65
+a(g19
+g20
+g42
+I23
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I310
+tp66
+a(g19
+g20
+g42
+I24
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I790
+tp67
+a(g19
+g20
+g42
+I25
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I580
+tp68
+a(g19
+g20
+g42
+I26
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I350
+tp69
+a(g19
+g20
+g42
+I27
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I400
+tp70
+a(g19
+g20
+g42
+I28
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I420
+tp71
+a(g19
+g20
+g42
+I29
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I290
+tp72
+a(g19
+g20
+g42
+I30
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I441
+tp73
+a(g19
+g20
+g42
+I31
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I370
+tp74
+a(g19
+g20
+g42
+I32
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I410
+tp75
+a(g19
+g20
+g42
+I33
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I981
+tp76
+a(g19
+g20
+g42
+I34
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I540
+tp77
+a(g19
+g20
+g42
+I35
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I510
+tp78
+a(g19
+g20
+g42
+I36
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I480
+tp79
+a(g19
+g20
+g42
+I37
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I360
+tp80
+a(g19
+g20
+g42
+I38
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I460
+tp81
+a(g19
+g20
+g42
+I39
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I460
+tp82
+a(g19
+g20
+g42
+I40
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I500
+tp83
+a(g19
+g20
+g42
+I41
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I410
+tp84
+a(g19
+g20
+g42
+I42
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I540
+tp85
+a(g19
+g20
+g42
+I43
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I440
+tp86
+a(g19
+g20
+g42
+I44
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I460
+tp87
+a(g19
+g20
+g42
+I45
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I430
+tp88
+a(g19
+g20
+g42
+I46
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I750
+tp89
+a(g19
+g20
+g42
+I47
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I460
+tp90
+a(g19
+g20
+g42
+I48
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I561
+tp91
+a(g19
+g20
+g42
+I49
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I390
+tp92
+a(g19
+g20
+g42
+I50
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I420
+tp93
+a(g19
+g20
+g42
+I51
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I440
+tp94
+a(g19
+g20
+g42
+I52
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I500
+tp95
+a(g19
+g20
+g42
+I53
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I441
+tp96
+a(g19
+g20
+g42
+I54
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I470
+tp97
+a(g19
+g20
+g42
+I55
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I370
+tp98
+a(g19
+g20
+g42
+I56
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I330
+tp99
+a(g19
+g20
+g42
+I57
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I380
+tp100
+a(g19
+g20
+g42
+I58
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I380
+tp101
+a(g19
+g20
+g42
+I59
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I610
+tp102
+a(g19
+g20
+g42
+I60
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I270
+tp103
+a(g19
+g20
+g42
+I61
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I330
+tp104
+a(g19
+g20
+g42
+I62
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I410
+tp105
+a(g19
+g20
+g42
+I63
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I260
+tp106
+a(g19
+g20
+g42
+I64
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I431
+tp107
+a(g19
+g20
+g42
+I65
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I100
+tp108
+a(g19
+g20
+g42
+I66
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I310
+tp109
+a(g19
+g20
+g42
+I67
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I230
+tp110
+a(g19
+g20
+g42
+I68
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I410
+tp111
+a(g19
+g20
+g42
+I69
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I490
+tp112
+a(g19
+g20
+g42
+I70
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I150
+tp113
+a(g19
+g20
+g42
+I71
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I711
+tp114
+a(g19
+g20
+g42
+I72
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I380
+tp115
+a(g19
+g20
+g42
+I73
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I840
+tp116
+a(g19
+g20
+g42
+I74
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I380
+tp117
+a(g19
+g20
+g42
+I75
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I350
+tp118
+a(g19
+g20
+g42
+I76
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I460
+tp119
+a(g19
+g20
+g42
+I77
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I300
+tp120
+a(g19
+g20
+g42
+I78
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I220
+tp121
+a(g19
+g20
+g42
+I79
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I10
+tp122
+a(g19
+g20
+g42
+I80
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I120
+tp123
+a(g19
+g20
+g42
+I81
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I800
+tp124
+a(g19
+g20
+g42
+I82
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I680
+tp125
+a(g19
+g20
+g42
+I83
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I10
+tp126
+a(g19
+g20
+g42
+I84
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I160
+tp127
+a(g19
+g20
+g42
+I85
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I380
+tp128
+a(g19
+g20
+g42
+I86
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I250
+tp129
+a(g19
+g20
+g42
+I87
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I260
+tp130
+a(g19
+g20
+g42
+I88
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I380
+tp131
+a(g19
+g20
+g42
+I89
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I1050
+tp132
+a(g19
+g20
+g42
+I90
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I320
+tp133
+a(g19
+g20
+g42
+I91
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I301
+tp134
+a(g19
+g20
+g42
+I92
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I520
+tp135
+a(g19
+g20
+g42
+I93
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I400
+tp136
+a(g19
+g20
+g42
+I94
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I300
+tp137
+a(g19
+g20
+g42
+I95
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I350
+tp138
+a(g19
+g20
+g42
+I96
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I350
+tp139
+a(g19
+g20
+g42
+I97
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I620
+tp140
+a(g19
+g20
+g42
+I98
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I320
+tp141
+a(g19
+g20
+g42
+I99
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I340
+tp142
+a(g19
+g20
+g42
+I100
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I480
+tp143
+a(g19
+g20
+S'random'
+p144
+I0
+g22
+g24
+g24
+g25
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I980
+tp145
+a(g19
+g20
+g144
+I1
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I530
+tp146
+a(g19
+g20
+g144
+I2
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I340
+tp147
+a(g19
+g20
+g144
+I3
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I380
+tp148
+a(g19
+g20
+g144
+I4
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I340
+tp149
+a(g19
+g20
+g144
+I5
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I280
+tp150
+a(g19
+g20
+g144
+I6
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I251
+tp151
+a(g19
+g20
+g144
+I7
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I250
+tp152
+a(g19
+g20
+g144
+I8
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I90
+tp153
+a(g19
+g20
+g144
+I9
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I60
+tp154
+a(g19
+g20
+g144
+I10
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I390
+tp155
+a(g19
+g20
+g144
+I11
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I430
+tp156
+a(g19
+g20
+g144
+I12
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I820
+tp157
+a(g19
+g20
+g144
+I13
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I550
+tp158
+a(g19
+g20
+g144
+I14
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I690
+tp159
+a(g19
+g20
+g144
+I15
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I350
+tp160
+a(g19
+g20
+g144
+I16
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I420
+tp161
+a(g19
+g20
+g144
+I17
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I580
+tp162
+a(g19
+g20
+g144
+I18
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I410
+tp163
+a(g19
+g20
+g144
+I19
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I590
+tp164
+a(g19
+g20
+g144
+I20
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I380
+tp165
+a(g19
+g20
+g144
+I21
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I361
+tp166
+a(g19
+g20
+g144
+I22
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I260
+tp167
+a(g19
+g20
+g144
+I23
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I280
+tp168
+a(g19
+g20
+g144
+I24
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I260
+tp169
+a(g19
+g20
+g144
+I25
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I390
+tp170
+a(g19
+g20
+g144
+I26
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I330
+tp171
+a(g19
+g20
+g144
+I27
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I360
+tp172
+a(g19
+g20
+g144
+I28
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I420
+tp173
+a(g19
+g20
+g144
+I29
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I1160
+tp174
+a(g19
+g20
+g144
+I30
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I330
+tp175
+a(g19
+g20
+g144
+I31
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I320
+tp176
+a(g19
+g20
+g144
+I32
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I420
+tp177
+a(g19
+g20
+g144
+I33
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I290
+tp178
+a(g19
+g20
+g144
+I34
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I280
+tp179
+a(g19
+g20
+g144
+I35
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I360
+tp180
+a(g19
+g20
+g144
+I36
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I200
+tp181
+a(g19
+g20
+g144
+I37
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I180
+tp182
+a(g19
+g20
+g144
+I38
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I260
+tp183
+a(g19
+g20
+g144
+I39
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I360
+tp184
+a(g19
+g20
+g144
+I40
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I380
+tp185
+a(g19
+g20
+g144
+I41
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I940
+tp186
+a(g19
+g20
+g144
+I42
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I850
+tp187
+a(g19
+g20
+g144
+I43
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I340
+tp188
+a(g19
+g20
+g144
+I44
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I440
+tp189
+a(g19
+g20
+g144
+I45
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I741
+tp190
+a(g19
+g20
+g144
+I46
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I550
+tp191
+a(g19
+g20
+g144
+I47
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I400
+tp192
+a(g19
+g20
+g144
+I48
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I370
+tp193
+a(g19
+g20
+g144
+I49
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I300
+tp194
+a(g19
+g20
+g144
+I50
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I340
+tp195
+a(g19
+g20
+g144
+I51
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I330
+tp196
+a(g19
+g20
+g144
+I52
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I290
+tp197
+a(g19
+g20
+g144
+I53
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I350
+tp198
+a(g19
+g20
+g144
+I54
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I520
+tp199
+a(g19
+g20
+g144
+I55
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I740
+tp200
+a(g19
+g20
+g144
+I56
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I510
+tp201
+a(g19
+g20
+g144
+I57
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I320
+tp202
+a(g19
+g20
+g144
+I58
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I250
+tp203
+a(g19
+g20
+g144
+I59
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I340
+tp204
+a(g19
+g20
+g144
+I60
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I350
+tp205
+a(g19
+g20
+g144
+I61
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I380
+tp206
+a(g19
+g20
+g144
+I62
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I620
+tp207
+a(g19
+g20
+g144
+I63
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I430
+tp208
+a(g19
+g20
+g144
+I64
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I490
+tp209
+a(g19
+g20
+g144
+I65
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I320
+tp210
+a(g19
+g20
+g144
+I66
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I400
+tp211
+a(g19
+g20
+g144
+I67
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I320
+tp212
+a(g19
+g20
+g144
+I68
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I340
+tp213
+a(g19
+g20
+g144
+I69
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I330
+tp214
+a(g19
+g20
+g144
+I70
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I300
+tp215
+a(g19
+g20
+g144
+I71
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I330
+tp216
+a(g19
+g20
+g144
+I72
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I540
+tp217
+a(g19
+g20
+g144
+I73
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I500
+tp218
+a(g19
+g20
+g144
+I74
+g32
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I40
+tp219
+a(g19
+g20
+g144
+I75
+g22
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I330
+tp220
+a(g19
+g20
+g144
+I76
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I370
+tp221
+a(g19
+g20
+g144
+I77
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I280
+tp222
+a(g19
+g20
+g144
+I78
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g30
+I340
+tp223
+a(g19
+g20
+g144
+I79
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I430
+tp224
+a(g19
+g20
+g144
+I80
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I410
+tp225
+a(g19
+g20
+g144
+I81
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I380
+tp226
+a(g19
+g20
+g144
+I82
+g32
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g27
+I360
+tp227
+a(g19
+g20
+g144
+I83
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I850
+tp228
+a(g19
+g20
+g144
+I84
+g32
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I560
+tp229
+a(g19
+g20
+g144
+I85
+g32
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I700
+tp230
+a(g19
+g20
+g144
+I86
+g22
+g23
+g24
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I590
+tp231
+a(g19
+g20
+g144
+I87
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g30
+I340
+tp232
+a(g19
+g20
+g144
+I88
+g32
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I780
+tp233
+a(g19
+g20
+g144
+I89
+g22
+g24
+g23
+g33
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g30
+I680
+tp234
+a(g19
+g20
+g144
+I90
+g22
+g23
+g24
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g23
+g27
+I380
+tp235
+a(g19
+g20
+g144
+I91
+g22
+g24
+g23
+g29
+g26
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g24
+g27
+I340
+tp236
+a(g19
+g20
+g144
+I92
+g32
+g23
+g23
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I460
+tp237
+a(g19
+g20
+g144
+I93
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I530
+tp238
+a(g19
+g20
+g144
+I94
+g32
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I1190
+tp239
+a(g19
+g20
+g144
+I95
+g32
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I660
+tp240
+a(g19
+g20
+g144
+I96
+g22
+g24
+g24
+g33
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I560
+tp241
+a(g19
+g20
+g144
+I97
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I420
+tp242
+a(g19
+g20
+g144
+I98
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+g24
+g27
+I120
+tp243
+a(g19
+g20
+g144
+I99
+g22
+g23
+g23
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_left.png'
+g23
+g30
+I530
+tp244
+a(g19
+g20
+g144
+I100
+g22
+g24
+g24
+g29
+g36
+S'C:\\Users\\oleach\\Charlie\\charlie\\stimuli\\visual\\switching\\arrow_black_right.png'
+p245
+g24
+g27
+I520
+tp246
+asS'output_format'
+p247
+(lp248
+(S'proband_id'
+p249
+c__builtin__
+str
+p250
+tp251
+a(S'test_name'
+p252
+g250
+tp253
+a(S'phase'
+p254
+g250
+tp255
+a(S'trialn'
+p256
+c__builtin__
+int
+p257
+tp258
+a(S'task'
+p259
+g250
+tp260
+a(S'pos'
+p261
+g250
+tp262
+a(S'dir'
+p263
+g250
+tp264
+a(S'switch'
+p265
+g250
+tp266
+a(S'cong'
+p267
+g250
+tp268
+a(S'f'
+g250
+tp269
+a(S'ans'
+p270
+g250
+tp271
+a(S'rsp'
+p272
+g250
+tp273
+a(S'rt'
+p274
+g257
+tp275
+asg249
+g19
+sS'filename'
+p276
+S'4441_switching.data'
+p277
+sS'initialised'
+p278
+g10
+(S'\x07\xdf\x08\x18\x0b,$\x0e\xecP'
+tRp279
+sg252
+S'switching'
+p280
+sS'directory'
+p281
+S'C:\\Users\\oleach\\Charlie\\charlie\\data\\raw'
+p282
+sS'user_id'
+p283
+S'oleach'
+p284
+sS'test_started'
+p285
+I01
+sS'abs_filename'
+p286
+S'C:\\Users\\oleach\\Charlie\\charlie\\data\\raw\\4441_switching.data'
+p287
+sS'date_started'
+p288
+g10
+(S'\x07\xdf\x08\x18\x0b-\x18\x0b\x088'
+tRp289
+sS'log'
+p290
+(lp291
+(S'2015-08-24 11:44:36.978000'
+S'instance created'
+p292
+tp293
+a(S'2015-08-24 11:45:24.737000'
+S'instance updated'
+p294
+tp295
+a(S'2015-08-24 11:45:24.765000'
+S'pandas DataFrame of data created'
+p296
+tp297
+a(S'2015-08-24 11:45:24.782000'
+g294
+tp298
+a(S'2015-08-24 11:45:24.785000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp299
+a(S'2015-08-24 11:45:32.409000'
+g294
+tp300
+a(S'2015-08-24 11:45:32.442000'
+g296
+tp301
+a(S'2015-08-24 11:45:32.449000'
+g294
+tp302
+a(S'2015-08-24 11:45:32.450000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp303
+a(S'2015-08-24 11:45:38.194000'
+g294
+tp304
+a(S'2015-08-24 11:45:38.255000'
+g296
+tp305
+a(S'2015-08-24 11:45:38.267000'
+g294
+tp306
+a(S'2015-08-24 11:45:38.270000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp307
+a(S'2015-08-24 11:45:42.757000'
+g294
+tp308
+a(S'2015-08-24 11:45:42.809000'
+g296
+tp309
+a(S'2015-08-24 11:45:42.816000'
+g294
+tp310
+a(S'2015-08-24 11:45:42.818000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp311
+a(S'2015-08-24 11:45:50.912000'
+g294
+tp312
+a(S'2015-08-24 11:45:50.975000'
+g296
+tp313
+a(S'2015-08-24 11:45:50.983000'
+g294
+tp314
+a(S'2015-08-24 11:45:50.985000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp315
+a(S'2015-08-24 11:45:58.859000'
+g294
+tp316
+a(S'2015-08-24 11:45:58.942000'
+g296
+tp317
+a(S'2015-08-24 11:45:58.950000'
+g294
+tp318
+a(S'2015-08-24 11:45:58.953000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp319
+a(S'2015-08-24 11:46:03.878000'
+g294
+tp320
+a(S'2015-08-24 11:46:03.958000'
+g296
+tp321
+a(S'2015-08-24 11:46:03.965000'
+g294
+tp322
+a(S'2015-08-24 11:46:03.967000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp323
+a(S'2015-08-24 11:46:07.941000'
+g294
+tp324
+a(S'2015-08-24 11:46:08.086000'
+g296
+tp325
+a(S'2015-08-24 11:46:08.098000'
+g294
+tp326
+a(S'2015-08-24 11:46:08.101000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp327
+a(S'2015-08-24 11:46:10.466000'
+g294
+tp328
+a(S'2015-08-24 11:46:10.610000'
+g296
+tp329
+a(S'2015-08-24 11:46:10.618000'
+g294
+tp330
+a(S'2015-08-24 11:46:10.619000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp331
+a(S'2015-08-24 11:46:26.297000'
+g294
+tp332
+a(S'2015-08-24 11:46:26.473000'
+g296
+tp333
+a(S'2015-08-24 11:46:26.485000'
+g294
+tp334
+a(S'2015-08-24 11:46:26.488000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp335
+a(S'2015-08-24 11:46:27.872000'
+g294
+tp336
+a(S'2015-08-24 11:46:27.992000'
+g296
+tp337
+a(S'2015-08-24 11:46:28'
+g294
+tp338
+a(S'2015-08-24 11:46:28.002000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp339
+a(S'2015-08-24 11:46:28.807000'
+g294
+tp340
+a(S'2015-08-24 11:46:28.935000'
+g296
+tp341
+a(S'2015-08-24 11:46:28.942000'
+g294
+tp342
+a(S'2015-08-24 11:46:28.944000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp343
+a(S'2015-08-24 11:46:30.080000'
+g294
+tp344
+a(S'2015-08-24 11:46:30.305000'
+g296
+tp345
+a(S'2015-08-24 11:46:30.318000'
+g294
+tp346
+a(S'2015-08-24 11:46:30.321000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp347
+a(S'2015-08-24 11:46:31.258000'
+g294
+tp348
+a(S'2015-08-24 11:46:31.368000'
+g296
+tp349
+a(S'2015-08-24 11:46:31.372000'
+g294
+tp350
+a(S'2015-08-24 11:46:31.373000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp351
+a(S'2015-08-24 11:46:33.329000'
+g294
+tp352
+a(S'2015-08-24 11:46:33.580000'
+g296
+tp353
+a(S'2015-08-24 11:46:33.588000'
+g294
+tp354
+a(S'2015-08-24 11:46:33.590000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp355
+a(S'2015-08-24 11:46:34.588000'
+g294
+tp356
+a(S'2015-08-24 11:46:34.863000'
+g296
+tp357
+a(S'2015-08-24 11:46:34.876000'
+g294
+tp358
+a(S'2015-08-24 11:46:34.880000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp359
+a(S'2015-08-24 11:46:35.507000'
+g294
+tp360
+a(S'2015-08-24 11:46:35.698000'
+g296
+tp361
+a(S'2015-08-24 11:46:35.705000'
+g294
+tp362
+a(S'2015-08-24 11:46:35.707000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp363
+a(S'2015-08-24 11:46:36.579000'
+g294
+tp364
+a(S'2015-08-24 11:46:36.784000'
+g296
+tp365
+a(S'2015-08-24 11:46:36.792000'
+g294
+tp366
+a(S'2015-08-24 11:46:36.795000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp367
+a(S'2015-08-24 11:46:37.331000'
+g294
+tp368
+a(S'2015-08-24 11:46:37.618000'
+g296
+tp369
+a(S'2015-08-24 11:46:37.625000'
+g294
+tp370
+a(S'2015-08-24 11:46:37.627000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp371
+a(S'2015-08-24 11:46:38.603000'
+g294
+tp372
+a(S'2015-08-24 11:46:38.813000'
+g296
+tp373
+a(S'2015-08-24 11:46:38.821000'
+g294
+tp374
+a(S'2015-08-24 11:46:38.823000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp375
+a(S'2015-08-24 11:46:39.880000'
+g294
+tp376
+a(S'2015-08-24 11:46:40.091000'
+g296
+tp377
+a(S'2015-08-24 11:46:40.099000'
+g294
+tp378
+a(S'2015-08-24 11:46:40.101000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp379
+a(S'2015-08-24 11:46:41.037000'
+g294
+tp380
+a(S'2015-08-24 11:46:41.297000'
+g296
+tp381
+a(S'2015-08-24 11:46:41.306000'
+g294
+tp382
+a(S'2015-08-24 11:46:41.308000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp383
+a(S'2015-08-24 11:46:42.395000'
+g294
+tp384
+a(S'2015-08-24 11:46:42.576000'
+g296
+tp385
+a(S'2015-08-24 11:46:42.580000'
+g294
+tp386
+a(S'2015-08-24 11:46:42.581000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp387
+a(S'2015-08-24 11:46:43.706000'
+g294
+tp388
+a(S'2015-08-24 11:46:43.989000'
+g296
+tp389
+a(S'2015-08-24 11:46:43.998000'
+g294
+tp390
+a(S'2015-08-24 11:46:44'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp391
+a(S'2015-08-24 11:46:45.347000'
+g294
+tp392
+a(S'2015-08-24 11:46:45.638000'
+g296
+tp393
+a(S'2015-08-24 11:46:45.647000'
+g294
+tp394
+a(S'2015-08-24 11:46:45.650000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp395
+a(S'2015-08-24 11:46:46.436000'
+g294
+tp396
+a(S'2015-08-24 11:46:46.705000'
+g296
+tp397
+a(S'2015-08-24 11:46:46.712000'
+g294
+tp398
+a(S'2015-08-24 11:46:46.714000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp399
+a(S'2015-08-24 11:46:47.371000'
+g294
+tp400
+a(S'2015-08-24 11:46:47.618000'
+g296
+tp401
+a(S'2015-08-24 11:46:47.622000'
+g294
+tp402
+a(S'2015-08-24 11:46:47.624000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp403
+a(S'2015-08-24 11:46:48.619000'
+g294
+tp404
+a(S'2015-08-24 11:46:48.948000'
+g296
+tp405
+a(S'2015-08-24 11:46:48.957000'
+g294
+tp406
+a(S'2015-08-24 11:46:48.960000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp407
+a(S'2015-08-24 11:46:49.456000'
+g294
+tp408
+a(S'2015-08-24 11:46:49.794000'
+g296
+tp409
+a(S'2015-08-24 11:46:49.802000'
+g294
+tp410
+a(S'2015-08-24 11:46:49.804000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp411
+a(S'2015-08-24 11:46:50.434000'
+g294
+tp412
+a(S'2015-08-24 11:46:50.658000'
+g296
+tp413
+a(S'2015-08-24 11:46:50.662000'
+g294
+tp414
+a(S'2015-08-24 11:46:50.664000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp415
+a(S'2015-08-24 11:46:51.149000'
+g294
+tp416
+a(S'2015-08-24 11:46:51.498000'
+g296
+tp417
+a(S'2015-08-24 11:46:51.507000'
+g294
+tp418
+a(S'2015-08-24 11:46:51.510000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp419
+a(S'2015-08-24 11:46:52.046000'
+g294
+tp420
+a(S'2015-08-24 11:46:52.582000'
+g296
+tp421
+a(S'2015-08-24 11:46:52.589000'
+g294
+tp422
+a(S'2015-08-24 11:46:52.591000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp423
+a(S'2015-08-24 11:46:53.037000'
+g294
+tp424
+a(S'2015-08-24 11:46:53.589000'
+g296
+tp425
+a(S'2015-08-24 11:46:53.596000'
+g294
+tp426
+a(S'2015-08-24 11:46:53.598000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp427
+a(S'2015-08-24 11:46:54.524000'
+g294
+tp428
+a(S'2015-08-24 11:46:54.746000'
+g296
+tp429
+a(S'2015-08-24 11:46:54.751000'
+g294
+tp430
+a(S'2015-08-24 11:46:54.752000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp431
+a(S'2015-08-24 11:46:55.469000'
+g294
+tp432
+a(S'2015-08-24 11:46:55.800000'
+g296
+tp433
+a(S'2015-08-24 11:46:55.807000'
+g294
+tp434
+a(S'2015-08-24 11:46:55.809000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp435
+a(S'2015-08-24 11:46:56.295000'
+g294
+tp436
+a(S'2015-08-24 11:46:56.653000'
+g296
+tp437
+a(S'2015-08-24 11:46:56.658000'
+g294
+tp438
+a(S'2015-08-24 11:46:56.660000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp439
+a(S'2015-08-24 11:46:57.195000'
+g294
+tp440
+a(S'2015-08-24 11:46:57.715000'
+g296
+tp441
+a(S'2015-08-24 11:46:57.722000'
+g294
+tp442
+a(S'2015-08-24 11:46:57.725000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp443
+a(S'2015-08-24 11:46:58.281000'
+g294
+tp444
+a(S'2015-08-24 11:46:58.783000'
+g296
+tp445
+a(S'2015-08-24 11:46:58.791000'
+g294
+tp446
+a(S'2015-08-24 11:46:58.793000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp447
+a(S'2015-08-24 11:46:59.220000'
+g294
+tp448
+a(S'2015-08-24 11:46:59.721000'
+g296
+tp449
+a(S'2015-08-24 11:46:59.727000'
+g294
+tp450
+a(S'2015-08-24 11:46:59.729000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp451
+a(S'2015-08-24 11:47:00.306000'
+g294
+tp452
+a(S'2015-08-24 11:47:00.650000'
+g296
+tp453
+a(S'2015-08-24 11:47:00.655000'
+g294
+tp454
+a(S'2015-08-24 11:47:00.656000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp455
+a(S'2015-08-24 11:47:01.161000'
+g294
+tp456
+a(S'2015-08-24 11:47:01.664000'
+g296
+tp457
+a(S'2015-08-24 11:47:01.671000'
+g294
+tp458
+a(S'2015-08-24 11:47:01.674000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp459
+a(S'2015-08-24 11:47:02.222000'
+g294
+tp460
+a(S'2015-08-24 11:47:02.767000'
+g296
+tp461
+a(S'2015-08-24 11:47:02.774000'
+g294
+tp462
+a(S'2015-08-24 11:47:02.776000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp463
+a(S'2015-08-24 11:47:03.893000'
+g294
+tp464
+a(S'2015-08-24 11:47:04.608000'
+g296
+tp465
+a(S'2015-08-24 11:47:04.615000'
+g294
+tp466
+a(S'2015-08-24 11:47:04.618000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp467
+a(S'2015-08-24 11:47:05.293000'
+g294
+tp468
+a(S'2015-08-24 11:47:05.724000'
+g296
+tp469
+a(S'2015-08-24 11:47:05.732000'
+g294
+tp470
+a(S'2015-08-24 11:47:05.734000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp471
+a(S'2015-08-24 11:47:06.381000'
+g294
+tp472
+a(S'2015-08-24 11:47:06.807000'
+g296
+tp473
+a(S'2015-08-24 11:47:06.813000'
+g294
+tp474
+a(S'2015-08-24 11:47:06.815000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp475
+a(S'2015-08-24 11:47:07.433000'
+g294
+tp476
+a(S'2015-08-24 11:47:07.778000'
+g296
+tp477
+a(S'2015-08-24 11:47:07.782000'
+g294
+tp478
+a(S'2015-08-24 11:47:07.783000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp479
+a(S'2015-08-24 11:47:08.280000'
+g294
+tp480
+a(S'2015-08-24 11:47:08.678000'
+g296
+tp481
+a(S'2015-08-24 11:47:08.684000'
+g294
+tp482
+a(S'2015-08-24 11:47:08.686000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp483
+a(S'2015-08-24 11:47:09.283000'
+g294
+tp484
+a(S'2015-08-24 11:47:09.635000'
+g296
+tp485
+a(S'2015-08-24 11:47:09.638000'
+g294
+tp486
+a(S'2015-08-24 11:47:09.639000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp487
+a(S'2015-08-24 11:47:10.236000'
+g294
+tp488
+a(S'2015-08-24 11:47:10.721000'
+g296
+tp489
+a(S'2015-08-24 11:47:10.729000'
+g294
+tp490
+a(S'2015-08-24 11:47:10.732000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp491
+a(S'2015-08-24 11:47:11.369000'
+g294
+tp492
+a(S'2015-08-24 11:47:11.839000'
+g296
+tp493
+a(S'2015-08-24 11:47:11.845000'
+g294
+tp494
+a(S'2015-08-24 11:47:11.847000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp495
+a(S'2015-08-24 11:47:12.393000'
+g294
+tp496
+a(S'2015-08-24 11:47:12.718000'
+g296
+tp497
+a(S'2015-08-24 11:47:12.723000'
+g294
+tp498
+a(S'2015-08-24 11:47:12.724000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp499
+a(S'2015-08-24 11:47:13.399000'
+g294
+tp500
+a(S'2015-08-24 11:47:13.908000'
+g296
+tp501
+a(S'2015-08-24 11:47:13.916000'
+g294
+tp502
+a(S'2015-08-24 11:47:13.918000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp503
+a(S'2015-08-24 11:47:14.495000'
+g294
+tp504
+a(S'2015-08-24 11:47:15.020000'
+g296
+tp505
+a(S'2015-08-24 11:47:15.028000'
+g294
+tp506
+a(S'2015-08-24 11:47:15.030000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp507
+a(S'2015-08-24 11:47:15.627000'
+g294
+tp508
+a(S'2015-08-24 11:47:15.980000'
+g296
+tp509
+a(S'2015-08-24 11:47:15.985000'
+g294
+tp510
+a(S'2015-08-24 11:47:16.030000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp511
+a(S'2015-08-24 11:47:16.596000'
+g294
+tp512
+a(S'2015-08-24 11:47:17.126000'
+g296
+tp513
+a(S'2015-08-24 11:47:17.134000'
+g294
+tp514
+a(S'2015-08-24 11:47:17.136000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp515
+a(S'2015-08-24 11:47:18.024000'
+g294
+tp516
+a(S'2015-08-24 11:47:18.473000'
+g296
+tp517
+a(S'2015-08-24 11:47:18.480000'
+g294
+tp518
+a(S'2015-08-24 11:47:18.482000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp519
+a(S'2015-08-24 11:47:19.078000'
+g294
+tp520
+a(S'2015-08-24 11:47:19.850000'
+g296
+tp521
+a(S'2015-08-24 11:47:19.858000'
+g294
+tp522
+a(S'2015-08-24 11:47:19.861000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp523
+a(S'2015-08-24 11:47:20.558000'
+g294
+tp524
+a(S'2015-08-24 11:47:21.006000'
+g296
+tp525
+a(S'2015-08-24 11:47:21.012000'
+g294
+tp526
+a(S'2015-08-24 11:47:21.014000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp527
+a(S'2015-08-24 11:47:21.541000'
+g294
+tp528
+a(S'2015-08-24 11:47:22.027000'
+g296
+tp529
+a(S'2015-08-24 11:47:22.034000'
+g294
+tp530
+a(S'2015-08-24 11:47:22.036000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp531
+a(S'2015-08-24 11:47:22.583000'
+g294
+tp532
+a(S'2015-08-24 11:47:22.993000'
+g296
+tp533
+a(S'2015-08-24 11:47:22.999000'
+g294
+tp534
+a(S'2015-08-24 11:47:23'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp535
+a(S'2015-08-24 11:47:23.580000'
+g294
+tp536
+a(S'2015-08-24 11:47:24.065000'
+g296
+tp537
+a(S'2015-08-24 11:47:24.072000'
+g294
+tp538
+a(S'2015-08-24 11:47:24.074000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp539
+a(S'2015-08-24 11:47:24.711000'
+g294
+tp540
+a(S'2015-08-24 11:47:25.412000'
+g296
+tp541
+a(S'2015-08-24 11:47:25.422000'
+g294
+tp542
+a(S'2015-08-24 11:47:25.425000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp543
+a(S'2015-08-24 11:47:26.004000'
+g294
+tp544
+a(S'2015-08-24 11:47:26.822000'
+g296
+tp545
+a(S'2015-08-24 11:47:26.830000'
+g294
+tp546
+a(S'2015-08-24 11:47:26.833000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp547
+a(S'2015-08-24 11:47:27.441000'
+g294
+tp548
+a(S'2015-08-24 11:47:27.886000'
+g296
+tp549
+a(S'2015-08-24 11:47:27.891000'
+g294
+tp550
+a(S'2015-08-24 11:47:27.892000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp551
+a(S'2015-08-24 11:47:28.399000'
+g294
+tp552
+a(S'2015-08-24 11:47:28.898000'
+g296
+tp553
+a(S'2015-08-24 11:47:28.903000'
+g294
+tp554
+a(S'2015-08-24 11:47:28.904000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp555
+a(S'2015-08-24 11:47:29.372000'
+g294
+tp556
+a(S'2015-08-24 11:47:30.022000'
+g296
+tp557
+a(S'2015-08-24 11:47:30.030000'
+g294
+tp558
+a(S'2015-08-24 11:47:30.033000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp559
+a(S'2015-08-24 11:47:30.551000'
+g294
+tp560
+a(S'2015-08-24 11:47:31.019000'
+g296
+tp561
+a(S'2015-08-24 11:47:31.025000'
+g294
+tp562
+a(S'2015-08-24 11:47:31.027000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp563
+a(S'2015-08-24 11:47:31.527000'
+g294
+tp564
+a(S'2015-08-24 11:47:31.844000'
+g296
+tp565
+a(S'2015-08-24 11:47:31.849000'
+g294
+tp566
+a(S'2015-08-24 11:47:31.850000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp567
+a(S'2015-08-24 11:47:32.590000'
+g294
+tp568
+a(S'2015-08-24 11:47:33.253000'
+g296
+tp569
+a(S'2015-08-24 11:47:33.261000'
+g294
+tp570
+a(S'2015-08-24 11:47:33.264000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp571
+a(S'2015-08-24 11:47:33.671000'
+g294
+tp572
+a(S'2015-08-24 11:47:34.306000'
+g296
+tp573
+a(S'2015-08-24 11:47:34.314000'
+g294
+tp574
+a(S'2015-08-24 11:47:34.316000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp575
+a(S'2015-08-24 11:47:34.784000'
+g294
+tp576
+a(S'2015-08-24 11:47:35.473000'
+g296
+tp577
+a(S'2015-08-24 11:47:35.481000'
+g294
+tp578
+a(S'2015-08-24 11:47:35.484000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp579
+a(S'2015-08-24 11:47:36.030000'
+g294
+tp580
+a(S'2015-08-24 11:47:36.792000'
+g296
+tp581
+a(S'2015-08-24 11:47:36.799000'
+g294
+tp582
+a(S'2015-08-24 11:47:36.802000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp583
+a(S'2015-08-24 11:47:37.199000'
+g294
+tp584
+a(S'2015-08-24 11:47:37.842000'
+g296
+tp585
+a(S'2015-08-24 11:47:37.848000'
+g294
+tp586
+a(S'2015-08-24 11:47:37.850000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp587
+a(S'2015-08-24 11:47:38.417000'
+g294
+tp588
+a(S'2015-08-24 11:47:39.134000'
+g296
+tp589
+a(S'2015-08-24 11:47:39.142000'
+g294
+tp590
+a(S'2015-08-24 11:47:39.145000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp591
+a(S'2015-08-24 11:47:39.383000'
+g294
+tp592
+a(S'2015-08-24 11:47:39.897000'
+g296
+tp593
+a(S'2015-08-24 11:47:39.902000'
+g294
+tp594
+a(S'2015-08-24 11:47:39.904000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp595
+a(S'2015-08-24 11:47:40.351000'
+g294
+tp596
+a(S'2015-08-24 11:47:41.092000'
+g296
+tp597
+a(S'2015-08-24 11:47:41.101000'
+g294
+tp598
+a(S'2015-08-24 11:47:41.103000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp599
+a(S'2015-08-24 11:47:41.471000'
+g294
+tp600
+a(S'2015-08-24 11:47:41.971000'
+g296
+tp601
+a(S'2015-08-24 11:47:41.976000'
+g294
+tp602
+a(S'2015-08-24 11:47:41.978000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp603
+a(S'2015-08-24 11:47:42.526000'
+g294
+tp604
+a(S'2015-08-24 11:47:43.006000'
+g296
+tp605
+a(S'2015-08-24 11:47:43.011000'
+g294
+tp606
+a(S'2015-08-24 11:47:43.013000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp607
+a(S'2015-08-24 11:47:43.640000'
+g294
+tp608
+a(S'2015-08-24 11:47:44.406000'
+g296
+tp609
+a(S'2015-08-24 11:47:44.415000'
+g294
+tp610
+a(S'2015-08-24 11:47:44.417000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp611
+a(S'2015-08-24 11:47:44.705000'
+g294
+tp612
+a(S'2015-08-24 11:47:45.641000'
+g296
+tp613
+a(S'2015-08-24 11:47:45.646000'
+g294
+tp614
+a(S'2015-08-24 11:47:45.648000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp615
+a(S'2015-08-24 11:47:46.471000'
+g294
+tp616
+a(S'2015-08-24 11:47:46.850000'
+g296
+tp617
+a(S'2015-08-24 11:47:46.855000'
+g294
+tp618
+a(S'2015-08-24 11:47:46.856000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp619
+a(S'2015-08-24 11:47:47.373000'
+g294
+tp620
+a(S'2015-08-24 11:47:47.943000'
+g296
+tp621
+a(S'2015-08-24 11:47:47.949000'
+g294
+tp622
+a(S'2015-08-24 11:47:47.950000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp623
+a(S'2015-08-24 11:47:48.928000'
+g294
+tp624
+a(S'2015-08-24 11:47:49.872000'
+g296
+tp625
+a(S'2015-08-24 11:47:49.883000'
+g294
+tp626
+a(S'2015-08-24 11:47:49.886000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp627
+a(S'2015-08-24 11:47:50.404000'
+g294
+tp628
+a(S'2015-08-24 11:47:51.173000'
+g296
+tp629
+a(S'2015-08-24 11:47:51.181000'
+g294
+tp630
+a(S'2015-08-24 11:47:51.184000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp631
+a(S'2015-08-24 11:47:51.672000'
+g294
+tp632
+a(S'2015-08-24 11:47:52.503000'
+g296
+tp633
+a(S'2015-08-24 11:47:52.512000'
+g294
+tp634
+a(S'2015-08-24 11:47:52.515000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp635
+a(S'2015-08-24 11:47:53.113000'
+g294
+tp636
+a(S'2015-08-24 11:47:53.804000'
+g296
+tp637
+a(S'2015-08-24 11:47:53.809000'
+g294
+tp638
+a(S'2015-08-24 11:47:53.811000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp639
+a(S'2015-08-24 11:47:54.248000'
+g294
+tp640
+a(S'2015-08-24 11:47:54.882000'
+g296
+tp641
+a(S'2015-08-24 11:47:54.887000'
+g294
+tp642
+a(S'2015-08-24 11:47:54.888000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp643
+a(S'2015-08-24 11:47:55.245000'
+g294
+tp644
+a(S'2015-08-24 11:47:56.102000'
+g296
+tp645
+a(S'2015-08-24 11:47:56.111000'
+g294
+tp646
+a(S'2015-08-24 11:47:56.113000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp647
+a(S'2015-08-24 11:47:56.257000'
+g294
+tp648
+a(S'2015-08-24 11:47:56.789000'
+g296
+tp649
+a(S'2015-08-24 11:47:56.795000'
+g294
+tp650
+a(S'2015-08-24 11:47:56.797000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp651
+a(S'2015-08-24 11:47:57.054000'
+g294
+tp652
+a(S'2015-08-24 11:47:57.871000'
+g296
+tp653
+a(S'2015-08-24 11:47:57.877000'
+g294
+tp654
+a(S'2015-08-24 11:47:57.879000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp655
+a(S'2015-08-24 11:47:58.816000'
+g294
+tp656
+a(S'2015-08-24 11:47:59.653000'
+g296
+tp657
+a(S'2015-08-24 11:47:59.659000'
+g294
+tp658
+a(S'2015-08-24 11:47:59.661000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp659
+a(S'2015-08-24 11:48:00.478000'
+g294
+tp660
+a(S'2015-08-24 11:48:01.258000'
+g296
+tp661
+a(S'2015-08-24 11:48:01.265000'
+g294
+tp662
+a(S'2015-08-24 11:48:01.267000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp663
+a(S'2015-08-24 11:48:01.413000'
+g294
+tp664
+a(S'2015-08-24 11:48:02.559000'
+g296
+tp665
+a(S'2015-08-24 11:48:02.571000'
+g294
+tp666
+a(S'2015-08-24 11:48:02.574000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp667
+a(S'2015-08-24 11:48:02.873000'
+g294
+tp668
+a(S'2015-08-24 11:48:03.699000'
+g296
+tp669
+a(S'2015-08-24 11:48:03.704000'
+g294
+tp670
+a(S'2015-08-24 11:48:03.706000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp671
+a(S'2015-08-24 11:48:04.225000'
+g294
+tp672
+a(S'2015-08-24 11:48:05.192000'
+g296
+tp673
+a(S'2015-08-24 11:48:05.197000'
+g294
+tp674
+a(S'2015-08-24 11:48:05.199000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp675
+a(S'2015-08-24 11:48:05.587000'
+g294
+tp676
+a(S'2015-08-24 11:48:06.511000'
+g296
+tp677
+a(S'2015-08-24 11:48:06.520000'
+g294
+tp678
+a(S'2015-08-24 11:48:06.523000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp679
+a(S'2015-08-24 11:48:06.922000'
+g294
+tp680
+a(S'2015-08-24 11:48:07.862000'
+g296
+tp681
+a(S'2015-08-24 11:48:07.871000'
+g294
+tp682
+a(S'2015-08-24 11:48:07.874000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp683
+a(S'2015-08-24 11:48:08.392000'
+g294
+tp684
+a(S'2015-08-24 11:48:08.977000'
+g296
+tp685
+a(S'2015-08-24 11:48:08.982000'
+g294
+tp686
+a(S'2015-08-24 11:48:08.984000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp687
+a(S'2015-08-24 11:48:10.172000'
+g294
+tp688
+a(S'2015-08-24 11:48:11.305000'
+g296
+tp689
+a(S'2015-08-24 11:48:11.313000'
+g294
+tp690
+a(S'2015-08-24 11:48:11.314000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp691
+a(S'2015-08-24 11:48:11.773000'
+g294
+tp692
+a(S'2015-08-24 11:48:12.668000'
+g296
+tp693
+a(S'2015-08-24 11:48:12.673000'
+g294
+tp694
+a(S'2015-08-24 11:48:12.675000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp695
+a(S'2015-08-24 11:48:13.112000'
+g294
+tp696
+a(S'2015-08-24 11:48:13.927000'
+g296
+tp697
+a(S'2015-08-24 11:48:13.934000'
+g294
+tp698
+a(S'2015-08-24 11:48:13.936000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp699
+a(S'2015-08-24 11:48:14.590000'
+g294
+tp700
+a(S'2015-08-24 11:48:15.575000'
+g296
+tp701
+a(S'2015-08-24 11:48:15.584000'
+g294
+tp702
+a(S'2015-08-24 11:48:15.587000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp703
+a(S'2015-08-24 11:48:16.126000'
+g294
+tp704
+a(S'2015-08-24 11:48:17.126000'
+g296
+tp705
+a(S'2015-08-24 11:48:17.135000'
+g294
+tp706
+a(S'2015-08-24 11:48:17.139000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp707
+a(S'2015-08-24 11:48:17.580000'
+g294
+tp708
+a(S'2015-08-24 11:48:18.050000'
+g296
+tp709
+a(S'2015-08-24 11:48:18.054000'
+g294
+tp710
+a(S'2015-08-24 11:48:18.055000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp711
+a(S'2015-08-24 11:48:18.517000'
+g294
+tp712
+a(S'2015-08-24 11:48:18.996000'
+g296
+tp713
+a(S'2015-08-24 11:48:19.001000'
+g294
+tp714
+a(S'2015-08-24 11:48:19.002000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp715
+a(S'2015-08-24 11:48:19.489000'
+g294
+tp716
+a(S'2015-08-24 11:48:20.515000'
+g296
+tp717
+a(S'2015-08-24 11:48:20.524000'
+g294
+tp718
+a(S'2015-08-24 11:48:20.527000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp719
+a(S'2015-08-24 11:48:21.286000'
+g294
+tp720
+a(S'2015-08-24 11:48:22.027000'
+g296
+tp721
+a(S'2015-08-24 11:48:22.033000'
+g294
+tp722
+a(S'2015-08-24 11:48:22.035000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp723
+a(S'2015-08-24 11:48:22.493000'
+g294
+tp724
+a(S'2015-08-24 11:48:23.529000'
+g296
+tp725
+a(S'2015-08-24 11:48:23.538000'
+g294
+tp726
+a(S'2015-08-24 11:48:23.541000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp727
+a(S'2015-08-24 11:48:24.020000'
+g294
+tp728
+a(S'2015-08-24 11:48:24.840000'
+g296
+tp729
+a(S'2015-08-24 11:48:24.845000'
+g294
+tp730
+a(S'2015-08-24 11:48:24.847000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp731
+a(S'2015-08-24 11:48:25.464000'
+g294
+tp732
+a(S'2015-08-24 11:48:26.524000'
+g296
+tp733
+a(S'2015-08-24 11:48:26.533000'
+g294
+tp734
+a(S'2015-08-24 11:48:26.536000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp735
+a(S'2015-08-24 11:48:41.011000'
+g294
+tp736
+a(S'2015-08-24 11:48:42.271000'
+g296
+tp737
+a(S'2015-08-24 11:48:42.280000'
+g294
+tp738
+a(S'2015-08-24 11:48:42.283000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp739
+a(S'2015-08-24 11:48:42.951000'
+g294
+tp740
+a(S'2015-08-24 11:48:44.298000'
+g296
+tp741
+a(S'2015-08-24 11:48:44.307000'
+g294
+tp742
+a(S'2015-08-24 11:48:44.311000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp743
+a(S'2015-08-24 11:48:44.790000'
+g294
+tp744
+a(S'2015-08-24 11:48:46.209000'
+g296
+tp745
+a(S'2015-08-24 11:48:46.218000'
+g294
+tp746
+a(S'2015-08-24 11:48:46.221000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp747
+a(S'2015-08-24 11:48:46.714000'
+g294
+tp748
+a(S'2015-08-24 11:48:47.242000'
+g296
+tp749
+a(S'2015-08-24 11:48:47.247000'
+g294
+tp750
+a(S'2015-08-24 11:48:47.248000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp751
+a(S'2015-08-24 11:48:47.726000'
+g294
+tp752
+a(S'2015-08-24 11:48:48.734000'
+g296
+tp753
+a(S'2015-08-24 11:48:48.739000'
+g294
+tp754
+a(S'2015-08-24 11:48:48.741000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp755
+a(S'2015-08-24 11:48:49.160000'
+g294
+tp756
+a(S'2015-08-24 11:48:50.282000'
+g296
+tp757
+a(S'2015-08-24 11:48:50.291000'
+g294
+tp758
+a(S'2015-08-24 11:48:50.295000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp759
+a(S'2015-08-24 11:48:50.670000'
+g294
+tp760
+a(S'2015-08-24 11:48:51.708000'
+g296
+tp761
+a(S'2015-08-24 11:48:51.714000'
+g294
+tp762
+a(S'2015-08-24 11:48:51.716000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp763
+a(S'2015-08-24 11:48:52.103000'
+g294
+tp764
+a(S'2015-08-24 11:48:53.236000'
+g296
+tp765
+a(S'2015-08-24 11:48:53.245000'
+g294
+tp766
+a(S'2015-08-24 11:48:53.249000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp767
+a(S'2015-08-24 11:48:53.477000'
+g294
+tp768
+a(S'2015-08-24 11:48:54.543000'
+g296
+tp769
+a(S'2015-08-24 11:48:54.552000'
+g294
+tp770
+a(S'2015-08-24 11:48:54.555000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp771
+a(S'2015-08-24 11:48:54.754000'
+g294
+tp772
+a(S'2015-08-24 11:48:56.166000'
+g296
+tp773
+a(S'2015-08-24 11:48:56.175000'
+g294
+tp774
+a(S'2015-08-24 11:48:56.178000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp775
+a(S'2015-08-24 11:48:56.707000'
+g294
+tp776
+a(S'2015-08-24 11:48:58.309000'
+g296
+tp777
+a(S'2015-08-24 11:48:58.320000'
+g294
+tp778
+a(S'2015-08-24 11:48:58.323000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp779
+a(S'2015-08-24 11:48:58.891000'
+g294
+tp780
+a(S'2015-08-24 11:49:00.303000'
+g296
+tp781
+a(S'2015-08-24 11:49:00.311000'
+g294
+tp782
+a(S'2015-08-24 11:49:00.315000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp783
+a(S'2015-08-24 11:49:01.273000'
+g294
+tp784
+a(S'2015-08-24 11:49:02.458000'
+g296
+tp785
+a(S'2015-08-24 11:49:02.467000'
+g294
+tp786
+a(S'2015-08-24 11:49:02.471000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp787
+a(S'2015-08-24 11:49:03.160000'
+g294
+tp788
+a(S'2015-08-24 11:49:04.105000'
+g296
+tp789
+a(S'2015-08-24 11:49:04.111000'
+g294
+tp790
+a(S'2015-08-24 11:49:04.113000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp791
+a(S'2015-08-24 11:49:04.941000'
+g294
+tp792
+a(S'2015-08-24 11:49:05.978000'
+g296
+tp793
+a(S'2015-08-24 11:49:05.982000'
+g294
+tp794
+a(S'2015-08-24 11:49:05.984000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp795
+a(S'2015-08-24 11:49:06.472000'
+g294
+tp796
+a(S'2015-08-24 11:49:07.679000'
+g296
+tp797
+a(S'2015-08-24 11:49:07.689000'
+g294
+tp798
+a(S'2015-08-24 11:49:07.692000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp799
+a(S'2015-08-24 11:49:08.251000'
+g294
+tp800
+a(S'2015-08-24 11:49:09.119000'
+g296
+tp801
+a(S'2015-08-24 11:49:09.124000'
+g294
+tp802
+a(S'2015-08-24 11:49:09.126000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp803
+a(S'2015-08-24 11:49:09.845000'
+g294
+tp804
+a(S'2015-08-24 11:49:11.076000'
+g296
+tp805
+a(S'2015-08-24 11:49:11.085000'
+g294
+tp806
+a(S'2015-08-24 11:49:11.088000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp807
+a(S'2015-08-24 11:49:11.629000'
+g294
+tp808
+a(S'2015-08-24 11:49:13.201000'
+g296
+tp809
+a(S'2015-08-24 11:49:13.211000'
+g294
+tp810
+a(S'2015-08-24 11:49:13.214000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp811
+a(S'2015-08-24 11:49:13.943000'
+g294
+tp812
+a(S'2015-08-24 11:49:14.951000'
+g296
+tp813
+a(S'2015-08-24 11:49:14.957000'
+g294
+tp814
+a(S'2015-08-24 11:49:14.959000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp815
+a(S'2015-08-24 11:49:15.477000'
+g294
+tp816
+a(S'2015-08-24 11:49:16.276000'
+g296
+tp817
+a(S'2015-08-24 11:49:16.282000'
+g294
+tp818
+a(S'2015-08-24 11:49:16.284000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp819
+a(S'2015-08-24 11:49:16.782000'
+g294
+tp820
+a(S'2015-08-24 11:49:17.737000'
+g296
+tp821
+a(S'2015-08-24 11:49:17.742000'
+g294
+tp822
+a(S'2015-08-24 11:49:17.744000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp823
+a(S'2015-08-24 11:49:18.142000'
+g294
+tp824
+a(S'2015-08-24 11:49:19.599000'
+g296
+tp825
+a(S'2015-08-24 11:49:19.608000'
+g294
+tp826
+a(S'2015-08-24 11:49:19.612000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp827
+a(S'2015-08-24 11:49:20.031000'
+g294
+tp828
+a(S'2015-08-24 11:49:21.003000'
+g296
+tp829
+a(S'2015-08-24 11:49:21.009000'
+g294
+tp830
+a(S'2015-08-24 11:49:21.012000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp831
+a(S'2015-08-24 11:49:21.410000'
+g294
+tp832
+a(S'2015-08-24 11:49:22.226000'
+g296
+tp833
+a(S'2015-08-24 11:49:22.232000'
+g294
+tp834
+a(S'2015-08-24 11:49:22.234000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp835
+a(S'2015-08-24 11:49:22.762000'
+g294
+tp836
+a(S'2015-08-24 11:49:23.974000'
+g296
+tp837
+a(S'2015-08-24 11:49:23.983000'
+g294
+tp838
+a(S'2015-08-24 11:49:23.986000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp839
+a(S'2015-08-24 11:49:24.455000'
+g294
+tp840
+a(S'2015-08-24 11:49:25.188000'
+g296
+tp841
+a(S'2015-08-24 11:49:25.192000'
+g294
+tp842
+a(S'2015-08-24 11:49:25.194000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp843
+a(S'2015-08-24 11:49:25.692000'
+g294
+tp844
+a(S'2015-08-24 11:49:26.355000'
+g296
+tp845
+a(S'2015-08-24 11:49:26.360000'
+g294
+tp846
+a(S'2015-08-24 11:49:26.361000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp847
+a(S'2015-08-24 11:49:26.920000'
+g294
+tp848
+a(S'2015-08-24 11:49:28.250000'
+g296
+tp849
+a(S'2015-08-24 11:49:28.260000'
+g294
+tp850
+a(S'2015-08-24 11:49:28.264000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp851
+a(S'2015-08-24 11:49:29.563000'
+g294
+tp852
+a(S'2015-08-24 11:49:30.508000'
+g296
+tp853
+a(S'2015-08-24 11:49:30.514000'
+g294
+tp854
+a(S'2015-08-24 11:49:30.517000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp855
+a(S'2015-08-24 11:49:30.986000'
+g294
+tp856
+a(S'2015-08-24 11:49:31.895000'
+g296
+tp857
+a(S'2015-08-24 11:49:31.900000'
+g294
+tp858
+a(S'2015-08-24 11:49:31.901000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp859
+a(S'2015-08-24 11:49:32.362000'
+g294
+tp860
+a(S'2015-08-24 11:49:33.271000'
+g296
+tp861
+a(S'2015-08-24 11:49:33.277000'
+g294
+tp862
+a(S'2015-08-24 11:49:33.279000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp863
+a(S'2015-08-24 11:49:33.838000'
+g294
+tp864
+a(S'2015-08-24 11:49:35.208000'
+g296
+tp865
+a(S'2015-08-24 11:49:35.218000'
+g294
+tp866
+a(S'2015-08-24 11:49:35.222000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp867
+a(S'2015-08-24 11:49:35.652000'
+g294
+tp868
+a(S'2015-08-24 11:49:36.949000'
+g296
+tp869
+a(S'2015-08-24 11:49:36.959000'
+g294
+tp870
+a(S'2015-08-24 11:49:36.962000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp871
+a(S'2015-08-24 11:49:37.381000'
+g294
+tp872
+a(S'2015-08-24 11:49:38.803000'
+g296
+tp873
+a(S'2015-08-24 11:49:38.809000'
+g294
+tp874
+a(S'2015-08-24 11:49:38.811000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp875
+a(S'2015-08-24 11:49:39.311000'
+g294
+tp876
+a(S'2015-08-24 11:49:40.617000'
+g296
+tp877
+a(S'2015-08-24 11:49:40.626000'
+g294
+tp878
+a(S'2015-08-24 11:49:40.630000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp879
+a(S'2015-08-24 11:49:40.970000'
+g294
+tp880
+a(S'2015-08-24 11:49:42.067000'
+g296
+tp881
+a(S'2015-08-24 11:49:42.073000'
+g294
+tp882
+a(S'2015-08-24 11:49:42.075000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp883
+a(S'2015-08-24 11:49:42.396000'
+g294
+tp884
+a(S'2015-08-24 11:49:43.703000'
+g296
+tp885
+a(S'2015-08-24 11:49:43.709000'
+g294
+tp886
+a(S'2015-08-24 11:49:43.711000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp887
+a(S'2015-08-24 11:49:44.110000'
+g294
+tp888
+a(S'2015-08-24 11:49:45.627000'
+g296
+tp889
+a(S'2015-08-24 11:49:45.633000'
+g294
+tp890
+a(S'2015-08-24 11:49:45.635000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp891
+a(S'2015-08-24 11:49:46.133000'
+g294
+tp892
+a(S'2015-08-24 11:49:47.159000'
+g296
+tp893
+a(S'2015-08-24 11:49:47.164000'
+g294
+tp894
+a(S'2015-08-24 11:49:47.165000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp895
+a(S'2015-08-24 11:49:47.684000'
+g294
+tp896
+a(S'2015-08-24 11:49:49.125000'
+g296
+tp897
+a(S'2015-08-24 11:49:49.135000'
+g294
+tp898
+a(S'2015-08-24 11:49:49.139000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp899
+a(S'2015-08-24 11:49:50.218000'
+g294
+tp900
+a(S'2015-08-24 11:49:51.241000'
+g296
+tp901
+a(S'2015-08-24 11:49:51.247000'
+g294
+tp902
+a(S'2015-08-24 11:49:51.249000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp903
+a(S'2015-08-24 11:49:52.240000'
+g294
+tp904
+a(S'2015-08-24 11:49:53.867000'
+g296
+tp905
+a(S'2015-08-24 11:49:53.874000'
+g294
+tp906
+a(S'2015-08-24 11:49:53.877000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp907
+a(S'2015-08-24 11:49:54.355000'
+g294
+tp908
+a(S'2015-08-24 11:49:55.325000'
+g296
+tp909
+a(S'2015-08-24 11:49:55.331000'
+g294
+tp910
+a(S'2015-08-24 11:49:55.333000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp911
+a(S'2015-08-24 11:49:55.912000'
+g294
+tp912
+a(S'2015-08-24 11:49:57.125000'
+g296
+tp913
+a(S'2015-08-24 11:49:57.134000'
+g294
+tp914
+a(S'2015-08-24 11:49:57.137000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp915
+a(S'2015-08-24 11:49:58.015000'
+g294
+tp916
+a(S'2015-08-24 11:49:59.497000'
+g296
+tp917
+a(S'2015-08-24 11:49:59.507000'
+g294
+tp918
+a(S'2015-08-24 11:49:59.510000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp919
+a(S'2015-08-24 11:50:00.200000'
+g294
+tp920
+a(S'2015-08-24 11:50:01.695000'
+g296
+tp921
+a(S'2015-08-24 11:50:01.705000'
+g294
+tp922
+a(S'2015-08-24 11:50:01.709000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp923
+a(S'2015-08-24 11:50:02.250000'
+g294
+tp924
+a(S'2015-08-24 11:50:03.264000'
+g296
+tp925
+a(S'2015-08-24 11:50:03.270000'
+g294
+tp926
+a(S'2015-08-24 11:50:03.273000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp927
+a(S'2015-08-24 11:50:03.782000'
+g294
+tp928
+a(S'2015-08-24 11:50:05.289000'
+g296
+tp929
+a(S'2015-08-24 11:50:05.299000'
+g294
+tp930
+a(S'2015-08-24 11:50:05.303000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp931
+a(S'2015-08-24 11:50:05.743000'
+g294
+tp932
+a(S'2015-08-24 11:50:06.997000'
+g296
+tp933
+a(S'2015-08-24 11:50:07.003000'
+g294
+tp934
+a(S'2015-08-24 11:50:07.006000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp935
+a(S'2015-08-24 11:50:07.487000'
+g294
+tp936
+a(S'2015-08-24 11:50:08.804000'
+g296
+tp937
+a(S'2015-08-24 11:50:08.810000'
+g294
+tp938
+a(S'2015-08-24 11:50:08.813000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp939
+a(S'2015-08-24 11:50:09.281000'
+g294
+tp940
+a(S'2015-08-24 11:50:10.554000'
+g296
+tp941
+a(S'2015-08-24 11:50:10.562000'
+g294
+tp942
+a(S'2015-08-24 11:50:10.566000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp943
+a(S'2015-08-24 11:50:10.996000'
+g294
+tp944
+a(S'2015-08-24 11:50:12.173000'
+g296
+tp945
+a(S'2015-08-24 11:50:12.179000'
+g294
+tp946
+a(S'2015-08-24 11:50:12.182000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp947
+a(S'2015-08-24 11:50:12.672000'
+g294
+tp948
+a(S'2015-08-24 11:50:14.236000'
+g296
+tp949
+a(S'2015-08-24 11:50:14.246000'
+g294
+tp950
+a(S'2015-08-24 11:50:14.250000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp951
+a(S'2015-08-24 11:50:14.910000'
+g294
+tp952
+a(S'2015-08-24 11:50:16.475000'
+g296
+tp953
+a(S'2015-08-24 11:50:16.486000'
+g294
+tp954
+a(S'2015-08-24 11:50:16.489000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp955
+a(S'2015-08-24 11:50:17.369000'
+g294
+tp956
+a(S'2015-08-24 11:50:18.543000'
+g296
+tp957
+a(S'2015-08-24 11:50:18.549000'
+g294
+tp958
+a(S'2015-08-24 11:50:18.552000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp959
+a(S'2015-08-24 11:50:19.201000'
+g294
+tp960
+a(S'2015-08-24 11:50:20.238000'
+g296
+tp961
+a(S'2015-08-24 11:50:20.244000'
+g294
+tp962
+a(S'2015-08-24 11:50:20.246000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp963
+a(S'2015-08-24 11:50:20.705000'
+g294
+tp964
+a(S'2015-08-24 11:50:21.709000'
+g296
+tp965
+a(S'2015-08-24 11:50:21.715000'
+g294
+tp966
+a(S'2015-08-24 11:50:21.718000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp967
+a(S'2015-08-24 11:50:22.107000'
+g294
+tp968
+a(S'2015-08-24 11:50:23.605000'
+g296
+tp969
+a(S'2015-08-24 11:50:23.614000'
+g294
+tp970
+a(S'2015-08-24 11:50:23.617000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp971
+a(S'2015-08-24 11:50:24.097000'
+g294
+tp972
+a(S'2015-08-24 11:50:25.420000'
+g296
+tp973
+a(S'2015-08-24 11:50:25.430000'
+g294
+tp974
+a(S'2015-08-24 11:50:25.433000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp975
+a(S'2015-08-24 11:50:25.922000'
+g294
+tp976
+a(S'2015-08-24 11:50:27.168000'
+g296
+tp977
+a(S'2015-08-24 11:50:27.175000'
+g294
+tp978
+a(S'2015-08-24 11:50:27.177000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp979
+a(S'2015-08-24 11:50:27.698000'
+g294
+tp980
+a(S'2015-08-24 11:50:29.709000'
+g296
+tp981
+a(S'2015-08-24 11:50:29.720000'
+g294
+tp982
+a(S'2015-08-24 11:50:29.724000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp983
+a(S'2015-08-24 11:50:30.484000'
+g294
+tp984
+a(S'2015-08-24 11:50:31.521000'
+g296
+tp985
+a(S'2015-08-24 11:50:31.526000'
+g294
+tp986
+a(S'2015-08-24 11:50:31.528000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp987
+a(S'2015-08-24 11:50:32.097000'
+g294
+tp988
+a(S'2015-08-24 11:50:33.299000'
+g296
+tp989
+a(S'2015-08-24 11:50:33.305000'
+g294
+tp990
+a(S'2015-08-24 11:50:33.308000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp991
+a(S'2015-08-24 11:50:33.937000'
+g294
+tp992
+a(S'2015-08-24 11:50:35.602000'
+g296
+tp993
+a(S'2015-08-24 11:50:35.612000'
+g294
+tp994
+a(S'2015-08-24 11:50:35.616000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp995
+a(S'2015-08-24 11:50:36.077000'
+g294
+tp996
+a(S'2015-08-24 11:50:37.277000'
+g296
+tp997
+a(S'2015-08-24 11:50:37.283000'
+g294
+tp998
+a(S'2015-08-24 11:50:37.286000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp999
+a(S'2015-08-24 11:50:37.825000'
+g294
+tp1000
+a(S'2015-08-24 11:50:39.093000'
+g296
+tp1001
+a(S'2015-08-24 11:50:39.099000'
+g294
+tp1002
+a(S'2015-08-24 11:50:39.101000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1003
+a(S'2015-08-24 11:50:39.561000'
+g294
+tp1004
+a(S'2015-08-24 11:50:40.748000'
+g296
+tp1005
+a(S'2015-08-24 11:50:40.755000'
+g294
+tp1006
+a(S'2015-08-24 11:50:40.758000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1007
+a(S'2015-08-24 11:50:41.237000'
+g294
+tp1008
+a(S'2015-08-24 11:50:42.816000'
+g296
+tp1009
+a(S'2015-08-24 11:50:42.825000'
+g294
+tp1010
+a(S'2015-08-24 11:50:42.828000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1011
+a(S'2015-08-24 11:50:43.299000'
+g294
+tp1012
+a(S'2015-08-24 11:50:44.995000'
+g296
+tp1013
+a(S'2015-08-24 11:50:45.004000'
+g294
+tp1014
+a(S'2015-08-24 11:50:45.007000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1015
+a(S'2015-08-24 11:50:45.447000'
+g294
+tp1016
+a(S'2015-08-24 11:50:46.990000'
+g296
+tp1017
+a(S'2015-08-24 11:50:46.995000'
+g294
+tp1018
+a(S'2015-08-24 11:50:46.997000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1019
+a(S'2015-08-24 11:50:47.468000'
+g294
+tp1020
+a(S'2015-08-24 11:50:48.526000'
+g296
+tp1021
+a(S'2015-08-24 11:50:48.533000'
+g294
+tp1022
+a(S'2015-08-24 11:50:48.535000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1023
+a(S'2015-08-24 11:50:49.214000'
+g294
+tp1024
+a(S'2015-08-24 11:50:50.802000'
+g296
+tp1025
+a(S'2015-08-24 11:50:50.809000'
+g294
+tp1026
+a(S'2015-08-24 11:50:50.811000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1027
+a(S'2015-08-24 11:50:51.452000'
+g294
+tp1028
+a(S'2015-08-24 11:50:53.207000'
+g296
+tp1029
+a(S'2015-08-24 11:50:53.217000'
+g294
+tp1030
+a(S'2015-08-24 11:50:53.221000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1031
+a(S'2015-08-24 11:50:53.400000'
+g294
+tp1032
+a(S'2015-08-24 11:50:54.934000'
+g296
+tp1033
+a(S'2015-08-24 11:50:54.941000'
+g294
+tp1034
+a(S'2015-08-24 11:50:54.943000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1035
+a(S'2015-08-24 11:50:55.413000'
+g294
+tp1036
+a(S'2015-08-24 11:50:57.171000'
+g296
+tp1037
+a(S'2015-08-24 11:50:57.181000'
+g294
+tp1038
+a(S'2015-08-24 11:50:57.185000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1039
+a(S'2015-08-24 11:50:57.695000'
+g294
+tp1040
+a(S'2015-08-24 11:50:59.459000'
+g296
+tp1041
+a(S'2015-08-24 11:50:59.498000'
+g294
+tp1042
+a(S'2015-08-24 11:50:59.502000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1043
+a(S'2015-08-24 11:50:59.923000'
+g294
+tp1044
+a(S'2015-08-24 11:51:01.710000'
+g296
+tp1045
+a(S'2015-08-24 11:51:01.720000'
+g294
+tp1046
+a(S'2015-08-24 11:51:01.724000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1047
+a(S'2015-08-24 11:51:02.206000'
+g294
+tp1048
+a(S'2015-08-24 11:51:03.873000'
+g296
+tp1049
+a(S'2015-08-24 11:51:03.879000'
+g294
+tp1050
+a(S'2015-08-24 11:51:03.881000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1051
+a(S'2015-08-24 11:51:04.452000'
+g294
+tp1052
+a(S'2015-08-24 11:51:06.307000'
+g296
+tp1053
+a(S'2015-08-24 11:51:06.317000'
+g294
+tp1054
+a(S'2015-08-24 11:51:06.321000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1055
+a(S'2015-08-24 11:51:06.872000'
+g294
+tp1056
+a(S'2015-08-24 11:51:08.643000'
+g296
+tp1057
+a(S'2015-08-24 11:51:08.649000'
+g294
+tp1058
+a(S'2015-08-24 11:51:08.652000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1059
+a(S'2015-08-24 11:51:09.172000'
+g294
+tp1060
+a(S'2015-08-24 11:51:10.437000'
+g296
+tp1061
+a(S'2015-08-24 11:51:10.444000'
+g294
+tp1062
+a(S'2015-08-24 11:51:10.446000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1063
+a(S'2015-08-24 11:51:10.947000'
+g294
+tp1064
+a(S'2015-08-24 11:51:12.308000'
+g296
+tp1065
+a(S'2015-08-24 11:51:12.315000'
+g294
+tp1066
+a(S'2015-08-24 11:51:12.318000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1067
+a(S'2015-08-24 11:51:13.308000'
+g294
+tp1068
+a(S'2015-08-24 11:51:15.149000'
+g296
+tp1069
+a(S'2015-08-24 11:51:15.159000'
+g294
+tp1070
+a(S'2015-08-24 11:51:15.163000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1071
+a(S'2015-08-24 11:51:15.864000'
+g294
+tp1072
+a(S'2015-08-24 11:51:17.589000'
+g296
+tp1073
+a(S'2015-08-24 11:51:17.595000'
+g294
+tp1074
+a(S'2015-08-24 11:51:17.597000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1075
+a(S'2015-08-24 11:51:18.439000'
+g294
+tp1076
+a(S'2015-08-24 11:51:20.187000'
+g296
+tp1077
+a(S'2015-08-24 11:51:20.197000'
+g294
+tp1078
+a(S'2015-08-24 11:51:20.199000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1079
+a(S'2015-08-24 11:51:20.911000'
+g294
+tp1080
+a(S'2015-08-24 11:51:22.453000'
+g296
+tp1081
+a(S'2015-08-24 11:51:22.462000'
+g294
+tp1082
+a(S'2015-08-24 11:51:22.465000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1083
+a(S'2015-08-24 11:51:22.946000'
+g294
+tp1084
+a(S'2015-08-24 11:51:24.124000'
+g296
+tp1085
+a(S'2015-08-24 11:51:24.129000'
+g294
+tp1086
+a(S'2015-08-24 11:51:24.131000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1087
+a(S'2015-08-24 11:51:25.052000'
+g294
+tp1088
+a(S'2015-08-24 11:51:26.798000'
+g296
+tp1089
+a(S'2015-08-24 11:51:26.805000'
+g294
+tp1090
+a(S'2015-08-24 11:51:26.808000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1091
+a(S'2015-08-24 11:51:27.628000'
+g294
+tp1092
+a(S'2015-08-24 11:51:29.192000'
+g296
+tp1093
+a(S'2015-08-24 11:51:29.199000'
+g294
+tp1094
+a(S'2015-08-24 11:51:29.202000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1095
+a(S'2015-08-24 11:51:29.723000'
+g294
+tp1096
+a(S'2015-08-24 11:51:31.123000'
+g296
+tp1097
+a(S'2015-08-24 11:51:31.129000'
+g294
+tp1098
+a(S'2015-08-24 11:51:31.131000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1099
+a(S'2015-08-24 11:51:31.587000'
+g294
+tp1100
+a(S'2015-08-24 11:51:32.511000'
+g296
+tp1101
+a(S'2015-08-24 11:51:32.516000'
+g294
+tp1102
+a(S'2015-08-24 11:51:32.518000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1103
+a(S'2015-08-24 11:51:33.119000'
+g294
+tp1104
+a(S'2015-08-24 11:51:34.338000'
+g296
+tp1105
+a(S'2015-08-24 11:51:34.344000'
+g294
+tp1106
+a(S'2015-08-24 11:51:34.346000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1107
+a(S'2015-08-24 11:51:35.018000'
+g294
+tp1108
+a(S'2015-08-24 11:51:36.801000'
+g296
+tp1109
+a(S'2015-08-24 11:51:36.808000'
+g294
+tp1110
+a(S'2015-08-24 11:51:36.811000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1111
+a(S'2015-08-24 11:51:38.141000'
+g294
+tp1112
+a(S'2015-08-24 11:51:40.155000'
+g296
+tp1113
+a(S'2015-08-24 11:51:40.165000'
+g294
+tp1114
+a(S'2015-08-24 11:51:40.169000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1115
+a(S'2015-08-24 11:51:40.970000'
+g294
+tp1116
+a(S'2015-08-24 11:51:42.923000'
+g296
+tp1117
+a(S'2015-08-24 11:51:42.934000'
+g294
+tp1118
+a(S'2015-08-24 11:51:42.937000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1119
+a(S'2015-08-24 11:51:43.639000'
+g294
+tp1120
+a(S'2015-08-24 11:51:45.469000'
+g296
+tp1121
+a(S'2015-08-24 11:51:45.480000'
+g294
+tp1122
+a(S'2015-08-24 11:51:45.484000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1123
+a(S'2015-08-24 11:51:46.043000'
+g294
+tp1124
+a(S'2015-08-24 11:51:47.581000'
+g296
+tp1125
+a(S'2015-08-24 11:51:47.586000'
+g294
+tp1126
+a(S'2015-08-24 11:51:47.588000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1127
+a(S'2015-08-24 11:51:47.850000'
+g294
+tp1128
+a(S'2015-08-24 11:51:49.273000'
+g296
+tp1129
+a(S'2015-08-24 11:51:49.279000'
+g294
+tp1130
+a(S'2015-08-24 11:51:49.282000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1131
+a(S'2015-08-24 11:51:49.953000'
+g294
+tp1132
+a(S'2015-08-24 11:51:51.794000'
+g296
+tp1133
+a(S'2015-08-24 11:51:51.800000'
+g294
+tp1134
+a(S'2015-08-24 11:51:51.803000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1135
+a(S'2015-08-24 11:51:52.465000'
+g294
+tp1136
+a(S'2015-08-24 11:51:54.012000'
+g296
+tp1137
+a(S'2015-08-24 11:51:54.018000'
+g294
+tp1138
+a(S'2015-08-24 11:51:54.020000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie\\charlie\\data\\csv\\4441_switching.csv'
+tp1139
+a(S'2015-08-24 11:51:54.027000'
+g294
+tp1140
+asb.

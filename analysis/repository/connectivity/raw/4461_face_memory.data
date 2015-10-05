@@ -1,0 +1,1389 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+S'2015-09-14 09:46:35.030000'
+p8
+sS'last_opened'
+p9
+cdatetime
+datetime
+p10
+(S'\x07\xdf\t\x0e\t+\x1a\x06\xba\xa8'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g10
+(S'\x07\xdf\t\x0e\t.#\x00qH'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4461'
+p19
+S'face_memory'
+p20
+S'learning'
+p21
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar01.bmp'
+p22
+NS'n/a'
+p23
+I0
+tp24
+a(g19
+g20
+g21
+I1
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar02.bmp'
+p25
+Ng23
+I0
+tp26
+a(g19
+g20
+g21
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar03.bmp'
+p27
+Ng23
+I0
+tp28
+a(g19
+g20
+g21
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar04.bmp'
+p29
+Ng23
+I0
+tp30
+a(g19
+g20
+g21
+I4
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar05.bmp'
+p31
+Ng23
+I0
+tp32
+a(g19
+g20
+g21
+I5
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar06.bmp'
+p33
+Ng23
+I0
+tp34
+a(g19
+g20
+g21
+I6
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar07.bmp'
+p35
+Ng23
+I0
+tp36
+a(g19
+g20
+g21
+I7
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar08.bmp'
+p37
+Ng23
+I0
+tp38
+a(g19
+g20
+g21
+I8
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar09.bmp'
+p39
+Ng23
+I0
+tp40
+a(g19
+g20
+g21
+I9
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar10.bmp'
+p41
+Ng23
+I0
+tp42
+a(g19
+g20
+g21
+I10
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar11.bmp'
+p43
+Ng23
+I0
+tp44
+a(g19
+g20
+g21
+I11
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar12.bmp'
+p45
+Ng23
+I0
+tp46
+a(g19
+g20
+g21
+I12
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar13.bmp'
+p47
+Ng23
+I0
+tp48
+a(g19
+g20
+g21
+I13
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar14.bmp'
+p49
+Ng23
+I0
+tp50
+a(g19
+g20
+g21
+I14
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar15.bmp'
+p51
+Ng23
+I0
+tp52
+a(g19
+g20
+g21
+I15
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar16.bmp'
+p53
+Ng23
+I0
+tp54
+a(g19
+g20
+g21
+I16
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar17.bmp'
+p55
+Ng23
+I0
+tp56
+a(g19
+g20
+g21
+I17
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar18.bmp'
+p57
+Ng23
+I0
+tp58
+a(g19
+g20
+g21
+I18
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar19.bmp'
+p59
+Ng23
+I0
+tp60
+a(g19
+g20
+g21
+I19
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\tar20.bmp'
+p61
+Ng23
+I0
+tp62
+a(g19
+g20
+S'test'
+p63
+I0
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis04.bmp'
+S'No'
+p64
+g64
+I2980
+tp65
+a(g19
+g20
+g63
+I1
+g61
+S'Yes'
+p66
+g66
+I810
+tp67
+a(g19
+g20
+g63
+I2
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis01.bmp'
+g64
+g64
+I1070
+tp68
+a(g19
+g20
+g63
+I3
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis05.bmp'
+g64
+g66
+I1040
+tp69
+a(g19
+g20
+g63
+I4
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis16.bmp'
+g64
+g66
+I1210
+tp70
+a(g19
+g20
+g63
+I5
+g55
+g66
+g66
+I1010
+tp71
+a(g19
+g20
+g63
+I6
+g39
+g66
+g66
+I1030
+tp72
+a(g19
+g20
+g63
+I7
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis11.bmp'
+g64
+g66
+I1000
+tp73
+a(g19
+g20
+g63
+I8
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis06.bmp'
+g64
+g64
+I1910
+tp74
+a(g19
+g20
+g63
+I9
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis15.bmp'
+g64
+g64
+I3230
+tp75
+a(g19
+g20
+g63
+I10
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis14.bmp'
+g64
+g64
+I1200
+tp76
+a(g19
+g20
+g63
+I11
+g33
+g66
+g66
+I910
+tp77
+a(g19
+g20
+g63
+I12
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis02.bmp'
+g64
+g64
+I1310
+tp78
+a(g19
+g20
+g63
+I13
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis13.bmp'
+g64
+g64
+I1250
+tp79
+a(g19
+g20
+g63
+I14
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis18.bmp'
+g64
+g66
+I790
+tp80
+a(g19
+g20
+g63
+I15
+g22
+g66
+g66
+I930
+tp81
+a(g19
+g20
+g63
+I16
+g37
+g66
+g66
+I840
+tp82
+a(g19
+g20
+g63
+I17
+g45
+g66
+g66
+I860
+tp83
+a(g19
+g20
+g63
+I18
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis20.bmp'
+g64
+g64
+I1000
+tp84
+a(g19
+g20
+g63
+I19
+g25
+g66
+g66
+I871
+tp85
+a(g19
+g20
+g63
+I20
+g43
+g66
+g66
+I850
+tp86
+a(g19
+g20
+g63
+I21
+g59
+g66
+g66
+I1160
+tp87
+a(g19
+g20
+g63
+I22
+g51
+g66
+g64
+I1750
+tp88
+a(g19
+g20
+g63
+I23
+g41
+g66
+g66
+I910
+tp89
+a(g19
+g20
+g63
+I24
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis07.bmp'
+g64
+g64
+I1210
+tp90
+a(g19
+g20
+g63
+I25
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis09.bmp'
+g64
+g64
+I1050
+tp91
+a(g19
+g20
+g63
+I26
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis12.bmp'
+g64
+g66
+I1130
+tp92
+a(g19
+g20
+g63
+I27
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis17.bmp'
+g64
+g64
+I1490
+tp93
+a(g19
+g20
+g63
+I28
+g35
+g66
+g66
+I810
+tp94
+a(g19
+g20
+g63
+I29
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis19.bmp'
+g64
+g66
+I830
+tp95
+a(g19
+g20
+g63
+I30
+g57
+g66
+g66
+I1010
+tp96
+a(g19
+g20
+g63
+I31
+g27
+g66
+g66
+I960
+tp97
+a(g19
+g20
+g63
+I32
+g49
+g66
+g64
+I1770
+tp98
+a(g19
+g20
+g63
+I33
+g31
+g66
+g64
+I2000
+tp99
+a(g19
+g20
+g63
+I34
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis10.bmp'
+g64
+g64
+I1590
+tp100
+a(g19
+g20
+g63
+I35
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis08.bmp'
+g64
+g66
+I780
+tp101
+a(g19
+g20
+g63
+I36
+g53
+g66
+g66
+I1030
+tp102
+a(g19
+g20
+g63
+I37
+g29
+g66
+g66
+I2520
+tp103
+a(g19
+g20
+g63
+I38
+S'c:\\Charlie\\charlie\\stimuli\\visual\\face_memory\\idis03.bmp'
+g64
+g66
+I1251
+tp104
+a(g19
+g20
+g63
+I39
+g47
+g66
+g64
+I1090
+tp105
+asS'output_format'
+p106
+(lp107
+(S'proband_id'
+p108
+c__builtin__
+str
+p109
+tp110
+a(S'test_name'
+p111
+g109
+tp112
+a(S'phase'
+p113
+g109
+tp114
+a(S'trialn'
+p115
+c__builtin__
+int
+p116
+tp117
+a(S'f'
+g109
+tp118
+a(S'ans'
+p119
+g109
+tp120
+a(S'rsp'
+p121
+g109
+tp122
+a(S'rt'
+p123
+g116
+tp124
+asg108
+g19
+sS'filename'
+p125
+S'4461_face_memory.data'
+p126
+sS'initialised'
+p127
+g10
+(S'\x07\xdf\t\x0e\t+\x1a\x06\xba\xa8'
+tRp128
+sg111
+S'face_memory'
+p129
+sS'directory'
+p130
+S'c:\\Charlie\\charlie\\data\\raw'
+p131
+sS'user_id'
+p132
+S'sbuccheri'
+p133
+sS'test_started'
+p134
+I01
+sS'abs_filename'
+p135
+S'c:\\Charlie\\charlie\\data\\raw\\4461_face_memory.data'
+p136
+sS'date_started'
+p137
+g10
+(S'\x07\xdf\t\x0e\t+,\r\xd6\xf8'
+tRp138
+sS'log'
+p139
+(lp140
+(S'2015-09-14 09:43:26.441000'
+S'instance created'
+p141
+tp142
+a(S'2015-09-14 09:43:44.925000'
+S'instance updated'
+p143
+tp144
+a(S'2015-09-14 09:43:44.939000'
+S'pandas DataFrame of data created'
+p145
+tp146
+a(S'2015-09-14 09:43:44.944000'
+g143
+tp147
+a(S'2015-09-14 09:43:44.951000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp148
+a(S'2015-09-14 09:43:48.973000'
+g143
+tp149
+a(S'2015-09-14 09:43:49'
+g145
+tp150
+a(S'2015-09-14 09:43:49.008000'
+g143
+tp151
+a(S'2015-09-14 09:43:49.012000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp152
+a(S'2015-09-14 09:43:53.035000'
+g143
+tp153
+a(S'2015-09-14 09:43:53.071000'
+g145
+tp154
+a(S'2015-09-14 09:43:53.080000'
+g143
+tp155
+a(S'2015-09-14 09:43:53.083000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp156
+a(S'2015-09-14 09:43:57.106000'
+g143
+tp157
+a(S'2015-09-14 09:43:57.151000'
+g145
+tp158
+a(S'2015-09-14 09:43:57.160000'
+g143
+tp159
+a(S'2015-09-14 09:43:57.163000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp160
+a(S'2015-09-14 09:44:01.186000'
+g143
+tp161
+a(S'2015-09-14 09:44:01.241000'
+g145
+tp162
+a(S'2015-09-14 09:44:01.249000'
+g143
+tp163
+a(S'2015-09-14 09:44:01.253000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp164
+a(S'2015-09-14 09:44:05.277000'
+g143
+tp165
+a(S'2015-09-14 09:44:05.341000'
+g145
+tp166
+a(S'2015-09-14 09:44:05.349000'
+g143
+tp167
+a(S'2015-09-14 09:44:05.353000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp168
+a(S'2015-09-14 09:44:09.378000'
+g143
+tp169
+a(S'2015-09-14 09:44:09.416000'
+g145
+tp170
+a(S'2015-09-14 09:44:09.420000'
+g143
+tp171
+a(S'2015-09-14 09:44:09.422000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp172
+a(S'2015-09-14 09:44:13.443000'
+g143
+tp173
+a(S'2015-09-14 09:44:13.524000'
+g145
+tp174
+a(S'2015-09-14 09:44:13.533000'
+g143
+tp175
+a(S'2015-09-14 09:44:13.536000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp176
+a(S'2015-09-14 09:44:17.560000'
+g143
+tp177
+a(S'2015-09-14 09:44:17.651000'
+g145
+tp178
+a(S'2015-09-14 09:44:17.659000'
+g143
+tp179
+a(S'2015-09-14 09:44:17.663000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp180
+a(S'2015-09-14 09:44:21.685000'
+g143
+tp181
+a(S'2015-09-14 09:44:21.785000'
+g145
+tp182
+a(S'2015-09-14 09:44:21.794000'
+g143
+tp183
+a(S'2015-09-14 09:44:21.797000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp184
+a(S'2015-09-14 09:44:25.821000'
+g143
+tp185
+a(S'2015-09-14 09:44:25.930000'
+g145
+tp186
+a(S'2015-09-14 09:44:25.939000'
+g143
+tp187
+a(S'2015-09-14 09:44:25.942000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp188
+a(S'2015-09-14 09:44:29.966000'
+g143
+tp189
+a(S'2015-09-14 09:44:30.084000'
+g145
+tp190
+a(S'2015-09-14 09:44:30.093000'
+g143
+tp191
+a(S'2015-09-14 09:44:30.096000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp192
+a(S'2015-09-14 09:44:34.120000'
+g143
+tp193
+a(S'2015-09-14 09:44:34.248000'
+g145
+tp194
+a(S'2015-09-14 09:44:34.257000'
+g143
+tp195
+a(S'2015-09-14 09:44:34.260000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp196
+a(S'2015-09-14 09:44:38.283000'
+g143
+tp197
+a(S'2015-09-14 09:44:38.420000'
+g145
+tp198
+a(S'2015-09-14 09:44:38.429000'
+g143
+tp199
+a(S'2015-09-14 09:44:38.432000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp200
+a(S'2015-09-14 09:44:42.456000'
+g143
+tp201
+a(S'2015-09-14 09:44:42.602000'
+g145
+tp202
+a(S'2015-09-14 09:44:42.611000'
+g143
+tp203
+a(S'2015-09-14 09:44:42.614000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp204
+a(S'2015-09-14 09:44:46.638000'
+g143
+tp205
+a(S'2015-09-14 09:44:46.794000'
+g145
+tp206
+a(S'2015-09-14 09:44:46.803000'
+g143
+tp207
+a(S'2015-09-14 09:44:46.806000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp208
+a(S'2015-09-14 09:44:50.830000'
+g143
+tp209
+a(S'2015-09-14 09:44:50.995000'
+g145
+tp210
+a(S'2015-09-14 09:44:51.004000'
+g143
+tp211
+a(S'2015-09-14 09:44:51.008000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp212
+a(S'2015-09-14 09:44:55.032000'
+g143
+tp213
+a(S'2015-09-14 09:44:55.206000'
+g145
+tp214
+a(S'2015-09-14 09:44:55.215000'
+g143
+tp215
+a(S'2015-09-14 09:44:55.218000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp216
+a(S'2015-09-14 09:44:59.242000'
+g143
+tp217
+a(S'2015-09-14 09:44:59.426000'
+g145
+tp218
+a(S'2015-09-14 09:44:59.435000'
+g143
+tp219
+a(S'2015-09-14 09:44:59.438000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp220
+a(S'2015-09-14 09:45:03.462000'
+g143
+tp221
+a(S'2015-09-14 09:45:03.655000'
+g145
+tp222
+a(S'2015-09-14 09:45:03.664000'
+g143
+tp223
+a(S'2015-09-14 09:45:03.667000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp224
+a(S'2015-09-14 09:45:27.177000'
+g143
+tp225
+a(S'2015-09-14 09:45:27.379000'
+g145
+tp226
+a(S'2015-09-14 09:45:27.388000'
+g143
+tp227
+a(S'2015-09-14 09:45:27.391000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp228
+a(S'2015-09-14 09:45:28.329000'
+g143
+tp229
+a(S'2015-09-14 09:45:28.541000'
+g145
+tp230
+a(S'2015-09-14 09:45:28.550000'
+g143
+tp231
+a(S'2015-09-14 09:45:28.553000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp232
+a(S'2015-09-14 09:45:29.750000'
+g143
+tp233
+a(S'2015-09-14 09:45:29.971000'
+g145
+tp234
+a(S'2015-09-14 09:45:29.980000'
+g143
+tp235
+a(S'2015-09-14 09:45:29.984000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp236
+a(S'2015-09-14 09:45:31.151000'
+g143
+tp237
+a(S'2015-09-14 09:45:31.381000'
+g145
+tp238
+a(S'2015-09-14 09:45:31.390000'
+g143
+tp239
+a(S'2015-09-14 09:45:31.393000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp240
+a(S'2015-09-14 09:45:32.730000'
+g143
+tp241
+a(S'2015-09-14 09:45:32.969000'
+g145
+tp242
+a(S'2015-09-14 09:45:32.978000'
+g143
+tp243
+a(S'2015-09-14 09:45:32.981000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp244
+a(S'2015-09-14 09:45:34.118000'
+g143
+tp245
+a(S'2015-09-14 09:45:34.365000'
+g145
+tp246
+a(S'2015-09-14 09:45:34.374000'
+g143
+tp247
+a(S'2015-09-14 09:45:34.378000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp248
+a(S'2015-09-14 09:45:35.535000'
+g143
+tp249
+a(S'2015-09-14 09:45:35.791000'
+g145
+tp250
+a(S'2015-09-14 09:45:35.800000'
+g143
+tp251
+a(S'2015-09-14 09:45:35.803000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp252
+a(S'2015-09-14 09:45:36.930000'
+g143
+tp253
+a(S'2015-09-14 09:45:37.167000'
+g145
+tp254
+a(S'2015-09-14 09:45:37.171000'
+g143
+tp255
+a(S'2015-09-14 09:45:37.172000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp256
+a(S'2015-09-14 09:45:39.208000'
+g143
+tp257
+a(S'2015-09-14 09:45:39.482000'
+g145
+tp258
+a(S'2015-09-14 09:45:39.492000'
+g143
+tp259
+a(S'2015-09-14 09:45:39.495000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp260
+a(S'2015-09-14 09:45:42.854000'
+g143
+tp261
+a(S'2015-09-14 09:45:43.139000'
+g145
+tp262
+a(S'2015-09-14 09:45:43.148000'
+g143
+tp263
+a(S'2015-09-14 09:45:43.152000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp264
+a(S'2015-09-14 09:45:44.479000'
+g143
+tp265
+a(S'2015-09-14 09:45:44.772000'
+g145
+tp266
+a(S'2015-09-14 09:45:44.781000'
+g143
+tp267
+a(S'2015-09-14 09:45:44.785000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp268
+a(S'2015-09-14 09:45:45.823000'
+g143
+tp269
+a(S'2015-09-14 09:45:46.124000'
+g145
+tp270
+a(S'2015-09-14 09:45:46.133000'
+g143
+tp271
+a(S'2015-09-14 09:45:46.137000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp272
+a(S'2015-09-14 09:45:47.573000'
+g143
+tp273
+a(S'2015-09-14 09:45:47.681000'
+g145
+tp274
+a(S'2015-09-14 09:45:47.683000'
+g143
+tp275
+a(S'2015-09-14 09:45:47.684000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp276
+a(S'2015-09-14 09:45:49.059000'
+g143
+tp277
+a(S'2015-09-14 09:45:49.379000'
+g145
+tp278
+a(S'2015-09-14 09:45:49.388000'
+g143
+tp279
+a(S'2015-09-14 09:45:49.392000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp280
+a(S'2015-09-14 09:45:50.309000'
+g143
+tp281
+a(S'2015-09-14 09:45:50.638000'
+g145
+tp282
+a(S'2015-09-14 09:45:50.648000'
+g143
+tp283
+a(S'2015-09-14 09:45:50.652000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp284
+a(S'2015-09-14 09:45:51.709000'
+g143
+tp285
+a(S'2015-09-14 09:45:52.047000'
+g145
+tp286
+a(S'2015-09-14 09:45:52.057000'
+g143
+tp287
+a(S'2015-09-14 09:45:52.061000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp288
+a(S'2015-09-14 09:45:53.028000'
+g143
+tp289
+a(S'2015-09-14 09:45:53.376000'
+g145
+tp290
+a(S'2015-09-14 09:45:53.386000'
+g143
+tp291
+a(S'2015-09-14 09:45:53.389000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp292
+a(S'2015-09-14 09:45:54.374000'
+g143
+tp293
+a(S'2015-09-14 09:45:54.731000'
+g145
+tp294
+a(S'2015-09-14 09:45:54.741000'
+g143
+tp295
+a(S'2015-09-14 09:45:54.745000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp296
+a(S'2015-09-14 09:45:55.873000'
+g143
+tp297
+a(S'2015-09-14 09:45:56.239000'
+g145
+tp298
+a(S'2015-09-14 09:45:56.249000'
+g143
+tp299
+a(S'2015-09-14 09:45:56.253000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp300
+a(S'2015-09-14 09:45:57.251000'
+g143
+tp301
+a(S'2015-09-14 09:45:57.625000'
+g145
+tp302
+a(S'2015-09-14 09:45:57.635000'
+g143
+tp303
+a(S'2015-09-14 09:45:57.639000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp304
+a(S'2015-09-14 09:45:58.617000'
+g143
+tp305
+a(S'2015-09-14 09:45:59'
+g145
+tp306
+a(S'2015-09-14 09:45:59.010000'
+g143
+tp307
+a(S'2015-09-14 09:45:59.014000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp308
+a(S'2015-09-14 09:46:00.302000'
+g143
+tp309
+a(S'2015-09-14 09:46:00.695000'
+g145
+tp310
+a(S'2015-09-14 09:46:00.705000'
+g143
+tp311
+a(S'2015-09-14 09:46:00.708000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp312
+a(S'2015-09-14 09:46:02.586000'
+g143
+tp313
+a(S'2015-09-14 09:46:02.988000'
+g145
+tp314
+a(S'2015-09-14 09:46:02.998000'
+g143
+tp315
+a(S'2015-09-14 09:46:03.001000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp316
+a(S'2015-09-14 09:46:04.039000'
+g143
+tp317
+a(S'2015-09-14 09:46:04.450000'
+g145
+tp318
+a(S'2015-09-14 09:46:04.460000'
+g143
+tp319
+a(S'2015-09-14 09:46:04.464000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp320
+a(S'2015-09-14 09:46:05.802000'
+g143
+tp321
+a(S'2015-09-14 09:46:06.222000'
+g145
+tp322
+a(S'2015-09-14 09:46:06.232000'
+g143
+tp323
+a(S'2015-09-14 09:46:06.236000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp324
+a(S'2015-09-14 09:46:07.414000'
+g143
+tp325
+a(S'2015-09-14 09:46:07.842000'
+g145
+tp326
+a(S'2015-09-14 09:46:07.852000'
+g143
+tp327
+a(S'2015-09-14 09:46:07.856000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp328
+a(S'2015-09-14 09:46:09.114000'
+g143
+tp329
+a(S'2015-09-14 09:46:09.553000'
+g145
+tp330
+a(S'2015-09-14 09:46:09.563000'
+g143
+tp331
+a(S'2015-09-14 09:46:09.567000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp332
+a(S'2015-09-14 09:46:11.185000'
+g143
+tp333
+a(S'2015-09-14 09:46:11.633000'
+g145
+tp334
+a(S'2015-09-14 09:46:11.643000'
+g143
+tp335
+a(S'2015-09-14 09:46:11.647000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp336
+a(S'2015-09-14 09:46:12.585000'
+g143
+tp337
+a(S'2015-09-14 09:46:13.040000'
+g145
+tp338
+a(S'2015-09-14 09:46:13.051000'
+g143
+tp339
+a(S'2015-09-14 09:46:13.054000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp340
+a(S'2015-09-14 09:46:14.013000'
+g143
+tp341
+a(S'2015-09-14 09:46:14.478000'
+g145
+tp342
+a(S'2015-09-14 09:46:14.488000'
+g143
+tp343
+a(S'2015-09-14 09:46:14.492000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp344
+a(S'2015-09-14 09:46:15.630000'
+g143
+tp345
+a(S'2015-09-14 09:46:16.104000'
+g145
+tp346
+a(S'2015-09-14 09:46:16.114000'
+g143
+tp347
+a(S'2015-09-14 09:46:16.118000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp348
+a(S'2015-09-14 09:46:17.206000'
+g143
+tp349
+a(S'2015-09-14 09:46:17.690000'
+g145
+tp350
+a(S'2015-09-14 09:46:17.700000'
+g143
+tp351
+a(S'2015-09-14 09:46:17.704000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp352
+a(S'2015-09-14 09:46:19.602000'
+g143
+tp353
+a(S'2015-09-14 09:46:20.096000'
+g145
+tp354
+a(S'2015-09-14 09:46:20.106000'
+g143
+tp355
+a(S'2015-09-14 09:46:20.110000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp356
+a(S'2015-09-14 09:46:22.239000'
+g143
+tp357
+a(S'2015-09-14 09:46:22.741000'
+g145
+tp358
+a(S'2015-09-14 09:46:22.751000'
+g143
+tp359
+a(S'2015-09-14 09:46:22.755000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp360
+a(S'2015-09-14 09:46:24.473000'
+g143
+tp361
+a(S'2015-09-14 09:46:24.984000'
+g145
+tp362
+a(S'2015-09-14 09:46:24.994000'
+g143
+tp363
+a(S'2015-09-14 09:46:24.998000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp364
+a(S'2015-09-14 09:46:25.908000'
+g143
+tp365
+a(S'2015-09-14 09:46:26.370000'
+g145
+tp366
+a(S'2015-09-14 09:46:26.379000'
+g143
+tp367
+a(S'2015-09-14 09:46:26.383000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp368
+a(S'2015-09-14 09:46:27.541000'
+g143
+tp369
+a(S'2015-09-14 09:46:28.070000'
+g145
+tp370
+a(S'2015-09-14 09:46:28.081000'
+g143
+tp371
+a(S'2015-09-14 09:46:28.085000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp372
+a(S'2015-09-14 09:46:30.734000'
+g143
+tp373
+a(S'2015-09-14 09:46:31.274000'
+g145
+tp374
+a(S'2015-09-14 09:46:31.284000'
+g143
+tp375
+a(S'2015-09-14 09:46:31.288000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp376
+a(S'2015-09-14 09:46:32.666000'
+g143
+tp377
+a(S'2015-09-14 09:46:33.215000'
+g145
+tp378
+a(S'2015-09-14 09:46:33.225000'
+g143
+tp379
+a(S'2015-09-14 09:46:33.229000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp380
+a(S'2015-09-14 09:46:34.447000'
+g143
+tp381
+a(S'2015-09-14 09:46:35.004000'
+g145
+tp382
+a(S'2015-09-14 09:46:35.015000'
+g143
+tp383
+a(S'2015-09-14 09:46:35.019000'
+S'data saved as csv to c:\\Charlie\\charlie\\data\\csv\\4461_face_memory.csv'
+tp384
+a(S'2015-09-14 09:46:35.029000'
+g143
+tp385
+asb.

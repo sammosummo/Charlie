@@ -1,0 +1,393 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S'\x07\xdf\x08\x04\r&#\x06\xd6\x00'
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x08\x04\r\x1d4\x0c\xb5\xe8'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g8
+(S'\x07\xdf\x08\x04\r&#\x06\xb2\xd8'
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4436'
+p19
+S'cvlt2'
+p20
+I0
+Vsquirrel
+tp21
+a(g19
+g20
+I0
+Vcabbage
+tp22
+a(g19
+g20
+I0
+Vcabinet
+tp23
+a(g19
+g20
+I0
+Vmotorcycle
+tp24
+a(g19
+g20
+I0
+Vlamp
+tp25
+a(g19
+g20
+I0
+Vcabbage
+tp26
+a(g19
+g20
+I0
+Vtruck
+tp27
+a(g19
+g20
+I1
+Vcabbage
+tp28
+a(g19
+g20
+I1
+Vlamp
+tp29
+a(g19
+g20
+I1
+Vcabinet
+tp30
+a(g19
+g20
+I1
+Vtruck
+tp31
+a(g19
+g20
+I1
+Vmotorcycle
+tp32
+a(g19
+g20
+I1
+Vsquirrel
+tp33
+a(g19
+g20
+I1
+Vintrusion
+tp34
+a(g19
+g20
+I2
+Vboat
+tp35
+a(g19
+g20
+I2
+Vcabbage
+tp36
+a(g19
+g20
+I2
+Vintrusion
+tp37
+a(g19
+g20
+I2
+Vsquirrel
+tp38
+a(g19
+g20
+I2
+Vmotorcycle
+tp39
+a(g19
+g20
+I2
+Vtruck
+tp40
+a(g19
+g20
+I2
+Vcabinet
+tp41
+a(g19
+g20
+I2
+Vlamp
+tp42
+a(g19
+g20
+I3
+Vsquirrel
+tp43
+a(g19
+g20
+I3
+Vcabbage
+tp44
+a(g19
+g20
+I3
+Vtruck
+tp45
+a(g19
+g20
+I3
+Vspinach
+tp46
+a(g19
+g20
+I3
+Vmotorcycle
+tp47
+a(g19
+g20
+I3
+Vintrusion
+tp48
+a(g19
+g20
+I3
+Vbookcase
+tp49
+a(g19
+g20
+I3
+Vcabinet
+tp50
+a(g19
+g20
+I3
+Vmotorcycle
+tp51
+a(g19
+g20
+I3
+Vboat
+tp52
+a(g19
+g20
+I4
+Vsquirrel
+tp53
+a(g19
+g20
+I4
+Vcabbage
+tp54
+a(g19
+g20
+I4
+Vintrusion
+tp55
+a(g19
+g20
+I4
+Vmotorcycle
+tp56
+a(g19
+g20
+I4
+Vbookcase
+tp57
+a(g19
+g20
+I4
+Vspinach
+tp58
+a(g19
+g20
+I4
+Vtruck
+tp59
+a(g19
+g20
+I4
+Vcabinet
+tp60
+asS'output_format'
+p61
+(lp62
+(S'proband_id'
+p63
+c__builtin__
+str
+p64
+tp65
+a(S'test_name'
+p66
+g64
+tp67
+a(S'trialn'
+p68
+c__builtin__
+int
+p69
+tp70
+a(S'rsp'
+p71
+g64
+tp72
+asg63
+g19
+sS'filename'
+p73
+S'4436_cvlt2.data'
+p74
+sS'initialised'
+p75
+g8
+(S'\x07\xdf\x08\x04\r\x1d4\x0c\xb5\xe8'
+tRp76
+sS'last_udated'
+p77
+g8
+(S'\x07\xdf\x08\x04\r\x1d4\x0c\xb5\xe8'
+tRp78
+sg66
+S'cvlt2'
+p79
+sS'directory'
+p80
+S'C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\raw'
+p81
+sS'user_id'
+p82
+S'oleach'
+p83
+sS'test_started'
+p84
+I01
+sS'abs_filename'
+p85
+S'C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\raw\\4436_cvlt2.data'
+p86
+sS'date_started'
+p87
+g8
+(S'\x07\xdf\x08\x04\r!\x17\nh\x10'
+tRp88
+sS'log'
+p89
+(lp90
+(S'2015-08-04 13:29:52.833000'
+S'instance created'
+p91
+tp92
+a(S'2015-08-04 13:33:23.691000'
+S'instance updated'
+p93
+tp94
+a(S'2015-08-04 13:33:23.695000'
+S'pandas DataFrame of data created'
+p95
+tp96
+a(S'2015-08-04 13:33:23.699000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp97
+a(S'2015-08-04 13:34:14.482000'
+g93
+tp98
+a(S'2015-08-04 13:34:14.487000'
+g95
+tp99
+a(S'2015-08-04 13:34:14.490000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp100
+a(S'2015-08-04 13:34:44.111000'
+g93
+tp101
+a(S'2015-08-04 13:34:44.116000'
+g95
+tp102
+a(S'2015-08-04 13:34:44.119000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp103
+a(S'2015-08-04 13:35:28.515000'
+g93
+tp104
+a(S'2015-08-04 13:35:28.520000'
+g95
+tp105
+a(S'2015-08-04 13:35:28.524000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp106
+a(S'2015-08-04 13:36:03.880000'
+g93
+tp107
+a(S'2015-08-04 13:36:03.885000'
+g95
+tp108
+a(S'2015-08-04 13:36:03.888000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp109
+a(S'2015-08-04 13:36:42.126000'
+g93
+tp110
+a(S'2015-08-04 13:36:42.131000'
+g95
+tp111
+a(S'2015-08-04 13:36:42.135000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp112
+a(S'2015-08-04 13:37:23.051000'
+g93
+tp113
+a(S'2015-08-04 13:37:23.056000'
+g95
+tp114
+a(S'2015-08-04 13:37:23.059000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp115
+a(S'2015-08-04 13:38:02.393000'
+g93
+tp116
+a(S'2015-08-04 13:38:02.398000'
+g95
+tp117
+a(S'2015-08-04 13:38:02.401000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp118
+a(S'2015-08-04 13:38:35.439000'
+g93
+tp119
+a(S'2015-08-04 13:38:35.444000'
+g95
+tp120
+a(S'2015-08-04 13:38:35.448000'
+S'data saved as csv to C:\\Users\\oleach\\Charlie-master\\Charlie-master\\charlie\\data\\csv\\4436_cvlt2.csv'
+tp121
+asb.

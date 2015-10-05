@@ -1,0 +1,357 @@
+(icharlie.tools.data
+Data
+p1
+(dp2
+S'lang'
+p3
+S'EN'
+p4
+sS'control'
+p5
+(lp6
+sS'last_updated'
+p7
+cdatetime
+datetime
+p8
+(S"\x07\xdf\x04\x16\n';\x04\xa3\x80"
+tRp9
+sS'last_opened'
+p10
+g8
+(S'\x07\xdf\x04\x16\n \x1d\x07\xf7\x10'
+tRp11
+sS'proj_id'
+p12
+S'connectivity'
+p13
+sS'date_done'
+p14
+g8
+(S"\x07\xdf\x04\x16\n';\x04\x80X"
+tRp15
+sS'test_done'
+p16
+I01
+sS'data'
+p17
+(lp18
+(S'4370'
+p19
+S'verbal_fluency'
+p20
+I0
+S'True'
+p21
+tp22
+a(g19
+g20
+I0
+g21
+tp23
+a(g19
+g20
+I0
+S'False'
+p24
+tp25
+a(g19
+g20
+I0
+g24
+tp26
+a(g19
+g20
+I0
+g21
+tp27
+a(g19
+g20
+I0
+g21
+tp28
+a(g19
+g20
+I0
+g21
+tp29
+a(g19
+g20
+I1
+g21
+tp30
+a(g19
+g20
+I1
+g21
+tp31
+a(g19
+g20
+I1
+g21
+tp32
+a(g19
+g20
+I1
+g21
+tp33
+a(g19
+g20
+I1
+g24
+tp34
+a(g19
+g20
+I1
+g21
+tp35
+a(g19
+g20
+I1
+g21
+tp36
+a(g19
+g20
+I2
+g21
+tp37
+a(g19
+g20
+I2
+g21
+tp38
+a(g19
+g20
+I2
+g21
+tp39
+a(g19
+g20
+I2
+g21
+tp40
+a(g19
+g20
+I2
+g21
+tp41
+a(g19
+g20
+I2
+g21
+tp42
+a(g19
+g20
+I2
+g21
+tp43
+a(g19
+g20
+I2
+g21
+tp44
+a(g19
+g20
+I2
+g21
+tp45
+a(g19
+g20
+I3
+g21
+tp46
+a(g19
+g20
+I3
+g21
+tp47
+a(g19
+g20
+I3
+g21
+tp48
+a(g19
+g20
+I3
+g21
+tp49
+a(g19
+g20
+I3
+g21
+tp50
+a(g19
+g20
+I3
+g21
+tp51
+a(g19
+g20
+I3
+g21
+tp52
+a(g19
+g20
+I3
+g21
+tp53
+a(g19
+g20
+I3
+g21
+tp54
+a(g19
+g20
+I3
+g24
+tp55
+a(g19
+g20
+I3
+g21
+tp56
+a(g19
+g20
+I3
+g21
+tp57
+a(g19
+g20
+I3
+g21
+tp58
+asS'output_format'
+p59
+(lp60
+(S'proband_id'
+p61
+c__builtin__
+str
+p62
+tp63
+a(S'test_name'
+p64
+g62
+tp65
+a(S'trialn'
+p66
+c__builtin__
+int
+p67
+tp68
+a(S'rsp'
+p69
+g62
+tp70
+asg61
+g19
+sS'filename'
+p71
+S'4370_verbal_fluency.data'
+p72
+sS'initialised'
+p73
+g8
+(S'\x07\xdf\x04\x16\n \x1d\x07\xf7\x10'
+tRp74
+sS'last_udated'
+p75
+g8
+(S'\x07\xdf\x04\x16\n \x1d\x07\xf7\x10'
+tRp76
+sg64
+S'verbal_fluency'
+p77
+sS'directory'
+p78
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw'
+p79
+sS'user_id'
+p80
+S'sbuccheri'
+p81
+sS'test_started'
+p82
+I01
+sS'abs_filename'
+p83
+S'C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\raw\\4370_verbal_fluency.data'
+p84
+sS'date_started'
+p85
+g8
+(S'\x07\xdf\x04\x16\n#\x1c\x01W\xc0'
+tRp86
+sS'log'
+p87
+(lp88
+(S'2015-04-22 10:32:29.522000'
+S'instance created'
+p89
+tp90
+a(S'2015-04-22 10:35:28.096000'
+S'instance updated'
+p91
+tp92
+a(S'2015-04-22 10:35:28.101000'
+S'pandas DataFrame of data created'
+p93
+tp94
+a(S'2015-04-22 10:35:28.106000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp95
+a(S'2015-04-22 10:35:35.247000'
+g91
+tp96
+a(S'2015-04-22 10:35:35.252000'
+g93
+tp97
+a(S'2015-04-22 10:35:35.255000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp98
+a(S'2015-04-22 10:36:45.465000'
+g91
+tp99
+a(S'2015-04-22 10:36:45.471000'
+g93
+tp100
+a(S'2015-04-22 10:36:45.474000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp101
+a(S'2015-04-22 10:37:13.233000'
+g91
+tp102
+a(S'2015-04-22 10:37:13.239000'
+g93
+tp103
+a(S'2015-04-22 10:37:13.242000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp104
+a(S'2015-04-22 10:38:20.652000'
+g91
+tp105
+a(S'2015-04-22 10:38:20.657000'
+g93
+tp106
+a(S'2015-04-22 10:38:20.660000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp107
+a(S'2015-04-22 10:38:46.245000'
+g91
+tp108
+a(S'2015-04-22 10:38:46.251000'
+g93
+tp109
+a(S'2015-04-22 10:38:46.254000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp110
+a(S'2015-04-22 10:39:59.295000'
+g91
+tp111
+a(S'2015-04-22 10:39:59.301000'
+g93
+tp112
+a(S'2015-04-22 10:39:59.304000'
+S'data saved as csv to C:\\Users\\Jbarrett\\Charlie\\charlie\\data\\csv\\4370_verbal_fluency.csv'
+tp113
+asb.
