@@ -1,3 +1,5 @@
+*Please note that Charlie has been superseded by Charlie 2 (https://github.com/sammosummo/Charlie2). I'm no longer developing or supporting Charlie 1.*
+
 *******
 Charlie
 *******
